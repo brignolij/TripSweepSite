@@ -43,12 +43,11 @@ def lang_switcher(current_lang, page):
 
 INDEX = {
 "en": dict(
-    title="TripSweep — sort your photos by trip",
-    desc="Find your photos and videos grouped by trip, see what's taking up space, sort and export in one tap. 100% offline.",
+    title="TripSweep — clean up old trips, back up, share",
+    desc="Finally an easy way to delete old trips, back them up, and send them to the people who were there. 100% offline.",
     nav_desktop="Desktop app", nav_features="Features", nav_privacy_anchor="Privacy", nav_privacy="Privacy Policy",
-    badge="📱 iOS companion app",
-    h1="Your photos, finally sorted by trip",
-    subtitle="TripSweep automatically groups your photos and videos by trip, shows you what's taking up the most space, and lets you sort, export or delete in one tap — without ever sending your data anywhere.",
+    h1="Finally, an easy way to clear out old trips",
+    subtitle="TripSweep groups your photos and videos by trip, so you can see exactly what's taking up space, back it up or send it to the people who were there, then delete it in one tap — without ever sending your data anywhere.",
     cta_store="📱 Coming soon to the App Store", cta_kofi="☕ Support the project on Ko-fi",
     cta_desktop_link="→ Also check out PhotoCull for Mac, the desktop app that sorts your photos",
     hero_alt="List of trips in TripSweep, sorted by size",
@@ -57,9 +56,10 @@ INDEX = {
     preview_alt2="TripSweep's About screen",
     features_h2="What the app does",
     features=[
+        ("🗑️", "Delete old trips without the guesswork", "See exactly what a trip is taking up, then delete it all at once — always through “Recently Deleted”, never an immediate permanent delete."),
+        ("📤", "Back it up, or send it to someone who was there", "Export an entire trip to your Mac or Files before you delete it, or share it directly (AirDrop, Files...) with friends and family — nothing gets lost for good."),
         ("🧳", "Automatic grouping by trip", "Your photos and videos are grouped by trip — factoring in both time and location, so two different destinations never get mixed up."),
         ("⚖️", "The size that counts", "Each trip shows how much space it takes up. Sort by size to spot at a glance what's really worth sorting through."),
-        ("📤", "Export and delete in one tap", "View, share (AirDrop, Files...) or delete an entire trip at once — always through “Recently Deleted”, never an immediate permanent delete."),
         ("📍", "Custom places", "Define your own places (Home, Work...) and exclude them from the list to keep only real trips."),
         ("🔒", "100% offline", "No photo or location ever leaves your iPhone. Place recognition works entirely without a connection, an account, or any third-party service."),
         ("🌍", "Available in 5 languages", "English, French, Italian, German, Spanish — the app automatically adapts to your iPhone's language."),
@@ -71,12 +71,11 @@ INDEX = {
     footer_desktop="Desktop app", footer_privacy="Privacy", footer_kofi="Ko-fi", footer_github="GitHub",
 ),
 "fr": dict(
-    title="TripSweep — triez vos photos par voyage",
-    desc="Retrouvez vos photos et vidéos regroupées par séjour, voyez ce qui prend de la place, triez et exportez en un geste. 100% hors ligne.",
+    title="TripSweep — nettoyez vos vieux voyages, sauvegardez, partagez",
+    desc="Enfin un moyen simple de supprimer les vieux séjours, de les sauvegarder et de les envoyer à ceux qui y étaient. 100% hors ligne.",
     nav_desktop="Application de bureau", nav_features="Fonctionnalités", nav_privacy_anchor="Confidentialité", nav_privacy="Politique de confidentialité",
-    badge="📱 Application compagnon iOS",
-    h1="Vos photos, enfin triées par voyage",
-    subtitle="TripSweep regroupe automatiquement vos photos et vidéos par séjour, affiche ce qui prend le plus de place, et vous laisse trier, exporter ou supprimer en un geste — sans jamais envoyer vos données où que ce soit.",
+    h1="Enfin un moyen simple de faire le tri dans les anciens voyages",
+    subtitle="TripSweep regroupe vos photos et vidéos par séjour, pour voir exactement ce qui prend de la place, le sauvegarder ou l'envoyer à ceux qui y étaient, puis le supprimer en un geste — sans jamais envoyer vos données où que ce soit.",
     cta_store="📱 Bientôt sur l'App Store", cta_kofi="☕ Soutenir le projet sur Ko-fi",
     cta_desktop_link="→ Découvrir aussi PhotoCull pour Mac, l'application de bureau qui trie vos photos",
     hero_alt="Liste des séjours dans TripSweep, triée par poids",
@@ -85,9 +84,10 @@ INDEX = {
     preview_alt2="Écran À propos de TripSweep",
     features_h2="Ce que fait l'app",
     features=[
+        ("🗑️", "Supprimez les vieux séjours sans hésiter", "Voyez exactement ce qu'occupe un séjour, puis supprimez-le d'un coup — toujours via « Récemment supprimés », jamais de suppression définitive immédiate."),
+        ("📤", "Sauvegardez-le, ou envoyez-le à ceux qui y étaient", "Exportez tout un séjour vers votre Mac ou Fichiers avant de le supprimer, ou partagez-le directement (AirDrop, Fichiers...) avec vos proches — rien n'est perdu pour de bon."),
         ("🧳", "Regroupement automatique par séjour", "Vos photos et vidéos sont regroupées par voyage — en tenant compte à la fois du temps et du lieu, pour ne pas mélanger deux destinations différentes."),
         ("⚖️", "Le poids qui compte", "Chaque séjour affiche l'espace qu'il occupe. Triez par poids pour repérer en un coup d'œil ce qui vaut vraiment la peine d'être trié."),
-        ("📤", "Export et suppression en un geste", "Visionnez, partagez (AirDrop, Fichiers...) ou supprimez un séjour entier d'un coup — toujours via « Récemment supprimés », jamais de suppression définitive immédiate."),
         ("📍", "Lieux personnalisés", "Définissez vos lieux (Domicile, Travail...) et excluez-les de la liste pour ne garder que les vrais voyages."),
         ("🔒", "100% hors ligne", "Aucune photo ni position ne quitte votre iPhone. La reconnaissance des lieux fonctionne entièrement sans connexion, sans compte, sans service tiers."),
         ("🌍", "Disponible en 5 langues", "Français, anglais, italien, allemand, espagnol — l'app s'adapte automatiquement à la langue de votre iPhone."),
@@ -99,12 +99,11 @@ INDEX = {
     footer_desktop="Application de bureau", footer_privacy="Confidentialité", footer_kofi="Ko-fi", footer_github="GitHub",
 ),
 "it": dict(
-    title="TripSweep — ordina le tue foto per viaggio",
-    desc="Ritrova le tue foto e i tuoi video raggruppati per soggiorno, scopri cosa occupa più spazio, ordina ed esporta in un gesto. 100% offline.",
+    title="TripSweep — ripulisci i vecchi viaggi, salva, condividi",
+    desc="Finalmente un modo semplice per eliminare i vecchi soggiorni, salvarli e inviarli a chi era con te. 100% offline.",
     nav_desktop="App desktop", nav_features="Funzionalità", nav_privacy_anchor="Privacy", nav_privacy="Informativa sulla privacy",
-    badge="📱 App compagna per iOS",
-    h1="Le tue foto, finalmente ordinate per viaggio",
-    subtitle="TripSweep raggruppa automaticamente le tue foto e i tuoi video per soggiorno, mostra cosa occupa più spazio e ti permette di ordinare, esportare o eliminare in un gesto — senza mai inviare i tuoi dati altrove.",
+    h1="Finalmente un modo semplice per fare pulizia nei vecchi viaggi",
+    subtitle="TripSweep raggruppa le tue foto e i tuoi video per soggiorno, così puoi vedere esattamente cosa occupa spazio, salvarlo o inviarlo a chi era con te, e poi eliminarlo in un gesto — senza mai inviare i tuoi dati altrove.",
     cta_store="📱 Presto su App Store", cta_kofi="☕ Sostieni il progetto su Ko-fi",
     cta_desktop_link="→ Scopri anche PhotoCull per Mac, l'app desktop che ordina le tue foto",
     hero_alt="Elenco dei soggiorni in TripSweep, ordinato per dimensione",
@@ -113,9 +112,10 @@ INDEX = {
     preview_alt2="Schermata Informazioni di TripSweep",
     features_h2="Cosa fa l'app",
     features=[
+        ("🗑️", "Elimina i vecchi soggiorni senza pensarci troppo", "Scopri esattamente quanto spazio occupa un soggiorno, poi eliminalo tutto in una volta — sempre tramite «Eliminati di recente», mai un'eliminazione definitiva immediata."),
+        ("📤", "Salvalo, o invialo a chi era lì con te", "Esporta un intero soggiorno sul tuo Mac o su File prima di eliminarlo, oppure condividilo direttamente (AirDrop, File...) con amici e familiari — niente va perso per sempre."),
         ("🧳", "Raggruppamento automatico per soggiorno", "Le tue foto e i tuoi video sono raggruppati per viaggio — tenendo conto sia del tempo sia del luogo, per non mescolare mai due destinazioni diverse."),
         ("⚖️", "La dimensione che conta", "Ogni soggiorno mostra lo spazio che occupa. Ordina per dimensione per individuare a colpo d'occhio ciò che vale davvero la pena ordinare."),
-        ("📤", "Esporta ed elimina in un gesto", "Visualizza, condividi (AirDrop, File...) o elimina un intero soggiorno in un colpo solo — sempre tramite «Eliminati di recente», mai un'eliminazione definitiva immediata."),
         ("📍", "Luoghi personalizzati", "Definisci i tuoi luoghi (Casa, Lavoro...) ed escludili dall'elenco per tenere solo i veri viaggi."),
         ("🔒", "100% offline", "Nessuna foto o posizione lascia mai il tuo iPhone. Il riconoscimento dei luoghi funziona interamente senza connessione, senza account, senza servizi di terze parti."),
         ("🌍", "Disponibile in 5 lingue", "Francese, inglese, italiano, tedesco, spagnolo — l'app si adatta automaticamente alla lingua del tuo iPhone."),
@@ -127,12 +127,11 @@ INDEX = {
     footer_desktop="App desktop", footer_privacy="Privacy", footer_kofi="Ko-fi", footer_github="GitHub",
 ),
 "de": dict(
-    title="TripSweep — sortiere deine Fotos nach Reise",
-    desc="Finde deine Fotos und Videos nach Aufenthalt gruppiert, sieh, was am meisten Platz beansprucht, sortiere und exportiere mit einer Geste. 100% offline.",
+    title="TripSweep — alte Reisen aufräumen, sichern, teilen",
+    desc="Endlich eine einfache Möglichkeit, alte Aufenthalte zu löschen, zu sichern und an die Menschen zu schicken, die dabei waren. 100% offline.",
     nav_desktop="Desktop-App", nav_features="Funktionen", nav_privacy_anchor="Datenschutz", nav_privacy="Datenschutzerklärung",
-    badge="📱 iOS-Begleit-App",
-    h1="Deine Fotos, endlich nach Reise sortiert",
-    subtitle="TripSweep gruppiert deine Fotos und Videos automatisch nach Aufenthalt, zeigt dir, was am meisten Platz beansprucht, und lässt dich mit einer Geste sortieren, exportieren oder löschen — ohne dass deine Daten jemals irgendwohin gesendet werden.",
+    h1="Endlich eine einfache Möglichkeit, alte Reisen aufzuräumen",
+    subtitle="TripSweep gruppiert deine Fotos und Videos nach Aufenthalt, damit du genau siehst, was Platz beansprucht, es sichern oder an die Menschen schicken kannst, die dabei waren — und es dann mit einer Geste löschen kannst, ohne dass deine Daten jemals irgendwohin gesendet werden.",
     cta_store="📱 Bald im App Store", cta_kofi="☕ Projekt auf Ko-fi unterstützen",
     cta_desktop_link="→ Entdecke auch PhotoCull für Mac, die Desktop-App, die deine Fotos sortiert",
     hero_alt="Liste der Aufenthalte in TripSweep, nach Größe sortiert",
@@ -141,9 +140,10 @@ INDEX = {
     preview_alt2="TripSweep-Infobildschirm",
     features_h2="Was die App kann",
     features=[
+        ("🗑️", "Alte Aufenthalte ohne langes Überlegen löschen", "Sieh genau, wie viel Platz ein Aufenthalt beansprucht, und lösche ihn dann auf einmal — immer über „Kürzlich gelöscht“, nie ein sofortiges endgültiges Löschen."),
+        ("📤", "Sichern oder an die schicken, die dabei waren", "Exportiere einen ganzen Aufenthalt auf deinen Mac oder in Dateien, bevor du ihn löschst, oder teile ihn direkt (AirDrop, Dateien...) mit Freunden und Familie — nichts geht endgültig verloren."),
         ("🧳", "Automatische Gruppierung nach Aufenthalt", "Deine Fotos und Videos werden nach Reise gruppiert — unter Berücksichtigung von Zeit und Ort, damit zwei verschiedene Reiseziele nie vermischt werden."),
         ("⚖️", "Die Größe, die zählt", "Jeder Aufenthalt zeigt den belegten Speicherplatz. Sortiere nach Größe, um auf einen Blick zu erkennen, was sich wirklich zu sortieren lohnt."),
-        ("📤", "Exportieren und löschen mit einer Geste", "Sieh dir einen ganzen Aufenthalt an, teile ihn (AirDrop, Dateien...) oder lösche ihn auf einmal — immer über „Kürzlich gelöscht“, nie ein sofortiges endgültiges Löschen."),
         ("📍", "Eigene Orte", "Lege eigene Orte fest (Zuhause, Arbeit...) und schließe sie aus der Liste aus, um nur echte Reisen zu behalten."),
         ("🔒", "100% offline", "Kein Foto und kein Standort verlässt jemals dein iPhone. Die Ortserkennung funktioniert vollständig ohne Verbindung, ohne Konto, ohne Drittanbieterdienste."),
         ("🌍", "In 5 Sprachen verfügbar", "Französisch, Englisch, Italienisch, Deutsch, Spanisch — die App passt sich automatisch an die Sprache deines iPhones an."),
@@ -155,12 +155,11 @@ INDEX = {
     footer_desktop="Desktop-App", footer_privacy="Datenschutz", footer_kofi="Ko-fi", footer_github="GitHub",
 ),
 "es": dict(
-    title="TripSweep — ordena tus fotos por viaje",
-    desc="Encuentra tus fotos y vídeos agrupados por estancia, descubre qué ocupa más espacio, ordena y exporta en un gesto. 100% sin conexión.",
+    title="TripSweep — ordena tus viajes antiguos, guarda, comparte",
+    desc="Por fin una forma sencilla de eliminar estancias antiguas, guardarlas y enviárselas a quienes estuvieron allí. 100% sin conexión.",
     nav_desktop="Aplicación de escritorio", nav_features="Funciones", nav_privacy_anchor="Privacidad", nav_privacy="Política de privacidad",
-    badge="📱 Aplicación complementaria para iOS",
-    h1="Tus fotos, por fin ordenadas por viaje",
-    subtitle="TripSweep agrupa automáticamente tus fotos y vídeos por estancia, muestra lo que ocupa más espacio y te permite ordenar, exportar o eliminar en un gesto — sin enviar nunca tus datos a ningún sitio.",
+    h1="Por fin una forma sencilla de ordenar los viajes antiguos",
+    subtitle="TripSweep agrupa tus fotos y vídeos por estancia, para que veas exactamente qué ocupa espacio, lo guardes o se lo envíes a quienes estuvieron allí, y luego lo elimines en un gesto — sin enviar nunca tus datos a ningún sitio.",
     cta_store="📱 Próximamente en App Store", cta_kofi="☕ Apoya el proyecto en Ko-fi",
     cta_desktop_link="→ Descubre también PhotoCull para Mac, la aplicación de escritorio que ordena tus fotos",
     hero_alt="Lista de estancias en TripSweep, ordenada por tamaño",
@@ -169,9 +168,10 @@ INDEX = {
     preview_alt2="Pantalla Acerca de de TripSweep",
     features_h2="Qué hace la app",
     features=[
+        ("🗑️", "Elimina viajes antiguos sin pensarlo dos veces", "Descubre exactamente cuánto ocupa una estancia y luego elimínala de una vez — siempre a través de «Eliminados recientemente», nunca una eliminación definitiva inmediata."),
+        ("📤", "Guárdalo, o envíaselo a quien estuvo allí", "Exporta toda una estancia a tu Mac o a Archivos antes de eliminarla, o compártela directamente (AirDrop, Archivos...) con amigos y familiares — nada se pierde para siempre."),
         ("🧳", "Agrupación automática por estancia", "Tus fotos y vídeos se agrupan por viaje — teniendo en cuenta tanto el tiempo como el lugar, para no mezclar nunca dos destinos distintos."),
         ("⚖️", "El tamaño que importa", "Cada estancia muestra el espacio que ocupa. Ordena por tamaño para detectar de un vistazo lo que realmente vale la pena ordenar."),
-        ("📤", "Exportar y eliminar en un gesto", "Visualiza, comparte (AirDrop, Archivos...) o elimina toda una estancia de una vez — siempre a través de «Eliminados recientemente», nunca una eliminación definitiva inmediata."),
         ("📍", "Lugares personalizados", "Define tus lugares (Casa, Trabajo...) y exclúyelos de la lista para conservar solo los viajes reales."),
         ("🔒", "100% sin conexión", "Ninguna foto ni ubicación sale nunca de tu iPhone. El reconocimiento de lugares funciona completamente sin conexión, sin cuenta y sin servicios de terceros."),
         ("🌍", "Disponible en 5 idiomas", "Francés, inglés, italiano, alemán, español — la app se adapta automáticamente al idioma de tu iPhone."),
@@ -546,7 +546,6 @@ def render_index(lang):
     </header>
 
     <section class="hero">
-      <span class="badge">{d['badge']}</span>
       <h1>{d['h1']}</h1>
       <p class="subtitle">
         {d['subtitle']}
