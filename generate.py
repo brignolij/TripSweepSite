@@ -19,12 +19,14 @@ def path_for(lang, page, from_lang):
 def asset_path(from_lang, rel):
     return ("" if from_lang == "en" else "../") + rel
 
+SITE_ORIGIN = "https://brignolij.github.io/TripSweepSite"
+
 def hreflang_links(page):
     links = []
     for l in LANGS:
-        href = ("/" if l == "en" else f"/{l}/") + page
+        href = SITE_ORIGIN + ("/" if l == "en" else f"/{l}/") + page
         links.append(f'  <link rel="alternate" hreflang="{l}" href="{href}" />')
-    links.append(f'  <link rel="alternate" hreflang="x-default" href="/{page}" />')
+    links.append(f'  <link rel="alternate" hreflang="x-default" href="{SITE_ORIGIN}/{page}" />')
     return "\n".join(links)
 
 def lang_switcher(current_lang, page):
@@ -597,7 +599,7 @@ def render_index(lang):
         <a href="{path_for(lang, 'desktop.html', lang)}">{d['footer_desktop']}</a>
         <a href="{path_for(lang, 'privacy.html', lang)}">{d['footer_privacy']}</a>
         <a href="https://ko-fi.com/jeffreybrignoli" target="_blank" rel="noopener">{d['footer_kofi']}</a>
-        <a href="https://github.com/" target="_blank" rel="noopener">{d['footer_github']}</a>
+        <a href="https://github.com/brignolij/TripSweepSite" target="_blank" rel="noopener">{d['footer_github']}</a>
       </div>
     </footer>
   </div>
@@ -689,7 +691,7 @@ def render_desktop(lang):
         <a href="{path_for(lang, 'index.html', lang)}">{d['footer_ios']}</a>
         <a href="{path_for(lang, 'privacy.html', lang)}">{d['footer_privacy']}</a>
         <a href="https://ko-fi.com/jeffreybrignoli" target="_blank" rel="noopener">{d['footer_kofi']}</a>
-        <a href="https://github.com/" target="_blank" rel="noopener">{d['footer_github']}</a>
+        <a href="https://github.com/brignolij/TripSweepSite" target="_blank" rel="noopener">{d['footer_github']}</a>
       </div>
     </footer>
   </div>
