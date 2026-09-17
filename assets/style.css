@@ -39,6 +39,8 @@ header.nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px 20px;
   padding: 20px 0;
 }
 
@@ -62,8 +64,15 @@ header.nav {
 
 nav.links {
   display: flex;
-  gap: 24px;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 20px;
   font-size: 14px;
+}
+
+.lang-switch {
+  padding-left: 12px;
+  border-left: 1px solid var(--border);
 }
 
 nav.links a {
@@ -205,6 +214,68 @@ nav.links a:hover {
 
 .phone-mock .line.short {
   width: 45%;
+}
+
+.logo-img {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  display: inline-block;
+  object-fit: cover;
+}
+
+.phone-frame {
+  margin: 56px auto 0;
+  width: 240px;
+  border-radius: 40px;
+  background: linear-gradient(160deg, var(--bg-elevated), #0a1526);
+  border: 2px solid var(--border);
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.6);
+  padding: 10px;
+}
+
+.phone-frame img {
+  display: block;
+  width: 100%;
+  border-radius: 32px;
+}
+
+.screens-row {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.phone-frame-small {
+  margin: 0;
+  width: 200px;
+}
+
+.lang-switch {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.lang-switch a {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 4px 7px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+}
+
+.lang-switch a:hover {
+  color: var(--text);
+  border-color: var(--border);
+}
+
+.lang-switch a.active {
+  color: var(--bg);
+  background: var(--accent-2);
 }
 
 section {

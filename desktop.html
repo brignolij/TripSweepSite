@@ -1,38 +1,43 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PhotosManager pour Mac — l'outil de tri de photos</title>
-  <meta name="description" content="L'application de bureau qui trie vos photos par séjour, compare et supprime en masse — 100% hors ligne, sans abonnement." />
+  <title>PhotoCull for Mac — the photo sorting tool</title>
+  <meta name="description" content="The desktop app that sorts your photos by trip, compares and bulk-deletes — 100% offline, no subscription." />
+  <link rel="icon" type="image/png" href="assets/img/favicon-photocull.png" />
+  <link rel="alternate" hreflang="en" href="/desktop.html" />
+  <link rel="alternate" hreflang="fr" href="/fr/desktop.html" />
+  <link rel="alternate" hreflang="it" href="/it/desktop.html" />
+  <link rel="alternate" hreflang="de" href="/de/desktop.html" />
+  <link rel="alternate" hreflang="es" href="/es/desktop.html" />
+  <link rel="alternate" hreflang="x-default" href="/desktop.html" />
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
   <div class="wrap">
     <header class="nav">
       <a class="brand" href="index.html">
-        <span class="logo-dot"></span>
-        PhotosManager
+        <img class="logo-img" src="assets/img/photocull-icon.png" alt="" />
+        PhotoCull
       </a>
       <nav class="links">
-        <a href="index.html">Application iOS</a>
-        <a href="#fonctionnalites">Fonctionnalités</a>
-        <a href="privacy.html">Confidentialité</a>
+        <a href="index.html">iOS app</a>
+        <a href="#fonctionnalites">Features</a>
+        <a href="privacy.html">Privacy</a>
+        <div class="lang-switch"><a href="desktop.html" class="active">EN</a><a href="fr/desktop.html">FR</a><a href="it/desktop.html">IT</a><a href="de/desktop.html">DE</a><a href="es/desktop.html">ES</a></div>
       </nav>
     </header>
 
     <section class="hero">
-      <span class="badge">🖥️ Application de bureau (macOS)</span>
-      <h1>Le vrai outil pour trier des milliers de photos</h1>
+      <span class="badge">🖥️ Desktop app (macOS)</span>
+      <h1>The real tool for sorting thousands of photos</h1>
       <p class="subtitle">
-        PhotosManager est une application de bureau à part entière : elle affiche tout le
-        rouleau de votre iPhone regroupé par séjour, compare vos photos côte à côte, et
-        supprime en masse ce qui ne vaut plus la peine d'être gardé — directement depuis
-        votre Mac.
+        PhotoCull is a full desktop application: it shows your entire iPhone camera roll grouped by trip, compares your photos side by side, and bulk-deletes what's no longer worth keeping — right from your Mac.
       </p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="#" aria-disabled="true">💻 Télécharger pour Mac (bientôt)</a>
-        <a class="btn btn-kofi" href="https://ko-fi.com/jeffreybrignoli" target="_blank" rel="noopener">☕ Soutenir le projet sur Ko-fi</a>
+        <a class="btn btn-primary" href="#" aria-disabled="true">💻 Download for Mac (coming soon)</a>
+        <a class="btn btn-kofi" href="https://ko-fi.com/jeffreybrignoli" target="_blank" rel="noopener">☕ Support the project on Ko-fi</a>
       </div>
 
       <div class="phone-mock" style="width: 420px; height: 280px; border-radius: 16px;" aria-hidden="true">
@@ -50,59 +55,56 @@
     </section>
 
     <section id="fonctionnalites">
-      <h2>Ce que fait l'app</h2>
+      <h2>What the app does</h2>
       <div class="features">
         <div class="feature-card">
           <span class="icon">🧳</span>
-          <h3>Vue "Voyages / séjours"</h3>
-          <p>Toute votre photothèque regroupée automatiquement par séjour (temps ET lieu, comme l'app iOS) — pour repérer d'un coup d'œil les voyages qui prennent le plus de place.</p>
+          <h3>The "Trips" view</h3>
+          <p>Your entire photo library automatically grouped by trip (time AND location, just like the iOS app) — spot at a glance which trips take up the most space.</p>
         </div>
         <div class="feature-card">
           <span class="icon">🔍</span>
-          <h3>Comparaison côte à côte</h3>
-          <p>Affichez jusqu'à 6 photos similaires en même temps pour choisir la meilleure — idéal pour trier les rafales et les quasi-doublons.</p>
+          <h3>Side-by-side comparison</h3>
+          <p>Show up to 6 similar photos at once to pick the best one — perfect for sorting through bursts and near-duplicates.</p>
         </div>
         <div class="feature-card">
           <span class="icon">🗑️</span>
-          <h3>Suppression en masse, en toute sécurité</h3>
-          <p>Marquez des centaines de photos en quelques clics. La suppression réelle passe par l'app compagnon sur votre iPhone et « Récemment supprimés » (30 jours) — jamais de suppression définitive immédiate.</p>
+          <h3>Safe bulk deletion</h3>
+          <p>Mark hundreds of photos in a few clicks. The actual deletion goes through the companion app on your iPhone and “Recently Deleted” (30 days) — never an immediate permanent delete.</p>
         </div>
         <div class="feature-card">
           <span class="icon">⚖️</span>
-          <h3>Le poids qui compte</h3>
-          <p>Triez et filtrez par séjour d'1 jour, par lieu exclu (domicile, travail...), par poids — les mêmes filtres que sur l'app iOS, pensés pour aller vite.</p>
+          <h3>The size that counts</h3>
+          <p>Sort and filter by single-day trip, by excluded place (home, work...), by size — the same filters as the iOS app, built for speed.</p>
         </div>
         <div class="feature-card">
           <span class="icon">🔌</span>
-          <h3>Connexion directe à l'iPhone</h3>
-          <p>Branchez votre iPhone en USB (ou utilisez le mode simulation pour tester) : PhotosManager lit votre rouleau directement, sans passer par iCloud ni aucun serveur.</p>
+          <h3>Direct connection to your iPhone</h3>
+          <p>Plug in your iPhone via USB (or use simulation mode to try it out): PhotoCull reads your camera roll directly, with no iCloud and no server involved.</p>
         </div>
         <div class="feature-card">
           <span class="icon">🔒</span>
-          <h3>100% hors ligne</h3>
-          <p>Aucune photo, aucune position GPS n'est jamais envoyée où que ce soit. La reconnaissance des lieux fonctionne entièrement en local, sans compte ni abonnement.</p>
+          <h3>100% offline</h3>
+          <p>No photo, no GPS location is ever sent anywhere. Place recognition runs entirely locally, with no account and no subscription.</p>
         </div>
       </div>
     </section>
 
     <section>
       <div class="privacy-strip">
-        <h2>Fonctionne avec ou sans l'app iOS</h2>
+        <h2>Works with or without the iOS app</h2>
         <p>
-          PhotosManager pour Mac se suffit à lui-même : connectez simplement votre iPhone en
-          USB. Si vous installez aussi
-          <a href="index.html">l'app compagnon iOS</a>, l'analyse des séjours devient quasi
-          instantanée (calculée directement sur le téléphone) — mais ce n'est jamais
-          obligatoire.
+          PhotoCull for Mac stands entirely on its own: just plug in your iPhone via USB. If you also install 
+          <a href="index.html">the iOS companion app</a>, trip analysis becomes near-instant (computed directly on the phone) — but it's never required.
         </p>
       </div>
     </section>
 
     <footer>
-      <div>© 2026 PhotosManager. Développé par Jeffrey Brignoli.</div>
+      <div>© 2026 PhotoCull. Developed by Jeffrey Brignoli.</div>
       <div class="footer-links">
-        <a href="index.html">Application iOS</a>
-        <a href="privacy.html">Confidentialité</a>
+        <a href="index.html">iOS app</a>
+        <a href="privacy.html">Privacy</a>
         <a href="https://ko-fi.com/jeffreybrignoli" target="_blank" rel="noopener">Ko-fi</a>
         <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
       </div>

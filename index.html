@@ -1,130 +1,117 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PhotosManager Companion — triez vos photos par voyage</title>
-  <meta name="description" content="Retrouvez vos photos et vidéos regroupées par séjour, voyez ce qui prend de la place, triez et exportez en un geste. 100% hors ligne." />
+  <title>TripSweep — sort your photos by trip</title>
+  <meta name="description" content="Find your photos and videos grouped by trip, see what's taking up space, sort and export in one tap. 100% offline." />
+  <link rel="icon" type="image/png" href="assets/img/favicon-tripsweep.png" />
+  <link rel="alternate" hreflang="en" href="/index.html" />
+  <link rel="alternate" hreflang="fr" href="/fr/index.html" />
+  <link rel="alternate" hreflang="it" href="/it/index.html" />
+  <link rel="alternate" hreflang="de" href="/de/index.html" />
+  <link rel="alternate" hreflang="es" href="/es/index.html" />
+  <link rel="alternate" hreflang="x-default" href="/index.html" />
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
   <div class="wrap">
     <header class="nav">
-      <a class="brand" href="#">
-        <span class="logo-dot"></span>
-        PhotosManager Companion
+      <a class="brand" href="index.html">
+        <img class="logo-img" src="assets/img/tripsweep-icon.png" alt="" />
+        TripSweep
       </a>
       <nav class="links">
-        <a href="desktop.html">Application de bureau</a>
-        <a href="#fonctionnalites">Fonctionnalités</a>
-        <a href="#confidentialite">Confidentialité</a>
-        <a href="privacy.html">Politique de confidentialité</a>
+        <a href="desktop.html">Desktop app</a>
+        <a href="#fonctionnalites">Features</a>
+        <a href="#confidentialite">Privacy</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <div class="lang-switch"><a href="index.html" class="active">EN</a><a href="fr/index.html">FR</a><a href="it/index.html">IT</a><a href="de/index.html">DE</a><a href="es/index.html">ES</a></div>
       </nav>
     </header>
 
     <section class="hero">
-      <span class="badge">📱 Application compagnon iOS</span>
-      <h1>Vos photos, enfin triées par voyage</h1>
+      <span class="badge">📱 iOS companion app</span>
+      <h1>Your photos, finally sorted by trip</h1>
       <p class="subtitle">
-        PhotosManager Companion regroupe automatiquement vos photos et vidéos par séjour,
-        affiche ce qui prend le plus de place, et vous laisse trier, exporter ou supprimer
-        en un geste — sans jamais envoyer vos données où que ce soit.
+        TripSweep automatically groups your photos and videos by trip, shows you what's taking up the most space, and lets you sort, export or delete in one tap — without ever sending your data anywhere.
       </p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="#" aria-disabled="true">📱 Bientôt sur l'App Store</a>
-        <a class="btn btn-kofi" href="https://ko-fi.com/jeffreybrignoli" target="_blank" rel="noopener">☕ Soutenir le projet sur Ko-fi</a>
+        <a class="btn btn-primary" href="#" aria-disabled="true">📱 Coming soon to the App Store</a>
+        <a class="btn btn-kofi" href="https://ko-fi.com/jeffreybrignoli" target="_blank" rel="noopener">☕ Support the project on Ko-fi</a>
       </div>
       <p style="margin-top:20px; font-size:14px;">
-        <a href="desktop.html">→ Découvrir aussi PhotosManager pour Mac, l'application de bureau qui trie vos photos</a>
+        <a href="desktop.html">→ Also check out PhotoCull for Mac, the desktop app that sorts your photos</a>
       </p>
 
-      <div class="phone-mock" aria-hidden="true">
-        <div class="screen">
-          <div class="row">
-            <span class="thumb"></span>
-            <div class="lines">
-              <span class="line short"></span>
-              <span class="line"></span>
-            </div>
-          </div>
-          <div class="row">
-            <span class="thumb"></span>
-            <div class="lines">
-              <span class="line short"></span>
-              <span class="line"></span>
-            </div>
-          </div>
-          <div class="row">
-            <span class="thumb"></span>
-            <div class="lines">
-              <span class="line short"></span>
-              <span class="line"></span>
-            </div>
-          </div>
-          <div class="row">
-            <span class="thumb"></span>
-            <div class="lines">
-              <span class="line short"></span>
-              <span class="line"></span>
-            </div>
-          </div>
+      <div class="phone-frame">
+        <img src="assets/screenshots/tripsweep-mytrips-en.jpg" alt="List of trips in TripSweep, sorted by size" />
+      </div>
+    </section>
+
+    <section id="apercu">
+      <h2>A look at the app</h2>
+      <div class="screens-row">
+        <div class="phone-frame phone-frame-small">
+          <img src="assets/screenshots/tripsweep-mytrips-en.jpg" alt="List of trips, sorted by size" />
+        </div>
+        <div class="phone-frame phone-frame-small">
+          <img src="assets/screenshots/tripsweep-about-en.jpg" alt="TripSweep's About screen" />
         </div>
       </div>
     </section>
 
     <section id="fonctionnalites">
-      <h2>Ce que fait l'app</h2>
+      <h2>What the app does</h2>
       <div class="features">
         <div class="feature-card">
           <span class="icon">🧳</span>
-          <h3>Regroupement automatique par séjour</h3>
-          <p>Vos photos et vidéos sont regroupées par voyage — en tenant compte à la fois du temps et du lieu, pour ne pas mélanger deux destinations différentes.</p>
+          <h3>Automatic grouping by trip</h3>
+          <p>Your photos and videos are grouped by trip — factoring in both time and location, so two different destinations never get mixed up.</p>
         </div>
         <div class="feature-card">
           <span class="icon">⚖️</span>
-          <h3>Le poids qui compte</h3>
-          <p>Chaque séjour affiche l'espace qu'il occupe. Triez par poids pour repérer en un coup d'œil ce qui vaut vraiment la peine d'être trié.</p>
+          <h3>The size that counts</h3>
+          <p>Each trip shows how much space it takes up. Sort by size to spot at a glance what's really worth sorting through.</p>
         </div>
         <div class="feature-card">
           <span class="icon">📤</span>
-          <h3>Export et suppression en un geste</h3>
-          <p>Visionnez, partagez (AirDrop, Fichiers...) ou supprimez un séjour entier d'un coup — toujours via « Récemment supprimés », jamais de suppression définitive immédiate.</p>
+          <h3>Export and delete in one tap</h3>
+          <p>View, share (AirDrop, Files...) or delete an entire trip at once — always through “Recently Deleted”, never an immediate permanent delete.</p>
         </div>
         <div class="feature-card">
           <span class="icon">📍</span>
-          <h3>Lieux personnalisés</h3>
-          <p>Définissez vos lieux (Domicile, Travail...) et excluez-les de la liste pour ne garder que les vrais voyages.</p>
+          <h3>Custom places</h3>
+          <p>Define your own places (Home, Work...) and exclude them from the list to keep only real trips.</p>
         </div>
         <div class="feature-card">
           <span class="icon">🔒</span>
-          <h3>100% hors ligne</h3>
-          <p>Aucune photo ni position ne quitte votre iPhone. La reconnaissance des lieux fonctionne entièrement sans connexion, sans compte, sans service tiers.</p>
+          <h3>100% offline</h3>
+          <p>No photo or location ever leaves your iPhone. Place recognition works entirely without a connection, an account, or any third-party service.</p>
         </div>
         <div class="feature-card">
           <span class="icon">🌍</span>
-          <h3>Disponible en 5 langues</h3>
-          <p>Français, anglais, italien, allemand, espagnol — l'app s'adapte automatiquement à la langue de votre iPhone.</p>
+          <h3>Available in 5 languages</h3>
+          <p>English, French, Italian, German, Spanish — the app automatically adapts to your iPhone's language.</p>
         </div>
       </div>
     </section>
 
     <section id="confidentialite">
       <div class="privacy-strip">
-        <h2>Votre vie privée, prise au sérieux</h2>
+        <h2>Your privacy, taken seriously</h2>
         <p>
-          PhotosManager Companion ne collecte, n'envoie et ne partage aucune de vos photos,
-          vidéos ou données de localisation. Tout le traitement — reconnaissance de lieux
-          incluse — se fait localement sur votre iPhone.
+          TripSweep never collects, sends, or shares any of your photos, videos, or location data. All processing — including place recognition — happens locally on your iPhone.
         </p>
-        <a class="btn btn-secondary" href="privacy.html">Lire la politique de confidentialité complète</a>
+        <a class="btn btn-secondary" href="privacy.html">Read the full privacy policy</a>
       </div>
     </section>
 
     <footer>
-      <div>© 2026 PhotosManager Companion. Développé par Jeffrey Brignoli.</div>
+      <div>© 2026 TripSweep. Developed by Jeffrey Brignoli.</div>
       <div class="footer-links">
-        <a href="desktop.html">Application de bureau</a>
-        <a href="privacy.html">Confidentialité</a>
+        <a href="desktop.html">Desktop app</a>
+        <a href="privacy.html">Privacy</a>
         <a href="https://ko-fi.com/jeffreybrignoli" target="_blank" rel="noopener">Ko-fi</a>
         <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
       </div>
