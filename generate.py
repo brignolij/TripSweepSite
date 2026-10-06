@@ -20,6 +20,8 @@ def asset_path(from_lang, rel):
     return ("" if from_lang == "en" else "../") + rel
 
 SITE_ORIGIN = "https://brignolij.github.io/TripSweepSite"
+APP_STORE_URL = "https://apps.apple.com/app/tripsweep/id6813028251"
+APP_STORE_ID = "6813028251"
 
 def hreflang_links(page):
     links = []
@@ -60,7 +62,7 @@ def seo_meta(lang, page, title, desc, image_rel, og_type="website"):
   <meta name="twitter:description" content="{desc}" />
   <meta name="twitter:image" content="{image_url}" />'''
 
-def software_app_ld_json(name, description, url, image_url, operating_system, price="0"):
+def software_app_ld_json(name, description, url, image_url, operating_system, price="0", download_url=None):
     """JSON-LD SoftwareApplication — the structured-data vocabulary both classic search engines and
     AI answer engines (Google SGE, Bing/Copilot, Perplexity...) use to lift out entity facts (what is
     this, what platform, free or paid) instead of having to infer them from prose."""
@@ -84,6 +86,9 @@ def software_app_ld_json(name, description, url, image_url, operating_system, pr
             "name": "Jeffrey Brignoli",
         },
     }
+    if download_url:
+        data["downloadUrl"] = download_url
+        data["installUrl"] = download_url
     return f'  <script type="application/ld+json">{json.dumps(data, ensure_ascii=False)}</script>'
 
 def lang_switcher(current_lang, page):
@@ -105,7 +110,7 @@ INDEX = {
     nav_desktop="Desktop app", nav_features="Features", nav_privacy_anchor="Privacy", nav_privacy="Privacy Policy",
     h1="Finally, an easy way to clear out old trips",
     subtitle="TripSweep groups your photos and videos by trip, so you can see exactly what's taking up space, back it up or send it to the people who were there, then delete it in one tap — without ever sending your data anywhere.",
-    cta_store="📱 Coming soon to the App Store", cta_kofi="☕ Support the project on Ko-fi",
+    cta_store="📱 Download on the App Store", cta_kofi="☕ Support the project on Ko-fi",
     cta_desktop_link="→ Also check out PhotoCull for Mac, the desktop app that sorts your photos",
     hero_alt="List of trips in TripSweep, sorted by size",
     preview_h2="A look at the app",
@@ -133,7 +138,7 @@ INDEX = {
     nav_desktop="Application de bureau", nav_features="Fonctionnalités", nav_privacy_anchor="Confidentialité", nav_privacy="Politique de confidentialité",
     h1="Enfin un moyen simple de faire le tri dans les anciens voyages",
     subtitle="TripSweep regroupe vos photos et vidéos par séjour, pour voir exactement ce qui prend de la place, le sauvegarder ou l'envoyer à ceux qui y étaient, puis le supprimer en un geste — sans jamais envoyer vos données où que ce soit.",
-    cta_store="📱 Bientôt sur l'App Store", cta_kofi="☕ Soutenir le projet sur Ko-fi",
+    cta_store="📱 Télécharger sur l'App Store", cta_kofi="☕ Soutenir le projet sur Ko-fi",
     cta_desktop_link="→ Découvrir aussi PhotoCull pour Mac, l'application de bureau qui trie vos photos",
     hero_alt="Liste des séjours dans TripSweep, triée par poids",
     preview_h2="Un aperçu de l'app",
@@ -161,7 +166,7 @@ INDEX = {
     nav_desktop="App desktop", nav_features="Funzionalità", nav_privacy_anchor="Privacy", nav_privacy="Informativa sulla privacy",
     h1="Finalmente un modo semplice per fare pulizia nei vecchi viaggi",
     subtitle="TripSweep raggruppa le tue foto e i tuoi video per soggiorno, così puoi vedere esattamente cosa occupa spazio, salvarlo o inviarlo a chi era con te, e poi eliminarlo in un gesto — senza mai inviare i tuoi dati altrove.",
-    cta_store="📱 Presto su App Store", cta_kofi="☕ Sostieni il progetto su Ko-fi",
+    cta_store="📱 Scarica su App Store", cta_kofi="☕ Sostieni il progetto su Ko-fi",
     cta_desktop_link="→ Scopri anche PhotoCull per Mac, l'app desktop che ordina le tue foto",
     hero_alt="Elenco dei soggiorni in TripSweep, ordinato per dimensione",
     preview_h2="Uno sguardo all'app",
@@ -189,7 +194,7 @@ INDEX = {
     nav_desktop="Desktop-App", nav_features="Funktionen", nav_privacy_anchor="Datenschutz", nav_privacy="Datenschutzerklärung",
     h1="Endlich eine einfache Möglichkeit, alte Reisen aufzuräumen",
     subtitle="TripSweep gruppiert deine Fotos und Videos nach Aufenthalt, damit du genau siehst, was Platz beansprucht, es sichern oder an die Menschen schicken kannst, die dabei waren — und es dann mit einer Geste löschen kannst, ohne dass deine Daten jemals irgendwohin gesendet werden.",
-    cta_store="📱 Bald im App Store", cta_kofi="☕ Projekt auf Ko-fi unterstützen",
+    cta_store="📱 Im App Store laden", cta_kofi="☕ Projekt auf Ko-fi unterstützen",
     cta_desktop_link="→ Entdecke auch PhotoCull für Mac, die Desktop-App, die deine Fotos sortiert",
     hero_alt="Liste der Aufenthalte in TripSweep, nach Größe sortiert",
     preview_h2="Ein Blick auf die App",
@@ -217,7 +222,7 @@ INDEX = {
     nav_desktop="Aplicación de escritorio", nav_features="Funciones", nav_privacy_anchor="Privacidad", nav_privacy="Política de privacidad",
     h1="Por fin una forma sencilla de ordenar los viajes antiguos",
     subtitle="TripSweep agrupa tus fotos y vídeos por estancia, para que veas exactamente qué ocupa espacio, lo guardes o se lo envíes a quienes estuvieron allí, y luego lo elimines en un gesto — sin enviar nunca tus datos a ningún sitio.",
-    cta_store="📱 Próximamente en App Store", cta_kofi="☕ Apoya el proyecto en Ko-fi",
+    cta_store="📱 Descargar en el App Store", cta_kofi="☕ Apoya el proyecto en Ko-fi",
     cta_desktop_link="→ Descubre también PhotoCull para Mac, la aplicación de escritorio que ordena tus fotos",
     hero_alt="Lista de estancias en TripSweep, ordenada por tamaño",
     preview_h2="Un vistazo a la app",
@@ -590,7 +595,8 @@ def render_index(lang):
   <link rel="icon" type="image/png" href="{a('assets/img/favicon-tripsweep.png')}" />
 {hreflang_links('index.html')}
 {seo_meta(lang, 'index.html', d['title'], d['desc'], f'assets/screenshots/tripsweep-mytrips-{lang}.jpg')}
-{software_app_ld_json("TripSweep", d['desc'], page_url(lang, 'index.html'), SITE_ORIGIN + '/assets/img/tripsweep-icon.png', "iOS")}
+{software_app_ld_json("TripSweep", d['desc'], page_url(lang, 'index.html'), SITE_ORIGIN + '/assets/img/tripsweep-icon.png', "iOS", download_url=APP_STORE_URL)}
+  <meta name="apple-itunes-app" content="app-id={APP_STORE_ID}" />
   <link rel="stylesheet" href="{a('assets/style.css')}" />
 </head>
 <body>
@@ -615,7 +621,7 @@ def render_index(lang):
         {d['subtitle']}
       </p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="#" aria-disabled="true">{d['cta_store']}</a>
+        <a class="btn btn-primary" href="{APP_STORE_URL}" target="_blank" rel="noopener">{d['cta_store']}</a>
         <a class="btn btn-kofi" href="https://ko-fi.com/jeffreybrignoli" target="_blank" rel="noopener">{d['cta_kofi']}</a>
       </div>
       <p style="margin-top:20px; font-size:14px;">
@@ -884,7 +890,7 @@ for lang in LANGS:
 # engines are documented to also read it from the sitemap directly).
 # ---------------------------------------------------------------------------
 
-LASTMOD = "2026-09-17"
+LASTMOD = "2026-10-06"
 
 def sitemap_entry(page):
     urls = []
@@ -963,6 +969,7 @@ llms_txt = f'''# TripSweep & PhotoCull
 
 ## Pages
 
+- [TripSweep on the App Store]({APP_STORE_URL}): download the iOS app.
 - [TripSweep (iOS app)]({SITE_ORIGIN}/index.html): grouping, backup, sharing and deletion of trips on iPhone.
 - [PhotoCull (macOS app)]({SITE_ORIGIN}/desktop.html): desktop companion for comparing and bulk-deleting photos.
 - [Privacy Policy]({SITE_ORIGIN}/privacy.html): what data is used, where it goes (nowhere), and why.

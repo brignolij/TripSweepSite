@@ -92,7 +92,7 @@ publié via GitHub Pages sans exposer le code de l'app.
 ## À faire avant publication
 
 - [ ] Remplacer le lien GitHub factice du pied de page par le vrai dépôt.
-- [ ] Remplacer le bouton "Bientôt sur l'App Store" / "Télécharger pour Mac (bientôt)"
+- [ ] Remplacer le bouton "Disponible sur l'App Store" / "Télécharger pour Mac (bientôt)"
       par les vrais liens une fois les apps publiées.
 - [ ] URLs hreflang absolues (voir ci-dessus) une fois le domaine définitif connu.
 - [ ] Captures d'écran de l'app de bureau PhotoCull (le hero garde encore le mockup CSS).

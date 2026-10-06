@@ -8,6 +8,7 @@
 
 ## Pages
 
+- [TripSweep on the App Store](https://apps.apple.com/app/tripsweep/id6813028251): download the iOS app.
 - [TripSweep (iOS app)](https://brignolij.github.io/TripSweepSite/index.html): grouping, backup, sharing and deletion of trips on iPhone.
 - [PhotoCull (macOS app)](https://brignolij.github.io/TripSweepSite/desktop.html): desktop companion for comparing and bulk-deleting photos.
 - [Privacy Policy](https://brignolij.github.io/TripSweepSite/privacy.html): what data is used, where it goes (nowhere), and why.
