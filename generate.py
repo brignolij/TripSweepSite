@@ -48,7 +48,8 @@ def seo_meta(lang, page, title, desc, image_rel, og_type="website"):
     alt_locales = "\n".join(
         f'  <meta property="og:locale:alternate" content="{OG_LOCALE[l]}" />' for l in LANGS if l != lang
     )
-    return f'''  <link rel="canonical" href="{url}" />
+    return f'''  <meta name="google-site-verification" content="5HOh0hrLDaKSXUZ1k1-Y7yOrdBucjiu6-zij86Fq-xM" />
+  <link rel="canonical" href="{url}" />
   <meta property="og:type" content="{og_type}" />
   <meta property="og:site_name" content="TripSweep" />
   <meta property="og:title" content="{title}" />
