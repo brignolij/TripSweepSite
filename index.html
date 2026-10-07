@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TripSweep — clean up old trips, back up, share</title>
-  <meta name="description" content="Finally an easy way to delete old trips, back them up, and send them to the people who were there. 100% offline." />
+  <title>TripSweep — clean up old trips, find similar photos, back up, share</title>
+  <meta name="description" content="Delete old trips, spot near-duplicate photos and free up gigabytes, back everything up and share it with the people who were there. 100% offline." />
   <link rel="icon" type="image/png" href="assets/img/favicon-tripsweep.png" />
   <link rel="alternate" hreflang="en" href="https://brignolij.github.io/TripSweepSite/index.html" />
   <link rel="alternate" hreflang="fr" href="https://brignolij.github.io/TripSweepSite/fr/index.html" />
@@ -18,8 +18,8 @@
   <link rel="canonical" href="https://brignolij.github.io/TripSweepSite/index.html" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="TripSweep" />
-  <meta property="og:title" content="TripSweep — clean up old trips, back up, share" />
-  <meta property="og:description" content="Finally an easy way to delete old trips, back them up, and send them to the people who were there. 100% offline." />
+  <meta property="og:title" content="TripSweep — clean up old trips, find similar photos, back up, share" />
+  <meta property="og:description" content="Delete old trips, spot near-duplicate photos and free up gigabytes, back everything up and share it with the people who were there. 100% offline." />
   <meta property="og:url" content="https://brignolij.github.io/TripSweepSite/index.html" />
   <meta property="og:image" content="https://brignolij.github.io/TripSweepSite/assets/screenshots/tripsweep-mytrips-en.jpg" />
   <meta property="og:locale" content="en_US" />
@@ -28,10 +28,10 @@
   <meta property="og:locale:alternate" content="de_DE" />
   <meta property="og:locale:alternate" content="es_ES" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="TripSweep — clean up old trips, back up, share" />
-  <meta name="twitter:description" content="Finally an easy way to delete old trips, back them up, and send them to the people who were there. 100% offline." />
+  <meta name="twitter:title" content="TripSweep — clean up old trips, find similar photos, back up, share" />
+  <meta name="twitter:description" content="Delete old trips, spot near-duplicate photos and free up gigabytes, back everything up and share it with the people who were there. 100% offline." />
   <meta name="twitter:image" content="https://brignolij.github.io/TripSweepSite/assets/screenshots/tripsweep-mytrips-en.jpg" />
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "TripSweep", "description": "Finally an easy way to delete old trips, back them up, and send them to the people who were there. 100% offline.", "url": "https://brignolij.github.io/TripSweepSite/index.html", "image": "https://brignolij.github.io/TripSweepSite/assets/img/tripsweep-icon.png", "operatingSystem": "iOS", "applicationCategory": "PhotoApplication", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "author": {"@type": "Person", "name": "Jeffrey Brignoli"}, "downloadUrl": "https://apps.apple.com/app/tripsweep/id6813028251", "installUrl": "https://apps.apple.com/app/tripsweep/id6813028251"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "TripSweep", "description": "Delete old trips, spot near-duplicate photos and free up gigabytes, back everything up and share it with the people who were there. 100% offline.", "url": "https://brignolij.github.io/TripSweepSite/index.html", "image": "https://brignolij.github.io/TripSweepSite/assets/img/tripsweep-icon.png", "operatingSystem": "iOS", "applicationCategory": "PhotoApplication", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "author": {"@type": "Person", "name": "Jeffrey Brignoli"}, "downloadUrl": "https://apps.apple.com/app/tripsweep/id6813028251", "installUrl": "https://apps.apple.com/app/tripsweep/id6813028251"}</script>
   <meta name="apple-itunes-app" content="app-id=6813028251" />
   <link rel="stylesheet" href="assets/style.css" />
 </head>
@@ -54,7 +54,7 @@
     <section class="hero">
       <h1>Finally, an easy way to clear out old trips</h1>
       <p class="subtitle">
-        TripSweep groups your photos and videos by trip, so you can see exactly what's taking up space, back it up or send it to the people who were there, then delete it in one tap — without ever sending your data anywhere.
+        TripSweep groups your photos and videos by trip, shows what's taking up space and how much of it is near-duplicates, then lets you keep the best shot and delete the rest — without ever sending your data anywhere.
       </p>
       <div class="cta-row">
         <a class="btn btn-primary" href="https://apps.apple.com/app/tripsweep/id6813028251" target="_blank" rel="noopener">📱 Download on the App Store</a>
@@ -65,7 +65,7 @@
       </p>
 
       <div class="phone-frame">
-        <img src="assets/screenshots/tripsweep-mytrips-en.jpg" alt="List of trips in TripSweep, sorted by size" />
+        <img src="assets/screenshots/tripsweep-mytrips-en.jpg" alt="List of trips in TripSweep, with the share of similar photos for each trip" />
       </div>
     </section>
 
@@ -73,10 +73,16 @@
       <h2>A look at the app</h2>
       <div class="screens-row">
         <div class="phone-frame phone-frame-small">
-          <img src="assets/screenshots/tripsweep-mytrips-en.jpg" alt="List of trips, sorted by size" />
+          <img src="assets/screenshots/tripsweep-mytrips-en.jpg" alt="List of trips with the share of similar photos and the total weight" loading="lazy" />
         </div>
         <div class="phone-frame phone-frame-small">
-          <img src="assets/screenshots/tripsweep-about-en.jpg" alt="TripSweep's About screen" />
+          <img src="assets/screenshots/tripsweep-viewer-en.jpg" alt="Full-screen viewer with the similar-photos button" loading="lazy" />
+        </div>
+        <div class="phone-frame phone-frame-small">
+          <img src="assets/screenshots/tripsweep-similar-en.jpg" alt="Reviewing a group of similar photos: keep the best, delete the rest" loading="lazy" />
+        </div>
+        <div class="phone-frame phone-frame-small">
+          <img src="assets/screenshots/tripsweep-about-en.jpg" alt="Free vs Pro comparison in TripSweep" loading="lazy" />
         </div>
       </div>
     </section>
@@ -85,24 +91,39 @@
       <h2>What the app does</h2>
       <div class="features">
         <div class="feature-card">
+          <span class="icon">🧳</span>
+          <h3>Automatic grouping by trip</h3>
+          <p>Your photos and videos are grouped by trip — factoring in both time and location, so two different destinations never get mixed up. Trips are stored on your iPhone: the list appears instantly at launch, then refreshes in the background.</p>
+        </div>
+        <div class="feature-card">
+          <span class="icon">🪞</span>
+          <h3>Similar photos, found for you</h3>
+          <p>TripSweep analyzes your photos in the background, on your iPhone, with Apple's Vision framework. Each trip shows how much of it is near-duplicates (“≈ 27% similar · 4.3 GB to free up”) — a good reason to come back and sort.</p>
+        </div>
+        <div class="feature-card">
+          <span class="icon">🔎</span>
+          <h3>Compare and pick the best</h3>
+          <p>Open a group of similar photos: portraits side by side, landscapes stacked, never cropped. A best shot is suggested (sharpness, Apple's aesthetic score, faces), bursts are grouped automatically, and your favorites are never marked for deletion.</p>
+        </div>
+        <div class="feature-card">
+          <span class="icon">⚖️</span>
+          <h3>The size that counts</h3>
+          <p>Sort trips by date or by size with one big button. A footer shows the total weight of your photos and the share that is similar — to see at a glance where sorting pays off.</p>
+        </div>
+        <div class="feature-card">
+          <span class="icon">👆</span>
+          <h3>Free to browse, easy to sort</h3>
+          <p>Tapping a trip opens the viewer — free. Mark any photo for deletion, similar or not, from the grid or in full screen; a big button jumps straight to the group when a photo has similar ones.</p>
+        </div>
+        <div class="feature-card">
           <span class="icon">🗑️</span>
-          <h3>Delete old trips without the guesswork</h3>
-          <p>See exactly what a trip is taking up, then delete it all at once — always through “Recently Deleted”, never an immediate permanent delete.</p>
+          <h3>Delete without the guesswork</h3>
+          <p>Always through “Recently Deleted”, never an immediate permanent delete. The free version includes 3 deletions a day from the viewer; Pro removes the limit.</p>
         </div>
         <div class="feature-card">
           <span class="icon">📤</span>
           <h3>Back it up, or send it to someone who was there</h3>
           <p>Export an entire trip to your Mac or Files before you delete it, or share it directly (AirDrop, Files...) with friends and family — nothing gets lost for good.</p>
-        </div>
-        <div class="feature-card">
-          <span class="icon">🧳</span>
-          <h3>Automatic grouping by trip</h3>
-          <p>Your photos and videos are grouped by trip — factoring in both time and location, so two different destinations never get mixed up.</p>
-        </div>
-        <div class="feature-card">
-          <span class="icon">⚖️</span>
-          <h3>The size that counts</h3>
-          <p>Each trip shows how much space it takes up. Sort by size to spot at a glance what's really worth sorting through.</p>
         </div>
         <div class="feature-card">
           <span class="icon">📍</span>
@@ -112,12 +133,12 @@
         <div class="feature-card">
           <span class="icon">🔒</span>
           <h3>100% offline</h3>
-          <p>No photo or location ever leaves your iPhone. Place recognition works entirely without a connection, an account, or any third-party service.</p>
+          <p>No photo or location ever leaves your iPhone. Place recognition and similar-photo detection both run entirely on the device, with no connection, account, or third-party service.</p>
         </div>
         <div class="feature-card">
           <span class="icon">🌍</span>
           <h3>Available in 5 languages</h3>
-          <p>English, French, Italian, German, Spanish — the app automatically adapts to your iPhone's language.</p>
+          <p>English, French, Italian, German, Spanish — the app automatically adapts to your iPhone's language, in portrait or landscape.</p>
         </div>
       </div>
     </section>

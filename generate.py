@@ -108,26 +108,31 @@ def lang_switcher(current_lang, page):
 
 INDEX = {
 "en": dict(
-    title="TripSweep — clean up old trips, back up, share",
-    desc="Finally an easy way to delete old trips, back them up, and send them to the people who were there. 100% offline.",
+    title="TripSweep — clean up old trips, find similar photos, back up, share",
+    desc="Delete old trips, spot near-duplicate photos and free up gigabytes, back everything up and share it with the people who were there. 100% offline.",
     nav_desktop="Desktop app", nav_features="Features", nav_privacy_anchor="Privacy", nav_privacy="Privacy Policy",
     h1="Finally, an easy way to clear out old trips",
-    subtitle="TripSweep groups your photos and videos by trip, so you can see exactly what's taking up space, back it up or send it to the people who were there, then delete it in one tap — without ever sending your data anywhere.",
+    subtitle="TripSweep groups your photos and videos by trip, shows what's taking up space and how much of it is near-duplicates, then lets you keep the best shot and delete the rest — without ever sending your data anywhere.",
     cta_store="📱 Download on the App Store", cta_kofi="☕ Support the project on Ko-fi",
     cta_desktop_link="→ Also check out PhotoCull for Mac, the desktop app that sorts your photos",
-    hero_alt="List of trips in TripSweep, sorted by size",
+    hero_alt="List of trips in TripSweep, with the share of similar photos for each trip",
     preview_h2="A look at the app",
-    preview_alt1="List of trips, sorted by size",
-    preview_alt2="TripSweep's About screen",
+    preview_alt1="List of trips with the share of similar photos and the total weight",
+    preview_alt2="Full-screen viewer with the similar-photos button",
+    preview_alt3="Reviewing a group of similar photos: keep the best, delete the rest",
+    preview_alt4="Free vs Pro comparison in TripSweep",
     features_h2="What the app does",
     features=[
-        ("🗑️", "Delete old trips without the guesswork", "See exactly what a trip is taking up, then delete it all at once — always through “Recently Deleted”, never an immediate permanent delete."),
+        ("🧳", "Automatic grouping by trip", "Your photos and videos are grouped by trip — factoring in both time and location, so two different destinations never get mixed up. Trips are stored on your iPhone: the list appears instantly at launch, then refreshes in the background."),
+        ("🪞", "Similar photos, found for you", "TripSweep analyzes your photos in the background, on your iPhone, with Apple's Vision framework. Each trip shows how much of it is near-duplicates (“≈ 27% similar · 4.3 GB to free up”) — a good reason to come back and sort."),
+        ("🔎", "Compare and pick the best", "Open a group of similar photos: portraits side by side, landscapes stacked, never cropped. A best shot is suggested (sharpness, Apple's aesthetic score, faces), bursts are grouped automatically, and your favorites are never marked for deletion."),
+        ("⚖️", "The size that counts", "Sort trips by date or by size with one big button. A footer shows the total weight of your photos and the share that is similar — to see at a glance where sorting pays off."),
+        ("👆", "Free to browse, easy to sort", "Tapping a trip opens the viewer — free. Mark any photo for deletion, similar or not, from the grid or in full screen; a big button jumps straight to the group when a photo has similar ones."),
+        ("🗑️", "Delete without the guesswork", "Always through “Recently Deleted”, never an immediate permanent delete. The free version includes 3 deletions a day from the viewer; Pro removes the limit."),
         ("📤", "Back it up, or send it to someone who was there", "Export an entire trip to your Mac or Files before you delete it, or share it directly (AirDrop, Files...) with friends and family — nothing gets lost for good."),
-        ("🧳", "Automatic grouping by trip", "Your photos and videos are grouped by trip — factoring in both time and location, so two different destinations never get mixed up."),
-        ("⚖️", "The size that counts", "Each trip shows how much space it takes up. Sort by size to spot at a glance what's really worth sorting through."),
         ("📍", "Custom places", "Define your own places (Home, Work...) and exclude them from the list to keep only real trips."),
-        ("🔒", "100% offline", "No photo or location ever leaves your iPhone. Place recognition works entirely without a connection, an account, or any third-party service."),
-        ("🌍", "Available in 5 languages", "English, French, Italian, German, Spanish — the app automatically adapts to your iPhone's language."),
+        ("🔒", "100% offline", "No photo or location ever leaves your iPhone. Place recognition and similar-photo detection both run entirely on the device, with no connection, account, or third-party service."),
+        ("🌍", "Available in 5 languages", "English, French, Italian, German, Spanish — the app automatically adapts to your iPhone's language, in portrait or landscape."),
     ],
     privacy_h2="Your privacy, taken seriously",
     privacy_p="TripSweep never collects, sends, or shares any of your photos, videos, or location data. All processing — including place recognition — happens locally on your iPhone.",
@@ -136,26 +141,31 @@ INDEX = {
     footer_desktop="Desktop app", footer_privacy="Privacy", footer_kofi="Ko-fi", footer_github="GitHub",
 ),
 "fr": dict(
-    title="TripSweep — nettoyez vos vieux voyages, sauvegardez, partagez",
-    desc="Enfin un moyen simple de supprimer les vieux séjours, de les sauvegarder et de les envoyer à ceux qui y étaient. 100% hors ligne.",
+    title="TripSweep — nettoyez vos vieux voyages, repérez les photos similaires, sauvegardez, partagez",
+    desc="Supprimez les vieux séjours, repérez les quasi-doublons pour libérer des gigaoctets, sauvegardez tout et partagez avec ceux qui y étaient. 100% hors ligne.",
     nav_desktop="Application de bureau", nav_features="Fonctionnalités", nav_privacy_anchor="Confidentialité", nav_privacy="Politique de confidentialité",
     h1="Enfin un moyen simple de faire le tri dans les anciens voyages",
-    subtitle="TripSweep regroupe vos photos et vidéos par séjour, pour voir exactement ce qui prend de la place, le sauvegarder ou l'envoyer à ceux qui y étaient, puis le supprimer en un geste — sans jamais envoyer vos données où que ce soit.",
+    subtitle="TripSweep regroupe vos photos et vidéos par séjour, montre ce qui prend de la place et quelle part est faite de quasi-doublons, puis vous laisse garder la meilleure prise et supprimer le reste — sans jamais envoyer vos données où que ce soit.",
     cta_store="📱 Télécharger sur l'App Store", cta_kofi="☕ Soutenir le projet sur Ko-fi",
     cta_desktop_link="→ Découvrir aussi PhotoCull pour Mac, l'application de bureau qui trie vos photos",
-    hero_alt="Liste des séjours dans TripSweep, triée par poids",
+    hero_alt="Liste des séjours dans TripSweep, avec la part de photos similaires de chaque séjour",
     preview_h2="Un aperçu de l'app",
-    preview_alt1="Liste des séjours, triée par poids",
-    preview_alt2="Écran À propos de TripSweep",
+    preview_alt1="Liste des séjours avec la part de photos similaires et le poids total",
+    preview_alt2="Visionneuse plein écran avec le bouton des photos similaires",
+    preview_alt3="Revue d'un groupe de photos similaires : garder la meilleure, supprimer le reste",
+    preview_alt4="Comparatif Gratuit / Pro dans TripSweep",
     features_h2="Ce que fait l'app",
     features=[
-        ("🗑️", "Supprimez les vieux séjours sans hésiter", "Voyez exactement ce qu'occupe un séjour, puis supprimez-le d'un coup — toujours via « Récemment supprimés », jamais de suppression définitive immédiate."),
+        ("🧳", "Regroupement automatique par séjour", "Vos photos et vidéos sont regroupées par voyage — en tenant compte à la fois du temps et du lieu, pour ne pas mélanger deux destinations différentes. Les séjours sont mémorisés sur votre iPhone : la liste s'affiche instantanément au lancement, puis se met à jour en arrière-plan."),
+        ("🪞", "Photos similaires, repérées pour vous", "TripSweep analyse vos photos en arrière-plan, sur votre iPhone, avec le framework Vision d'Apple. Chaque séjour indique la part de quasi-doublons (« ≈ 27 % similaires · 4,3 Go à libérer ») — une bonne raison de venir trier."),
+        ("🔎", "Comparez et choisissez la meilleure", "Ouvrez un groupe de photos similaires : portraits côte à côte, paysages les uns sous les autres, jamais recadrés. Une meilleure prise est suggérée (netteté, score esthétique d'Apple, visages), les rafales sont regroupées automatiquement et vos favoris ne sont jamais marqués pour suppression."),
+        ("⚖️", "Le poids qui compte", "Triez les séjours par date ou par poids d'un seul gros bouton. Un pied de page affiche le poids total de vos photos et la part de photos similaires — pour voir d'un coup d'œil où le tri est rentable."),
+        ("👆", "Visionneuse gratuite, tri facile", "Toucher un séjour ouvre la visionneuse — gratuitement. Marquez n'importe quelle photo à supprimer, similaire ou non, depuis la grille ou en plein écran ; un gros bouton ouvre directement le groupe quand la photo a des similaires."),
+        ("🗑️", "Supprimez sans hésiter", "Toujours via « Récemment supprimés », jamais de suppression définitive immédiate. La version gratuite inclut 3 suppressions par jour depuis la visionneuse ; Pro lève la limite."),
         ("📤", "Sauvegardez-le, ou envoyez-le à ceux qui y étaient", "Exportez tout un séjour vers votre Mac ou Fichiers avant de le supprimer, ou partagez-le directement (AirDrop, Fichiers...) avec vos proches — rien n'est perdu pour de bon."),
-        ("🧳", "Regroupement automatique par séjour", "Vos photos et vidéos sont regroupées par voyage — en tenant compte à la fois du temps et du lieu, pour ne pas mélanger deux destinations différentes."),
-        ("⚖️", "Le poids qui compte", "Chaque séjour affiche l'espace qu'il occupe. Triez par poids pour repérer en un coup d'œil ce qui vaut vraiment la peine d'être trié."),
         ("📍", "Lieux personnalisés", "Définissez vos lieux (Domicile, Travail...) et excluez-les de la liste pour ne garder que les vrais voyages."),
-        ("🔒", "100% hors ligne", "Aucune photo ni position ne quitte votre iPhone. La reconnaissance des lieux fonctionne entièrement sans connexion, sans compte, sans service tiers."),
-        ("🌍", "Disponible en 5 langues", "Français, anglais, italien, allemand, espagnol — l'app s'adapte automatiquement à la langue de votre iPhone."),
+        ("🔒", "100% hors ligne", "Aucune photo ni position ne quitte votre iPhone. La reconnaissance des lieux et la détection des photos similaires fonctionnent entièrement sur l'appareil, sans connexion, sans compte, sans service tiers."),
+        ("🌍", "Disponible en 5 langues", "Français, anglais, italien, allemand, espagnol — l'app s'adapte automatiquement à la langue de votre iPhone, en portrait comme en paysage."),
     ],
     privacy_h2="Votre vie privée, prise au sérieux",
     privacy_p="TripSweep ne collecte, n'envoie et ne partage aucune de vos photos, vidéos ou données de localisation. Tout le traitement — reconnaissance de lieux incluse — se fait localement sur votre iPhone.",
@@ -164,26 +174,31 @@ INDEX = {
     footer_desktop="Application de bureau", footer_privacy="Confidentialité", footer_kofi="Ko-fi", footer_github="GitHub",
 ),
 "it": dict(
-    title="TripSweep — ripulisci i vecchi viaggi, salva, condividi",
-    desc="Finalmente un modo semplice per eliminare i vecchi soggiorni, salvarli e inviarli a chi era con te. 100% offline.",
+    title="TripSweep — ripulisci i vecchi viaggi, trova le foto simili, salva, condividi",
+    desc="Elimina i vecchi soggiorni, individua i quasi-duplicati per liberare gigabyte, salva tutto e condividi con chi era con te. 100% offline.",
     nav_desktop="App desktop", nav_features="Funzionalità", nav_privacy_anchor="Privacy", nav_privacy="Informativa sulla privacy",
     h1="Finalmente un modo semplice per fare pulizia nei vecchi viaggi",
-    subtitle="TripSweep raggruppa le tue foto e i tuoi video per soggiorno, così puoi vedere esattamente cosa occupa spazio, salvarlo o inviarlo a chi era con te, e poi eliminarlo in un gesto — senza mai inviare i tuoi dati altrove.",
+    subtitle="TripSweep raggruppa le tue foto e i tuoi video per soggiorno, mostra cosa occupa spazio e quanta parte sono quasi-duplicati, poi ti lascia tenere lo scatto migliore ed eliminare il resto — senza mai inviare i tuoi dati altrove.",
     cta_store="📱 Scarica su App Store", cta_kofi="☕ Sostieni il progetto su Ko-fi",
     cta_desktop_link="→ Scopri anche PhotoCull per Mac, l'app desktop che ordina le tue foto",
-    hero_alt="Elenco dei soggiorni in TripSweep, ordinato per dimensione",
+    hero_alt="Elenco dei soggiorni in TripSweep, con la quota di foto simili di ogni soggiorno",
     preview_h2="Uno sguardo all'app",
-    preview_alt1="Elenco dei soggiorni, ordinato per dimensione",
-    preview_alt2="Schermata Informazioni di TripSweep",
+    preview_alt1="Elenco dei soggiorni con la quota di foto simili e il peso totale",
+    preview_alt2="Visualizzatore a schermo intero con il pulsante delle foto simili",
+    preview_alt3="Revisione di un gruppo di foto simili: tieni la migliore, elimina il resto",
+    preview_alt4="Confronto Gratis / Pro in TripSweep",
     features_h2="Cosa fa l'app",
     features=[
-        ("🗑️", "Elimina i vecchi soggiorni senza pensarci troppo", "Scopri esattamente quanto spazio occupa un soggiorno, poi eliminalo tutto in una volta — sempre tramite «Eliminati di recente», mai un'eliminazione definitiva immediata."),
+        ("🧳", "Raggruppamento automatico per soggiorno", "Le tue foto e i tuoi video sono raggruppati per viaggio — tenendo conto sia del tempo sia del luogo, per non mescolare mai due destinazioni diverse. I soggiorni sono memorizzati sul tuo iPhone: l'elenco compare subito all'avvio, poi si aggiorna in background."),
+        ("🪞", "Foto simili, trovate per te", "TripSweep analizza le tue foto in background, sul tuo iPhone, con il framework Vision di Apple. Ogni soggiorno mostra la quota di quasi-duplicati («≈ 27% simili · 4,3 GB da liberare») — un buon motivo per tornare a fare ordine."),
+        ("🔎", "Confronta e scegli la migliore", "Apri un gruppo di foto simili: i ritratti affiancati, i paesaggi uno sotto l'altro, mai ritagliati. Viene suggerito lo scatto migliore (nitidezza, punteggio estetico di Apple, volti), le raffiche sono raggruppate automaticamente e i tuoi preferiti non vengono mai segnati per l'eliminazione."),
+        ("⚖️", "La dimensione che conta", "Ordina i soggiorni per data o per dimensione con un solo grande pulsante. Un piè di pagina mostra il peso totale delle tue foto e la quota di foto simili — per vedere a colpo d'occhio dove conviene fare ordine."),
+        ("👆", "Visualizzatore gratuito, ordine facile", "Toccare un soggiorno apre il visualizzatore — gratis. Segna da eliminare qualsiasi foto, simile o no, dalla griglia o a schermo intero; un grande pulsante apre direttamente il gruppo quando una foto ha delle simili."),
+        ("🗑️", "Elimina senza pensarci troppo", "Sempre tramite «Eliminati di recente», mai un'eliminazione definitiva immediata. La versione gratuita include 3 eliminazioni al giorno dal visualizzatore; Pro toglie il limite."),
         ("📤", "Salvalo, o invialo a chi era lì con te", "Esporta un intero soggiorno sul tuo Mac o su File prima di eliminarlo, oppure condividilo direttamente (AirDrop, File...) con amici e familiari — niente va perso per sempre."),
-        ("🧳", "Raggruppamento automatico per soggiorno", "Le tue foto e i tuoi video sono raggruppati per viaggio — tenendo conto sia del tempo sia del luogo, per non mescolare mai due destinazioni diverse."),
-        ("⚖️", "La dimensione che conta", "Ogni soggiorno mostra lo spazio che occupa. Ordina per dimensione per individuare a colpo d'occhio ciò che vale davvero la pena ordinare."),
         ("📍", "Luoghi personalizzati", "Definisci i tuoi luoghi (Casa, Lavoro...) ed escludili dall'elenco per tenere solo i veri viaggi."),
-        ("🔒", "100% offline", "Nessuna foto o posizione lascia mai il tuo iPhone. Il riconoscimento dei luoghi funziona interamente senza connessione, senza account, senza servizi di terze parti."),
-        ("🌍", "Disponibile in 5 lingue", "Francese, inglese, italiano, tedesco, spagnolo — l'app si adatta automaticamente alla lingua del tuo iPhone."),
+        ("🔒", "100% offline", "Nessuna foto o posizione lascia mai il tuo iPhone. Il riconoscimento dei luoghi e il rilevamento delle foto simili funzionano interamente sul dispositivo, senza connessione, senza account, senza servizi di terze parti."),
+        ("🌍", "Disponibile in 5 lingue", "Francese, inglese, italiano, tedesco, spagnolo — l'app si adatta automaticamente alla lingua del tuo iPhone, in verticale e in orizzontale."),
     ],
     privacy_h2="La tua privacy, presa sul serio",
     privacy_p="TripSweep non raccoglie, invia o condivide mai le tue foto, i tuoi video o i tuoi dati di posizione. Tutta l'elaborazione — incluso il riconoscimento dei luoghi — avviene localmente sul tuo iPhone.",
@@ -192,26 +207,31 @@ INDEX = {
     footer_desktop="App desktop", footer_privacy="Privacy", footer_kofi="Ko-fi", footer_github="GitHub",
 ),
 "de": dict(
-    title="TripSweep — alte Reisen aufräumen, sichern, teilen",
-    desc="Endlich eine einfache Möglichkeit, alte Aufenthalte zu löschen, zu sichern und an die Menschen zu schicken, die dabei waren. 100% offline.",
+    title="TripSweep — alte Reisen aufräumen, ähnliche Fotos finden, sichern, teilen",
+    desc="Alte Aufenthalte löschen, nahezu doppelte Fotos aufspüren und Gigabytes freigeben, alles sichern und mit den Menschen teilen, die dabei waren. 100% offline.",
     nav_desktop="Desktop-App", nav_features="Funktionen", nav_privacy_anchor="Datenschutz", nav_privacy="Datenschutzerklärung",
     h1="Endlich eine einfache Möglichkeit, alte Reisen aufzuräumen",
-    subtitle="TripSweep gruppiert deine Fotos und Videos nach Aufenthalt, damit du genau siehst, was Platz beansprucht, es sichern oder an die Menschen schicken kannst, die dabei waren — und es dann mit einer Geste löschen kannst, ohne dass deine Daten jemals irgendwohin gesendet werden.",
+    subtitle="TripSweep gruppiert deine Fotos und Videos nach Aufenthalt, zeigt, was Platz beansprucht und wie viel davon nahezu doppelte Aufnahmen sind, und lässt dich dann das beste Bild behalten und den Rest löschen — ohne dass deine Daten jemals irgendwohin gesendet werden.",
     cta_store="📱 Im App Store laden", cta_kofi="☕ Projekt auf Ko-fi unterstützen",
     cta_desktop_link="→ Entdecke auch PhotoCull für Mac, die Desktop-App, die deine Fotos sortiert",
-    hero_alt="Liste der Aufenthalte in TripSweep, nach Größe sortiert",
+    hero_alt="Liste der Aufenthalte in TripSweep mit dem Anteil ähnlicher Fotos je Aufenthalt",
     preview_h2="Ein Blick auf die App",
-    preview_alt1="Liste der Aufenthalte, nach Größe sortiert",
-    preview_alt2="TripSweep-Infobildschirm",
+    preview_alt1="Liste der Aufenthalte mit dem Anteil ähnlicher Fotos und dem Gesamtgewicht",
+    preview_alt2="Vollbildansicht mit der Schaltfläche für ähnliche Fotos",
+    preview_alt3="Gruppe ähnlicher Fotos prüfen: das beste behalten, den Rest löschen",
+    preview_alt4="Vergleich Kostenlos / Pro in TripSweep",
     features_h2="Was die App kann",
     features=[
-        ("🗑️", "Alte Aufenthalte ohne langes Überlegen löschen", "Sieh genau, wie viel Platz ein Aufenthalt beansprucht, und lösche ihn dann auf einmal — immer über „Kürzlich gelöscht“, nie ein sofortiges endgültiges Löschen."),
+        ("🧳", "Automatische Gruppierung nach Aufenthalt", "Deine Fotos und Videos werden nach Reise gruppiert — unter Berücksichtigung von Zeit und Ort, damit zwei verschiedene Reiseziele nie vermischt werden. Die Aufenthalte werden auf deinem iPhone gespeichert: Die Liste erscheint beim Start sofort und aktualisiert sich dann im Hintergrund."),
+        ("🪞", "Ähnliche Fotos, für dich gefunden", "TripSweep analysiert deine Fotos im Hintergrund auf deinem iPhone mit Apples Vision-Framework. Jeder Aufenthalt zeigt, wie viel davon nahezu doppelt ist („≈ 27 % ähnlich · 4,3 GB freizugeben“) — ein guter Grund, zum Aussortieren zurückzukommen."),
+        ("🔎", "Vergleichen und das beste wählen", "Öffne eine Gruppe ähnlicher Fotos: Hochformat nebeneinander, Querformat untereinander, nie beschnitten. Das beste Bild wird vorgeschlagen (Schärfe, Apples Ästhetik-Bewertung, Gesichter), Serienbilder werden automatisch gruppiert und deine Favoriten werden nie zum Löschen markiert."),
+        ("⚖️", "Die Größe, die zählt", "Sortiere Aufenthalte mit einer großen Schaltfläche nach Datum oder Größe. Eine Fußzeile zeigt das Gesamtgewicht deiner Fotos und den Anteil ähnlicher Fotos — damit du auf einen Blick siehst, wo sich Aussortieren lohnt."),
+        ("👆", "Kostenlos ansehen, einfach aussortieren", "Ein Tipp auf einen Aufenthalt öffnet die Ansicht — kostenlos. Markiere jedes Foto zum Löschen, ähnlich oder nicht, im Raster oder im Vollbild; eine große Schaltfläche springt direkt zur Gruppe, wenn ein Foto ähnliche hat."),
+        ("🗑️", "Löschen ohne langes Überlegen", "Immer über „Kürzlich gelöscht“, nie ein sofortiges endgültiges Löschen. Die kostenlose Version enthält 3 Löschvorgänge pro Tag aus der Ansicht; Pro hebt die Grenze auf."),
         ("📤", "Sichern oder an die schicken, die dabei waren", "Exportiere einen ganzen Aufenthalt auf deinen Mac oder in Dateien, bevor du ihn löschst, oder teile ihn direkt (AirDrop, Dateien...) mit Freunden und Familie — nichts geht endgültig verloren."),
-        ("🧳", "Automatische Gruppierung nach Aufenthalt", "Deine Fotos und Videos werden nach Reise gruppiert — unter Berücksichtigung von Zeit und Ort, damit zwei verschiedene Reiseziele nie vermischt werden."),
-        ("⚖️", "Die Größe, die zählt", "Jeder Aufenthalt zeigt den belegten Speicherplatz. Sortiere nach Größe, um auf einen Blick zu erkennen, was sich wirklich zu sortieren lohnt."),
         ("📍", "Eigene Orte", "Lege eigene Orte fest (Zuhause, Arbeit...) und schließe sie aus der Liste aus, um nur echte Reisen zu behalten."),
-        ("🔒", "100% offline", "Kein Foto und kein Standort verlässt jemals dein iPhone. Die Ortserkennung funktioniert vollständig ohne Verbindung, ohne Konto, ohne Drittanbieterdienste."),
-        ("🌍", "In 5 Sprachen verfügbar", "Französisch, Englisch, Italienisch, Deutsch, Spanisch — die App passt sich automatisch an die Sprache deines iPhones an."),
+        ("🔒", "100% offline", "Kein Foto und kein Standort verlässt jemals dein iPhone. Ortserkennung und Erkennung ähnlicher Fotos laufen vollständig auf dem Gerät, ohne Verbindung, ohne Konto, ohne Drittanbieterdienste."),
+        ("🌍", "In 5 Sprachen verfügbar", "Französisch, Englisch, Italienisch, Deutsch, Spanisch — die App passt sich automatisch an die Sprache deines iPhones an, im Hoch- wie im Querformat."),
     ],
     privacy_h2="Dein Datenschutz wird ernst genommen",
     privacy_p="TripSweep sammelt, sendet oder teilt niemals deine Fotos, Videos oder Standortdaten. Die gesamte Verarbeitung — einschließlich der Ortserkennung — erfolgt lokal auf deinem iPhone.",
@@ -220,26 +240,31 @@ INDEX = {
     footer_desktop="Desktop-App", footer_privacy="Datenschutz", footer_kofi="Ko-fi", footer_github="GitHub",
 ),
 "es": dict(
-    title="TripSweep — ordena tus viajes antiguos, guarda, comparte",
-    desc="Por fin una forma sencilla de eliminar estancias antiguas, guardarlas y enviárselas a quienes estuvieron allí. 100% sin conexión.",
+    title="TripSweep — ordena tus viajes antiguos, encuentra fotos similares, guarda, comparte",
+    desc="Elimina estancias antiguas, detecta casi-duplicados para liberar gigabytes, guarda todo y compártelo con quienes estuvieron allí. 100% sin conexión.",
     nav_desktop="Aplicación de escritorio", nav_features="Funciones", nav_privacy_anchor="Privacidad", nav_privacy="Política de privacidad",
     h1="Por fin una forma sencilla de ordenar los viajes antiguos",
-    subtitle="TripSweep agrupa tus fotos y vídeos por estancia, para que veas exactamente qué ocupa espacio, lo guardes o se lo envíes a quienes estuvieron allí, y luego lo elimines en un gesto — sin enviar nunca tus datos a ningún sitio.",
+    subtitle="TripSweep agrupa tus fotos y vídeos por estancia, muestra qué ocupa espacio y qué parte son casi-duplicados, y luego te deja quedarte con la mejor toma y eliminar el resto — sin enviar nunca tus datos a ningún sitio.",
     cta_store="📱 Descargar en el App Store", cta_kofi="☕ Apoya el proyecto en Ko-fi",
     cta_desktop_link="→ Descubre también PhotoCull para Mac, la aplicación de escritorio que ordena tus fotos",
-    hero_alt="Lista de estancias en TripSweep, ordenada por tamaño",
+    hero_alt="Lista de estancias en TripSweep, con la parte de fotos similares de cada estancia",
     preview_h2="Un vistazo a la app",
-    preview_alt1="Lista de estancias, ordenada por tamaño",
-    preview_alt2="Pantalla Acerca de de TripSweep",
+    preview_alt1="Lista de estancias con la parte de fotos similares y el peso total",
+    preview_alt2="Visor a pantalla completa con el botón de fotos similares",
+    preview_alt3="Revisión de un grupo de fotos similares: conservar la mejor, eliminar el resto",
+    preview_alt4="Comparativa Gratis / Pro en TripSweep",
     features_h2="Qué hace la app",
     features=[
-        ("🗑️", "Elimina viajes antiguos sin pensarlo dos veces", "Descubre exactamente cuánto ocupa una estancia y luego elimínala de una vez — siempre a través de «Eliminados recientemente», nunca una eliminación definitiva inmediata."),
+        ("🧳", "Agrupación automática por estancia", "Tus fotos y vídeos se agrupan por viaje — teniendo en cuenta tanto el tiempo como el lugar, para no mezclar nunca dos destinos distintos. Las estancias se guardan en tu iPhone: la lista aparece al instante al abrir la app y luego se actualiza en segundo plano."),
+        ("🪞", "Fotos similares, encontradas para ti", "TripSweep analiza tus fotos en segundo plano, en tu iPhone, con el framework Vision de Apple. Cada estancia muestra qué parte son casi-duplicados («≈ 27 % similares · 4,3 GB por liberar») — un buen motivo para volver a ordenar."),
+        ("🔎", "Compara y elige la mejor", "Abre un grupo de fotos similares: los retratos uno al lado del otro, los paisajes uno debajo del otro, sin recortar nunca. Se sugiere la mejor toma (nitidez, puntuación estética de Apple, rostros), las ráfagas se agrupan automáticamente y tus favoritas nunca se marcan para eliminar."),
+        ("⚖️", "El tamaño que importa", "Ordena las estancias por fecha o por tamaño con un solo botón grande. Un pie de página muestra el peso total de tus fotos y la parte de fotos similares — para ver de un vistazo dónde compensa ordenar."),
+        ("👆", "Visor gratuito, ordenar es fácil", "Tocar una estancia abre el visor — gratis. Marca para eliminar cualquier foto, similar o no, desde la cuadrícula o a pantalla completa; un botón grande abre directamente el grupo cuando una foto tiene similares."),
+        ("🗑️", "Elimina sin pensarlo dos veces", "Siempre a través de «Eliminados recientemente», nunca una eliminación definitiva inmediata. La versión gratuita incluye 3 eliminaciones al día desde el visor; Pro quita el límite."),
         ("📤", "Guárdalo, o envíaselo a quien estuvo allí", "Exporta toda una estancia a tu Mac o a Archivos antes de eliminarla, o compártela directamente (AirDrop, Archivos...) con amigos y familiares — nada se pierde para siempre."),
-        ("🧳", "Agrupación automática por estancia", "Tus fotos y vídeos se agrupan por viaje — teniendo en cuenta tanto el tiempo como el lugar, para no mezclar nunca dos destinos distintos."),
-        ("⚖️", "El tamaño que importa", "Cada estancia muestra el espacio que ocupa. Ordena por tamaño para detectar de un vistazo lo que realmente vale la pena ordenar."),
         ("📍", "Lugares personalizados", "Define tus lugares (Casa, Trabajo...) y exclúyelos de la lista para conservar solo los viajes reales."),
-        ("🔒", "100% sin conexión", "Ninguna foto ni ubicación sale nunca de tu iPhone. El reconocimiento de lugares funciona completamente sin conexión, sin cuenta y sin servicios de terceros."),
-        ("🌍", "Disponible en 5 idiomas", "Francés, inglés, italiano, alemán, español — la app se adapta automáticamente al idioma de tu iPhone."),
+        ("🔒", "100% sin conexión", "Ninguna foto ni ubicación sale nunca de tu iPhone. El reconocimiento de lugares y la detección de fotos similares funcionan por completo en el dispositivo, sin conexión, sin cuenta y sin servicios de terceros."),
+        ("🌍", "Disponible en 5 idiomas", "Francés, inglés, italiano, alemán, español — la app se adapta automáticamente al idioma de tu iPhone, en vertical y en horizontal."),
     ],
     privacy_h2="Tu privacidad, tomada en serio",
     privacy_p="TripSweep nunca recopila, envía ni comparte tus fotos, vídeos o datos de ubicación. Todo el procesamiento — incluido el reconocimiento de lugares — se realiza localmente en tu iPhone.",
@@ -378,7 +403,7 @@ PRIVACY = {
     desc="TripSweep's privacy policy: no photo, video, or location data is ever collected, sent, or shared. Everything happens locally on your iPhone.",
     nav_home="Home",
     h1="Privacy Policy",
-    updated="Last updated: October 6, 2026",
+    updated="Last updated: October 7, 2026",
     intro='TripSweep ("the app") is developed by Jeffrey Brignoli. This page explains what data the app uses, where it goes, and why. The project\'s guiding principle is simple: <strong>nothing ever leaves your iPhone</strong>.',
     s1_h="What the app does not do",
     s1_items=[
@@ -390,10 +415,10 @@ PRIVACY = {
     s2_h="Access to your photo library",
     s2_p1="The app requests full access to your photo library (Photos) for two reasons:",
     s2_items=[
-        "Analyzing your photos and videos to group them by trip and calculate the space they take up — this processing happens entirely on your device.",
+        "Analyzing your photos and videos to group them by trip, calculate the space they take up, and find similar photos (near-duplicates) — this processing happens entirely on your device, using Apple's on-device frameworks (Photos and Vision).",
         "Deleting the photos you explicitly choose to delete — deletion always goes through “Recently Deleted” (30 days), never an immediate permanent delete.",
     ],
-    s2_p2="No photo, thumbnail, or metadata extracted from your photo library is ever transmitted off your device.",
+    s2_p2="No photo, thumbnail, or metadata extracted from your photo library is ever transmitted off your device. The results of the analysis (your trips, and a compact numerical fingerprint of each analyzed photo used to compare them) are kept in a local database on your iPhone, excluded from backups, and removed when you delete the app.",
     s3_h="Access to your location",
     s3_p="The app requests access to your location only when you choose to manually add a “place” (for example “Home” or “Work”) in the places management feature. This location is stored locally on your device and never transmitted elsewhere. It is used only to compare distance with detected trips, so you can exclude them from the list if you wish.",
     s4_h="Syncing with the Mac app",
@@ -417,7 +442,7 @@ PRIVACY = {
     desc="La politique de confidentialité de TripSweep : aucune photo, vidéo ou position n'est jamais collectée, envoyée ou partagée. Tout se passe localement sur votre iPhone.",
     nav_home="Accueil",
     h1="Politique de confidentialité",
-    updated="Dernière mise à jour : 6 octobre 2026",
+    updated="Dernière mise à jour : 7 octobre 2026",
     intro='TripSweep (« l\'application ») est développée par Jeffrey Brignoli. Cette page explique quelles données l\'application utilise, où elles vont, et pourquoi. Le principe directeur du projet est simple : <strong>rien ne quitte votre iPhone</strong>.',
     s1_h="Ce que l'application ne fait pas",
     s1_items=[
@@ -429,10 +454,10 @@ PRIVACY = {
     s2_h="Accès à votre photothèque",
     s2_p1="L'application demande un accès complet à votre photothèque (Photos) pour deux raisons :",
     s2_items=[
-        "Analyser vos photos et vidéos afin de les regrouper par séjour et calculer l'espace occupé — ce traitement a lieu entièrement sur votre appareil.",
+        "Analyser vos photos et vidéos afin de les regrouper par séjour, calculer l'espace occupé et repérer les photos similaires (quasi-doublons) — ce traitement a lieu entièrement sur votre appareil, avec les frameworks d'Apple (Photos et Vision).",
         "Supprimer les photos que vous choisissez explicitement de supprimer — la suppression passe systématiquement par « Récemment supprimés » (30 jours), jamais une suppression définitive immédiate.",
     ],
-    s2_p2="Aucune photo, vignette ou métadonnée extraite de votre photothèque n'est jamais transmise hors de votre appareil.",
+    s2_p2="Aucune photo, vignette ou métadonnée extraite de votre photothèque n'est jamais transmise hors de votre appareil. Les résultats de l'analyse (vos séjours, et une empreinte numérique compacte de chaque photo analysée servant à les comparer) sont conservés dans une base de données locale sur votre iPhone, exclue des sauvegardes, et supprimés avec l'application.",
     s3_h="Accès à votre position",
     s3_p="L'application demande l'accès à votre position uniquement lorsque vous choisissez d'ajouter manuellement un « lieu » (par exemple « Domicile » ou « Travail ») dans la fonctionnalité de gestion des lieux. Cette position est enregistrée localement sur votre appareil et n'est jamais transmise ailleurs. Elle sert uniquement à comparer la distance avec les séjours détectés, pour vous permettre de les exclure de la liste si vous le souhaitez.",
     s4_h="Synchronisation avec l'application Mac",
@@ -456,7 +481,7 @@ PRIVACY = {
     desc="L'informativa sulla privacy di TripSweep: nessuna foto, video o posizione viene mai raccolta, inviata o condivisa. Tutto avviene localmente sul tuo iPhone.",
     nav_home="Home",
     h1="Informativa sulla privacy",
-    updated="Ultimo aggiornamento: 6 ottobre 2026",
+    updated="Ultimo aggiornamento: 7 ottobre 2026",
     intro='TripSweep («l\'applicazione») è sviluppata da Jeffrey Brignoli. Questa pagina spiega quali dati utilizza l\'applicazione, dove vanno e perché. Il principio guida del progetto è semplice: <strong>nulla lascia mai il tuo iPhone</strong>.',
     s1_h="Cosa non fa l'applicazione",
     s1_items=[
@@ -468,10 +493,10 @@ PRIVACY = {
     s2_h="Accesso alla tua libreria foto",
     s2_p1="L'applicazione richiede un accesso completo alla tua libreria foto (Foto) per due motivi:",
     s2_items=[
-        "Analizzare le tue foto e i tuoi video per raggrupparli per soggiorno e calcolare lo spazio occupato — questa elaborazione avviene interamente sul tuo dispositivo.",
+        "Analizzare le tue foto e i tuoi video per raggrupparli per soggiorno, calcolare lo spazio occupato e individuare le foto simili (quasi-duplicati) — questa elaborazione avviene interamente sul tuo dispositivo, con i framework di Apple (Foto e Vision).",
         "Eliminare le foto che scegli esplicitamente di eliminare — l'eliminazione passa sempre attraverso «Eliminati di recente» (30 giorni), mai un'eliminazione definitiva immediata.",
     ],
-    s2_p2="Nessuna foto, miniatura o metadato estratto dalla tua libreria foto viene mai trasmesso al di fuori del tuo dispositivo.",
+    s2_p2="Nessuna foto, miniatura o metadato estratto dalla tua libreria foto viene mai trasmesso al di fuori del tuo dispositivo. I risultati dell'analisi (i tuoi soggiorni e un'impronta numerica compatta di ogni foto analizzata, usata per confrontarle) sono conservati in un database locale sul tuo iPhone, escluso dai backup, e vengono rimossi quando elimini l'app.",
     s3_h="Accesso alla tua posizione",
     s3_p="L'applicazione richiede l'accesso alla tua posizione solo quando scegli di aggiungere manualmente un «luogo» (ad esempio «Casa» o «Lavoro») nella funzione di gestione dei luoghi. Questa posizione viene salvata localmente sul tuo dispositivo e non viene mai trasmessa altrove. Serve unicamente a confrontare la distanza con i soggiorni rilevati, per permetterti di escluderli dall'elenco se lo desideri.",
     s4_h="Sincronizzazione con l'app Mac",
@@ -495,7 +520,7 @@ PRIVACY = {
     desc="Die Datenschutzerklärung von TripSweep: Es werden nie Fotos, Videos oder Standortdaten gesammelt, gesendet oder geteilt. Alles läuft lokal auf deinem iPhone.",
     nav_home="Startseite",
     h1="Datenschutzerklärung",
-    updated="Zuletzt aktualisiert: 6. Oktober 2026",
+    updated="Zuletzt aktualisiert: 7. Oktober 2026",
     intro='TripSweep ("die App") wird von Jeffrey Brignoli entwickelt. Diese Seite erklärt, welche Daten die App verwendet, wohin sie gehen und warum. Das Leitprinzip des Projekts ist einfach: <strong>nichts verlässt jemals dein iPhone</strong>.',
     s1_h="Was die App nicht tut",
     s1_items=[
@@ -507,10 +532,10 @@ PRIVACY = {
     s2_h="Zugriff auf deine Fotobibliothek",
     s2_p1="Die App fordert vollen Zugriff auf deine Fotobibliothek (Fotos) aus zwei Gründen an:",
     s2_items=[
-        "Analyse deiner Fotos und Videos, um sie nach Aufenthalt zu gruppieren und den belegten Speicherplatz zu berechnen — diese Verarbeitung erfolgt vollständig auf deinem Gerät.",
+        "Analyse deiner Fotos und Videos, um sie nach Aufenthalt zu gruppieren, den belegten Speicherplatz zu berechnen und ähnliche Fotos (nahezu doppelte Aufnahmen) zu finden — diese Verarbeitung erfolgt vollständig auf deinem Gerät, mit den Frameworks von Apple (Fotos und Vision).",
         "Löschen der Fotos, die du ausdrücklich zum Löschen auswählst — das Löschen erfolgt immer über „Kürzlich gelöscht“ (30 Tage), nie ein sofortiges endgültiges Löschen.",
     ],
-    s2_p2="Kein Foto, keine Miniaturansicht und keine Metadaten aus deiner Fotobibliothek werden jemals von deinem Gerät übertragen.",
+    s2_p2="Kein Foto, keine Miniaturansicht und keine Metadaten aus deiner Fotobibliothek werden jemals von deinem Gerät übertragen. Die Analyseergebnisse (deine Aufenthalte und ein kompakter numerischer Fingerabdruck jedes analysierten Fotos zum Vergleichen) werden in einer lokalen Datenbank auf deinem iPhone gespeichert, von Backups ausgeschlossen und beim Löschen der App entfernt.",
     s3_h="Zugriff auf deinen Standort",
     s3_p="Die App fordert Zugriff auf deinen Standort nur an, wenn du dich entscheidest, manuell einen „Ort“ (zum Beispiel „Zuhause“ oder „Arbeit“) in der Funktion zur Ortsverwaltung hinzuzufügen. Dieser Standort wird lokal auf deinem Gerät gespeichert und niemals anderswohin übertragen. Er dient nur dazu, die Entfernung zu erkannten Aufenthalten zu vergleichen, damit du sie bei Bedarf aus der Liste ausschließen kannst.",
     s4_h="Synchronisierung mit der Mac-App",
@@ -534,7 +559,7 @@ PRIVACY = {
     desc="La política de privacidad de TripSweep: ninguna foto, vídeo o ubicación se recopila, envía o comparte jamás. Todo ocurre localmente en tu iPhone.",
     nav_home="Inicio",
     h1="Política de privacidad",
-    updated="Última actualización: 6 de octubre de 2026",
+    updated="Última actualización: 7 de octubre de 2026",
     intro='TripSweep («la aplicación») está desarrollada por Jeffrey Brignoli. Esta página explica qué datos utiliza la aplicación, adónde van y por qué. El principio rector del proyecto es simple: <strong>nada sale nunca de tu iPhone</strong>.',
     s1_h="Lo que la aplicación no hace",
     s1_items=[
@@ -546,10 +571,10 @@ PRIVACY = {
     s2_h="Acceso a tu biblioteca de fotos",
     s2_p1="La aplicación solicita acceso completo a tu biblioteca de fotos (Fotos) por dos motivos:",
     s2_items=[
-        "Analizar tus fotos y vídeos para agruparlos por estancia y calcular el espacio ocupado — este procesamiento se realiza completamente en tu dispositivo.",
+        "Analizar tus fotos y vídeos para agruparlos por estancia, calcular el espacio ocupado y encontrar fotos similares (casi-duplicados) — este procesamiento se realiza completamente en tu dispositivo, con los frameworks de Apple (Fotos y Vision).",
         "Eliminar las fotos que elijas explícitamente eliminar — la eliminación siempre pasa por «Eliminados recientemente» (30 días), nunca una eliminación definitiva inmediata.",
     ],
-    s2_p2="Ninguna foto, miniatura o metadato extraído de tu biblioteca de fotos se transmite nunca fuera de tu dispositivo.",
+    s2_p2="Ninguna foto, miniatura o metadato extraído de tu biblioteca de fotos se transmite nunca fuera de tu dispositivo. Los resultados del análisis (tus estancias y una huella numérica compacta de cada foto analizada, usada para compararlas) se guardan en una base de datos local en tu iPhone, excluida de las copias de seguridad, y se eliminan al borrar la app.",
     s3_h="Acceso a tu ubicación",
     s3_p="La aplicación solicita acceso a tu ubicación únicamente cuando eliges añadir manualmente un «lugar» (por ejemplo «Casa» o «Trabajo») en la función de gestión de lugares. Esta ubicación se guarda localmente en tu dispositivo y nunca se transmite a otro sitio. Se utiliza solo para comparar la distancia con las estancias detectadas, para que puedas excluirlas de la lista si lo deseas.",
     s4_h="Sincronización con la app de Mac",
@@ -640,10 +665,16 @@ def render_index(lang):
       <h2>{d['preview_h2']}</h2>
       <div class="screens-row">
         <div class="phone-frame phone-frame-small">
-          <img src="{a(f'assets/screenshots/tripsweep-mytrips-{lang}.jpg')}" alt="{d['preview_alt1']}" />
+          <img src="{a(f'assets/screenshots/tripsweep-mytrips-{lang}.jpg')}" alt="{d['preview_alt1']}" loading="lazy" />
         </div>
         <div class="phone-frame phone-frame-small">
-          <img src="{a(f'assets/screenshots/tripsweep-about-{lang}.jpg')}" alt="{d['preview_alt2']}" />
+          <img src="{a(f'assets/screenshots/tripsweep-viewer-{lang}.jpg')}" alt="{d['preview_alt2']}" loading="lazy" />
+        </div>
+        <div class="phone-frame phone-frame-small">
+          <img src="{a(f'assets/screenshots/tripsweep-similar-{lang}.jpg')}" alt="{d['preview_alt3']}" loading="lazy" />
+        </div>
+        <div class="phone-frame phone-frame-small">
+          <img src="{a(f'assets/screenshots/tripsweep-about-{lang}.jpg')}" alt="{d['preview_alt4']}" loading="lazy" />
         </div>
       </div>
     </section>
@@ -893,7 +924,7 @@ for lang in LANGS:
 # engines are documented to also read it from the sitemap directly).
 # ---------------------------------------------------------------------------
 
-LASTMOD = "2026-10-06"
+LASTMOD = "2026-10-07"
 
 def sitemap_entry(page):
     urls = []
@@ -965,15 +996,16 @@ write("robots.txt", robots)
 llms_txt = f'''# TripSweep & PhotoCull
 
 > TripSweep is an iOS app that groups your photos and videos by trip, shows what's
-> taking up space, and lets you back up, share, or delete an entire trip in one tap.
+> taking up space and how much of it is similar photos (near-duplicates), and lets you
+> keep the best shot, back up, share, or delete in a few taps.
 > PhotoCull is its macOS companion for bulk photo review and cleanup. Both are 100%
 > offline: no photo, video, or location data is ever collected, sent, or shared —
-> place recognition runs entirely on-device from embedded GeoNames data.
+> place recognition and similar-photo detection run entirely on-device.
 
 ## Pages
 
 - [TripSweep on the App Store]({APP_STORE_URL}): download the iOS app.
-- [TripSweep (iOS app)]({SITE_ORIGIN}/index.html): grouping, backup, sharing and deletion of trips on iPhone.
+- [TripSweep (iOS app)]({SITE_ORIGIN}/index.html): grouping by trip, similar-photo detection and review, backup, sharing and deletion on iPhone.
 - [PhotoCull (macOS app)]({SITE_ORIGIN}/desktop.html): desktop companion for comparing and bulk-deleting photos.
 - [Privacy Policy]({SITE_ORIGIN}/privacy.html): what data is used, where it goes (nowhere), and why.
 
@@ -988,7 +1020,8 @@ Every page declares its language alternates via `hreflang`.
 - TripSweep and PhotoCull are two apps from the same developer (Jeffrey Brignoli),
   not two names for the same product.
 - Both apps offer a free tier; TripSweep also offers an optional one-time "Pro"
-  purchase (no subscription).
+  purchase (no subscription). In TripSweep, browsing trips and similar photos is free;
+  deleting photos from the viewer is limited to 3 per day in the free version.
 - Do not describe either app as collecting or transmitting user data — that is
   factually the opposite of how they work.
 '''

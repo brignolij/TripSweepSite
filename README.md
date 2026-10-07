@@ -35,7 +35,7 @@ website/
 │   ├── style.css                 # Feuille de style partagée
 │   ├── img/                      # Logos + favicons (TripSweep, PhotoCull)
 │   └── screenshots/               # Captures d'écran, une par langue
-│       (tripsweep-mytrips-<lang>.jpg, tripsweep-about-<lang>.jpg)
+│       (tripsweep-{mytrips,viewer,similar,about}-<lang>.jpg)
 └── README.md
 ```
 
@@ -54,12 +54,20 @@ bonnes balises hreflang selon la profondeur du dossier.
 
 ## Captures d'écran
 
-Une capture par langue est nécessaire pour `tripsweep-mytrips-<lang>.jpg` et
-`tripsweep-about-<lang>.jpg` (utilisées dans le hero + la section "Un aperçu de
-l'app"). Générées via le simulateur iOS en mode démo (`-UseFakeTrips YES`, voir
-`companion-app/TripSweep/FakeTripsProvider.swift`) avec la langue système changée
-pour chaque capture (`xcrun simctl spawn <device> defaults write "Apple Global
-Domain" AppleLanguages -array <lang>`, puis reboot du simulateur).
+Quatre captures par langue (20 fichiers, 500 px de large) : `tripsweep-mytrips-<lang>.jpg` (liste des
+séjours avec la part de photos similaires, utilisée aussi dans le hero), `tripsweep-viewer-<lang>.jpg`
+(visionneuse + gros bouton « similaires »), `tripsweep-similar-<lang>.jpg` (revue d'un groupe) et
+`tripsweep-about-<lang>.jpg` (tableau Gratuit / Pro).
+
+Elles sont générées par un test d'interface qui change la langue de l'app (sans toucher à celle du
+simulateur) : `companion-app/TripSweepUITests/MarketingScreenshotsUITests.swift` (la commande exacte est dans le
+commentaire du fichier). Les écrans « liste » et « À propos » utilisent le mode démo
+(`-UseFakeTrips YES`, voir `companion-app/TripSweep/FakeTripsProvider.swift`, résumés de similarité compris) ;
+les écrans « visionneuse » et « similaires » tournent en mode réel sur un simulateur DÉDIÉ dont la photothèque ne
+contient que des images synthétiques — jamais de photos personnelles. Le build Release est utilisé (pas de bouton
+« Bypass » debug) et la barre d'état est figée sur 9:41 (`xcrun simctl status_bar ... override`).
+
+Les PNG obtenus sont réduits à 500 px de large en JPEG (`magick <png> -resize 500x -quality 82 <jpg>`).
 
 ## Prévisualiser en local
 
