@@ -1,0 +1,14 @@
+<!doctype html><meta charset="utf-8"><title>sender</title>
+<script>
+(async () => {
+  const lang = new URLSearchParams(location.search).get('lang');
+  const names = ['1-mytrips', '2-viewer', '3-similar', '4-about'];
+  const files = [];
+  for (const n of names) {
+    const r = await fetch(lang + '/' + n + '.png');
+    files.push({ name: n + '.png', buf: await r.arrayBuffer() });
+  }
+  window.opener.postMessage({ type: 'asc-shots', lang, files }, 'https://appstoreconnect.apple.com', files.map(f => f.buf));
+  document.title = 'sent ' + lang;
+})();
+</script>
