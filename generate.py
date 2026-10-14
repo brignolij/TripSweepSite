@@ -403,8 +403,8 @@ PRIVACY = {
     desc="TripSweep's privacy policy: no photo, video, or location data is ever collected, sent, or shared. Everything happens locally on your iPhone.",
     nav_home="Home",
     h1="Privacy Policy",
-    updated="Last updated: October 7, 2026",
-    intro='TripSweep ("the app") is developed by Jeffrey Brignoli. This page explains what data the app uses, where it goes, and why. The project\'s guiding principle is simple: <strong>nothing ever leaves your iPhone</strong>.',
+    updated="Last updated: October 14, 2026",
+    intro='TripSweep ("the app") is developed by Jeffrey Brignoli. This page explains what data the app uses, where it goes, and why. The project\'s guiding principle is simple: <strong>nothing ever leaves your iPhone or Android phone</strong>.',
     s1_h="What the app does not do",
     s1_items=[
         "It does not collect, send, or share your photos, videos, or metadata with anyone.",
@@ -431,6 +431,8 @@ PRIVACY = {
     s6_p="The app does not currently integrate any third-party analytics or tracking tool. If you have enabled analytics data sharing with app developers (iOS Settings > Privacy & Security > Analytics & Improvements), Apple may send anonymized crash reports — this feature is handled entirely by Apple, independently of the app. This website (not the apps) uses Google Analytics 4 in a cookieless configuration to count visits: no cookie or local identifier is stored in your browser, advertising features are disabled, and no photo, library, or location data from the apps is involved.",
     s7_h="Your rights",
     s7_p="Since no personal data is collected or stored by the developer outside your device, there is no external database to consult, correct, or delete. You retain full control at all times over the permissions granted to the app via iOS Settings.",
+    sa_h='Android version',
+    sa_p="The Android version of TripSweep follows exactly the same principle: nothing ever leaves your phone. It requests access to your photos and videos (on Android 14 and later you can grant partial access), and to the location stored in your photos' metadata (“media location” permission) to recognize where each trip took place; this information is processed only on your device, in a local database that is excluded from backups and removed when you uninstall the app. Similar-photo detection uses on-device models (including Google ML Kit for faces), with no network connection. Your current location is requested only when you choose to add a “place” manually. Photos you delete go to the Android system trash (30 days). The optional “Pro” purchase is handled exclusively by Google Play: no payment information is visible to the developer. The app contains no advertising or analytics SDK and collects no data.",
     s8_h="Contact",
     s8_p1="For any question regarding this privacy policy, you can contact the developer via ",
     s8_p2=".",
@@ -442,8 +444,8 @@ PRIVACY = {
     desc="La politique de confidentialité de TripSweep : aucune photo, vidéo ou position n'est jamais collectée, envoyée ou partagée. Tout se passe localement sur votre iPhone.",
     nav_home="Accueil",
     h1="Politique de confidentialité",
-    updated="Dernière mise à jour : 7 octobre 2026",
-    intro='TripSweep (« l\'application ») est développée par Jeffrey Brignoli. Cette page explique quelles données l\'application utilise, où elles vont, et pourquoi. Le principe directeur du projet est simple : <strong>rien ne quitte votre iPhone</strong>.',
+    updated="Dernière mise à jour : 14 octobre 2026",
+    intro='TripSweep (« l\'application ») est développée par Jeffrey Brignoli. Cette page explique quelles données l\'application utilise, où elles vont, et pourquoi. Le principe directeur du projet est simple : <strong>rien ne quitte votre iPhone ou votre téléphone Android</strong>.',
     s1_h="Ce que l'application ne fait pas",
     s1_items=[
         "Elle ne collecte, n'envoie ni ne partage vos photos, vidéos ou métadonnées avec qui que ce soit.",
@@ -470,6 +472,8 @@ PRIVACY = {
     s6_p="L'application n'intègre, à ce jour, aucun outil d'analyse ou de suivi tiers. Si vous avez activé le partage de données d'analyse avec les développeurs d'applications (Réglages iOS > Confidentialité et sécurité > Analyse et améliorations), Apple peut transmettre des rapports de plantage anonymisés — cette fonctionnalité est gérée entièrement par Apple, indépendamment de l'application. Ce site web (et non les applications) utilise Google Analytics 4 dans une configuration sans cookies pour compter les visites : aucun cookie ni identifiant local n'est enregistré dans votre navigateur, les fonctions publicitaires sont désactivées, et aucune donnée de photothèque ou de position issue des applications n'est concernée.",
     s7_h="Vos droits",
     s7_p="Puisqu'aucune donnée personnelle n'est collectée ni stockée par le développeur en dehors de votre appareil, il n'existe aucune base de données externe à consulter, corriger ou supprimer. Vous gardez à tout moment le contrôle total sur les permissions accordées à l'application via Réglages iOS.",
+    sa_h='Version Android',
+    sa_p="La version Android de TripSweep suit exactement le même principe : rien ne quitte jamais votre téléphone. Elle demande l'accès à vos photos et vidéos (sous Android 14 et ultérieur, vous pouvez accorder un accès partiel) ainsi qu'à la position enregistrée dans les métadonnées de vos photos (autorisation « position des médias ») pour reconnaître où s'est déroulé chaque séjour ; ces informations sont traitées uniquement sur votre appareil, dans une base de données locale exclue des sauvegardes et supprimée lorsque vous désinstallez l'application. La détection des photos similaires utilise des modèles qui s'exécutent sur l'appareil (dont Google ML Kit pour les visages), sans connexion réseau. Votre position actuelle n'est demandée que lorsque vous choisissez d'ajouter un « lieu » manuellement. Les photos que vous supprimez vont dans la corbeille du système Android (30 jours). L'achat optionnel « Pro » est géré exclusivement par Google Play : aucune information de paiement n'est visible par le développeur. L'application ne contient aucun SDK publicitaire ou d'analyse et ne collecte aucune donnée.",
     s8_h="Contact",
     s8_p1="Pour toute question concernant cette politique de confidentialité, vous pouvez contacter le développeur via ",
     s8_p2=".",
@@ -481,8 +485,8 @@ PRIVACY = {
     desc="L'informativa sulla privacy di TripSweep: nessuna foto, video o posizione viene mai raccolta, inviata o condivisa. Tutto avviene localmente sul tuo iPhone.",
     nav_home="Home",
     h1="Informativa sulla privacy",
-    updated="Ultimo aggiornamento: 7 ottobre 2026",
-    intro='TripSweep («l\'applicazione») è sviluppata da Jeffrey Brignoli. Questa pagina spiega quali dati utilizza l\'applicazione, dove vanno e perché. Il principio guida del progetto è semplice: <strong>nulla lascia mai il tuo iPhone</strong>.',
+    updated="Ultimo aggiornamento: 14 ottobre 2026",
+    intro='TripSweep («l\'applicazione») è sviluppata da Jeffrey Brignoli. Questa pagina spiega quali dati utilizza l\'applicazione, dove vanno e perché. Il principio guida del progetto è semplice: <strong>nulla lascia mai il tuo iPhone o il tuo telefono Android</strong>.',
     s1_h="Cosa non fa l'applicazione",
     s1_items=[
         "Non raccoglie, invia o condivide le tue foto, i tuoi video o metadati con chiunque.",
@@ -509,6 +513,8 @@ PRIVACY = {
     s6_p="Ad oggi, l'applicazione non integra alcuno strumento di analisi o tracciamento di terze parti. Se hai attivato la condivisione dei dati di analisi con gli sviluppatori di app (Impostazioni iOS > Privacy e sicurezza > Analisi e miglioramenti), Apple potrebbe trasmettere report di arresto anomalo anonimizzati — questa funzione è gestita interamente da Apple, indipendentemente dall'applicazione. Questo sito web (non le applicazioni) utilizza Google Analytics 4 in una configurazione senza cookie per contare le visite: nessun cookie né identificatore locale viene memorizzato nel tuo browser, le funzioni pubblicitarie sono disattivate e nessun dato della libreria foto o della posizione delle applicazioni è coinvolto.",
     s7_h="I tuoi diritti",
     s7_p="Poiché nessun dato personale viene raccolto o archiviato dallo sviluppatore al di fuori del tuo dispositivo, non esiste alcun database esterno da consultare, correggere o eliminare. Mantieni sempre il controllo completo sulle autorizzazioni concesse all'applicazione tramite le Impostazioni iOS.",
+    sa_h='Versione Android',
+    sa_p="La versione Android di TripSweep segue esattamente lo stesso principio: nulla lascia mai il tuo telefono. Richiede l'accesso alle tue foto e ai tuoi video (da Android 14 in poi puoi concedere un accesso parziale) e alla posizione memorizzata nei metadati delle foto (autorizzazione «posizione dei contenuti multimediali») per riconoscere dove si è svolto ogni soggiorno; queste informazioni sono elaborate solo sul tuo dispositivo, in un database locale escluso dai backup e rimosso quando disinstalli l'app. Il rilevamento delle foto simili usa modelli eseguiti sul dispositivo (incluso Google ML Kit per i volti), senza connessione di rete. La tua posizione attuale viene richiesta solo quando scegli di aggiungere manualmente un «luogo». Le foto che elimini finiscono nel cestino di sistema di Android (30 giorni). L'acquisto opzionale «Pro» è gestito esclusivamente da Google Play: nessuna informazione di pagamento è visibile allo sviluppatore. L'app non contiene alcun SDK pubblicitario o di analisi e non raccoglie alcun dato.",
     s8_h="Contatto",
     s8_p1="Per qualsiasi domanda relativa a questa informativa sulla privacy, puoi contattare lo sviluppatore tramite ",
     s8_p2=".",
@@ -520,8 +526,8 @@ PRIVACY = {
     desc="Die Datenschutzerklärung von TripSweep: Es werden nie Fotos, Videos oder Standortdaten gesammelt, gesendet oder geteilt. Alles läuft lokal auf deinem iPhone.",
     nav_home="Startseite",
     h1="Datenschutzerklärung",
-    updated="Zuletzt aktualisiert: 7. Oktober 2026",
-    intro='TripSweep ("die App") wird von Jeffrey Brignoli entwickelt. Diese Seite erklärt, welche Daten die App verwendet, wohin sie gehen und warum. Das Leitprinzip des Projekts ist einfach: <strong>nichts verlässt jemals dein iPhone</strong>.',
+    updated="Zuletzt aktualisiert: 14. Oktober 2026",
+    intro='TripSweep ("die App") wird von Jeffrey Brignoli entwickelt. Diese Seite erklärt, welche Daten die App verwendet, wohin sie gehen und warum. Das Leitprinzip des Projekts ist einfach: <strong>nichts verlässt jemals dein iPhone oder dein Android-Telefon</strong>.',
     s1_h="Was die App nicht tut",
     s1_items=[
         "Sie sammelt, sendet oder teilt deine Fotos, Videos oder Metadaten mit niemandem.",
@@ -548,6 +554,8 @@ PRIVACY = {
     s6_p="Die App integriert derzeit kein Analyse- oder Tracking-Tool von Drittanbietern. Wenn du die Freigabe von Analysedaten für App-Entwickler aktiviert hast (iOS-Einstellungen > Datenschutz & Sicherheit > Analyse & Verbesserungen), kann Apple anonymisierte Absturzberichte übermitteln — diese Funktion wird vollständig von Apple verwaltet, unabhängig von der App. Diese Website (nicht die Apps) verwendet Google Analytics 4 in einer cookielosen Konfiguration, um Besuche zu zählen: Es werden weder Cookies noch lokale Kennungen in deinem Browser gespeichert, Werbefunktionen sind deaktiviert, und es sind keine Foto-, Bibliotheks- oder Standortdaten der Apps betroffen.",
     s7_h="Deine Rechte",
     s7_p="Da außerhalb deines Geräts keine personenbezogenen Daten vom Entwickler erfasst oder gespeichert werden, gibt es keine externe Datenbank, die eingesehen, korrigiert oder gelöscht werden könnte. Du behältst jederzeit die volle Kontrolle über die der App erteilten Berechtigungen über die iOS-Einstellungen.",
+    sa_h='Android-Version',
+    sa_p='Die Android-Version von TripSweep folgt genau demselben Prinzip: Nichts verlässt jemals dein Telefon. Sie fragt den Zugriff auf deine Fotos und Videos an (ab Android 14 kannst du teilweisen Zugriff gewähren) sowie auf den in den Metadaten deiner Fotos gespeicherten Standort (Berechtigung „Medienstandort“), um zu erkennen, wo jede Reise stattgefunden hat; diese Informationen werden ausschließlich auf deinem Gerät verarbeitet, in einer lokalen Datenbank, die von Backups ausgeschlossen ist und beim Deinstallieren der App gelöscht wird. Die Erkennung ähnlicher Fotos nutzt Modelle, die auf dem Gerät laufen (darunter Google ML Kit für Gesichter), ohne Netzwerkverbindung. Dein aktueller Standort wird nur abgefragt, wenn du manuell einen „Ort“ hinzufügst. Gelöschte Fotos landen im Android-Papierkorb (30 Tage). Der optionale Kauf „Pro“ wird ausschließlich von Google Play abgewickelt: Der Entwickler sieht keine Zahlungsinformationen. Die App enthält kein Werbe- oder Analyse-SDK und erfasst keine Daten.',
     s8_h="Kontakt",
     s8_p1="Bei Fragen zu dieser Datenschutzerklärung kannst du den Entwickler über ",
     s8_p2=" kontaktieren.",
@@ -559,8 +567,8 @@ PRIVACY = {
     desc="La política de privacidad de TripSweep: ninguna foto, vídeo o ubicación se recopila, envía o comparte jamás. Todo ocurre localmente en tu iPhone.",
     nav_home="Inicio",
     h1="Política de privacidad",
-    updated="Última actualización: 7 de octubre de 2026",
-    intro='TripSweep («la aplicación») está desarrollada por Jeffrey Brignoli. Esta página explica qué datos utiliza la aplicación, adónde van y por qué. El principio rector del proyecto es simple: <strong>nada sale nunca de tu iPhone</strong>.',
+    updated="Última actualización: 14 de octubre de 2026",
+    intro='TripSweep («la aplicación») está desarrollada por Jeffrey Brignoli. Esta página explica qué datos utiliza la aplicación, adónde van y por qué. El principio rector del proyecto es simple: <strong>nada sale nunca de tu iPhone ni de tu teléfono Android</strong>.',
     s1_h="Lo que la aplicación no hace",
     s1_items=[
         "No recopila, envía ni comparte tus fotos, vídeos o metadatos con nadie.",
@@ -587,6 +595,8 @@ PRIVACY = {
     s6_p="A día de hoy, la aplicación no integra ninguna herramienta de análisis o seguimiento de terceros. Si has activado el uso compartido de datos de análisis con los desarrolladores de aplicaciones (Ajustes de iOS > Privacidad y seguridad > Análisis y mejoras), Apple puede enviar informes de fallos anonimizados — esta función la gestiona Apple por completo, de forma independiente a la aplicación. Este sitio web (no las aplicaciones) utiliza Google Analytics 4 en una configuración sin cookies para contar las visitas: no se almacena ninguna cookie ni identificador local en tu navegador, las funciones publicitarias están desactivadas y no interviene ningún dato de la biblioteca de fotos ni de ubicación de las aplicaciones.",
     s7_h="Tus derechos",
     s7_p="Dado que el desarrollador no recopila ni almacena ningún dato personal fuera de tu dispositivo, no existe ninguna base de datos externa que consultar, corregir o eliminar. Mantienes en todo momento el control total sobre los permisos concedidos a la aplicación a través de los Ajustes de iOS.",
+    sa_h='Versión de Android',
+    sa_p='La versión de Android de TripSweep sigue exactamente el mismo principio: nada sale nunca de tu teléfono. Solicita acceso a tus fotos y vídeos (en Android 14 y posteriores puedes conceder acceso parcial) y a la ubicación guardada en los metadatos de tus fotos (permiso «ubicación de los archivos multimedia») para reconocer dónde tuvo lugar cada estancia; esta información se procesa únicamente en tu dispositivo, en una base de datos local excluida de las copias de seguridad y eliminada al desinstalar la app. La detección de fotos similares usa modelos que se ejecutan en el dispositivo (incluido Google ML Kit para los rostros), sin conexión de red. Tu ubicación actual solo se solicita cuando decides añadir un «lugar» manualmente. Las fotos que eliminas van a la papelera del sistema Android (30 días). La compra opcional «Pro» la gestiona exclusivamente Google Play: el desarrollador no ve ninguna información de pago. La app no contiene ningún SDK publicitario ni de analítica y no recopila ningún dato.',
     s8_h="Contacto",
     s8_p1="Para cualquier pregunta relacionada con esta política de privacidad, puedes contactar con el desarrollador a través de ",
     s8_p2=".",
@@ -881,6 +891,11 @@ def render_privacy(lang):
       <h2>{d['s7_h']}</h2>
       <p>
         {d['s7_p']}
+      </p>
+
+      <h2>{d['sa_h']}</h2>
+      <p>
+        {d['sa_p']}
       </p>
 
       <h2>{d['s8_h']}</h2>
