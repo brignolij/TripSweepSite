@@ -35,7 +35,7 @@ website/
 │   ├── style.css                 # Feuille de style partagée
 │   ├── img/                      # Logos + favicons (TripSweep, PhotoCull)
 │   └── screenshots/               # Captures d'écran, une par langue
-│       (tripsweep-{mytrips,viewer,similar,about}-<lang>.jpg)
+│       (tripsweep-{mytrips,cleanup,cleanup-similar,viewer,similar,about}-<lang>.jpg)
 └── README.md
 ```
 
@@ -54,8 +54,9 @@ bonnes balises hreflang selon la profondeur du dossier.
 
 ## Captures d'écran
 
-Quatre captures par langue (20 fichiers, 500 px de large) : `tripsweep-mytrips-<lang>.jpg` (liste des
-séjours avec la part de photos similaires, utilisée aussi dans le hero), `tripsweep-viewer-<lang>.jpg`
+Six captures par langue (30 fichiers, 500 px de large) : `tripsweep-mytrips-<lang>.jpg` (liste des
+séjours avec la part de photos similaires, utilisée aussi dans le hero), `tripsweep-cleanup-<lang>.jpg`
+(onglet Nettoyage), `tripsweep-cleanup-similar-<lang>.jpg` (Photos similaires + « Garder 1 par groupe »), `tripsweep-viewer-<lang>.jpg`
 (visionneuse + gros bouton « similaires »), `tripsweep-similar-<lang>.jpg` (revue d'un groupe) et
 `tripsweep-about-<lang>.jpg` (tableau Gratuit / Pro).
 

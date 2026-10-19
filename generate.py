@@ -121,6 +121,8 @@ INDEX = {
     preview_alt2="Full-screen viewer with the similar-photos button",
     preview_alt3="Reviewing a group of similar photos: keep the best, delete the rest",
     preview_alt4="Free vs Pro comparison in TripSweep",
+    preview_alt5="Cleanup tab: recoverable space by content type, no GPS needed",
+    preview_alt6="Similar photos in Cleanup: keep 1 per group in one tap",
     features_h2="What the app does",
     features=[
         ("🧳", "Automatic grouping by trip", "Your photos and videos are grouped by trip — by trip when they have a location, by event and month when they don't. Trips are stored on your iPhone: the list appears instantly at launch, then refreshes in the background."),
@@ -155,6 +157,8 @@ INDEX = {
     preview_alt2="Visionneuse plein écran avec le bouton des photos similaires",
     preview_alt3="Revue d'un groupe de photos similaires : garder la meilleure, supprimer le reste",
     preview_alt4="Comparatif Gratuit / Pro dans TripSweep",
+    preview_alt5="Onglet Nettoyage : espace récupérable par type de contenu, sans GPS",
+    preview_alt6="Photos similaires dans Nettoyage : garder 1 par groupe en un geste",
     features_h2="Ce que fait l'app",
     features=[
         ("🧳", "Regroupement automatique par séjour", "Vos photos et vidéos sont regroupées par voyage — par voyage quand elles ont une position, par événement et par mois sinon. Les séjours sont mémorisés sur votre iPhone : la liste s'affiche instantanément au lancement, puis se met à jour en arrière-plan."),
@@ -189,6 +193,8 @@ INDEX = {
     preview_alt2="Visualizzatore a schermo intero con il pulsante delle foto simili",
     preview_alt3="Revisione di un gruppo di foto simili: tieni la migliore, elimina il resto",
     preview_alt4="Confronto Gratis / Pro in TripSweep",
+    preview_alt5="Scheda Pulizia: spazio recuperabile per tipo di contenuto, senza GPS",
+    preview_alt6="Foto simili in Pulizia: tieni 1 per gruppo con un tocco",
     features_h2="Cosa fa l'app",
     features=[
         ("🧳", "Raggruppamento automatico per soggiorno", "Le tue foto e i tuoi video sono raggruppati per viaggio — per soggiorno quando hanno una posizione, altrimenti per evento e per mese. I soggiorni sono memorizzati sul tuo iPhone: l'elenco compare subito all'avvio, poi si aggiorna in background."),
@@ -223,6 +229,8 @@ INDEX = {
     preview_alt2="Vollbildansicht mit der Schaltfläche für ähnliche Fotos",
     preview_alt3="Gruppe ähnlicher Fotos prüfen: das beste behalten, den Rest löschen",
     preview_alt4="Vergleich Kostenlos / Pro in TripSweep",
+    preview_alt5="Tab Aufräumen: wiederherstellbarer Speicher nach Inhaltstyp, ohne GPS",
+    preview_alt6="Ähnliche Fotos im Aufräumen: 1 pro Gruppe behalten mit einem Tipp",
     features_h2="Was die App kann",
     features=[
         ("🧳", "Automatische Gruppierung nach Aufenthalt", "Deine Fotos und Videos werden nach Reise gruppiert — nach Reise, wenn sie einen Standort haben, sonst nach Ereignis und Monat. Die Aufenthalte werden auf deinem iPhone gespeichert: Die Liste erscheint beim Start sofort und aktualisiert sich dann im Hintergrund."),
@@ -257,6 +265,8 @@ INDEX = {
     preview_alt2="Visor a pantalla completa con el botón de fotos similares",
     preview_alt3="Revisión de un grupo de fotos similares: conservar la mejor, eliminar el resto",
     preview_alt4="Comparativa Gratis / Pro en TripSweep",
+    preview_alt5="Pestaña Limpieza: espacio recuperable por tipo de contenido, sin GPS",
+    preview_alt6="Fotos similares en Limpieza: conservar 1 por grupo con un toque",
     features_h2="Qué hace la app",
     features=[
         ("🧳", "Agrupación automática por estancia", "Tus fotos y vídeos se agrupan por viaje — por viaje cuando tienen ubicación, y si no por evento y por mes. Las estancias se guardan en tu iPhone: la lista aparece al instante al abrir la app y luego se actualiza en segundo plano."),
@@ -681,6 +691,12 @@ def render_index(lang):
       <div class="screens-row">
         <div class="phone-frame phone-frame-small">
           <img src="{a(f'assets/screenshots/tripsweep-mytrips-{lang}.jpg')}" alt="{d['preview_alt1']}" loading="lazy" />
+        </div>
+        <div class="phone-frame phone-frame-small">
+          <img src="{a(f'assets/screenshots/tripsweep-cleanup-{lang}.jpg')}" alt="{d['preview_alt5']}" loading="lazy" />
+        </div>
+        <div class="phone-frame phone-frame-small">
+          <img src="{a(f'assets/screenshots/tripsweep-cleanup-similar-{lang}.jpg')}" alt="{d['preview_alt6']}" loading="lazy" />
         </div>
         <div class="phone-frame phone-frame-small">
           <img src="{a(f'assets/screenshots/tripsweep-viewer-{lang}.jpg')}" alt="{d['preview_alt2']}" loading="lazy" />
