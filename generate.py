@@ -108,11 +108,11 @@ def lang_switcher(current_lang, page):
 
 INDEX = {
 "en": dict(
-    title="TripSweep — clean up old trips, find similar photos, back up, share",
-    desc="Delete old trips, spot near-duplicate photos and free up gigabytes, back everything up and share it with the people who were there. 100% offline.",
+    title="TripSweep — photo cleaner: duplicates, similar photos, screenshots and old trips",
+    desc="Sort your photos by trip or by type: identical copies, similar and blurry photos, screenshots, large videos. Free up gigabytes, back up and share — even without GPS. 100% offline.",
     nav_desktop="Desktop app", nav_features="Features", nav_privacy_anchor="Privacy", nav_privacy="Privacy Policy",
-    h1="Finally, an easy way to clear out old trips",
-    subtitle="TripSweep groups your photos and videos by trip, shows what's taking up space and how much of it is near-duplicates, then lets you keep the best shot and delete the rest — without ever sending your data anywhere.",
+    h1="Finally, an easy way to clear out your photo library",
+    subtitle="TripSweep groups your photos and videos by trip (or by event and month when they have no location), shows what's taking up space, and sorts out what you don't need — identical copies, similar and blurry photos, screenshots, large videos. Keep the best shot, delete the rest, without ever sending your data anywhere.",
     cta_store="📱 Download on the App Store", cta_kofi="☕ Support the project on Ko-fi",
     cta_desktop_link="→ Also check out PhotoCull for Mac, the desktop app that sorts your photos",
     hero_alt="List of trips in TripSweep, with the share of similar photos for each trip",
@@ -123,7 +123,8 @@ INDEX = {
     preview_alt4="Free vs Pro comparison in TripSweep",
     features_h2="What the app does",
     features=[
-        ("🧳", "Automatic grouping by trip", "Your photos and videos are grouped by trip — factoring in both time and location, so two different destinations never get mixed up. Trips are stored on your iPhone: the list appears instantly at launch, then refreshes in the background."),
+        ("🧳", "Automatic grouping by trip", "Your photos and videos are grouped by trip — by trip when they have a location, by event and month when they don't. Trips are stored on your iPhone: the list appears instantly at launch, then refreshes in the background."),
+        ("🧹", "Cleanup by type, no GPS needed", "The Cleanup tab sorts your photos by what's in them: screenshots, documents and receipts, burst leftovers, videos over 100 MB, blurry photos, identical copies and similar photos found anywhere in your library. Photos without a location are grouped by event and by month, a “Keep 1 per group” button sorts a whole category in one tap, and your favorites are never suggested."),
         ("🪞", "Similar photos, found for you", "TripSweep analyzes your photos in the background, on your iPhone, with Apple's Vision framework. Each trip shows how much of it is near-duplicates (“≈ 27% similar · 4.3 GB to free up”) — a good reason to come back and sort."),
         ("🔎", "Compare and pick the best", "Open a group of similar photos: portraits side by side, landscapes stacked, never cropped. A best shot is suggested (sharpness, Apple's aesthetic score, faces), bursts are grouped automatically, and your favorites are never marked for deletion."),
         ("⚖️", "The size that counts", "Sort trips by date or by size with one big button. A footer shows the total weight of your photos and the share that is similar — to see at a glance where sorting pays off."),
@@ -141,11 +142,11 @@ INDEX = {
     footer_desktop="Desktop app", footer_privacy="Privacy", footer_kofi="Ko-fi", footer_github="GitHub",
 ),
 "fr": dict(
-    title="TripSweep — nettoyez vos vieux voyages, repérez les photos similaires, sauvegardez, partagez",
-    desc="Supprimez les vieux séjours, repérez les quasi-doublons pour libérer des gigaoctets, sauvegardez tout et partagez avec ceux qui y étaient. 100% hors ligne.",
+    title="TripSweep — nettoyeur de photos : doublons, photos similaires, captures d'écran et vieux voyages",
+    desc="Triez vos photos par séjour ou par type : copies identiques, photos similaires et floues, captures d'écran, grosses vidéos. Libérez des gigaoctets, sauvegardez, partagez — même sans GPS. 100% hors ligne.",
     nav_desktop="Application de bureau", nav_features="Fonctionnalités", nav_privacy_anchor="Confidentialité", nav_privacy="Politique de confidentialité",
-    h1="Enfin un moyen simple de faire le tri dans les anciens voyages",
-    subtitle="TripSweep regroupe vos photos et vidéos par séjour, montre ce qui prend de la place et quelle part est faite de quasi-doublons, puis vous laisse garder la meilleure prise et supprimer le reste — sans jamais envoyer vos données où que ce soit.",
+    h1="Enfin un moyen simple de faire le tri dans votre photothèque",
+    subtitle="TripSweep regroupe vos photos et vidéos par séjour (ou par événement et par mois quand elles n'ont pas de position), montre ce qui prend de la place et repère ce dont vous n'avez pas besoin : copies identiques, photos similaires et floues, captures d'écran, grosses vidéos. Gardez la meilleure prise, supprimez le reste, sans jamais envoyer vos données où que ce soit.",
     cta_store="📱 Télécharger sur l'App Store", cta_kofi="☕ Soutenir le projet sur Ko-fi",
     cta_desktop_link="→ Découvrir aussi PhotoCull pour Mac, l'application de bureau qui trie vos photos",
     hero_alt="Liste des séjours dans TripSweep, avec la part de photos similaires de chaque séjour",
@@ -156,7 +157,8 @@ INDEX = {
     preview_alt4="Comparatif Gratuit / Pro dans TripSweep",
     features_h2="Ce que fait l'app",
     features=[
-        ("🧳", "Regroupement automatique par séjour", "Vos photos et vidéos sont regroupées par voyage — en tenant compte à la fois du temps et du lieu, pour ne pas mélanger deux destinations différentes. Les séjours sont mémorisés sur votre iPhone : la liste s'affiche instantanément au lancement, puis se met à jour en arrière-plan."),
+        ("🧳", "Regroupement automatique par séjour", "Vos photos et vidéos sont regroupées par voyage — par voyage quand elles ont une position, par événement et par mois sinon. Les séjours sont mémorisés sur votre iPhone : la liste s'affiche instantanément au lancement, puis se met à jour en arrière-plan."),
+        ("🧹", "Nettoyage par type, sans GPS", "L'onglet Nettoyage trie vos photos selon leur contenu : captures d'écran, documents et tickets, images en trop des rafales, vidéos de plus de 100 Mo, photos floues, copies identiques et photos similaires repérées n'importe où dans la photothèque. Les photos sans position sont regroupées par événement et par mois, un bouton « Garder 1 par groupe » trie une catégorie entière en un geste, et vos favoris ne sont jamais proposés."),
         ("🪞", "Photos similaires, repérées pour vous", "TripSweep analyse vos photos en arrière-plan, sur votre iPhone, avec le framework Vision d'Apple. Chaque séjour indique la part de quasi-doublons (« ≈ 27 % similaires · 4,3 Go à libérer ») — une bonne raison de venir trier."),
         ("🔎", "Comparez et choisissez la meilleure", "Ouvrez un groupe de photos similaires : portraits côte à côte, paysages les uns sous les autres, jamais recadrés. Une meilleure prise est suggérée (netteté, score esthétique d'Apple, visages), les rafales sont regroupées automatiquement et vos favoris ne sont jamais marqués pour suppression."),
         ("⚖️", "Le poids qui compte", "Triez les séjours par date ou par poids d'un seul gros bouton. Un pied de page affiche le poids total de vos photos et la part de photos similaires — pour voir d'un coup d'œil où le tri est rentable."),
@@ -174,11 +176,11 @@ INDEX = {
     footer_desktop="Application de bureau", footer_privacy="Confidentialité", footer_kofi="Ko-fi", footer_github="GitHub",
 ),
 "it": dict(
-    title="TripSweep — ripulisci i vecchi viaggi, trova le foto simili, salva, condividi",
-    desc="Elimina i vecchi soggiorni, individua i quasi-duplicati per liberare gigabyte, salva tutto e condividi con chi era con te. 100% offline.",
+    title="TripSweep — pulizia foto: duplicati, foto simili, screenshot e vecchi viaggi",
+    desc="Ordina le foto per soggiorno o per tipo: copie identiche, foto simili e sfocate, screenshot, video pesanti. Libera gigabyte, salva e condividi — anche senza GPS. 100% offline.",
     nav_desktop="App desktop", nav_features="Funzionalità", nav_privacy_anchor="Privacy", nav_privacy="Informativa sulla privacy",
-    h1="Finalmente un modo semplice per fare pulizia nei vecchi viaggi",
-    subtitle="TripSweep raggruppa le tue foto e i tuoi video per soggiorno, mostra cosa occupa spazio e quanta parte sono quasi-duplicati, poi ti lascia tenere lo scatto migliore ed eliminare il resto — senza mai inviare i tuoi dati altrove.",
+    h1="Finalmente un modo semplice per fare ordine nella tua libreria foto",
+    subtitle="TripSweep raggruppa le tue foto e i tuoi video per soggiorno (o per evento e per mese quando non hanno una posizione), mostra cosa occupa spazio e individua ciò che non ti serve: copie identiche, foto simili e sfocate, screenshot, video pesanti. Tieni lo scatto migliore ed elimina il resto, senza mai inviare i tuoi dati da nessuna parte.",
     cta_store="📱 Scarica su App Store", cta_kofi="☕ Sostieni il progetto su Ko-fi",
     cta_desktop_link="→ Scopri anche PhotoCull per Mac, l'app desktop che ordina le tue foto",
     hero_alt="Elenco dei soggiorni in TripSweep, con la quota di foto simili di ogni soggiorno",
@@ -189,7 +191,8 @@ INDEX = {
     preview_alt4="Confronto Gratis / Pro in TripSweep",
     features_h2="Cosa fa l'app",
     features=[
-        ("🧳", "Raggruppamento automatico per soggiorno", "Le tue foto e i tuoi video sono raggruppati per viaggio — tenendo conto sia del tempo sia del luogo, per non mescolare mai due destinazioni diverse. I soggiorni sono memorizzati sul tuo iPhone: l'elenco compare subito all'avvio, poi si aggiorna in background."),
+        ("🧳", "Raggruppamento automatico per soggiorno", "Le tue foto e i tuoi video sono raggruppati per viaggio — per soggiorno quando hanno una posizione, altrimenti per evento e per mese. I soggiorni sono memorizzati sul tuo iPhone: l'elenco compare subito all'avvio, poi si aggiorna in background."),
+        ("🧹", "Pulizia per tipo, senza GPS", "La scheda Pulizia ordina le foto in base al contenuto: screenshot, documenti e scontrini, fotogrammi in più delle raffiche, video oltre 100 MB, foto sfocate, copie identiche e foto simili trovate ovunque nella libreria. Le foto senza posizione sono raggruppate per evento e per mese, un pulsante «Tieni 1 per gruppo» ordina un'intera categoria con un tocco, e i preferiti non vengono mai proposti."),
         ("🪞", "Foto simili, trovate per te", "TripSweep analizza le tue foto in background, sul tuo iPhone, con il framework Vision di Apple. Ogni soggiorno mostra la quota di quasi-duplicati («≈ 27% simili · 4,3 GB da liberare») — un buon motivo per tornare a fare ordine."),
         ("🔎", "Confronta e scegli la migliore", "Apri un gruppo di foto simili: i ritratti affiancati, i paesaggi uno sotto l'altro, mai ritagliati. Viene suggerito lo scatto migliore (nitidezza, punteggio estetico di Apple, volti), le raffiche sono raggruppate automaticamente e i tuoi preferiti non vengono mai segnati per l'eliminazione."),
         ("⚖️", "La dimensione che conta", "Ordina i soggiorni per data o per dimensione con un solo grande pulsante. Un piè di pagina mostra il peso totale delle tue foto e la quota di foto simili — per vedere a colpo d'occhio dove conviene fare ordine."),
@@ -207,11 +210,11 @@ INDEX = {
     footer_desktop="App desktop", footer_privacy="Privacy", footer_kofi="Ko-fi", footer_github="GitHub",
 ),
 "de": dict(
-    title="TripSweep — alte Reisen aufräumen, ähnliche Fotos finden, sichern, teilen",
-    desc="Alte Aufenthalte löschen, nahezu doppelte Fotos aufspüren und Gigabytes freigeben, alles sichern und mit den Menschen teilen, die dabei waren. 100% offline.",
+    title="TripSweep — Foto aufräumen: Duplikate, ähnliche Fotos, Bildschirmfotos und alte Reisen",
+    desc="Sortiere deine Fotos nach Reise oder nach Typ: identische Kopien, ähnliche und unscharfe Fotos, Bildschirmfotos, große Videos. Gib Gigabytes frei, sichere und teile — auch ohne GPS. 100% offline.",
     nav_desktop="Desktop-App", nav_features="Funktionen", nav_privacy_anchor="Datenschutz", nav_privacy="Datenschutzerklärung",
-    h1="Endlich eine einfache Möglichkeit, alte Reisen aufzuräumen",
-    subtitle="TripSweep gruppiert deine Fotos und Videos nach Aufenthalt, zeigt, was Platz beansprucht und wie viel davon nahezu doppelte Aufnahmen sind, und lässt dich dann das beste Bild behalten und den Rest löschen — ohne dass deine Daten jemals irgendwohin gesendet werden.",
+    h1="Endlich ein einfacher Weg, deine Fotomediathek aufzuräumen",
+    subtitle="TripSweep gruppiert deine Fotos und Videos nach Reise (oder nach Ereignis und Monat, wenn sie keinen Standort haben), zeigt, was Platz braucht, und findet, was du nicht brauchst: identische Kopien, ähnliche und unscharfe Fotos, Bildschirmfotos, große Videos. Behalte das beste Foto, lösche den Rest – ohne deine Daten jemals irgendwohin zu senden.",
     cta_store="📱 Im App Store laden", cta_kofi="☕ Projekt auf Ko-fi unterstützen",
     cta_desktop_link="→ Entdecke auch PhotoCull für Mac, die Desktop-App, die deine Fotos sortiert",
     hero_alt="Liste der Aufenthalte in TripSweep mit dem Anteil ähnlicher Fotos je Aufenthalt",
@@ -222,7 +225,8 @@ INDEX = {
     preview_alt4="Vergleich Kostenlos / Pro in TripSweep",
     features_h2="Was die App kann",
     features=[
-        ("🧳", "Automatische Gruppierung nach Aufenthalt", "Deine Fotos und Videos werden nach Reise gruppiert — unter Berücksichtigung von Zeit und Ort, damit zwei verschiedene Reiseziele nie vermischt werden. Die Aufenthalte werden auf deinem iPhone gespeichert: Die Liste erscheint beim Start sofort und aktualisiert sich dann im Hintergrund."),
+        ("🧳", "Automatische Gruppierung nach Aufenthalt", "Deine Fotos und Videos werden nach Reise gruppiert — nach Reise, wenn sie einen Standort haben, sonst nach Ereignis und Monat. Die Aufenthalte werden auf deinem iPhone gespeichert: Die Liste erscheint beim Start sofort und aktualisiert sich dann im Hintergrund."),
+        ("🧹", "Aufräumen nach Typ, ohne GPS", "Der Tab „Aufräumen“ sortiert deine Fotos nach Inhalt: Bildschirmfotos, Dokumente und Belege, überzählige Serienbilder, Videos über 100 MB, unscharfe Fotos, identische Kopien und ähnliche Fotos, die irgendwo in der Mediathek liegen. Fotos ohne Standort werden nach Ereignis und Monat gruppiert, eine Schaltfläche „1 pro Gruppe behalten“ sortiert eine ganze Kategorie mit einem Tipp, und deine Favoriten werden nie vorgeschlagen."),
         ("🪞", "Ähnliche Fotos, für dich gefunden", "TripSweep analysiert deine Fotos im Hintergrund auf deinem iPhone mit Apples Vision-Framework. Jeder Aufenthalt zeigt, wie viel davon nahezu doppelt ist („≈ 27 % ähnlich · 4,3 GB freizugeben“) — ein guter Grund, zum Aussortieren zurückzukommen."),
         ("🔎", "Vergleichen und das beste wählen", "Öffne eine Gruppe ähnlicher Fotos: Hochformat nebeneinander, Querformat untereinander, nie beschnitten. Das beste Bild wird vorgeschlagen (Schärfe, Apples Ästhetik-Bewertung, Gesichter), Serienbilder werden automatisch gruppiert und deine Favoriten werden nie zum Löschen markiert."),
         ("⚖️", "Die Größe, die zählt", "Sortiere Aufenthalte mit einer großen Schaltfläche nach Datum oder Größe. Eine Fußzeile zeigt das Gesamtgewicht deiner Fotos und den Anteil ähnlicher Fotos — damit du auf einen Blick siehst, wo sich Aussortieren lohnt."),
@@ -240,11 +244,11 @@ INDEX = {
     footer_desktop="Desktop-App", footer_privacy="Datenschutz", footer_kofi="Ko-fi", footer_github="GitHub",
 ),
 "es": dict(
-    title="TripSweep — ordena tus viajes antiguos, encuentra fotos similares, guarda, comparte",
-    desc="Elimina estancias antiguas, detecta casi-duplicados para liberar gigabytes, guarda todo y compártelo con quienes estuvieron allí. 100% sin conexión.",
+    title="TripSweep — limpiador de fotos: duplicados, fotos similares, capturas y viajes antiguos",
+    desc="Ordena tus fotos por viaje o por tipo: copias idénticas, fotos similares y borrosas, capturas de pantalla, vídeos grandes. Libera gigas, guarda y comparte — incluso sin GPS. 100% sin conexión.",
     nav_desktop="Aplicación de escritorio", nav_features="Funciones", nav_privacy_anchor="Privacidad", nav_privacy="Política de privacidad",
-    h1="Por fin una forma sencilla de ordenar los viajes antiguos",
-    subtitle="TripSweep agrupa tus fotos y vídeos por estancia, muestra qué ocupa espacio y qué parte son casi-duplicados, y luego te deja quedarte con la mejor toma y eliminar el resto — sin enviar nunca tus datos a ningún sitio.",
+    h1="Por fin, una forma sencilla de ordenar tu fototeca",
+    subtitle="TripSweep agrupa tus fotos y vídeos por viaje (o por evento y por mes cuando no tienen ubicación), muestra qué ocupa espacio y detecta lo que no necesitas: copias idénticas, fotos similares y borrosas, capturas de pantalla, vídeos grandes. Quédate con la mejor toma, elimina el resto, sin enviar nunca tus datos a ningún sitio.",
     cta_store="📱 Descargar en el App Store", cta_kofi="☕ Apoya el proyecto en Ko-fi",
     cta_desktop_link="→ Descubre también PhotoCull para Mac, la aplicación de escritorio que ordena tus fotos",
     hero_alt="Lista de estancias en TripSweep, con la parte de fotos similares de cada estancia",
@@ -255,7 +259,8 @@ INDEX = {
     preview_alt4="Comparativa Gratis / Pro en TripSweep",
     features_h2="Qué hace la app",
     features=[
-        ("🧳", "Agrupación automática por estancia", "Tus fotos y vídeos se agrupan por viaje — teniendo en cuenta tanto el tiempo como el lugar, para no mezclar nunca dos destinos distintos. Las estancias se guardan en tu iPhone: la lista aparece al instante al abrir la app y luego se actualiza en segundo plano."),
+        ("🧳", "Agrupación automática por estancia", "Tus fotos y vídeos se agrupan por viaje — por viaje cuando tienen ubicación, y si no por evento y por mes. Las estancias se guardan en tu iPhone: la lista aparece al instante al abrir la app y luego se actualiza en segundo plano."),
+        ("🧹", "Limpieza por tipo, sin GPS", "La pestaña Limpieza ordena tus fotos según su contenido: capturas de pantalla, documentos y recibos, imágenes sobrantes de ráfagas, vídeos de más de 100 MB, fotos borrosas, copias idénticas y fotos similares encontradas en cualquier parte de la fototeca. Las fotos sin ubicación se agrupan por evento y por mes, un botón «Conservar 1 por grupo» ordena una categoría entera con un toque, y tus favoritos nunca se proponen."),
         ("🪞", "Fotos similares, encontradas para ti", "TripSweep analiza tus fotos en segundo plano, en tu iPhone, con el framework Vision de Apple. Cada estancia muestra qué parte son casi-duplicados («≈ 27 % similares · 4,3 GB por liberar») — un buen motivo para volver a ordenar."),
         ("🔎", "Compara y elige la mejor", "Abre un grupo de fotos similares: los retratos uno al lado del otro, los paisajes uno debajo del otro, sin recortar nunca. Se sugiere la mejor toma (nitidez, puntuación estética de Apple, rostros), las ráfagas se agrupan automáticamente y tus favoritas nunca se marcan para eliminar."),
         ("⚖️", "El tamaño que importa", "Ordena las estancias por fecha o por tamaño con un solo botón grande. Un pie de página muestra el peso total de tus fotos y la parte de fotos similares — para ver de un vistazo dónde compensa ordenar."),
@@ -1010,9 +1015,11 @@ write("robots.txt", robots)
 
 llms_txt = f'''# TripSweep & PhotoCull
 
-> TripSweep is an iOS app that groups your photos and videos by trip, shows what's
-> taking up space and how much of it is similar photos (near-duplicates), and lets you
-> keep the best shot, back up, share, or delete in a few taps.
+> TripSweep is an iOS app (an Android version is in testing) that groups your photos and
+> videos by trip, or by event and month when they have no GPS location, shows what's
+> taking up space, and sorts out what you don't need by type — identical copies, similar
+> and blurry photos, screenshots, large videos — so you keep the best shot and delete
+> the rest in a few taps. It can also back up and share a whole trip.
 > PhotoCull is its macOS companion for bulk photo review and cleanup. Both are 100%
 > offline: no photo, video, or location data is ever collected, sent, or shared —
 > place recognition and similar-photo detection run entirely on-device.
@@ -1020,7 +1027,7 @@ llms_txt = f'''# TripSweep & PhotoCull
 ## Pages
 
 - [TripSweep on the App Store]({APP_STORE_URL}): download the iOS app.
-- [TripSweep (iOS app)]({SITE_ORIGIN}/index.html): grouping by trip, similar-photo detection and review, backup, sharing and deletion on iPhone.
+- [TripSweep (iOS app)]({SITE_ORIGIN}/index.html): grouping by trip, event or month, a Cleanup tab (identical copies, similar and blurry photos, screenshots, large videos), review, backup, sharing and deletion on iPhone.
 - [PhotoCull (macOS app)]({SITE_ORIGIN}/desktop.html): desktop companion for comparing and bulk-deleting photos.
 - [Privacy Policy]({SITE_ORIGIN}/privacy.html): what data is used, where it goes (nowhere), and why.
 

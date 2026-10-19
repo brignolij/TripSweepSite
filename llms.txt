@@ -1,8 +1,10 @@
 # TripSweep & PhotoCull
 
-> TripSweep is an iOS app that groups your photos and videos by trip, shows what's
-> taking up space and how much of it is similar photos (near-duplicates), and lets you
-> keep the best shot, back up, share, or delete in a few taps.
+> TripSweep is an iOS app (an Android version is in testing) that groups your photos and
+> videos by trip, or by event and month when they have no GPS location, shows what's
+> taking up space, and sorts out what you don't need by type — identical copies, similar
+> and blurry photos, screenshots, large videos — so you keep the best shot and delete
+> the rest in a few taps. It can also back up and share a whole trip.
 > PhotoCull is its macOS companion for bulk photo review and cleanup. Both are 100%
 > offline: no photo, video, or location data is ever collected, sent, or shared —
 > place recognition and similar-photo detection run entirely on-device.
@@ -10,7 +12,7 @@
 ## Pages
 
 - [TripSweep on the App Store](https://apps.apple.com/app/tripsweep/id6813028251): download the iOS app.
-- [TripSweep (iOS app)](https://brignolij.github.io/TripSweepSite/index.html): grouping by trip, similar-photo detection and review, backup, sharing and deletion on iPhone.
+- [TripSweep (iOS app)](https://brignolij.github.io/TripSweepSite/index.html): grouping by trip, event or month, a Cleanup tab (identical copies, similar and blurry photos, screenshots, large videos), review, backup, sharing and deletion on iPhone.
 - [PhotoCull (macOS app)](https://brignolij.github.io/TripSweepSite/desktop.html): desktop companion for comparing and bulk-deleting photos.
 - [Privacy Policy](https://brignolij.github.io/TripSweepSite/privacy.html): what data is used, where it goes (nowhere), and why.
 

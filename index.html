@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TripSweep — clean up old trips, find similar photos, back up, share</title>
-  <meta name="description" content="Delete old trips, spot near-duplicate photos and free up gigabytes, back everything up and share it with the people who were there. 100% offline." />
+  <title>TripSweep — photo cleaner: duplicates, similar photos, screenshots and old trips</title>
+  <meta name="description" content="Sort your photos by trip or by type: identical copies, similar and blurry photos, screenshots, large videos. Free up gigabytes, back up and share — even without GPS. 100% offline." />
   <link rel="icon" type="image/png" href="assets/img/favicon-tripsweep.png" />
   <link rel="alternate" hreflang="en" href="https://brignolij.github.io/TripSweepSite/index.html" />
   <link rel="alternate" hreflang="fr" href="https://brignolij.github.io/TripSweepSite/fr/index.html" />
@@ -18,8 +18,8 @@
   <link rel="canonical" href="https://brignolij.github.io/TripSweepSite/index.html" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="TripSweep" />
-  <meta property="og:title" content="TripSweep — clean up old trips, find similar photos, back up, share" />
-  <meta property="og:description" content="Delete old trips, spot near-duplicate photos and free up gigabytes, back everything up and share it with the people who were there. 100% offline." />
+  <meta property="og:title" content="TripSweep — photo cleaner: duplicates, similar photos, screenshots and old trips" />
+  <meta property="og:description" content="Sort your photos by trip or by type: identical copies, similar and blurry photos, screenshots, large videos. Free up gigabytes, back up and share — even without GPS. 100% offline." />
   <meta property="og:url" content="https://brignolij.github.io/TripSweepSite/index.html" />
   <meta property="og:image" content="https://brignolij.github.io/TripSweepSite/assets/screenshots/tripsweep-mytrips-en.jpg" />
   <meta property="og:locale" content="en_US" />
@@ -28,10 +28,10 @@
   <meta property="og:locale:alternate" content="de_DE" />
   <meta property="og:locale:alternate" content="es_ES" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="TripSweep — clean up old trips, find similar photos, back up, share" />
-  <meta name="twitter:description" content="Delete old trips, spot near-duplicate photos and free up gigabytes, back everything up and share it with the people who were there. 100% offline." />
+  <meta name="twitter:title" content="TripSweep — photo cleaner: duplicates, similar photos, screenshots and old trips" />
+  <meta name="twitter:description" content="Sort your photos by trip or by type: identical copies, similar and blurry photos, screenshots, large videos. Free up gigabytes, back up and share — even without GPS. 100% offline." />
   <meta name="twitter:image" content="https://brignolij.github.io/TripSweepSite/assets/screenshots/tripsweep-mytrips-en.jpg" />
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "TripSweep", "description": "Delete old trips, spot near-duplicate photos and free up gigabytes, back everything up and share it with the people who were there. 100% offline.", "url": "https://brignolij.github.io/TripSweepSite/index.html", "image": "https://brignolij.github.io/TripSweepSite/assets/img/tripsweep-icon.png", "operatingSystem": "iOS", "applicationCategory": "PhotoApplication", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "author": {"@type": "Person", "name": "Jeffrey Brignoli"}, "downloadUrl": "https://apps.apple.com/app/tripsweep/id6813028251", "installUrl": "https://apps.apple.com/app/tripsweep/id6813028251"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "TripSweep", "description": "Sort your photos by trip or by type: identical copies, similar and blurry photos, screenshots, large videos. Free up gigabytes, back up and share — even without GPS. 100% offline.", "url": "https://brignolij.github.io/TripSweepSite/index.html", "image": "https://brignolij.github.io/TripSweepSite/assets/img/tripsweep-icon.png", "operatingSystem": "iOS", "applicationCategory": "PhotoApplication", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "author": {"@type": "Person", "name": "Jeffrey Brignoli"}, "downloadUrl": "https://apps.apple.com/app/tripsweep/id6813028251", "installUrl": "https://apps.apple.com/app/tripsweep/id6813028251"}</script>
   <meta name="apple-itunes-app" content="app-id=6813028251" />
   <link rel="stylesheet" href="assets/style.css" />
 </head>
@@ -52,9 +52,9 @@
     </header>
 
     <section class="hero">
-      <h1>Finally, an easy way to clear out old trips</h1>
+      <h1>Finally, an easy way to clear out your photo library</h1>
       <p class="subtitle">
-        TripSweep groups your photos and videos by trip, shows what's taking up space and how much of it is near-duplicates, then lets you keep the best shot and delete the rest — without ever sending your data anywhere.
+        TripSweep groups your photos and videos by trip (or by event and month when they have no location), shows what's taking up space, and sorts out what you don't need — identical copies, similar and blurry photos, screenshots, large videos. Keep the best shot, delete the rest, without ever sending your data anywhere.
       </p>
       <div class="cta-row">
         <a class="btn btn-primary" href="https://apps.apple.com/app/tripsweep/id6813028251" target="_blank" rel="noopener">📱 Download on the App Store</a>
@@ -93,7 +93,12 @@
         <div class="feature-card">
           <span class="icon">🧳</span>
           <h3>Automatic grouping by trip</h3>
-          <p>Your photos and videos are grouped by trip — factoring in both time and location, so two different destinations never get mixed up. Trips are stored on your iPhone: the list appears instantly at launch, then refreshes in the background.</p>
+          <p>Your photos and videos are grouped by trip — by trip when they have a location, by event and month when they don't. Trips are stored on your iPhone: the list appears instantly at launch, then refreshes in the background.</p>
+        </div>
+        <div class="feature-card">
+          <span class="icon">🧹</span>
+          <h3>Cleanup by type, no GPS needed</h3>
+          <p>The Cleanup tab sorts your photos by what's in them: screenshots, documents and receipts, burst leftovers, videos over 100 MB, blurry photos, identical copies and similar photos found anywhere in your library. Photos without a location are grouped by event and by month, a “Keep 1 per group” button sorts a whole category in one tap, and your favorites are never suggested.</p>
         </div>
         <div class="feature-card">
           <span class="icon">🪞</span>
