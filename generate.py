@@ -828,6 +828,75 @@ def render_index(lang):
 </html>
 '''
 
+# Real screenshots of the PhotoCull window (dark theme, sample photos), one set per language:
+# assets/screenshots/photocull-{grid,review,compare,trips}-{lang}.jpg
+SHOTS = {
+"en": dict(
+    h2="A look at the app",
+    grid_alt="PhotoCull showing a folder of photos, with badges on the similar ones",
+    items=[
+        ("review", "Review a group of similar photos side by side: keep the best, mark the rest."),
+        ("compare", "Compare up to 6 photos at once in full screen."),
+        ("trips", "Your library grouped by trip, with the space each one takes."),
+    ],
+),
+"fr": dict(
+    h2="Un aperçu de l'app",
+    grid_alt="PhotoCull affichant un dossier de photos, avec des pastilles sur les photos similaires",
+    items=[
+        ("review", "Passez en revue un groupe de photos similaires côte à côte : gardez la meilleure, marquez les autres."),
+        ("compare", "Comparez jusqu'à 6 photos à la fois en plein écran."),
+        ("trips", "Votre photothèque regroupée par séjour, avec la place que chacun occupe."),
+    ],
+),
+"it": dict(
+    h2="Uno sguardo all'app",
+    grid_alt="PhotoCull con una cartella di foto e i badge sulle foto simili",
+    items=[
+        ("review", "Rivedi un gruppo di foto simili affiancate: tieni la migliore, segna le altre."),
+        ("compare", "Confronta fino a 6 foto alla volta a schermo intero."),
+        ("trips", "La tua libreria raggruppata per soggiorno, con lo spazio occupato da ciascuno."),
+    ],
+),
+"de": dict(
+    h2="Ein Blick in die App",
+    grid_alt="PhotoCull zeigt einen Fotoordner mit Markierungen an ähnlichen Fotos",
+    items=[
+        ("review", "Eine Gruppe ähnlicher Fotos nebeneinander prüfen: das beste behalten, den Rest markieren."),
+        ("compare", "Bis zu 6 Fotos gleichzeitig im Vollbild vergleichen."),
+        ("trips", "Deine Mediathek nach Aufenthalten gruppiert, mit dem Platz, den jeder belegt."),
+    ],
+),
+"es": dict(
+    h2="Un vistazo a la app",
+    grid_alt="PhotoCull mostrando una carpeta de fotos, con insignias en las fotos similares",
+    items=[
+        ("review", "Revisa un grupo de fotos similares una al lado de otra: conserva la mejor, marca el resto."),
+        ("compare", "Compara hasta 6 fotos a la vez a pantalla completa."),
+        ("trips", "Tu fototeca agrupada por estancia, con el espacio que ocupa cada una."),
+    ],
+),
+}
+
+def render_desktop_shots(lang):
+    d = SHOTS[lang]
+    a = lambda rel: asset_path(lang, rel)
+    figures = "\n".join(
+        f'''        <figure>
+          <a class="window-frame" href="{a(f'assets/screenshots/photocull-{key}-{lang}.jpg')}" target="_blank" rel="noopener"><img src="{a(f'assets/screenshots/photocull-{key}-{lang}.jpg')}" alt="{caption}" loading="lazy" /></a>
+          <figcaption>{caption}</figcaption>
+        </figure>''' for key, caption in d["items"]
+    )
+    return f'''    <section id="apercu">
+      <h2>{d['h2']}</h2>
+      <div class="screens-grid">
+{figures}
+      </div>
+    </section>
+
+'''
+
+
 def render_desktop(lang):
     d = DESKTOP[lang]
     a = lambda rel: asset_path(lang, rel)
@@ -878,21 +947,12 @@ def render_desktop(lang):
       </div>
       <p style="margin-top:12px; font-size:14px;">{d['dl_note']}</p>
 
-      <div class="phone-mock" style="width: 420px; height: 280px; border-radius: 16px;" aria-hidden="true">
-        <div class="screen" style="border-radius: 10px; flex-direction: row; flex-wrap: wrap; gap: 6px;">
-          <span class="thumb" style="width: 90px; height: 90px;"></span>
-          <span class="thumb" style="width: 90px; height: 90px;"></span>
-          <span class="thumb" style="width: 90px; height: 90px;"></span>
-          <span class="thumb" style="width: 90px; height: 90px;"></span>
-          <span class="thumb" style="width: 90px; height: 90px;"></span>
-          <span class="thumb" style="width: 90px; height: 90px;"></span>
-          <span class="thumb" style="width: 90px; height: 90px;"></span>
-          <span class="thumb" style="width: 90px; height: 90px;"></span>
-        </div>
-      </div>
+      <a class="window-frame" href="{a(f'assets/screenshots/photocull-grid-{lang}.jpg')}" target="_blank" rel="noopener">
+        <img src="{a(f'assets/screenshots/photocull-grid-{lang}.jpg')}" alt="{SHOTS[lang]['grid_alt']}" />
+      </a>
     </section>
 
-    <section id="fonctionnalites">
+{render_desktop_shots(lang)}    <section id="fonctionnalites">
       <h2>{d['features_h2']}</h2>
       <div class="features">
 {features_html}

@@ -367,3 +367,50 @@ footer .footer-links {
 .legal {
   padding: 48px 0 64px;
 }
+
+/* Desktop screenshots (PhotoCull): a real app window instead of a phone frame. */
+.window-frame {
+  display: block;
+  margin: 48px auto 0;
+  max-width: 960px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+}
+
+.window-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.screens-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+  gap: 32px 28px;
+  margin-top: 24px;
+}
+
+.screens-grid figure {
+  margin: 0;
+  text-align: center;
+}
+
+.screens-grid .window-frame {
+  margin: 0 0 12px;
+}
+
+.screens-grid figcaption {
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+@media (min-width: 880px) {
+  .screens-grid figure:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: 60%;
+    justify-self: center;
+  }
+}
