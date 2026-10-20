@@ -28,6 +28,20 @@ PHOTOCULL_DOWNLOAD_URL = "https://github.com/brignolij/TripSweepSite/releases/la
 # "Pro + Desktop") is still in App Store review, at the owner's request; set to False to hide it again.
 SHOW_PRICING = True
 
+# Cross-link to the owner's other site (PassMerge) in every footer, in the visitor's language. Mirrored by a
+# TripSweep link in PassMerge's own footers: inbound links are what gets these github.io sites crawled.
+PASSMERGE_LABEL = {
+    "en": "PassMerge: merge Bitwarden duplicates",
+    "fr": "PassMerge : fusionner les doublons Bitwarden",
+    "it": "PassMerge: unire i duplicati Bitwarden",
+    "de": "PassMerge: Bitwarden-Duplikate zusammenführen",
+    "es": "PassMerge: fusionar duplicados de Bitwarden",
+}
+
+def passmerge_link(lang):
+    href = "https://brignolij.github.io/passmerge/" + ("" if lang == "en" else f"{lang}/")
+    return f'<a href="{href}" target="_blank" rel="noopener">{PASSMERGE_LABEL[lang]}</a>'
+
 def hreflang_links(page):
     links = []
     for l in LANGS:
@@ -821,6 +835,7 @@ def render_index(lang):
         <a href="{path_for(lang, 'privacy.html', lang)}">{d['footer_privacy']}</a>
         <a href="https://ko-fi.com/jeffreybrignoli" target="_blank" rel="noopener">{d['footer_kofi']}</a>
         <a href="https://github.com/brignolij/TripSweepSite" target="_blank" rel="noopener">{d['footer_github']}</a>
+        {passmerge_link(lang)}
       </div>
     </footer>
   </div>
@@ -977,6 +992,7 @@ def render_desktop(lang):
         <a href="{path_for(lang, 'privacy.html', lang)}">{d['footer_privacy']}</a>
         <a href="https://ko-fi.com/jeffreybrignoli" target="_blank" rel="noopener">{d['footer_kofi']}</a>
         <a href="https://github.com/brignolij/TripSweepSite" target="_blank" rel="noopener">{d['footer_github']}</a>
+        {passmerge_link(lang)}
       </div>
     </footer>
   </div>
@@ -1079,6 +1095,7 @@ def render_privacy(lang):
       <div class="footer-links">
         <a href="{path_for(lang, 'index.html', lang)}">{d['footer_home']}</a>
         <a href="https://ko-fi.com/jeffreybrignoli" target="_blank" rel="noopener">{d['footer_kofi']}</a>
+        {passmerge_link(lang)}
       </div>
     </footer>
   </div>
