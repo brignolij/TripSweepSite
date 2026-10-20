@@ -54,7 +54,7 @@ def seo_meta(lang, page, title, desc, image_rel, og_type="website"):
         f'  <meta property="og:locale:alternate" content="{OG_LOCALE[l]}" />' for l in LANGS if l != lang
     )
     return f'''  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2QKSMXT76"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('consent','default',{{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'}});gtag('js',new Date());gtag('config','G-Z2QKSMXT76',{{storage:'none',allow_google_signals:false,allow_ad_personalization_signals:false}});</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('consent','default',{{analytics_storage:'granted',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'}});gtag('js',new Date());gtag('config','G-Z2QKSMXT76',{{storage:'none',allow_google_signals:false,allow_ad_personalization_signals:false}});</script>
   <meta name="google-site-verification" content="5HOh0hrLDaKSXUZ1k1-Y7yOrdBucjiu6-zij86Fq-xM" />
   <link rel="canonical" href="{url}" />
   <meta property="og:type" content="{og_type}" />
