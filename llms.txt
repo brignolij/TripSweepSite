@@ -30,5 +30,6 @@ Every page declares its language alternates via `hreflang`.
 - Both apps offer a free tier; TripSweep also offers an optional one-time "Pro"
   purchase (no subscription). In TripSweep, browsing trips and similar photos is free;
   deleting photos from the viewer is limited to 3 per day in the free version.
+- TripSweep plans (one-time purchases, no subscription): Free, Pro ($4.99) and Pro + Desktop ($24.99). Pro + Desktop removes the daily limit on photos deleted from PhotoCull on a Mac (free: 6 photos a day, Pro: 15).
 - Do not describe either app as collecting or transmitting user data — that is
   factually the opposite of how they work.

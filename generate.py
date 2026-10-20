@@ -24,9 +24,9 @@ APP_STORE_URL = "https://apps.apple.com/app/tripsweep/id6813028251"
 APP_STORE_ID = "6813028251"
 # Stable "latest" link: always the newest PhotoCull release attached to this repository's GitHub Releases.
 PHOTOCULL_DOWNLOAD_URL = "https://github.com/brignolij/TripSweepSite/releases/latest/download/PhotoCull-Desktop.zip"
-# Pricing section (Free / Pro / Pro + Desktop) on both pages and in llms.txt. Keep False until TripSweep 1.4 (which sells
-# "Pro + Desktop") is live on the App Store, so the site never advertises a purchase that can't be made yet.
-SHOW_PRICING = False
+# Pricing section (Free / Pro / Pro + Desktop) on both pages and in llms.txt. Turned on while TripSweep 1.4 (which sells
+# "Pro + Desktop") is still in App Store review, at the owner's request; set to False to hide it again.
+SHOW_PRICING = True
 
 def hreflang_links(page):
     links = []
@@ -917,6 +917,7 @@ def render_desktop(lang):
   <link rel="icon" type="image/png" href="{a('assets/img/favicon-photocull.png')}" />
 {hreflang_links('desktop.html')}
 {seo_meta(lang, 'desktop.html', d['title'], d['desc'], 'assets/img/photocull-icon.png')}
+  <script src="{a('assets/lightbox.js')}" defer></script>
 {software_app_ld_json("PhotoCull", d['desc'], page_url(lang, 'desktop.html'), SITE_ORIGIN + '/assets/img/photocull-icon.png', "macOS", download_url=PHOTOCULL_DOWNLOAD_URL)}
   <link rel="stylesheet" href="{a('assets/style.css')}" />
 </head>
