@@ -24,6 +24,9 @@ APP_STORE_URL = "https://apps.apple.com/app/tripsweep/id6813028251"
 APP_STORE_ID = "6813028251"
 # Stable "latest" link: always the newest PhotoCull release attached to this repository's GitHub Releases.
 PHOTOCULL_DOWNLOAD_URL = "https://github.com/brignolij/TripSweepSite/releases/latest/download/PhotoCull-Desktop.zip"
+# Windows build, attached to the SAME "latest" release as the Mac zip: every new release (Mac or Windows) must carry both
+# files, otherwise one of the two links 404s (`gh release upload <tag> dist/PhotoCull-Windows-x64.zip`).
+PHOTOCULL_WINDOWS_DOWNLOAD_URL = "https://github.com/brignolij/TripSweepSite/releases/latest/download/PhotoCull-Windows-x64.zip"
 # Pricing section (Free / Pro / Pro + Desktop) on both pages and in llms.txt. Turned on while TripSweep 1.4 (which sells
 # "Pro + Desktop") is still in App Store review, at the owner's request; set to False to hide it again.
 SHOW_PRICING = True
@@ -133,7 +136,7 @@ INDEX = {
     h1="Finally, an easy way to clear out your photo library",
     subtitle="TripSweep groups your photos and videos by trip (or by event and month when they have no location), shows what's taking up space, and sorts out what you don't need — identical copies, similar and blurry photos, screenshots, large videos. Keep the best shot, delete the rest, without ever sending your data anywhere.",
     cta_store="📱 Download on the App Store", cta_kofi="☕ Support the project on Ko-fi",
-    cta_desktop_link="→ Also check out PhotoCull for Mac, the desktop app that sorts your photos",
+    cta_desktop_link="→ Also check out PhotoCull for Mac and Windows, the desktop app that sorts your photos",
     hero_alt="List of trips in TripSweep, with the share of similar photos for each trip",
     preview_h2="A look at the app",
     preview_alt1="List of trips with the share of similar photos and the total weight",
@@ -169,7 +172,7 @@ INDEX = {
     h1="Enfin un moyen simple de faire le tri dans votre photothèque",
     subtitle="TripSweep regroupe vos photos et vidéos par séjour (ou par événement et par mois quand elles n'ont pas de position), montre ce qui prend de la place et repère ce dont vous n'avez pas besoin : copies identiques, photos similaires et floues, captures d'écran, grosses vidéos. Gardez la meilleure prise, supprimez le reste, sans jamais envoyer vos données où que ce soit.",
     cta_store="📱 Télécharger sur l'App Store", cta_kofi="☕ Soutenir le projet sur Ko-fi",
-    cta_desktop_link="→ Découvrir aussi PhotoCull pour Mac, l'application de bureau qui trie vos photos",
+    cta_desktop_link="→ Découvrir aussi PhotoCull pour Mac et Windows, l'application de bureau qui trie vos photos",
     hero_alt="Liste des séjours dans TripSweep, avec la part de photos similaires de chaque séjour",
     preview_h2="Un aperçu de l'app",
     preview_alt1="Liste des séjours avec la part de photos similaires et le poids total",
@@ -205,7 +208,7 @@ INDEX = {
     h1="Finalmente un modo semplice per fare ordine nella tua libreria foto",
     subtitle="TripSweep raggruppa le tue foto e i tuoi video per soggiorno (o per evento e per mese quando non hanno una posizione), mostra cosa occupa spazio e individua ciò che non ti serve: copie identiche, foto simili e sfocate, screenshot, video pesanti. Tieni lo scatto migliore ed elimina il resto, senza mai inviare i tuoi dati da nessuna parte.",
     cta_store="📱 Scarica su App Store", cta_kofi="☕ Sostieni il progetto su Ko-fi",
-    cta_desktop_link="→ Scopri anche PhotoCull per Mac, l'app desktop che ordina le tue foto",
+    cta_desktop_link="→ Scopri anche PhotoCull per Mac e Windows, l'app desktop che ordina le tue foto",
     hero_alt="Elenco dei soggiorni in TripSweep, con la quota di foto simili di ogni soggiorno",
     preview_h2="Uno sguardo all'app",
     preview_alt1="Elenco dei soggiorni con la quota di foto simili e il peso totale",
@@ -241,7 +244,7 @@ INDEX = {
     h1="Endlich ein einfacher Weg, deine Fotomediathek aufzuräumen",
     subtitle="TripSweep gruppiert deine Fotos und Videos nach Reise (oder nach Ereignis und Monat, wenn sie keinen Standort haben), zeigt, was Platz braucht, und findet, was du nicht brauchst: identische Kopien, ähnliche und unscharfe Fotos, Bildschirmfotos, große Videos. Behalte das beste Foto, lösche den Rest – ohne deine Daten jemals irgendwohin zu senden.",
     cta_store="📱 Im App Store laden", cta_kofi="☕ Projekt auf Ko-fi unterstützen",
-    cta_desktop_link="→ Entdecke auch PhotoCull für Mac, die Desktop-App, die deine Fotos sortiert",
+    cta_desktop_link="→ Entdecke auch PhotoCull für Mac und Windows, die Desktop-App, die deine Fotos sortiert",
     hero_alt="Liste der Aufenthalte in TripSweep mit dem Anteil ähnlicher Fotos je Aufenthalt",
     preview_h2="Ein Blick auf die App",
     preview_alt1="Liste der Aufenthalte mit dem Anteil ähnlicher Fotos und dem Gesamtgewicht",
@@ -277,7 +280,7 @@ INDEX = {
     h1="Por fin, una forma sencilla de ordenar tu fototeca",
     subtitle="TripSweep agrupa tus fotos y vídeos por viaje (o por evento y por mes cuando no tienen ubicación), muestra qué ocupa espacio y detecta lo que no necesitas: copias idénticas, fotos similares y borrosas, capturas de pantalla, vídeos grandes. Quédate con la mejor toma, elimina el resto, sin enviar nunca tus datos a ningún sitio.",
     cta_store="📱 Descargar en el App Store", cta_kofi="☕ Apoya el proyecto en Ko-fi",
-    cta_desktop_link="→ Descubre también PhotoCull para Mac, la aplicación de escritorio que ordena tus fotos",
+    cta_desktop_link="→ Descubre también PhotoCull para Mac y Windows, la aplicación de escritorio que ordena tus fotos",
     hero_alt="Lista de estancias en TripSweep, con la parte de fotos similares de cada estancia",
     preview_h2="Un vistazo a la app",
     preview_alt1="Lista de estancias con la parte de fotos similares y el peso total",
@@ -310,14 +313,14 @@ INDEX = {
 
 DESKTOP = {
 "en": dict(
-    title="PhotoCull for Mac — the photo sorting tool",
+    title="PhotoCull for Mac and Windows — the photo sorting tool",
     desc="The desktop app that sorts your photos by trip, compares and bulk-deletes — 100% offline, no subscription.",
     nav_ios="iOS app", nav_features="Features", nav_privacy="Privacy",
-    badge="🖥️ Desktop app (macOS)",
+    badge="🖥️ Desktop app (macOS · Windows)",
     h1="The real tool for sorting thousands of photos",
-    subtitle="PhotoCull is a full desktop application: it shows your entire iPhone camera roll grouped by trip, compares your photos side by side, and bulk-deletes what's no longer worth keeping — right from your Mac.",
-    dl_note="Free · macOS 11+ on Apple Silicon · signed and notarized by Apple",
-    cta_download="💻 Download for Mac", cta_kofi="☕ Support the project on Ko-fi",
+    subtitle="PhotoCull is a full desktop application: it shows your entire iPhone camera roll grouped by trip, compares your photos side by side, and bulk-deletes what's no longer worth keeping — right from your Mac or PC.",
+    dl_note="Mac: free · macOS 11+ on Apple Silicon · signed and notarized by Apple<br>Windows: free · Windows 10/11 (64-bit) · reading an iPhone needs the free Apple Devices app from the Microsoft Store · Windows may show a SmartScreen warning (the app is not signed yet): More info → Run anyway",
+    cta_download="💻 Download for Mac", cta_download_windows="🪟 Download for Windows", cta_kofi="☕ Support the project on Ko-fi",
     features_h2="What the app does",
     features=[
         ("🧳", 'The "Trips" view', "Your entire photo library automatically grouped by trip (time AND location, just like the iOS app) — spot at a glance which trips take up the most space."),
@@ -330,19 +333,19 @@ DESKTOP = {
     strip_h2="Pairs with the TripSweep iOS app",
     strip_p_before="Browsing, comparing and sorting your iPhone's photos works on its own: just plug it in via USB. To actually delete photos from the iPhone, you also need ",
     strip_p_link="the free TripSweep iOS app",
-    strip_p_after=", which applies the deletion on the phone through “Recently Deleted” and makes trip analysis near-instant. Folders on your Mac can be sorted without it.",
+    strip_p_after=", which applies the deletion on the phone through “Recently Deleted” and makes trip analysis near-instant. Folders on your Mac or PC can be sorted without it.",
     footer_copy="© 2026 PhotoCull. Developed by Jeffrey Brignoli.",
     footer_ios="iOS app", footer_privacy="Privacy", footer_kofi="Ko-fi", footer_github="GitHub",
 ),
 "fr": dict(
-    title="PhotoCull pour Mac — l'outil de tri de photos",
+    title="PhotoCull pour Mac et Windows — l'outil de tri de photos",
     desc="L'application de bureau qui trie vos photos par séjour, compare et supprime en masse — 100% hors ligne, sans abonnement.",
     nav_ios="Application iOS", nav_features="Fonctionnalités", nav_privacy="Confidentialité",
-    badge="🖥️ Application de bureau (macOS)",
+    badge="🖥️ Application de bureau (macOS · Windows)",
     h1="Le vrai outil pour trier des milliers de photos",
-    subtitle="PhotoCull est une application de bureau à part entière : elle affiche tout le rouleau de votre iPhone regroupé par séjour, compare vos photos côte à côte, et supprime en masse ce qui ne vaut plus la peine d'être gardé — directement depuis votre Mac.",
-    dl_note="Gratuit · macOS 11+ sur puce Apple · signé et notarisé par Apple",
-    cta_download="💻 Télécharger pour Mac", cta_kofi="☕ Soutenir le projet sur Ko-fi",
+    subtitle="PhotoCull est une application de bureau à part entière : elle affiche tout le rouleau de votre iPhone regroupé par séjour, compare vos photos côte à côte, et supprime en masse ce qui ne vaut plus la peine d'être gardé — directement depuis votre Mac ou votre PC.",
+    dl_note="Mac : gratuit · macOS 11+ sur puce Apple · signé et notarisé par Apple<br>Windows : gratuit · Windows 10/11 (64 bits) · lire un iPhone demande l'app gratuite Apple Devices du Microsoft Store · Windows peut afficher un avertissement SmartScreen (l'app n'est pas encore signée) : Informations complémentaires → Exécuter quand même",
+    cta_download="💻 Télécharger pour Mac", cta_download_windows="🪟 Télécharger pour Windows", cta_kofi="☕ Soutenir le projet sur Ko-fi",
     features_h2="Ce que fait l'app",
     features=[
         ("🧳", 'Vue "Voyages / séjours"', "Toute votre photothèque regroupée automatiquement par séjour (temps ET lieu, comme l'app iOS) — pour repérer d'un coup d'œil les voyages qui prennent le plus de place."),
@@ -355,19 +358,19 @@ DESKTOP = {
     strip_h2="Fonctionne avec l'app iOS TripSweep",
     strip_p_before="Parcourir, comparer et trier les photos de votre iPhone fonctionne seul : branchez-le en USB. Pour supprimer réellement des photos de l'iPhone, il faut aussi ",
     strip_p_link="l'app iOS TripSweep (gratuite)",
-    strip_p_after=", qui applique la suppression sur le téléphone via « Récemment supprimés » et rend l'analyse des séjours quasi instantanée. Les dossiers du Mac se trient sans elle.",
+    strip_p_after=", qui applique la suppression sur le téléphone via « Récemment supprimés » et rend l'analyse des séjours quasi instantanée. Les dossiers du Mac ou du PC se trient sans elle.",
     footer_copy="© 2026 PhotoCull. Développé par Jeffrey Brignoli.",
     footer_ios="Application iOS", footer_privacy="Confidentialité", footer_kofi="Ko-fi", footer_github="GitHub",
 ),
 "it": dict(
-    title="PhotoCull per Mac — lo strumento per ordinare le foto",
+    title="PhotoCull per Mac e Windows — lo strumento per ordinare le foto",
     desc="L'app desktop che ordina le tue foto per soggiorno, confronta ed elimina in blocco — 100% offline, senza abbonamento.",
     nav_ios="App iOS", nav_features="Funzionalità", nav_privacy="Privacy",
-    badge="🖥️ App desktop (macOS)",
+    badge="🖥️ App desktop (macOS · Windows)",
     h1="Il vero strumento per ordinare migliaia di foto",
-    subtitle="PhotoCull è un'applicazione desktop a tutti gli effetti: mostra l'intero rullino del tuo iPhone raggruppato per soggiorno, confronta le tue foto affiancate ed elimina in blocco ciò che non vale più la pena tenere — direttamente dal tuo Mac.",
-    dl_note="Gratuito · macOS 11+ su Apple Silicon · firmato e notarizzato da Apple",
-    cta_download="💻 Scarica per Mac", cta_kofi="☕ Sostieni il progetto su Ko-fi",
+    subtitle="PhotoCull è un'applicazione desktop a tutti gli effetti: mostra l'intero rullino del tuo iPhone raggruppato per soggiorno, confronta le tue foto affiancate ed elimina in blocco ciò che non vale più la pena tenere — direttamente dal tuo Mac o PC.",
+    dl_note="Mac: gratuito · macOS 11+ su Apple Silicon · firmato e notarizzato da Apple<br>Windows: gratuito · Windows 10/11 (64 bit) · per leggere un iPhone serve l'app gratuita Apple Devices del Microsoft Store · Windows può mostrare un avviso SmartScreen (l'app non è ancora firmata): Ulteriori informazioni → Esegui comunque",
+    cta_download="💻 Scarica per Mac", cta_download_windows="🪟 Scarica per Windows", cta_kofi="☕ Sostieni il progetto su Ko-fi",
     features_h2="Cosa fa l'app",
     features=[
         ("🧳", 'Vista "Viaggi / soggiorni"', "Tutta la tua libreria foto raggruppata automaticamente per soggiorno (tempo E luogo, come l'app iOS) — per individuare a colpo d'occhio i viaggi che occupano più spazio."),
@@ -380,19 +383,19 @@ DESKTOP = {
     strip_h2="Funziona con l'app iOS TripSweep",
     strip_p_before="Sfogliare, confrontare e ordinare le foto del tuo iPhone funziona da solo: collegalo via USB. Per eliminare davvero le foto dall'iPhone serve anche ",
     strip_p_link="l'app iOS TripSweep (gratuita)",
-    strip_p_after=", che applica l'eliminazione sul telefono tramite «Eliminati di recente» e rende l'analisi dei soggiorni quasi istantanea. Le cartelle del Mac si ordinano anche senza.",
+    strip_p_after=", che applica l'eliminazione sul telefono tramite «Eliminati di recente» e rende l'analisi dei soggiorni quasi istantanea. Le cartelle del Mac o del PC si ordinano anche senza.",
     footer_copy="© 2026 PhotoCull. Sviluppato da Jeffrey Brignoli.",
     footer_ios="App iOS", footer_privacy="Privacy", footer_kofi="Ko-fi", footer_github="GitHub",
 ),
 "de": dict(
-    title="PhotoCull für Mac — das Foto-Sortierwerkzeug",
+    title="PhotoCull für Mac und Windows — das Foto-Sortierwerkzeug",
     desc="Die Desktop-App, die deine Fotos nach Aufenthalt sortiert, vergleicht und in großen Mengen löscht — 100% offline, ohne Abo.",
     nav_ios="iOS-App", nav_features="Funktionen", nav_privacy="Datenschutz",
-    badge="🖥️ Desktop-App (macOS)",
+    badge="🖥️ Desktop-App (macOS · Windows)",
     h1="Das echte Werkzeug, um Tausende Fotos zu sortieren",
-    subtitle="PhotoCull ist eine vollwertige Desktop-Anwendung: Sie zeigt deine gesamte iPhone-Fotorolle nach Aufenthalt gruppiert, vergleicht deine Fotos nebeneinander und löscht in großen Mengen, was sich nicht mehr zu behalten lohnt — direkt von deinem Mac aus.",
-    dl_note="Kostenlos · macOS 11+ auf Apple Silicon · von Apple signiert und notarisiert",
-    cta_download="💻 Für Mac herunterladen", cta_kofi="☕ Projekt auf Ko-fi unterstützen",
+    subtitle="PhotoCull ist eine vollwertige Desktop-Anwendung: Sie zeigt deine gesamte iPhone-Fotorolle nach Aufenthalt gruppiert, vergleicht deine Fotos nebeneinander und löscht in großen Mengen, was sich nicht mehr zu behalten lohnt — direkt von deinem Mac oder PC aus.",
+    dl_note="Mac: kostenlos · macOS 11+ auf Apple Silicon · von Apple signiert und notarisiert<br>Windows: kostenlos · Windows 10/11 (64 Bit) · zum Lesen eines iPhones wird die kostenlose App Apple Devices aus dem Microsoft Store benötigt · Windows zeigt eventuell eine SmartScreen-Warnung (die App ist noch nicht signiert): Weitere Informationen → Trotzdem ausführen",
+    cta_download="💻 Für Mac herunterladen", cta_download_windows="🪟 Für Windows herunterladen", cta_kofi="☕ Projekt auf Ko-fi unterstützen",
     features_h2="Was die App kann",
     features=[
         ("🧳", 'Ansicht "Reisen / Aufenthalte"', "Deine gesamte Fotobibliothek automatisch nach Aufenthalt gruppiert (Zeit UND Ort, genau wie bei der iOS-App) — erkenne auf einen Blick, welche Reisen am meisten Platz beanspruchen."),
@@ -405,19 +408,19 @@ DESKTOP = {
     strip_h2="Funktioniert mit der iOS-App TripSweep",
     strip_p_before="Die Fotos deines iPhones durchsuchen, vergleichen und sortieren funktioniert allein: Schließe es einfach per USB an. Um Fotos wirklich vom iPhone zu löschen, brauchst du außerdem ",
     strip_p_link="die iOS-App TripSweep (kostenlos)",
-    strip_p_after=", die das Löschen auf dem Telefon über „Kürzlich gelöscht“ ausführt und die Analyse der Aufenthalte nahezu augenblicklich macht. Ordner auf deinem Mac lassen sich auch ohne sie sortieren.",
+    strip_p_after=", die das Löschen auf dem Telefon über „Kürzlich gelöscht“ ausführt und die Analyse der Aufenthalte nahezu augenblicklich macht. Ordner auf deinem Mac oder PC lassen sich auch ohne sie sortieren.",
     footer_copy="© 2026 PhotoCull. Entwickelt von Jeffrey Brignoli.",
     footer_ios="iOS-App", footer_privacy="Datenschutz", footer_kofi="Ko-fi", footer_github="GitHub",
 ),
 "es": dict(
-    title="PhotoCull para Mac — la herramienta para ordenar fotos",
+    title="PhotoCull para Mac y Windows — la herramienta para ordenar fotos",
     desc="La aplicación de escritorio que ordena tus fotos por estancia, compara y elimina en masa — 100% sin conexión, sin suscripción.",
     nav_ios="Aplicación iOS", nav_features="Funciones", nav_privacy="Privacidad",
-    badge="🖥️ Aplicación de escritorio (macOS)",
+    badge="🖥️ Aplicación de escritorio (macOS · Windows)",
     h1="La auténtica herramienta para ordenar miles de fotos",
-    subtitle="PhotoCull es una aplicación de escritorio completa: muestra todo el carrete de tu iPhone agrupado por estancia, compara tus fotos una junto a otra y elimina en masa lo que ya no vale la pena conservar — directamente desde tu Mac.",
-    dl_note="Gratis · macOS 11+ en Apple Silicon · firmada y notarizada por Apple",
-    cta_download="💻 Descargar para Mac", cta_kofi="☕ Apoya el proyecto en Ko-fi",
+    subtitle="PhotoCull es una aplicación de escritorio completa: muestra todo el carrete de tu iPhone agrupado por estancia, compara tus fotos una junto a otra y elimina en masa lo que ya no vale la pena conservar — directamente desde tu Mac o PC.",
+    dl_note="Mac: gratis · macOS 11+ en Apple Silicon · firmada y notarizada por Apple<br>Windows: gratis · Windows 10/11 (64 bits) · para leer un iPhone hace falta la app gratuita Apple Devices de Microsoft Store · Windows puede mostrar un aviso de SmartScreen (la app aún no está firmada): Más información → Ejecutar de todas formas",
+    cta_download="💻 Descargar para Mac", cta_download_windows="🪟 Descargar para Windows", cta_kofi="☕ Apoya el proyecto en Ko-fi",
     features_h2="Qué hace la app",
     features=[
         ("🧳", 'Vista "Viajes / estancias"', "Toda tu biblioteca de fotos agrupada automáticamente por estancia (tiempo Y lugar, igual que la app de iOS) — detecta de un vistazo los viajes que ocupan más espacio."),
@@ -430,7 +433,7 @@ DESKTOP = {
     strip_h2="Funciona con la app de iOS TripSweep",
     strip_p_before="Explorar, comparar y ordenar las fotos de tu iPhone funciona por sí solo: conéctalo por USB. Para eliminar de verdad fotos del iPhone también necesitas ",
     strip_p_link="la app de iOS TripSweep (gratuita)",
-    strip_p_after=", que aplica la eliminación en el teléfono a través de «Eliminados recientemente» y hace casi instantáneo el análisis de estancias. Las carpetas del Mac se ordenan sin ella.",
+    strip_p_after=", que aplica la eliminación en el teléfono a través de «Eliminados recientemente» y hace casi instantáneo el análisis de estancias. Las carpetas del Mac o del PC se ordenan sin ella.",
     footer_copy="© 2026 PhotoCull. Desarrollado por Jeffrey Brignoli.",
     footer_ios="Aplicación iOS", footer_privacy="Privacidad", footer_kofi="Ko-fi", footer_github="GitHub",
 ),
@@ -933,7 +936,7 @@ def render_desktop(lang):
 {hreflang_links('desktop.html')}
 {seo_meta(lang, 'desktop.html', d['title'], d['desc'], 'assets/img/photocull-icon.png')}
   <script src="{a('assets/lightbox.js')}" defer></script>
-{software_app_ld_json("PhotoCull", d['desc'], page_url(lang, 'desktop.html'), SITE_ORIGIN + '/assets/img/photocull-icon.png', "macOS", download_url=PHOTOCULL_DOWNLOAD_URL)}
+{software_app_ld_json("PhotoCull", d['desc'], page_url(lang, 'desktop.html'), SITE_ORIGIN + '/assets/img/photocull-icon.png', "macOS, Windows", download_url=PHOTOCULL_DOWNLOAD_URL)}
   <link rel="stylesheet" href="{a('assets/style.css')}" />
 </head>
 <body>
@@ -959,6 +962,7 @@ def render_desktop(lang):
       </p>
       <div class="cta-row">
         <a class="btn btn-primary" href="{PHOTOCULL_DOWNLOAD_URL}" rel="noopener">{d['cta_download']}</a>
+        <a class="btn btn-primary" href="{PHOTOCULL_WINDOWS_DOWNLOAD_URL}" rel="noopener">{d['cta_download_windows']}</a>
         <a class="btn btn-kofi" href="https://ko-fi.com/jeffreybrignoli" target="_blank" rel="noopener">{d['cta_kofi']}</a>
       </div>
       <p style="margin-top:12px; font-size:14px;">{d['dl_note']}</p>
@@ -1202,7 +1206,7 @@ llms_txt = f'''# TripSweep & PhotoCull
 > taking up space, and sorts out what you don't need by type — identical copies, similar
 > and blurry photos, screenshots, large videos — so you keep the best shot and delete
 > the rest in a few taps. It can also back up and share a whole trip.
-> PhotoCull is its macOS companion for bulk photo review and cleanup. Both are 100%
+> PhotoCull is its desktop companion (macOS and Windows) for bulk photo review and cleanup. Both are 100%
 > offline: no photo, video, or location data is ever collected, sent, or shared —
 > place recognition and similar-photo detection run entirely on-device.
 
@@ -1210,8 +1214,9 @@ llms_txt = f'''# TripSweep & PhotoCull
 
 - [TripSweep on the App Store]({APP_STORE_URL}): download the iOS app.
 - [TripSweep (iOS app)]({SITE_ORIGIN}/index.html): grouping by trip, event or month, a Cleanup tab (identical copies, similar and blurry photos, screenshots, large videos), review, backup, sharing and deletion on iPhone.
-- [PhotoCull (macOS app)]({SITE_ORIGIN}/desktop.html): desktop companion for comparing and bulk-deleting photos.
+- [PhotoCull (macOS and Windows app)]({SITE_ORIGIN}/desktop.html): desktop companion for comparing and bulk-deleting photos.
 - [Download PhotoCull for Mac]({PHOTOCULL_DOWNLOAD_URL}): free, signed and notarized by Apple, macOS 11+ on Apple Silicon.
+- [Download PhotoCull for Windows]({PHOTOCULL_WINDOWS_DOWNLOAD_URL}): free, Windows 10/11 (64-bit); reading an iPhone needs the free Apple Devices app (Microsoft Store). Not code-signed yet, so Windows SmartScreen may show a warning on first launch.
 - [Privacy Policy]({SITE_ORIGIN}/privacy.html): what data is used, where it goes (nowhere), and why.
 
 ## Languages
