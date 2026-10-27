@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-10-26",
+  "apps": {
+    "ios": {
+      "version": "1.5",
+      "url": "https://apps.apple.com/app/tripsweep/id6813028251"
+    },
+    "android": {
+      "version": "1.4.0",
+      "url": "https://play.google.com/store/apps/details?id=com.tripsweep.app"
+    },
+    "desktop": {
+      "version": "1.1.0",
+      "url": "https://brignolij.github.io/TripSweepSite/desktop.html",
+      "downloads": {
+        "mac": "https://github.com/brignolij/TripSweepSite/releases/latest/download/PhotoCull-Desktop.zip",
+        "windows": "https://github.com/brignolij/TripSweepSite/releases/latest/download/PhotoCull-Windows-x64.zip"
+      },
+      "windowsStore": {
+        "version": "1.0.2.0",
+        "url": "https://apps.microsoft.com/detail/9N6WV393B3PL"
+      }
+    }
+  }
+}
