@@ -141,11 +141,6 @@ nav.links a:hover {
   color: var(--text);
 }
 
-.btn-kofi {
-  background: #29abe0;
-  color: #051320;
-}
-
 .badge {
   display: inline-block;
   font-size: 12px;

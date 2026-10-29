@@ -16,6 +16,7 @@
 - [PhotoCull (macOS and Windows app)](https://brignolij.github.io/TripSweepSite/desktop.html): desktop companion for comparing and bulk-deleting photos.
 - [Download PhotoCull for Mac](https://github.com/brignolij/TripSweepSite/releases/latest/download/PhotoCull-Desktop.zip): free, signed and notarized by Apple, macOS 11+ on Apple Silicon.
 - [Download PhotoCull for Windows](https://github.com/brignolij/TripSweepSite/releases/latest/download/PhotoCull-Windows-x64.zip): free, Windows 10/11 (64-bit); reading an iPhone needs the free Apple Devices app (Microsoft Store). Not code-signed yet, so Windows SmartScreen may show a warning on first launch.
+- [FAQ](https://brignolij.github.io/TripSweepSite/faq.html): freeing up iPhone storage, deleting duplicate and similar photos, cleaning up old trips, recovering deleted photos, pricing.
 - [Privacy Policy](https://brignolij.github.io/TripSweepSite/privacy.html): what data is used, where it goes (nowhere), and why.
 
 ## Languages

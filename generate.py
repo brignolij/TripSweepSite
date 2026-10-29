@@ -22,6 +22,14 @@ def asset_path(from_lang, rel):
 SITE_ORIGIN = "https://brignolij.github.io/TripSweepSite"
 APP_STORE_URL = "https://apps.apple.com/app/tripsweep/id6813028251"
 APP_STORE_ID = "6813028251"
+# Provider token for App Store campaign links (App Store Connect > App Analytics > Acquisition > Campaigns > generate a
+# link: the pt=... value). Apple only attributes ct= installs to a campaign when pt is present.
+APP_STORE_PT = ""
+
+def store_link(campaign):
+    """App Store link tagged with a campaign token, so App Analytics shows which page brought the install."""
+    pt = f"pt={APP_STORE_PT}&" if APP_STORE_PT else ""
+    return f"{APP_STORE_URL}?{pt}ct={campaign}&mt=8"
 # Stable "latest" link: always the newest PhotoCull release attached to this repository's GitHub Releases.
 PHOTOCULL_DOWNLOAD_URL = "https://github.com/brignolij/TripSweepSite/releases/latest/download/PhotoCull-Desktop.zip"
 # Windows build, attached to the SAME "latest" release as the Mac zip: every new release (Mac or Windows) must carry both
@@ -71,7 +79,7 @@ def seo_meta(lang, page, title, desc, image_rel, og_type="website"):
         f'  <meta property="og:locale:alternate" content="{OG_LOCALE[l]}" />' for l in LANGS if l != lang
     )
     return f'''  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2QKSMXT76"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('consent','default',{{analytics_storage:'granted',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'}});gtag('js',new Date());gtag('config','G-Z2QKSMXT76',{{storage:'none',allow_google_signals:false,allow_ad_personalization_signals:false}});</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('consent','default',{{analytics_storage:'granted',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'}});gtag('js',new Date());gtag('config','G-Z2QKSMXT76',{{storage:'none',allow_google_signals:false,allow_ad_personalization_signals:false}});document.addEventListener('click',function(e){{var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.href,p=h.indexOf('apps.apple.com')>-1?'ios':h.indexOf('PhotoCull-Windows')>-1?'windows':h.indexOf('PhotoCull-Desktop')>-1?'mac':'';if(p)gtag('event','download_click',{{platform:p}});}});</script>
   <meta name="google-site-verification" content="5HOh0hrLDaKSXUZ1k1-Y7yOrdBucjiu6-zij86Fq-xM" />
   <link rel="canonical" href="{url}" />
   <meta property="og:type" content="{og_type}" />
@@ -135,7 +143,7 @@ INDEX = {
     nav_desktop="Desktop app", nav_features="Features", nav_privacy_anchor="Privacy", nav_privacy="Privacy Policy",
     h1="Finally, an easy way to clear out your photo library",
     subtitle="TripSweep groups your photos and videos by trip (or by event and month when they have no location), shows what's taking up space, and sorts out what you don't need — identical copies, similar and blurry photos, screenshots, large videos. Keep the best shot, delete the rest, without ever sending your data anywhere.",
-    cta_store="📱 Download on the App Store", cta_kofi="☕ Support the project on Ko-fi",
+    cta_store="📱 Download on the App Store",
     cta_desktop_link="→ Also check out PhotoCull for Mac and Windows, the desktop app that sorts your photos",
     hero_alt="List of trips in TripSweep, with the share of similar photos for each trip",
     preview_h2="A look at the app",
@@ -171,7 +179,7 @@ INDEX = {
     nav_desktop="Application de bureau", nav_features="Fonctionnalités", nav_privacy_anchor="Confidentialité", nav_privacy="Politique de confidentialité",
     h1="Enfin un moyen simple de faire le tri dans votre photothèque",
     subtitle="TripSweep regroupe vos photos et vidéos par séjour (ou par événement et par mois quand elles n'ont pas de position), montre ce qui prend de la place et repère ce dont vous n'avez pas besoin : copies identiques, photos similaires et floues, captures d'écran, grosses vidéos. Gardez la meilleure prise, supprimez le reste, sans jamais envoyer vos données où que ce soit.",
-    cta_store="📱 Télécharger sur l'App Store", cta_kofi="☕ Soutenir le projet sur Ko-fi",
+    cta_store="📱 Télécharger sur l'App Store",
     cta_desktop_link="→ Découvrir aussi PhotoCull pour Mac et Windows, l'application de bureau qui trie vos photos",
     hero_alt="Liste des séjours dans TripSweep, avec la part de photos similaires de chaque séjour",
     preview_h2="Un aperçu de l'app",
@@ -207,7 +215,7 @@ INDEX = {
     nav_desktop="App desktop", nav_features="Funzionalità", nav_privacy_anchor="Privacy", nav_privacy="Informativa sulla privacy",
     h1="Finalmente un modo semplice per fare ordine nella tua libreria foto",
     subtitle="TripSweep raggruppa le tue foto e i tuoi video per soggiorno (o per evento e per mese quando non hanno una posizione), mostra cosa occupa spazio e individua ciò che non ti serve: copie identiche, foto simili e sfocate, screenshot, video pesanti. Tieni lo scatto migliore ed elimina il resto, senza mai inviare i tuoi dati da nessuna parte.",
-    cta_store="📱 Scarica su App Store", cta_kofi="☕ Sostieni il progetto su Ko-fi",
+    cta_store="📱 Scarica su App Store",
     cta_desktop_link="→ Scopri anche PhotoCull per Mac e Windows, l'app desktop che ordina le tue foto",
     hero_alt="Elenco dei soggiorni in TripSweep, con la quota di foto simili di ogni soggiorno",
     preview_h2="Uno sguardo all'app",
@@ -243,7 +251,7 @@ INDEX = {
     nav_desktop="Desktop-App", nav_features="Funktionen", nav_privacy_anchor="Datenschutz", nav_privacy="Datenschutzerklärung",
     h1="Endlich ein einfacher Weg, deine Fotomediathek aufzuräumen",
     subtitle="TripSweep gruppiert deine Fotos und Videos nach Reise (oder nach Ereignis und Monat, wenn sie keinen Standort haben), zeigt, was Platz braucht, und findet, was du nicht brauchst: identische Kopien, ähnliche und unscharfe Fotos, Bildschirmfotos, große Videos. Behalte das beste Foto, lösche den Rest – ohne deine Daten jemals irgendwohin zu senden.",
-    cta_store="📱 Im App Store laden", cta_kofi="☕ Projekt auf Ko-fi unterstützen",
+    cta_store="📱 Im App Store laden",
     cta_desktop_link="→ Entdecke auch PhotoCull für Mac und Windows, die Desktop-App, die deine Fotos sortiert",
     hero_alt="Liste der Aufenthalte in TripSweep mit dem Anteil ähnlicher Fotos je Aufenthalt",
     preview_h2="Ein Blick auf die App",
@@ -279,7 +287,7 @@ INDEX = {
     nav_desktop="Aplicación de escritorio", nav_features="Funciones", nav_privacy_anchor="Privacidad", nav_privacy="Política de privacidad",
     h1="Por fin, una forma sencilla de ordenar tu fototeca",
     subtitle="TripSweep agrupa tus fotos y vídeos por viaje (o por evento y por mes cuando no tienen ubicación), muestra qué ocupa espacio y detecta lo que no necesitas: copias idénticas, fotos similares y borrosas, capturas de pantalla, vídeos grandes. Quédate con la mejor toma, elimina el resto, sin enviar nunca tus datos a ningún sitio.",
-    cta_store="📱 Descargar en el App Store", cta_kofi="☕ Apoya el proyecto en Ko-fi",
+    cta_store="📱 Descargar en el App Store",
     cta_desktop_link="→ Descubre también PhotoCull para Mac y Windows, la aplicación de escritorio que ordena tus fotos",
     hero_alt="Lista de estancias en TripSweep, con la parte de fotos similares de cada estancia",
     preview_h2="Un vistazo a la app",
@@ -320,7 +328,7 @@ DESKTOP = {
     h1="The real tool for sorting thousands of photos",
     subtitle="PhotoCull is a full desktop application: it shows your entire iPhone camera roll grouped by trip, compares your photos side by side, and bulk-deletes what's no longer worth keeping — right from your Mac or PC.",
     dl_note="Mac: free · macOS 11+ on Apple Silicon · signed and notarized by Apple<br>Windows: free · Windows 10/11 (64-bit) · reading an iPhone needs the free Apple Devices app from the Microsoft Store · Windows may show a SmartScreen warning (the app is not signed yet): More info → Run anyway",
-    cta_download="💻 Download for Mac", cta_download_windows="🪟 Download for Windows", cta_kofi="☕ Support the project on Ko-fi",
+    cta_download="💻 Download for Mac", cta_download_windows="🪟 Download for Windows",
     features_h2="What the app does",
     features=[
         ("🧳", 'The "Trips" view', "Your entire photo library automatically grouped by trip (time AND location, just like the iOS app) — spot at a glance which trips take up the most space."),
@@ -345,7 +353,7 @@ DESKTOP = {
     h1="Le vrai outil pour trier des milliers de photos",
     subtitle="PhotoCull est une application de bureau à part entière : elle affiche tout le rouleau de votre iPhone regroupé par séjour, compare vos photos côte à côte, et supprime en masse ce qui ne vaut plus la peine d'être gardé — directement depuis votre Mac ou votre PC.",
     dl_note="Mac : gratuit · macOS 11+ sur puce Apple · signé et notarisé par Apple<br>Windows : gratuit · Windows 10/11 (64 bits) · lire un iPhone demande l'app gratuite Apple Devices du Microsoft Store · Windows peut afficher un avertissement SmartScreen (l'app n'est pas encore signée) : Informations complémentaires → Exécuter quand même",
-    cta_download="💻 Télécharger pour Mac", cta_download_windows="🪟 Télécharger pour Windows", cta_kofi="☕ Soutenir le projet sur Ko-fi",
+    cta_download="💻 Télécharger pour Mac", cta_download_windows="🪟 Télécharger pour Windows",
     features_h2="Ce que fait l'app",
     features=[
         ("🧳", 'Vue "Voyages / séjours"', "Toute votre photothèque regroupée automatiquement par séjour (temps ET lieu, comme l'app iOS) — pour repérer d'un coup d'œil les voyages qui prennent le plus de place."),
@@ -370,7 +378,7 @@ DESKTOP = {
     h1="Il vero strumento per ordinare migliaia di foto",
     subtitle="PhotoCull è un'applicazione desktop a tutti gli effetti: mostra l'intero rullino del tuo iPhone raggruppato per soggiorno, confronta le tue foto affiancate ed elimina in blocco ciò che non vale più la pena tenere — direttamente dal tuo Mac o PC.",
     dl_note="Mac: gratuito · macOS 11+ su Apple Silicon · firmato e notarizzato da Apple<br>Windows: gratuito · Windows 10/11 (64 bit) · per leggere un iPhone serve l'app gratuita Apple Devices del Microsoft Store · Windows può mostrare un avviso SmartScreen (l'app non è ancora firmata): Ulteriori informazioni → Esegui comunque",
-    cta_download="💻 Scarica per Mac", cta_download_windows="🪟 Scarica per Windows", cta_kofi="☕ Sostieni il progetto su Ko-fi",
+    cta_download="💻 Scarica per Mac", cta_download_windows="🪟 Scarica per Windows",
     features_h2="Cosa fa l'app",
     features=[
         ("🧳", 'Vista "Viaggi / soggiorni"', "Tutta la tua libreria foto raggruppata automaticamente per soggiorno (tempo E luogo, come l'app iOS) — per individuare a colpo d'occhio i viaggi che occupano più spazio."),
@@ -395,7 +403,7 @@ DESKTOP = {
     h1="Das echte Werkzeug, um Tausende Fotos zu sortieren",
     subtitle="PhotoCull ist eine vollwertige Desktop-Anwendung: Sie zeigt deine gesamte iPhone-Fotorolle nach Aufenthalt gruppiert, vergleicht deine Fotos nebeneinander und löscht in großen Mengen, was sich nicht mehr zu behalten lohnt — direkt von deinem Mac oder PC aus.",
     dl_note="Mac: kostenlos · macOS 11+ auf Apple Silicon · von Apple signiert und notarisiert<br>Windows: kostenlos · Windows 10/11 (64 Bit) · zum Lesen eines iPhones wird die kostenlose App Apple Devices aus dem Microsoft Store benötigt · Windows zeigt eventuell eine SmartScreen-Warnung (die App ist noch nicht signiert): Weitere Informationen → Trotzdem ausführen",
-    cta_download="💻 Für Mac herunterladen", cta_download_windows="🪟 Für Windows herunterladen", cta_kofi="☕ Projekt auf Ko-fi unterstützen",
+    cta_download="💻 Für Mac herunterladen", cta_download_windows="🪟 Für Windows herunterladen",
     features_h2="Was die App kann",
     features=[
         ("🧳", 'Ansicht "Reisen / Aufenthalte"', "Deine gesamte Fotobibliothek automatisch nach Aufenthalt gruppiert (Zeit UND Ort, genau wie bei der iOS-App) — erkenne auf einen Blick, welche Reisen am meisten Platz beanspruchen."),
@@ -420,7 +428,7 @@ DESKTOP = {
     h1="La auténtica herramienta para ordenar miles de fotos",
     subtitle="PhotoCull es una aplicación de escritorio completa: muestra todo el carrete de tu iPhone agrupado por estancia, compara tus fotos una junto a otra y elimina en masa lo que ya no vale la pena conservar — directamente desde tu Mac o PC.",
     dl_note="Mac: gratis · macOS 11+ en Apple Silicon · firmada y notarizada por Apple<br>Windows: gratis · Windows 10/11 (64 bits) · para leer un iPhone hace falta la app gratuita Apple Devices de Microsoft Store · Windows puede mostrar un aviso de SmartScreen (la app aún no está firmada): Más información → Ejecutar de todas formas",
-    cta_download="💻 Descargar para Mac", cta_download_windows="🪟 Descargar para Windows", cta_kofi="☕ Apoya el proyecto en Ko-fi",
+    cta_download="💻 Descargar para Mac", cta_download_windows="🪟 Descargar para Windows",
     features_h2="Qué hace la app",
     features=[
         ("🧳", 'Vista "Viajes / estancias"', "Toda tu biblioteca de fotos agrupada automáticamente por estancia (tiempo Y lugar, igual que la app de iOS) — detecta de un vistazo los viajes que ocupan más espacio."),
@@ -760,13 +768,14 @@ def render_index(lang):
   <div class="wrap">
     <header class="nav">
       <a class="brand" href="{path_for(lang, 'index.html', lang)}">
-        <img class="logo-img" src="{a('assets/img/tripsweep-icon.png')}" alt="" />
+        <img class="logo-img" src="{a('assets/img/tripsweep-icon-96.png')}" alt="" />
         TripSweep
       </a>
       <nav class="links">
         <a href="{path_for(lang, 'desktop.html', lang)}">{d['nav_desktop']}</a>
         <a href="#fonctionnalites">{d['nav_features']}</a>
         <a href="#confidentialite">{d['nav_privacy_anchor']}</a>
+        <a href="{path_for(lang, 'faq.html', lang)}">FAQ</a>
         <a href="{path_for(lang, 'privacy.html', lang)}">{d['nav_privacy']}</a>
         {lang_switcher(lang, 'index.html')}
       </nav>
@@ -778,8 +787,7 @@ def render_index(lang):
         {d['subtitle']}
       </p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="{APP_STORE_URL}" target="_blank" rel="noopener">{d['cta_store']}</a>
-        <a class="btn btn-kofi" href="https://ko-fi.com/jeffreybrignoli" target="_blank" rel="noopener">{d['cta_kofi']}</a>
+        <a class="btn btn-primary" href="{store_link(f'site-{lang}-home')}" target="_blank" rel="noopener">{d['cta_store']}</a>
       </div>
       <p style="margin-top:20px; font-size:14px;">
         <a href="{path_for(lang, 'desktop.html', lang)}">{d['cta_desktop_link']}</a>
@@ -836,6 +844,7 @@ def render_index(lang):
       <div class="footer-links">
         <a href="{path_for(lang, 'desktop.html', lang)}">{d['footer_desktop']}</a>
         <a href="{path_for(lang, 'privacy.html', lang)}">{d['footer_privacy']}</a>
+        <a href="{path_for(lang, 'faq.html', lang)}">FAQ</a>
         <a href="https://ko-fi.com/jeffreybrignoli" target="_blank" rel="noopener">{d['footer_kofi']}</a>
         <a href="https://github.com/brignolij/TripSweepSite" target="_blank" rel="noopener">{d['footer_github']}</a>
         {passmerge_link(lang)}
@@ -943,13 +952,14 @@ def render_desktop(lang):
   <div class="wrap">
     <header class="nav">
       <a class="brand" href="{path_for(lang, 'index.html', lang)}">
-        <img class="logo-img" src="{a('assets/img/photocull-icon.png')}" alt="" />
+        <img class="logo-img" src="{a('assets/img/photocull-icon-96.png')}" alt="" />
         PhotoCull
       </a>
       <nav class="links">
         <a href="{path_for(lang, 'index.html', lang)}">{d['nav_ios']}</a>
         <a href="#fonctionnalites">{d['nav_features']}</a>
         <a href="{path_for(lang, 'privacy.html', lang)}">{d['nav_privacy']}</a>
+        <a href="{path_for(lang, 'faq.html', lang)}">FAQ</a>
         {lang_switcher(lang, 'desktop.html')}
       </nav>
     </header>
@@ -963,7 +973,6 @@ def render_desktop(lang):
       <div class="cta-row">
         <a class="btn btn-primary" href="{PHOTOCULL_DOWNLOAD_URL}" rel="noopener">{d['cta_download']}</a>
         <a class="btn btn-primary" href="{PHOTOCULL_WINDOWS_DOWNLOAD_URL}" rel="noopener">{d['cta_download_windows']}</a>
-        <a class="btn btn-kofi" href="https://ko-fi.com/jeffreybrignoli" target="_blank" rel="noopener">{d['cta_kofi']}</a>
       </div>
       <p style="margin-top:12px; font-size:14px;">{d['dl_note']}</p>
 
@@ -994,6 +1003,7 @@ def render_desktop(lang):
       <div class="footer-links">
         <a href="{path_for(lang, 'index.html', lang)}">{d['footer_ios']}</a>
         <a href="{path_for(lang, 'privacy.html', lang)}">{d['footer_privacy']}</a>
+        <a href="{path_for(lang, 'faq.html', lang)}">FAQ</a>
         <a href="https://ko-fi.com/jeffreybrignoli" target="_blank" rel="noopener">{d['footer_kofi']}</a>
         <a href="https://github.com/brignolij/TripSweepSite" target="_blank" rel="noopener">{d['footer_github']}</a>
         {passmerge_link(lang)}
@@ -1025,7 +1035,7 @@ def render_privacy(lang):
   <div class="wrap">
     <header class="nav">
       <a class="brand" href="{path_for(lang, 'index.html', lang)}">
-        <img class="logo-img" src="{a('assets/img/tripsweep-icon.png')}" alt="" />
+        <img class="logo-img" src="{a('assets/img/tripsweep-icon-96.png')}" alt="" />
         TripSweep
       </a>
       <nav class="links">
@@ -1107,6 +1117,228 @@ def render_privacy(lang):
 </html>
 '''
 
+# FAQ page: answers to the searches people actually type ("free up space on iPhone", "delete duplicate photos"...).
+# Answers are plain text: the same string goes into the page and into the FAQPage JSON-LD.
+FAQ = {
+"en": dict(
+    title="TripSweep FAQ — free up iPhone storage, delete duplicate and similar photos",
+    desc="How to free up space on your iPhone, find duplicate and similar photos, clean up old trips and recover deleted photos — answers about TripSweep, 100% offline.",
+    nav_home="iOS app", nav_desktop="Desktop app",
+    h1="Questions and answers",
+    intro="How to free up space on your iPhone, sort duplicates and similar photos, and what TripSweep does (and never does) with your photos.",
+    cta_store="📱 Download on the App Store",
+    qa=[
+        ("How do I free up space on my iPhone without paying for more iCloud storage?",
+         "Start with what weighs the most: large videos, screenshots, burst leftovers and near-identical shots. TripSweep's Cleanup tab lists them by type with the space each category takes, and each trip shows how many gigabytes its similar photos use. Keep the best shot of each group and delete the rest. If iCloud Photos is on, the deletion syncs to all your devices and also frees space in iCloud once “Recently Deleted” is emptied."),
+        ("How do I find and delete duplicate photos on my iPhone?",
+         "The Photos app has a Duplicates album for exact copies. TripSweep goes further: besides identical copies, it finds similar photos anywhere in your library — the five shots of the same sunset, bursts, near-identical selfies. In Cleanup, a “Keep 1 per group” button sorts a whole category in one tap, and your favorites are never suggested for deletion."),
+        ("How do I delete similar photos and keep only the best one?",
+         "Open a group of similar photos in TripSweep: they appear side by side, never cropped, and a best shot is suggested based on sharpness, Apple's aesthetic score and faces. Keep it or pick another one, then delete the rest. The analysis runs on your iPhone with Apple's Vision framework."),
+        ("How do I clean up old vacation photos?",
+         "TripSweep groups your photos and videos by trip using their location, or by event and month when they have no GPS. Sort trips by size to start with the heaviest, see the share of similar photos in each one, and sort trip by trip. Before deleting, you can export a whole trip to your Mac or to Files, or share it with the people who were there."),
+        ("Does TripSweep send my photos to a server?",
+         "No. TripSweep works 100% offline: place recognition and similar-photo detection run on your iPhone, with no account and no third-party service. No photo, video or location ever leaves the device."),
+        ("Is TripSweep free? Is there a subscription?",
+         "There is no subscription. Browsing, comparing and sorting are free, with 3 deletions a day from the viewer. Pro ($4.99, one time) removes the limit on the iPhone; Pro + Desktop ($24.99, one time) also removes it in PhotoCull on the Mac. TripSweep needs iOS 18 or later."),
+        ("Can I get back a photo I deleted by mistake?",
+         "Yes. TripSweep always deletes through the Photos app's “Recently Deleted” album, never permanently. Photos stay there for 30 days and you can restore them at any time."),
+        ("Can I sort my iPhone photos from my Mac or a Windows PC?",
+         "Yes, with PhotoCull, the free desktop companion for Mac and Windows. It compares photos on a big screen and sorts a folder on your computer with no limit. From a Mac, it can also delete photos on your iPhone: 6 a day for free, 15 with Pro, unlimited with Pro + Desktop."),
+    ],
+    footer_copy="© 2026 TripSweep. Developed by Jeffrey Brignoli.",
+    footer_privacy="Privacy", footer_kofi="Ko-fi",
+),
+"fr": dict(
+    title="FAQ TripSweep — libérer de l'espace sur iPhone, supprimer les doublons et photos similaires",
+    desc="Comment libérer de l'espace sur votre iPhone, trouver les doublons et photos similaires, trier vos vieux voyages et récupérer une photo supprimée — les réponses sur TripSweep, 100 % hors ligne.",
+    nav_home="Application iOS", nav_desktop="Application de bureau",
+    h1="Questions et réponses",
+    intro="Comment libérer de l'espace sur votre iPhone, trier les doublons et les photos similaires, et ce que TripSweep fait (et ne fait jamais) de vos photos.",
+    cta_store="📱 Télécharger sur l'App Store",
+    qa=[
+        ("Comment libérer de l'espace sur mon iPhone sans payer plus de stockage iCloud ?",
+         "Commencez par ce qui pèse le plus : grosses vidéos, captures d'écran, images en trop des rafales et photos presque identiques. L'onglet Nettoyage de TripSweep les classe par type avec la place que prend chaque catégorie, et chaque séjour affiche combien de gigaoctets occupent ses photos similaires. Gardez la meilleure de chaque groupe et supprimez le reste. Si Photos iCloud est activé, la suppression se synchronise sur tous vos appareils et libère aussi de la place dans iCloud une fois « Récemment supprimés » vidé."),
+        ("Comment trouver et supprimer les photos en double sur iPhone ?",
+         "L'app Photos a un album Doublons pour les copies exactes. TripSweep va plus loin : en plus des copies identiques, il trouve les photos similaires partout dans la photothèque — les cinq photos du même coucher de soleil, les rafales, les selfies presque identiques. Dans Nettoyage, un bouton « Garder 1 par groupe » trie toute une catégorie d'un geste, et vos favoris ne sont jamais proposés à la suppression."),
+        ("Comment supprimer les photos similaires et ne garder que la meilleure ?",
+         "Ouvrez un groupe de photos similaires dans TripSweep : elles s'affichent côte à côte, jamais recadrées, et une meilleure photo est suggérée selon la netteté, le score esthétique d'Apple et les visages. Gardez-la ou choisissez-en une autre, puis supprimez le reste. L'analyse se fait sur votre iPhone avec le framework Vision d'Apple."),
+        ("Comment trier les vieilles photos de vacances ?",
+         "TripSweep regroupe vos photos et vidéos par séjour grâce à leur position, ou par événement et par mois quand elles n'ont pas de GPS. Triez les séjours par taille pour commencer par les plus lourds, voyez la part de photos similaires de chacun et faites le tri séjour par séjour. Avant de supprimer, vous pouvez exporter un séjour entier vers votre Mac ou Fichiers, ou le partager avec ceux qui étaient là."),
+        ("TripSweep envoie-t-il mes photos sur un serveur ?",
+         "Non. TripSweep fonctionne 100 % hors ligne : la reconnaissance des lieux et la détection des photos similaires tournent sur votre iPhone, sans compte ni service tiers. Aucune photo, vidéo ou position ne quitte l'appareil."),
+        ("TripSweep est-il gratuit ? Y a-t-il un abonnement ?",
+         "Il n'y a pas d'abonnement. Parcourir, comparer et trier est gratuit, avec 3 suppressions par jour depuis la visionneuse. Pro (4,99 $, achat unique) lève la limite sur l'iPhone ; Pro + Desktop (24,99 $, achat unique) la lève aussi dans PhotoCull sur le Mac. TripSweep demande iOS 18 ou plus récent."),
+        ("Puis-je récupérer une photo supprimée par erreur ?",
+         "Oui. TripSweep supprime toujours via l'album « Récemment supprimés » de l'app Photos, jamais définitivement. Les photos y restent 30 jours et vous pouvez les restaurer à tout moment."),
+        ("Puis-je trier les photos de mon iPhone depuis mon Mac ou un PC Windows ?",
+         "Oui, avec PhotoCull, l'application de bureau gratuite pour Mac et Windows. Elle compare les photos sur grand écran et trie un dossier de votre ordinateur sans limite. Depuis un Mac, elle peut aussi supprimer des photos de votre iPhone : 6 par jour en gratuit, 15 avec Pro, sans limite avec Pro + Desktop."),
+    ],
+    footer_copy="© 2026 TripSweep. Développé par Jeffrey Brignoli.",
+    footer_privacy="Confidentialité", footer_kofi="Ko-fi",
+),
+"it": dict(
+    title="FAQ TripSweep — liberare spazio su iPhone, eliminare foto doppie e simili",
+    desc="Come liberare spazio sul tuo iPhone, trovare foto doppie e simili, riordinare i vecchi viaggi e recuperare una foto eliminata — le risposte su TripSweep, 100% offline.",
+    nav_home="App iOS", nav_desktop="App desktop",
+    h1="Domande e risposte",
+    intro="Come liberare spazio sul tuo iPhone, ordinare doppioni e foto simili, e cosa fa (e non fa mai) TripSweep con le tue foto.",
+    cta_store="📱 Scarica su App Store",
+    qa=[
+        ("Come libero spazio sull'iPhone senza pagare più spazio iCloud?",
+         "Parti da ciò che pesa di più: video grandi, screenshot, fotogrammi in più delle raffiche e scatti quasi identici. La scheda Pulizia di TripSweep li elenca per tipo con lo spazio occupato da ogni categoria, e ogni soggiorno mostra quanti gigabyte occupano le sue foto simili. Tieni lo scatto migliore di ogni gruppo ed elimina il resto. Se Foto di iCloud è attivo, l'eliminazione si sincronizza su tutti i tuoi dispositivi e libera spazio anche su iCloud una volta svuotato «Eliminati di recente»."),
+        ("Come trovo ed elimino le foto doppie sull'iPhone?",
+         "L'app Foto ha un album Duplicati per le copie esatte. TripSweep va oltre: oltre alle copie identiche, trova le foto simili ovunque nella libreria — i cinque scatti dello stesso tramonto, le raffiche, i selfie quasi uguali. In Pulizia, un pulsante «Tieni 1 per gruppo» ordina un'intera categoria con un tocco, e le preferite non vengono mai proposte per l'eliminazione."),
+        ("Come elimino le foto simili e tengo solo la migliore?",
+         "Apri un gruppo di foto simili in TripSweep: appaiono affiancate, mai ritagliate, e viene suggerito lo scatto migliore in base a nitidezza, punteggio estetico di Apple e volti. Tienilo o scegline un altro, poi elimina il resto. L'analisi avviene sul tuo iPhone con il framework Vision di Apple."),
+        ("Come riordino le vecchie foto delle vacanze?",
+         "TripSweep raggruppa foto e video per soggiorno in base alla posizione, o per evento e mese quando non hanno GPS. Ordina i soggiorni per dimensione per partire dai più pesanti, guarda la quota di foto simili di ciascuno e procedi soggiorno per soggiorno. Prima di eliminare puoi esportare un intero soggiorno sul Mac o in File, o condividerlo con chi c'era."),
+        ("TripSweep invia le mie foto a un server?",
+         "No. TripSweep funziona al 100% offline: il riconoscimento dei luoghi e il rilevamento delle foto simili avvengono sul tuo iPhone, senza account né servizi di terzi. Nessuna foto, video o posizione lascia il dispositivo."),
+        ("TripSweep è gratis? C'è un abbonamento?",
+         "Non c'è nessun abbonamento. Sfogliare, confrontare e ordinare è gratis, con 3 eliminazioni al giorno dal visualizzatore. Pro (4,99 $, acquisto unico) toglie il limite su iPhone; Pro + Desktop (24,99 $, acquisto unico) lo toglie anche in PhotoCull sul Mac. TripSweep richiede iOS 18 o successivo."),
+        ("Posso recuperare una foto eliminata per sbaglio?",
+         "Sì. TripSweep elimina sempre tramite l'album «Eliminati di recente» dell'app Foto, mai in modo definitivo. Le foto restano lì 30 giorni e puoi ripristinarle in qualsiasi momento."),
+        ("Posso ordinare le foto dell'iPhone dal Mac o da un PC Windows?",
+         "Sì, con PhotoCull, l'app desktop gratuita per Mac e Windows. Confronta le foto su grande schermo e ordina una cartella del computer senza limiti. Da un Mac può anche eliminare foto dall'iPhone: 6 al giorno gratis, 15 con Pro, senza limiti con Pro + Desktop."),
+    ],
+    footer_copy="© 2026 TripSweep. Sviluppato da Jeffrey Brignoli.",
+    footer_privacy="Privacy", footer_kofi="Ko-fi",
+),
+"de": dict(
+    title="TripSweep FAQ — iPhone-Speicher freigeben, doppelte und ähnliche Fotos löschen",
+    desc="Wie du Speicher auf dem iPhone freigibst, doppelte und ähnliche Fotos findest, alte Reisen aufräumst und gelöschte Fotos zurückholst — Antworten zu TripSweep, 100 % offline.",
+    nav_home="iOS-App", nav_desktop="Desktop-App",
+    h1="Fragen und Antworten",
+    intro="Wie du Speicher auf dem iPhone freigibst, Duplikate und ähnliche Fotos sortierst, und was TripSweep mit deinen Fotos macht (und nie macht).",
+    cta_store="📱 Im App Store laden",
+    qa=[
+        ("Wie gebe ich Speicher auf dem iPhone frei, ohne mehr iCloud-Speicher zu kaufen?",
+         "Fang mit dem an, was am meisten wiegt: große Videos, Bildschirmfotos, überzählige Serienbilder und fast identische Aufnahmen. Der Tab „Aufräumen“ in TripSweep listet sie nach Typ mit dem Platz, den jede Kategorie belegt, und jeder Aufenthalt zeigt, wie viele Gigabyte seine ähnlichen Fotos belegen. Behalte das beste Foto jeder Gruppe und lösche den Rest. Ist iCloud-Fotos aktiv, wird das Löschen auf alle Geräte übertragen und gibt auch in iCloud Platz frei, sobald „Kürzlich gelöscht“ geleert ist."),
+        ("Wie finde und lösche ich doppelte Fotos auf dem iPhone?",
+         "Die Fotos-App hat ein Album „Duplikate“ für exakte Kopien. TripSweep geht weiter: Neben identischen Kopien findet es ähnliche Fotos überall in der Mediathek — die fünf Aufnahmen desselben Sonnenuntergangs, Serienbilder, fast gleiche Selfies. In „Aufräumen“ sortiert eine Schaltfläche „1 pro Gruppe behalten“ eine ganze Kategorie mit einem Tippen, und deine Favoriten werden nie zum Löschen vorgeschlagen."),
+        ("Wie lösche ich ähnliche Fotos und behalte nur das beste?",
+         "Öffne in TripSweep eine Gruppe ähnlicher Fotos: Sie erscheinen nebeneinander, nie beschnitten, und das beste Foto wird nach Schärfe, Apples Ästhetik-Wert und Gesichtern vorgeschlagen. Behalte es oder wähle ein anderes, dann lösche den Rest. Die Analyse läuft auf deinem iPhone mit Apples Vision-Framework."),
+        ("Wie räume ich alte Urlaubsfotos auf?",
+         "TripSweep gruppiert Fotos und Videos nach Aufenthalt anhand ihres Standorts, oder nach Ereignis und Monat, wenn sie kein GPS haben. Sortiere die Aufenthalte nach Größe, um mit den schwersten zu beginnen, sieh den Anteil ähnlicher Fotos in jedem und räume Aufenthalt für Aufenthalt auf. Vor dem Löschen kannst du einen ganzen Aufenthalt auf den Mac oder in „Dateien“ exportieren oder mit den Leuten teilen, die dabei waren."),
+        ("Schickt TripSweep meine Fotos an einen Server?",
+         "Nein. TripSweep arbeitet zu 100 % offline: Ortserkennung und die Suche nach ähnlichen Fotos laufen auf deinem iPhone, ohne Konto und ohne Drittanbieter. Kein Foto, Video oder Standort verlässt das Gerät."),
+        ("Ist TripSweep kostenlos? Gibt es ein Abo?",
+         "Es gibt kein Abo. Durchsuchen, Vergleichen und Sortieren ist kostenlos, mit 3 Löschvorgängen pro Tag aus der Ansicht. Pro (4,99 $, einmalig) hebt die Grenze auf dem iPhone auf; Pro + Desktop (24,99 $, einmalig) hebt sie auch in PhotoCull auf dem Mac auf. TripSweep braucht iOS 18 oder neuer."),
+        ("Kann ich ein versehentlich gelöschtes Foto zurückholen?",
+         "Ja. TripSweep löscht immer über das Album „Kürzlich gelöscht“ der Fotos-App, nie endgültig. Die Fotos bleiben dort 30 Tage, und du kannst sie jederzeit wiederherstellen."),
+        ("Kann ich meine iPhone-Fotos vom Mac oder einem Windows-PC aus sortieren?",
+         "Ja, mit PhotoCull, der kostenlosen Desktop-App für Mac und Windows. Sie vergleicht Fotos auf dem großen Bildschirm und sortiert einen Ordner auf deinem Computer ohne Grenze. Vom Mac aus kann sie auch Fotos auf deinem iPhone löschen: 6 pro Tag kostenlos, 15 mit Pro, unbegrenzt mit Pro + Desktop."),
+    ],
+    footer_copy="© 2026 TripSweep. Entwickelt von Jeffrey Brignoli.",
+    footer_privacy="Datenschutz", footer_kofi="Ko-fi",
+),
+"es": dict(
+    title="FAQ de TripSweep — liberar espacio en el iPhone, eliminar fotos duplicadas y similares",
+    desc="Cómo liberar espacio en tu iPhone, encontrar fotos duplicadas y similares, ordenar viajes antiguos y recuperar una foto eliminada — respuestas sobre TripSweep, 100 % sin conexión.",
+    nav_home="Aplicación iOS", nav_desktop="Aplicación de escritorio",
+    h1="Preguntas y respuestas",
+    intro="Cómo liberar espacio en tu iPhone, ordenar duplicados y fotos similares, y qué hace (y nunca hace) TripSweep con tus fotos.",
+    cta_store="📱 Descargar en el App Store",
+    qa=[
+        ("¿Cómo libero espacio en el iPhone sin pagar más almacenamiento de iCloud?",
+         "Empieza por lo que más pesa: vídeos grandes, capturas de pantalla, imágenes sobrantes de ráfagas y fotos casi idénticas. La pestaña Limpieza de TripSweep las ordena por tipo con el espacio que ocupa cada categoría, y cada estancia muestra cuántos gigabytes ocupan sus fotos similares. Conserva la mejor de cada grupo y elimina el resto. Si Fotos en iCloud está activado, la eliminación se sincroniza en todos tus dispositivos y también libera espacio en iCloud una vez vaciado «Eliminados recientemente»."),
+        ("¿Cómo encuentro y elimino fotos duplicadas en el iPhone?",
+         "La app Fotos tiene un álbum Duplicados para copias exactas. TripSweep va más allá: además de las copias idénticas, encuentra fotos similares en cualquier parte de la fototeca — las cinco fotos de la misma puesta de sol, las ráfagas, los selfies casi iguales. En Limpieza, un botón «Conservar 1 por grupo» ordena una categoría entera con un toque, y tus favoritas nunca se proponen para eliminar."),
+        ("¿Cómo elimino las fotos similares y conservo solo la mejor?",
+         "Abre un grupo de fotos similares en TripSweep: aparecen una al lado de otra, nunca recortadas, y se sugiere la mejor según la nitidez, la puntuación estética de Apple y las caras. Consérvala o elige otra, y elimina el resto. El análisis se hace en tu iPhone con el framework Vision de Apple."),
+        ("¿Cómo ordeno las fotos antiguas de vacaciones?",
+         "TripSweep agrupa tus fotos y vídeos por estancia según su ubicación, o por evento y mes cuando no tienen GPS. Ordena las estancias por tamaño para empezar por las más pesadas, mira la parte de fotos similares de cada una y ordena estancia por estancia. Antes de eliminar, puedes exportar una estancia entera a tu Mac o a Archivos, o compartirla con quienes estaban allí."),
+        ("¿TripSweep envía mis fotos a un servidor?",
+         "No. TripSweep funciona 100 % sin conexión: el reconocimiento de lugares y la detección de fotos similares se hacen en tu iPhone, sin cuenta ni servicios de terceros. Ninguna foto, vídeo o ubicación sale del dispositivo."),
+        ("¿TripSweep es gratis? ¿Hay suscripción?",
+         "No hay suscripción. Explorar, comparar y ordenar es gratis, con 3 eliminaciones al día desde el visor. Pro (4,99 $, pago único) quita el límite en el iPhone; Pro + Desktop (24,99 $, pago único) también lo quita en PhotoCull en el Mac. TripSweep necesita iOS 18 o posterior."),
+        ("¿Puedo recuperar una foto eliminada por error?",
+         "Sí. TripSweep siempre elimina a través del álbum «Eliminados recientemente» de la app Fotos, nunca de forma definitiva. Las fotos se quedan allí 30 días y puedes restaurarlas en cualquier momento."),
+        ("¿Puedo ordenar las fotos del iPhone desde mi Mac o un PC con Windows?",
+         "Sí, con PhotoCull, la aplicación de escritorio gratuita para Mac y Windows. Compara fotos en pantalla grande y ordena una carpeta de tu ordenador sin límite. Desde un Mac también puede eliminar fotos de tu iPhone: 6 al día gratis, 15 con Pro, sin límite con Pro + Desktop."),
+    ],
+    footer_copy="© 2026 TripSweep. Desarrollado por Jeffrey Brignoli.",
+    footer_privacy="Privacidad", footer_kofi="Ko-fi",
+),
+}
+
+def faq_ld_json(qa):
+    """JSON-LD FAQPage: lets search and AI answer engines lift each question/answer pair as-is."""
+    import json
+    data = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": ans}} for q, ans in qa
+        ],
+    }
+    return f'  <script type="application/ld+json">{json.dumps(data, ensure_ascii=False)}</script>'
+
+def render_faq(lang):
+    d = FAQ[lang]
+    a = lambda rel: asset_path(lang, rel)
+    qa_html = "\n\n".join(
+        f'''      <h2>{q}</h2>
+      <p>
+        {ans}
+      </p>''' for q, ans in d["qa"]
+    )
+    return f'''<!DOCTYPE html>
+<html lang="{lang}">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{d['title']}</title>
+  <meta name="description" content="{d['desc']}" />
+  <link rel="icon" type="image/png" href="{a('assets/img/favicon-tripsweep.png')}" />
+{hreflang_links('faq.html')}
+{seo_meta(lang, 'faq.html', d['title'], d['desc'], f'assets/screenshots/tripsweep-cleanup-{lang}.jpg')}
+{faq_ld_json(d['qa'])}
+  <meta name="apple-itunes-app" content="app-id={APP_STORE_ID}" />
+  <link rel="stylesheet" href="{a('assets/style.css')}" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="nav">
+      <a class="brand" href="{path_for(lang, 'index.html', lang)}">
+        <img class="logo-img" src="{a('assets/img/tripsweep-icon-96.png')}" alt="" />
+        TripSweep
+      </a>
+      <nav class="links">
+        <a href="{path_for(lang, 'index.html', lang)}">{d['nav_home']}</a>
+        <a href="{path_for(lang, 'desktop.html', lang)}">{d['nav_desktop']}</a>
+        {lang_switcher(lang, 'faq.html')}
+      </nav>
+    </header>
+
+    <div class="legal">
+      <h1>{d['h1']}</h1>
+      <p>
+        {d['intro']}
+      </p>
+
+{qa_html}
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="{store_link(f'site-{lang}-faq')}" target="_blank" rel="noopener">{d['cta_store']}</a>
+      </div>
+    </div>
+
+    <footer>
+      <div>{d['footer_copy']}</div>
+      <div class="footer-links">
+        <a href="{path_for(lang, 'index.html', lang)}">{d['nav_home']}</a>
+        <a href="{path_for(lang, 'desktop.html', lang)}">{d['nav_desktop']}</a>
+        <a href="{path_for(lang, 'privacy.html', lang)}">{d['footer_privacy']}</a>
+        <a href="https://ko-fi.com/jeffreybrignoli" target="_blank" rel="noopener">{d['footer_kofi']}</a>
+        {passmerge_link(lang)}
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
+'''
+
 # ---------------------------------------------------------------------------
 # Write files
 # ---------------------------------------------------------------------------
@@ -1123,6 +1355,7 @@ for lang in LANGS:
     write(f"{prefix}index.html", render_index(lang))
     write(f"{prefix}desktop.html", render_desktop(lang))
     write(f"{prefix}privacy.html", render_privacy(lang))
+    write(f"{prefix}faq.html", render_faq(lang))
 
 # ---------------------------------------------------------------------------
 # sitemap.xml — one <url> per page/language, each carrying its own xhtml:link
@@ -1130,7 +1363,7 @@ for lang in LANGS:
 # engines are documented to also read it from the sitemap directly).
 # ---------------------------------------------------------------------------
 
-LASTMOD = "2026-10-20"
+LASTMOD = "2026-10-29"
 
 def sitemap_entry(page):
     urls = []
@@ -1153,6 +1386,7 @@ sitemap = f'''<?xml version="1.0" encoding="UTF-8"?>
 {sitemap_entry("index.html")}
 {sitemap_entry("desktop.html")}
 {sitemap_entry("privacy.html")}
+{sitemap_entry("faq.html")}
 </urlset>
 '''
 write("sitemap.xml", sitemap)
@@ -1217,6 +1451,7 @@ llms_txt = f'''# TripSweep & PhotoCull
 - [PhotoCull (macOS and Windows app)]({SITE_ORIGIN}/desktop.html): desktop companion for comparing and bulk-deleting photos.
 - [Download PhotoCull for Mac]({PHOTOCULL_DOWNLOAD_URL}): free, signed and notarized by Apple, macOS 11+ on Apple Silicon.
 - [Download PhotoCull for Windows]({PHOTOCULL_WINDOWS_DOWNLOAD_URL}): free, Windows 10/11 (64-bit); reading an iPhone needs the free Apple Devices app (Microsoft Store). Not code-signed yet, so Windows SmartScreen may show a warning on first launch.
+- [FAQ]({SITE_ORIGIN}/faq.html): freeing up iPhone storage, deleting duplicate and similar photos, cleaning up old trips, recovering deleted photos, pricing.
 - [Privacy Policy]({SITE_ORIGIN}/privacy.html): what data is used, where it goes (nowhere), and why.
 
 ## Languages

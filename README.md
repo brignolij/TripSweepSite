@@ -25,12 +25,12 @@ Le site est disponible en 5 langues, générées comme des pages HTML statiques
 
 ```
 website/
-├── generate.py                    # Génère les 15 pages HTML depuis les dicos de contenu
-├── index.html, desktop.html, privacy.html   # Anglais (défaut)
-├── fr/  index.html, desktop.html, privacy.html
-├── it/  index.html, desktop.html, privacy.html
-├── de/  index.html, desktop.html, privacy.html
-├── es/  index.html, desktop.html, privacy.html
+├── generate.py                    # Génère les 20 pages HTML depuis les dicos de contenu
+├── index.html, desktop.html, privacy.html, faq.html   # Anglais (défaut)
+├── fr/  index.html, desktop.html, privacy.html, faq.html
+├── it/  index.html, desktop.html, privacy.html, faq.html
+├── de/  index.html, desktop.html, privacy.html, faq.html
+├── es/  index.html, desktop.html, privacy.html, faq.html
 ├── assets/
 │   ├── style.css                 # Feuille de style partagée
 │   ├── img/                      # Logos + favicons (TripSweep, PhotoCull)
@@ -49,7 +49,7 @@ puis relancer :
 python3 generate.py
 ```
 
-Ça régénère les 15 fichiers HTML d'un coup, avec les bons chemins relatifs et les
+Ça régénère les 20 fichiers HTML d'un coup, avec les bons chemins relatifs et les
 bonnes balises hreflang selon la profondeur du dossier.
 
 ## Captures d'écran
