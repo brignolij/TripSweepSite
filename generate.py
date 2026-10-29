@@ -24,7 +24,7 @@ APP_STORE_URL = "https://apps.apple.com/app/tripsweep/id6813028251"
 APP_STORE_ID = "6813028251"
 # Provider token for App Store campaign links (App Store Connect > App Analytics > Acquisition > Campaigns > generate a
 # link: the pt=... value). Apple only attributes ct= installs to a campaign when pt is present.
-APP_STORE_PT = ""
+APP_STORE_PT = "519915"
 
 def store_link(campaign):
     """App Store link tagged with a campaign token, so App Analytics shows which page brought the install."""
