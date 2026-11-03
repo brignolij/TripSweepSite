@@ -1,107 +1,43 @@
-# TripSweep & PhotoCull — site vitrine
+# TripSweep & PhotoCull — site
 
-Site statique (HTML/CSS pur, aucune dépendance de build) présentant les deux apps :
-**TripSweep** (compagnon iOS) et **PhotoCull** (app de bureau macOS) — pages d'accueil +
-politique de confidentialité (requise par App Store Connect).
+Un seul site statique pour les deux apps, publié sur **https://tripsweep.idealy.ch** par GitHub Pages
+(domaine géré chez Infomaniak, voir `DEPLOY.md`). TripSweep (iOS/Android) est à la racine, PhotoCull
+(Mac/Windows) sous `desktop*.html`. `photocull.idealy.ch` redirige vers `desktop.html`.
 
-Généré à partir d'un script Python (`generate.py`, gardé hors du dossier publié —
-voir plus bas) pour garantir la cohérence du contenu sur les 5 langues.
-
-## Multilingue
-
-Le site est disponible en 5 langues, générées comme des pages HTML statiques
-**indexables séparément** (pas de switch JS côté client) :
-
-- **Anglais = langue par défaut**, servie à la racine (`/index.html`, `/desktop.html`,
-  `/privacy.html`) — pas de redirection, c'est la version que Google indexe par défaut.
-- Les 4 autres langues vivent dans un sous-dossier par code langue :
-  `/fr/`, `/it/`, `/de/`, `/es/` (mêmes noms de fichiers à l'intérieur).
-- Chaque page déclare ses 5 variantes via `<link rel="alternate" hreflang="...">`
-  (+ `x-default` pointant vers l'anglais), pour que les moteurs de recherche proposent
-  la bonne langue selon l'utilisateur.
-- Un sélecteur de langue (`.lang-switch`) est présent dans la nav de chaque page.
+Tout est généré par `generate.py` (Python standard, aucune dépendance) dans `sites/web/`, que le workflow
+`.github/workflows/pages.yml` publie à chaque push sur `main`.
 
 ## Structure
 
 ```
-website/
-├── generate.py                    # Génère les 20 pages HTML depuis les dicos de contenu
-├── index.html, desktop.html, privacy.html, faq.html   # Anglais (défaut)
-├── fr/  index.html, desktop.html, privacy.html, faq.html
-├── it/  index.html, desktop.html, privacy.html, faq.html
-├── de/  index.html, desktop.html, privacy.html, faq.html
-├── es/  index.html, desktop.html, privacy.html, faq.html
-├── assets/
-│   ├── style.css                 # Feuille de style partagée
-│   ├── img/                      # Logos + favicons (TripSweep, PhotoCull)
-│   └── screenshots/               # Captures d'écran, une par langue
-│       (tripsweep-{mytrips,cleanup,cleanup-similar,viewer,similar,about}-<lang>.jpg)
-└── README.md
+generate.py          # génère sites/web/ (en = racine, /fr/ /it/ /de/ /es/)
+content/{en,fr,it,de,es}.py   # FAQ et articles de blog, par langue
+assets/              # style.css, logos, captures d'écran (une par langue)
+versions.json        # lu par les apps pour l'avertissement de mise à jour, copié dans sites/web/
+sites/web/           # sortie générée et publiée : ne pas éditer à la main
 ```
 
-## Mettre à jour le contenu
+Pages par langue : `index`, `faq`, `blog` + 3 articles, `privacy` (TripSweep) et `desktop`, `desktop-faq`,
+`desktop-blog` + 3 articles (PhotoCull). Chaque page a ses hreflang, son canonical, ses données JSON-LD ;
+`sitemap.xml`, `robots.txt` et `llms.txt` sont générés aussi.
 
-Le contenu de chaque langue vit dans `generate.py`, à la racine de ce dossier, sous
-forme de dictionnaires Python (`INDEX`, `DESKTOP`, `PRIVACY`). Modifier le texte là,
-puis relancer :
+## Mettre à jour
+
+Le texte vit dans `generate.py` (pages, confidentialité, tarifs) et `content/` (FAQ, blog). Puis :
 
 ```bash
-python3 generate.py
+python3 generate.py   # réécrit sites/web/
+git add -A && git commit && git push   # Pages republie
 ```
-
-Ça régénère les 20 fichiers HTML d'un coup, avec les bons chemins relatifs et les
-bonnes balises hreflang selon la profondeur du dossier.
 
 ## Captures d'écran
 
-Six captures par langue (30 fichiers, 500 px de large) : `tripsweep-mytrips-<lang>.jpg` (liste des
-séjours avec la part de photos similaires, utilisée aussi dans le hero), `tripsweep-cleanup-<lang>.jpg`
-(onglet Nettoyage), `tripsweep-cleanup-similar-<lang>.jpg` (Photos similaires + « Garder 1 par groupe »), `tripsweep-viewer-<lang>.jpg`
-(visionneuse + gros bouton « similaires »), `tripsweep-similar-<lang>.jpg` (revue d'un groupe) et
-`tripsweep-about-<lang>.jpg` (tableau Gratuit / Pro).
+Générées par `companion-app/TripSweepUITests/MarketingScreenshotsUITests.swift` (la commande est dans le
+commentaire du fichier), sur un simulateur dédié sans photos personnelles, puis réduites :
+`magick <png> -resize 500x -quality 82 <jpg>`.
 
-Elles sont générées par un test d'interface qui change la langue de l'app (sans toucher à celle du
-simulateur) : `companion-app/TripSweepUITests/MarketingScreenshotsUITests.swift` (la commande exacte est dans le
-commentaire du fichier). Les écrans « liste » et « À propos » utilisent le mode démo
-(`-UseFakeTrips YES`, voir `companion-app/TripSweep/FakeTripsProvider.swift`, résumés de similarité compris) ;
-les écrans « visionneuse » et « similaires » tournent en mode réel sur un simulateur DÉDIÉ dont la photothèque ne
-contient que des images synthétiques — jamais de photos personnelles. Le build Release est utilisé (pas de bouton
-« Bypass » debug) et la barre d'état est figée sur 9:41 (`xcrun simctl status_bar ... override`).
-
-Les PNG obtenus sont réduits à 500 px de large en JPEG (`magick <png> -resize 500x -quality 82 <jpg>`).
-
-## Prévisualiser en local
+## Prévisualiser
 
 ```bash
-python3 -m http.server 8000
+python3 -m http.server 8000 -d sites/web
 ```
-
-Puis ouvrez `http://localhost:8000` (anglais) ou `http://localhost:8000/fr/` etc.
-
-## Publier sur GitHub Pages
-
-Ce dossier est pensé pour vivre dans **son propre dépôt GitHub dédié**, distinct du
-dépôt principal de l'application (`PhotosManager`), afin de pouvoir être public et
-publié via GitHub Pages sans exposer le code de l'app.
-
-1. Créer un nouveau dépôt GitHub **public**, par exemple `tripsweep-site`.
-2. Pousser le contenu de ce dossier à la racine du dépôt (branche `main`) — **sans**
-   `generate.py` s'il contient des notes internes, ou en le gardant, au choix.
-3. Dans les réglages du dépôt : **Settings > Pages > Source** → sélectionner la branche
-   `main` et le dossier `/ (root)`.
-4. Le site est publié à `https://<ton-pseudo-github>.github.io/<nom-du-dépôt>/`.
-5. **Remplacer les URLs relatives `hreflang` par des URLs absolues** avec le domaine
-   définitif (actuellement `/index.html`, `/fr/index.html`, etc. — fonctionnent en
-   relatif mais Google recommande des URLs absolues).
-6. Mettre à jour `AppLinks.websiteURL` dans l'app iOS
-   (`companion-app/TripSweep/AppLinks.swift`) avec cette URL définitive.
-7. Renseigner cette même URL comme lien "Politique de confidentialité" dans
-   App Store Connect (`.../privacy.html`).
-
-## À faire avant publication
-
-- [ ] Remplacer le lien GitHub factice du pied de page par le vrai dépôt.
-- [ ] Remplacer le bouton "Disponible sur l'App Store" / "Télécharger pour Mac (bientôt)"
-      par les vrais liens une fois les apps publiées.
-- [ ] URLs hreflang absolues (voir ci-dessus) une fois le domaine définitif connu.
-- [ ] Captures d'écran de l'app de bureau PhotoCull (le hero garde encore le mockup CSS).

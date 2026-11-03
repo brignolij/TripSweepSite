@@ -58,10 +58,10 @@ Les anciennes URLs sont encore dans : `AppLinks.swift`, `UpdateChecker.swift` (i
 `UpdateChecker.kt` (Android), `UpdateCheck.cs` (desktop), et dans les fiches App Store Connect, Play Console et
 Microsoft Store (URL marketing et politique de confidentialité : `https://tripsweep.idealy.ch/privacy.html`).
 
-## 5. Optionnel : photocull.idealy.ch en adresse courte
+## 5. photocull.idealy.ch (fait)
 
-Dans Infomaniak (Domaines → `idealy.ch` → **Redirection web**), créer une redirection permanente (301) de
-`photocull.idealy.ch` vers `https://tripsweep.idealy.ch/desktop.html`. Utile pour une carte ou une fiche de store.
+Redirection web permanente (301) Infomaniak : `photocull.idealy.ch` → `https://tripsweep.idealy.ch/desktop.html`
+(HTTP et HTTPS). Utile pour une carte ou une fiche de store.
 
 ## Régénérer le site
 
