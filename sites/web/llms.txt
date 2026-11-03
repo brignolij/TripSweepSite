@@ -5,7 +5,7 @@
 > taking up space, and sorts out what you don't need by type — identical copies, similar
 > and blurry photos, screenshots, large videos — so you keep the best shot and delete
 > the rest in a few taps. PhotoCull is its desktop companion (macOS and Windows) for bulk
-> photo review and cleanup on a big screen. Both are 100% offline: no photo, video, or
+> photo review and cleanup on a big screen. Both run 100% on-device: no photo, video, or
 > location data is ever collected, sent, or shared.
 
 ## Pages

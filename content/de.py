@@ -36,7 +36,7 @@ FAQ_TRIPSWEEP_EXTRA = [
     ("Kann ich eine Reise sichern oder teilen, bevor ich sie lösche?",
      "Ja. Du kannst eine ganze Reise auf deinen Mac oder in die Dateien-App exportieren oder mit den Personen teilen, die dabei waren, und sie dann von deinem iPhone löschen, sobald sie anderswo sicher liegt."),
     ("Brauche ich eine Internetverbindung oder ein Konto?",
-     "Nein. TripSweep braucht kein Konto und funktioniert offline. Ortsnamen werden auf deinem iPhone erkannt, und kein Foto, kein Video und kein Standort wird jemals an einen Server gesendet."),
+     "Nein. TripSweep braucht kein Konto und funktioniert offline. Ortsnamen werden auf deinem iPhone erkannt, und kein Foto, kein Video und kein Standort wird jemals an einen Server gesendet. Es können nur anonyme, abschaltbare Nutzungsstatistiken gesendet werden. Du kannst sie im Tab Info abschalten."),
     ("Löscht das Löschen in TripSweep meine Fotos auch aus iCloud?",
      "Wenn die iCloud-Fotos aktiviert sind, wird ein auf dem iPhone gelöschtes Foto von all deinen Geräten entfernt, weil iCloud-Fotos so funktioniert. TripSweep löscht über „Zuletzt gelöscht“, sodass du 30 Tage Zeit hast, es dir anders zu überlegen, und der iCloud-Speicherplatz wird frei, sobald dieses Album geleert wird."),
     ("Kann ich meine iPhone-Fotos auf einem großen Bildschirm statt am Telefon durchsehen?",
@@ -49,7 +49,7 @@ FAQ_TRIPSWEEP_EXTRA = [
 
 FAQ_PHOTOCULL = dict(
     title="PhotoCull FAQ – Fotos am Mac oder Windows-PC sortieren und löschen",
-    desc="Wie du Tausende Fotos am Computer sortierst, ähnliche Aufnahmen vergleichst, iPhone Speicher von einem Mac oder PC aus freigibst und sicher löschst – Antworten zu PhotoCull, 100 % offline.",
+    desc="Wie du Tausende Fotos am Computer sortierst, ähnliche Aufnahmen vergleichst, iPhone Speicher von einem Mac oder PC aus freigibst und sicher löschst – Antworten zu PhotoCull, 100 % auf dem Gerät.",
     nav_home="PhotoCull", nav_desktop="iOS-App",
     h1="Fragen und Antworten",
     intro="Wie du deine Fotos am Computer schneller sortierst, dein iPhone von einem Mac oder PC aus aufräumst und was PhotoCull mit deinen Fotos macht (und nie macht).",
@@ -57,7 +57,7 @@ FAQ_PHOTOCULL = dict(
         ("Warum Fotos am Computer statt auf dem iPhone sortieren?",
          "Ein großer Bildschirm zeigt mehr Fotos auf einmal, mit Maus und Tastatur wählst du Hunderte in Sekunden aus, und Aufnahmen nebeneinander zu vergleichen ist einfacher, als hin und her zu blättern. Eine Fotomediathek mit Tausenden Fotos zu sortieren, kostet am Telefon mehrere Sitzungen und am Mac oder PC deutlich weniger Zeit."),
         ("Was ist PhotoCull?",
-         "PhotoCull ist eine kostenlose Desktop-App für Mac und Windows, die deine Fotos nach Reisen gruppiert, ähnliche Aufnahmen nebeneinander vergleicht und alles, was nicht behalten werden muss, gesammelt löscht. Sie liest die Fotomediathek deines iPhones per USB oder einen beliebigen Fotoordner auf deinem Computer und arbeitet 100 % offline."),
+         "PhotoCull ist eine kostenlose Desktop-App für Mac und Windows, die deine Fotos nach Reisen gruppiert, ähnliche Aufnahmen nebeneinander vergleicht und alles, was nicht behalten werden muss, gesammelt löscht. Sie liest die Fotomediathek deines iPhones per USB oder einen beliebigen Fotoordner auf deinem Computer und arbeitet 100 % auf dem Gerät."),
         ("Wie sortiere ich Tausende Fotos schnell?",
          "Öffne die Ansicht „Reisen“: Deine Mediathek ist nach Reisen gruppiert, mit dem Speicherplatz jeder Reise, sodass du mit der größten beginnst. Markiere innerhalb einer Reise Fotos gesammelt, vergleiche die ähnlichen nebeneinander und behalte die beste Aufnahme jeder Gruppe. Dieselben Filter wie in der iOS-App (eintägige Reisen, ausgeschlossene Orte wie Zuhause oder Arbeit, Größe) grenzen die Auswahl weiter ein."),
         ("Wie gebe ich iPhone Speicher von einem Mac oder PC aus frei?",
@@ -83,7 +83,7 @@ FAQ_PHOTOCULL = dict(
         ("Ist PhotoCull kostenlos? Gibt es ein Abo?",
          "PhotoCull ist kostenlos erhältlich und es gibt kein Abo. Durchsehen, Vergleichen und Sortieren sind kostenlos, und das Sortieren eines Ordners auf deinem Computer ist nie begrenzt. Das Löschen von Fotos von einem iPhone aus am Mac ist in der kostenlosen Version auf 6 pro Tag begrenzt, mit TripSweep Pro auf 15 und mit Pro + Desktop unbegrenzt (Einmalkäufe in der iOS-App TripSweep)."),
         ("Sendet PhotoCull meine Fotos an einen Server oder in die Cloud?",
-         "Nein. PhotoCull arbeitet 100 % offline: kein Konto, keine Cloud, und kein Foto, kein Video und kein Standort wird jemals irgendwohin gesendet. Die Ortserkennung und die Erkennung ähnlicher Fotos laufen auf deinem Computer."),
+         "Nein. PhotoCull arbeitet 100 % auf dem Gerät: kein Konto, keine Cloud, und kein Foto, kein Video und kein Standort wird jemals irgendwohin gesendet. Die Ortserkennung und die Erkennung ähnlicher Fotos laufen auf deinem Computer. Es können nur anonyme, abschaltbare Nutzungsstatistiken gesendet werden."),
         ("Verändert PhotoCull meine Originalfotos?",
          "Nein. PhotoCull liest deine Fotos nur, um sie anzuzeigen und zu vergleichen. Die einzige Änderung, die es je vornimmt, ist das Löschen, das du bestätigst."),
         ("Wie blende ich mein Zuhause und meinen Arbeitsplatz in der Reiseansicht aus?",
@@ -121,7 +121,7 @@ dict(slug="free-up-iphone-storage",
       <p>Alte Urlaube sind der größte Block an Fotos, die du dir nie ansiehst. Reise für Reise vorzugehen ist einfacher, als durch eine Mediathek mit Tausenden Fotos zu scrollen: Nimm die größte Reise, behalte die Highlights, lösche den Rest.</p>
 
       <h2>Wie TripSweep das schneller macht</h2>
-      <p><a href="{ts}">TripSweep</a> erledigt diese Schritte für dich direkt auf dem iPhone. Der Tab „Aufräumen“ listet identische Kopien, ähnliche Fotos, unscharfe Fotos, Screenshots und große Videos auf, jeweils mit dem belegten Speicherplatz. Deine Reisen sind nach Ort und Datum gruppiert und nach Größe sortiert, und die Schaltfläche „1 pro Gruppe behalten“ erledigt eine ganze Kategorie mit einem Tap. Favoriten werden nie zum Löschen vorgeschlagen, gelöscht wird über „Zuletzt gelöscht“, und nichts verlässt jemals dein Telefon: kein Konto, keine Cloud, kein Server.</p>
+      <p><a href="{ts}">TripSweep</a> erledigt diese Schritte für dich direkt auf dem iPhone. Der Tab „Aufräumen“ listet identische Kopien, ähnliche Fotos, unscharfe Fotos, Screenshots und große Videos auf, jeweils mit dem belegten Speicherplatz. Deine Reisen sind nach Ort und Datum gruppiert und nach Größe sortiert, und die Schaltfläche „1 pro Gruppe behalten“ erledigt eine ganze Kategorie mit einem Tap. Favoriten werden nie zum Löschen vorgeschlagen, gelöscht wird über „Zuletzt gelöscht“, und nichts verlässt jemals dein Telefon: kein Konto, keine Cloud. Es können nur anonyme, abschaltbare Nutzungsstatistiken gesendet werden.</p>
       <p>Wenn du einen großen Bildschirm bevorzugst, erledigt <a href="{pc}">PhotoCull</a> dieselbe Sortierung an einem Mac oder Windows-PC.</p>
 
       <h2>Brauche ich iCloud?</h2>
@@ -200,7 +200,7 @@ dict(slug="sort-photos-on-computer",
       <p><strong>4. Auf einmal löschen.</strong> Markiere Hunderte Fotos und bestätige einmal.</p>
 
       <h2>PhotoCull macht genau das</h2>
-      <p><a href="{pc}">PhotoCull</a> ist eine kostenlose Desktop-App für Mac und Windows. Die Ansicht „Reisen“ gruppiert die Mediathek nach Reisen und zeigt den Speicherplatz jeder Reise, ähnliche Fotos tragen eine Markierung, und du kannst bis zu sechs nebeneinander vergleichen. Sie liest ein iPhone per USB oder einen beliebigen Ordner auf deinem Computer, arbeitet 100 % offline und verändert deine Originale nie.</p>
+      <p><a href="{pc}">PhotoCull</a> ist eine kostenlose Desktop-App für Mac und Windows. Die Ansicht „Reisen“ gruppiert die Mediathek nach Reisen und zeigt den Speicherplatz jeder Reise, ähnliche Fotos tragen eine Markierung, und du kannst bis zu sechs nebeneinander vergleichen. Sie liest ein iPhone per USB oder einen beliebigen Ordner auf deinem Computer, arbeitet 100 % auf dem Gerät und verändert deine Originale nie.</p>
       <p>Löschungen auf einem iPhone laufen über die kostenlose <a href="{ts}">TripSweep-App</a> und „Zuletzt gelöscht“, sodass sich ein Fehler 30 Tage lang rückgängig machen lässt. Das Sortieren eines Ordners auf deinem Computer ist nie begrenzt.</p>
 
       <h2>Tipps für eine lange Sitzung</h2>

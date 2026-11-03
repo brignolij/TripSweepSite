@@ -36,7 +36,7 @@ FAQ_TRIPSWEEP_EXTRA = [
     ("¿Puedo hacer una copia de seguridad de un viaje o compartirlo antes de borrarlo?",
      "Sí. Puedes exportar un viaje completo a tu Mac o a la app Archivos, o compartirlo con las personas que estuvieron allí, y después borrarlo de tu iPhone cuando esté a salvo en otro sitio."),
     ("¿Necesito conexión a internet o una cuenta?",
-     "No. TripSweep no necesita cuenta y funciona sin conexión. Los nombres de los lugares se reconocen en tu iPhone, y ninguna foto, vídeo ni ubicación se envía jamás a un servidor."),
+     "No. TripSweep no necesita cuenta y funciona sin conexión. Los nombres de los lugares se reconocen en tu iPhone, y ninguna foto, vídeo ni ubicación se envía jamás a un servidor. Solo se pueden enviar estadísticas de uso anónimas y desactivables. Puedes desactivarlas en la pestaña Acerca de."),
     ("¿Borrar en TripSweep también borra mis fotos de iCloud?",
      "Si Fotos de iCloud está activado, borrar una foto en el iPhone la elimina de todos tus dispositivos, porque así funciona Fotos de iCloud. TripSweep borra a través de « Eliminados recientemente », así que tienes 30 días para arrepentirte, y el espacio de iCloud se libera cuando vacías ese álbum."),
     ("¿Puedo revisar las fotos de mi iPhone en una pantalla grande en lugar del móvil?",
@@ -49,7 +49,7 @@ FAQ_TRIPSWEEP_EXTRA = [
 
 FAQ_PHOTOCULL = dict(
     title="FAQ de PhotoCull: ordena y borra fotos desde un Mac o un PC",
-    desc="Cómo ordenar miles de fotos en el ordenador, comparar fotos parecidas, liberar espacio en el iPhone desde un Mac o PC y borrar con seguridad: respuestas sobre PhotoCull, 100 % sin conexión.",
+    desc="Cómo ordenar miles de fotos en el ordenador, comparar fotos parecidas, liberar espacio en el iPhone desde un Mac o PC y borrar con seguridad: respuestas sobre PhotoCull, 100 % en el dispositivo.",
     nav_home="PhotoCull", nav_desktop="App para iOS",
     h1="Preguntas y respuestas",
     intro="Cómo ordenar tus fotos más rápido desde un ordenador, liberar espacio en tu iPhone desde un Mac o PC, y qué hace (y qué nunca hace) PhotoCull con tus fotos.",
@@ -57,7 +57,7 @@ FAQ_PHOTOCULL = dict(
         ("¿Por qué ordenar las fotos en el ordenador en lugar de en el iPhone?",
          "Una pantalla grande muestra más fotos a la vez, un ratón y un teclado seleccionan cientos en segundos, y comparar tomas lado a lado es más fácil que ir pasando de una a otra. Ordenar un carrete de miles de fotos son varias sesiones en el móvil y una sesión mucho más corta en un Mac o un PC."),
         ("¿Qué es PhotoCull?",
-         "PhotoCull es una app de escritorio gratuita para Mac y Windows que agrupa tus fotos por viaje, compara tomas parecidas lado a lado y borra en bloque lo que no merece la pena conservar. Lee el carrete de tu iPhone por USB, o cualquier carpeta de fotos de tu ordenador, y funciona 100 % sin conexión."),
+         "PhotoCull es una app de escritorio gratuita para Mac y Windows que agrupa tus fotos por viaje, compara tomas parecidas lado a lado y borra en bloque lo que no merece la pena conservar. Lee el carrete de tu iPhone por USB, o cualquier carpeta de fotos de tu ordenador, y funciona 100 % en el dispositivo."),
         ("¿Cómo ordeno miles de fotos rápidamente?",
          "Abre la vista Viajes: tu biblioteca aparece agrupada por viaje con el espacio que ocupa cada uno, así que empiezas por el más pesado. Dentro de un viaje, marca fotos en bloque, compara las parecidas lado a lado y conserva la mejor toma de cada grupo. Los mismos filtros que en la app para iOS (viajes de un solo día, lugares excluidos como casa o trabajo, tamaño) te ayudan a acotar."),
         ("¿Cómo libero espacio en el iPhone desde un Mac o un PC?",
@@ -83,7 +83,7 @@ FAQ_PHOTOCULL = dict(
         ("¿PhotoCull es gratis? ¿Hay suscripción?",
          "PhotoCull se descarga gratis y no hay suscripción. Explorar, comparar y ordenar es gratis, y ordenar una carpeta de tu ordenador nunca tiene límite. Borrar fotos de un iPhone desde un Mac está limitado a 6 al día en la versión gratuita, 15 con TripSweep Pro e ilimitado con Pro + Desktop (compras únicas que se hacen en la app TripSweep para iOS)."),
         ("¿PhotoCull envía mis fotos a un servidor o a la nube?",
-         "No. PhotoCull funciona 100 % sin conexión: sin cuenta, sin nube, y ninguna foto, vídeo ni ubicación se envía a ningún sitio. El reconocimiento de lugares y la detección de fotos parecidas se ejecutan en tu ordenador."),
+         "No. PhotoCull funciona 100 % en el dispositivo: sin cuenta, sin nube, y ninguna foto, vídeo ni ubicación se envía a ningún sitio. El reconocimiento de lugares y la detección de fotos parecidas se ejecutan en tu ordenador. Solo se pueden enviar estadísticas de uso anónimas y desactivables."),
         ("¿PhotoCull cambiará o modificará mis fotos originales?",
          "No. PhotoCull solo lee tus fotos para mostrarlas y compararlas. El único cambio que hace es el borrado que tú confirmas."),
         ("¿Cómo oculto mi casa y mi lugar de trabajo de la vista de viajes?",
@@ -121,7 +121,7 @@ dict(slug="free-up-iphone-storage",
       <p>Las vacaciones antiguas son el mayor bloque de fotos que nunca miras. Ir viaje por viaje es más fácil que desplazarse por una biblioteca de miles de fotos: elige el viaje más pesado, conserva lo mejor y borra lo que sobra.</p>
 
       <h2>Cómo te lo hace más rápido TripSweep</h2>
-      <p><a href="{ts}">TripSweep</a> hace estos pasos por ti en el iPhone. Su pestaña Limpieza enumera las copias idénticas, las fotos parecidas, las fotos borrosas, las capturas de pantalla y los vídeos grandes, cada uno con el espacio que ocupa. Tus viajes se agrupan por lugar y fecha y se ordenan por tamaño, y un botón « Conservar 1 por grupo » resuelve una categoría entera con un solo toque. Los favoritos nunca se sugieren para borrar, los borrados pasan por « Eliminados recientemente » y nada sale jamás de tu móvil: sin cuenta, sin nube, sin servidor.</p>
+      <p><a href="{ts}">TripSweep</a> hace estos pasos por ti en el iPhone. Su pestaña Limpieza enumera las copias idénticas, las fotos parecidas, las fotos borrosas, las capturas de pantalla y los vídeos grandes, cada uno con el espacio que ocupa. Tus viajes se agrupan por lugar y fecha y se ordenan por tamaño, y un botón « Conservar 1 por grupo » resuelve una categoría entera con un solo toque. Los favoritos nunca se sugieren para borrar, los borrados pasan por « Eliminados recientemente » y nada sale jamás de tu móvil: sin cuenta, sin nube. Solo se pueden enviar estadísticas de uso anónimas y desactivables.</p>
       <p>Si prefieres una pantalla grande, <a href="{pc}">PhotoCull</a> hace el mismo trabajo de ordenación en un Mac o un PC con Windows.</p>
 
       <h2>¿Necesito iCloud?</h2>
@@ -200,7 +200,7 @@ dict(slug="sort-photos-on-computer",
       <p><strong>4. Borra de una vez.</strong> Marca cientos de fotos y confirma una sola vez.</p>
 
       <h2>PhotoCull hace justo esto</h2>
-      <p><a href="{pc}">PhotoCull</a> es una app de escritorio gratuita para Mac y Windows. Su vista Viajes agrupa la biblioteca por viaje y muestra el espacio que ocupa cada uno, las fotos parecidas llevan una insignia y puedes comparar hasta seis lado a lado. Lee un iPhone por USB o cualquier carpeta de tu ordenador, funciona 100 % sin conexión y nunca modifica tus originales.</p>
+      <p><a href="{pc}">PhotoCull</a> es una app de escritorio gratuita para Mac y Windows. Su vista Viajes agrupa la biblioteca por viaje y muestra el espacio que ocupa cada uno, las fotos parecidas llevan una insignia y puedes comparar hasta seis lado a lado. Lee un iPhone por USB o cualquier carpeta de tu ordenador, funciona 100 % en el dispositivo y nunca modifica tus originales.</p>
       <p>Los borrados en un iPhone pasan por la <a href="{ts}">app TripSweep</a>, gratuita, y por « Eliminados recientemente », así que un error se puede deshacer durante 30 días. Ordenar una carpeta de tu ordenador nunca tiene límite.</p>
 
       <h2>Consejos para una sesión larga</h2>

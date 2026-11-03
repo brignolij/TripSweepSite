@@ -36,7 +36,7 @@ FAQ_TRIPSWEEP_EXTRA = [
     ("Can I back up or share a trip before deleting it?",
      "Yes. You can export a whole trip to your Mac or to the Files app, or share it with the people who were there, then delete it from your iPhone once it is safe elsewhere."),
     ("Do I need an internet connection or an account?",
-     "No. TripSweep needs no account and works offline. Place names are recognised on your iPhone, and no photo, video or location is ever sent to a server."),
+     "No. TripSweep needs no account and works offline. Place names are recognised on your iPhone, and no photo, video or location is ever sent to a server. Only optional, anonymous usage statistics can be sent. You can turn them off in the About tab."),
     ("Does deleting in TripSweep also delete my photos from iCloud?",
      "If iCloud Photos is on, deleting a photo on your iPhone removes it from all your devices, because that is how iCloud Photos works. TripSweep deletes through “Recently Deleted”, so you have 30 days to change your mind, and iCloud space is freed once that album is emptied."),
     ("Can I review my iPhone photos on a big screen instead of the phone?",
@@ -49,7 +49,7 @@ FAQ_TRIPSWEEP_EXTRA = [
 
 FAQ_PHOTOCULL = dict(
     title="PhotoCull FAQ — sort and delete photos from a Mac or Windows PC",
-    desc="How to sort thousands of photos on a computer, compare similar shots, free up an iPhone from a Mac or PC and delete safely — answers about PhotoCull, 100% offline.",
+    desc="How to sort thousands of photos on a computer, compare similar shots, free up an iPhone from a Mac or PC and delete safely — answers about PhotoCull, 100% on-device.",
     nav_home="PhotoCull", nav_desktop="iOS app",
     h1="Questions and answers",
     intro="How to sort your photos faster from a computer, clear your iPhone from a Mac or PC, and what PhotoCull does (and never does) with your photos.",
@@ -57,7 +57,7 @@ FAQ_PHOTOCULL = dict(
         ("Why sort photos on a computer instead of on the iPhone?",
          "A big screen shows more photos at once, a mouse and keyboard select hundreds of them in seconds, and comparing shots side by side is easier than flipping back and forth. Sorting a camera roll of thousands of photos is a few sittings on a phone and a much shorter session on a Mac or PC."),
         ("What is PhotoCull?",
-         "PhotoCull is a free desktop app for Mac and Windows that groups your photos by trip, compares similar shots side by side and bulk-deletes what is not worth keeping. It reads your iPhone's camera roll over USB, or any folder of photos on your computer, and works 100% offline."),
+         "PhotoCull is a free desktop app for Mac and Windows that groups your photos by trip, compares similar shots side by side and bulk-deletes what is not worth keeping. It reads your iPhone's camera roll over USB, or any folder of photos on your computer, and works 100% on-device."),
         ("How do I sort thousands of photos quickly?",
          "Open the Trips view: your library is grouped by trip with the space each one takes, so you start with the heaviest. Inside a trip, mark photos in bulk, compare the similar ones side by side and keep the best shot of each group. The same filters as the iOS app (single-day trips, excluded places like home or work, size) narrow things down."),
         ("How do I free up my iPhone storage from a Mac or PC?",
@@ -83,7 +83,7 @@ FAQ_PHOTOCULL = dict(
         ("Is PhotoCull free? Is there a subscription?",
          "PhotoCull is free to download and there is no subscription. Browsing, comparing and sorting are free, and sorting a folder on your computer is never limited. Deleting photos from an iPhone from a Mac is limited to 6 a day for free, 15 with TripSweep Pro and unlimited with Pro + Desktop (one-time purchases made in the TripSweep iOS app)."),
         ("Does PhotoCull send my photos to a server or the cloud?",
-         "No. PhotoCull works 100% offline: no account, no cloud, no photo, video or location is ever sent anywhere. Place recognition and similar-photo detection run on your computer."),
+         "No. PhotoCull works 100% on-device: no account, no cloud, no photo, video or location is ever sent anywhere. Place recognition and similar-photo detection run on your computer. Only optional, anonymous usage statistics can be sent."),
         ("Will PhotoCull change or modify my original photos?",
          "No. PhotoCull only reads your photos to show and compare them. The only change it ever makes is the deletion you confirm."),
         ("How do I hide my home and workplace from the trips view?",
@@ -121,7 +121,7 @@ dict(slug="free-up-iphone-storage",
       <p>Old vacations are the biggest block of photos you never look at. Going trip by trip is easier than scrolling a library of thousands of photos: pick the heaviest trip, keep the highlights, delete the leftovers.</p>
 
       <h2>How TripSweep makes this faster</h2>
-      <p><a href="{ts}">TripSweep</a> does these steps for you on the iPhone. Its Cleanup tab lists identical copies, similar photos, blurry photos, screenshots and large videos, each with the space it takes. Your trips are grouped by place and date and sorted by size, and a “Keep 1 per group” button handles a whole category in one tap. Favorites are never suggested for deletion, deletions go through “Recently Deleted”, and nothing ever leaves your phone: no account, no cloud, no server.</p>
+      <p><a href="{ts}">TripSweep</a> does these steps for you on the iPhone. Its Cleanup tab lists identical copies, similar photos, blurry photos, screenshots and large videos, each with the space it takes. Your trips are grouped by place and date and sorted by size, and a “Keep 1 per group” button handles a whole category in one tap. Favorites are never suggested for deletion, deletions go through “Recently Deleted”, and nothing ever leaves your phone: no account, no cloud. Only optional, anonymous usage statistics can be sent.</p>
       <p>If you prefer a big screen, <a href="{pc}">PhotoCull</a> does the same sorting on a Mac or Windows PC.</p>
 
       <h2>Do I need iCloud?</h2>
@@ -200,7 +200,7 @@ dict(slug="sort-photos-on-computer",
       <p><strong>4. Delete in one go.</strong> Mark hundreds of photos and confirm once.</p>
 
       <h2>PhotoCull does exactly this</h2>
-      <p><a href="{pc}">PhotoCull</a> is a free desktop app for Mac and Windows. Its Trips view groups the library by trip and shows the space each takes, similar photos carry a badge, and you can compare up to six side by side. It reads an iPhone over USB or any folder on your computer, works 100% offline and never modifies your originals.</p>
+      <p><a href="{pc}">PhotoCull</a> is a free desktop app for Mac and Windows. Its Trips view groups the library by trip and shows the space each takes, similar photos carry a badge, and you can compare up to six side by side. It reads an iPhone over USB or any folder on your computer, works 100% on-device and never modifies your originals.</p>
       <p>Deletions on an iPhone go through the free <a href="{ts}">TripSweep app</a> and “Recently Deleted”, so a mistake can be undone for 30 days. Sorting a folder on your computer is never limited.</p>
 
       <h2>Tips for a long session</h2>
