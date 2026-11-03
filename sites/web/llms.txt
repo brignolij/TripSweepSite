@@ -19,6 +19,7 @@
 - [How to clean up old vacation photos and keep the best ones](https://tripsweep.idealy.ch/blog-clean-up-vacation-photos.html): Turn a thousand holiday photos into a keeper album: group by trip, remove the near-identical shots, keep the highlights.
 - [PhotoCull home](https://tripsweep.idealy.ch/desktop.html): sort and bulk-delete photos from a Mac or Windows PC.
 - [Download PhotoCull for Mac](https://github.com/brignolij/TripSweepSite/releases/latest/download/PhotoCull-Desktop.zip): free, signed and notarized by Apple, macOS 11+ on Apple Silicon.
+- [PhotoCull on the Microsoft Store](https://apps.microsoft.com/detail/9n6wv393b3pl): the Windows app, installed from the Store.
 - [Download PhotoCull for Windows](https://github.com/brignolij/TripSweepSite/releases/latest/download/PhotoCull-Windows-x64.zip): free, Windows 10/11 (64-bit); reading an iPhone needs the free Apple Devices app. Not code-signed yet, so SmartScreen may warn on first launch.
 - [PhotoCull FAQ](https://tripsweep.idealy.ch/desktop-faq.html): questions and answers.
 - [PhotoCull blog](https://tripsweep.idealy.ch/desktop-blog.html): guides.

@@ -55,6 +55,7 @@ def store_link(campaign):
 PHOTOCULL_DOWNLOAD_URL = "https://github.com/brignolij/TripSweepSite/releases/latest/download/PhotoCull-Desktop.zip"
 # Windows build, attached to the SAME "latest" release as the Mac zip: every new release (Mac or Windows) must carry both
 # files, otherwise one of the two links 404s (`gh release upload <tag> dist/PhotoCull-Windows-x64.zip`).
+MS_STORE_URL = "https://apps.microsoft.com/detail/9n6wv393b3pl"
 PHOTOCULL_WINDOWS_DOWNLOAD_URL = "https://github.com/brignolij/TripSweepSite/releases/latest/download/PhotoCull-Windows-x64.zip"
 # Pricing section (Free / Pro / Pro + Desktop) on both pages and in llms.txt. Turned on while TripSweep 1.4 (which sells
 # "Pro + Desktop") is still in App Store review, at the owner's request; set to False to hide it again.
@@ -101,7 +102,7 @@ def seo_meta(lang, page, title, desc, image_rel, og_type="website"):
         f'  <meta property="og:locale:alternate" content="{OG_LOCALE[l]}" />' for l in LANGS if l != lang
     )
     return f'''  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2QKSMXT76"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('consent','default',{{analytics_storage:'granted',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'}});gtag('js',new Date());gtag('config','G-Z2QKSMXT76',{{storage:'none',allow_google_signals:false,allow_ad_personalization_signals:false}});document.addEventListener('click',function(e){{var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.href,p=h.indexOf('apps.apple.com')>-1?'ios':h.indexOf('PhotoCull-Windows')>-1?'windows':h.indexOf('PhotoCull-Desktop')>-1?'mac':'';if(p)gtag('event','download_click',{{platform:p}});}});</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('consent','default',{{analytics_storage:'granted',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'}});gtag('js',new Date());gtag('config','G-Z2QKSMXT76',{{storage:'none',allow_google_signals:false,allow_ad_personalization_signals:false}});document.addEventListener('click',function(e){{var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.href,p=h.indexOf('apps.apple.com')>-1?'ios':h.indexOf('apps.microsoft.com')>-1?'windows-store':h.indexOf('PhotoCull-Windows')>-1?'windows':h.indexOf('PhotoCull-Desktop')>-1?'mac':'';if(p)gtag('event','download_click',{{platform:p}});}});</script>
   <meta name="google-site-verification" content="5HOh0hrLDaKSXUZ1k1-Y7yOrdBucjiu6-zij86Fq-xM" />
   <link rel="canonical" href="{url}" />
   <meta property="og:type" content="{og_type}" />
@@ -361,7 +362,7 @@ DESKTOP = {
     h1="The real tool for sorting thousands of photos",
     subtitle="PhotoCull is a full desktop application: it shows your entire iPhone camera roll grouped by trip, compares your photos side by side, and bulk-deletes what's no longer worth keeping — right from your Mac or PC.",
     dl_note="Mac: free · macOS 11+ on Apple Silicon · signed and notarized by Apple<br>Windows: free · Windows 10/11 (64-bit) · reading an iPhone needs the free Apple Devices app from the Microsoft Store · Windows may show a SmartScreen warning (the app is not signed yet): More info → Run anyway",
-    cta_download="💻 Download for Mac", cta_download_windows="🪟 Download for Windows",
+    cta_download="💻 Download for Mac", cta_download_windows="🪟 Download for Windows", cta_ms_store="🛍️ Get it from the Microsoft Store",
     features_h2="What the app does",
     features=[
         ("🧳", 'The "Trips" view', "Your entire photo library automatically grouped by trip (time AND location, just like the iOS app) — spot at a glance which trips take up the most space."),
@@ -386,7 +387,7 @@ DESKTOP = {
     h1="Le vrai outil pour trier des milliers de photos",
     subtitle="PhotoCull est une application de bureau à part entière : elle affiche tout le rouleau de votre iPhone regroupé par séjour, compare vos photos côte à côte, et supprime en masse ce qui ne vaut plus la peine d'être gardé — directement depuis votre Mac ou votre PC.",
     dl_note="Mac : gratuit · macOS 11+ sur puce Apple · signé et notarisé par Apple<br>Windows : gratuit · Windows 10/11 (64 bits) · lire un iPhone demande l'app gratuite Apple Devices du Microsoft Store · Windows peut afficher un avertissement SmartScreen (l'app n'est pas encore signée) : Informations complémentaires → Exécuter quand même",
-    cta_download="💻 Télécharger pour Mac", cta_download_windows="🪟 Télécharger pour Windows",
+    cta_download="💻 Télécharger pour Mac", cta_download_windows="🪟 Télécharger pour Windows", cta_ms_store="🛍️ Obtenir sur le Microsoft Store",
     features_h2="Ce que fait l'app",
     features=[
         ("🧳", 'Vue "Voyages / séjours"', "Toute votre photothèque regroupée automatiquement par séjour (temps ET lieu, comme l'app iOS) — pour repérer d'un coup d'œil les voyages qui prennent le plus de place."),
@@ -411,7 +412,7 @@ DESKTOP = {
     h1="Il vero strumento per ordinare migliaia di foto",
     subtitle="PhotoCull è un'applicazione desktop a tutti gli effetti: mostra l'intero rullino del tuo iPhone raggruppato per soggiorno, confronta le tue foto affiancate ed elimina in blocco ciò che non vale più la pena tenere — direttamente dal tuo Mac o PC.",
     dl_note="Mac: gratuito · macOS 11+ su Apple Silicon · firmato e notarizzato da Apple<br>Windows: gratuito · Windows 10/11 (64 bit) · per leggere un iPhone serve l'app gratuita Apple Devices del Microsoft Store · Windows può mostrare un avviso SmartScreen (l'app non è ancora firmata): Ulteriori informazioni → Esegui comunque",
-    cta_download="💻 Scarica per Mac", cta_download_windows="🪟 Scarica per Windows",
+    cta_download="💻 Scarica per Mac", cta_download_windows="🪟 Scarica per Windows", cta_ms_store="🛍️ Scarica da Microsoft Store",
     features_h2="Cosa fa l'app",
     features=[
         ("🧳", 'Vista "Viaggi / soggiorni"', "Tutta la tua libreria foto raggruppata automaticamente per soggiorno (tempo E luogo, come l'app iOS) — per individuare a colpo d'occhio i viaggi che occupano più spazio."),
@@ -436,7 +437,7 @@ DESKTOP = {
     h1="Das echte Werkzeug, um Tausende Fotos zu sortieren",
     subtitle="PhotoCull ist eine vollwertige Desktop-Anwendung: Sie zeigt deine gesamte iPhone-Fotorolle nach Aufenthalt gruppiert, vergleicht deine Fotos nebeneinander und löscht in großen Mengen, was sich nicht mehr zu behalten lohnt — direkt von deinem Mac oder PC aus.",
     dl_note="Mac: kostenlos · macOS 11+ auf Apple Silicon · von Apple signiert und notarisiert<br>Windows: kostenlos · Windows 10/11 (64 Bit) · zum Lesen eines iPhones wird die kostenlose App Apple Devices aus dem Microsoft Store benötigt · Windows zeigt eventuell eine SmartScreen-Warnung (die App ist noch nicht signiert): Weitere Informationen → Trotzdem ausführen",
-    cta_download="💻 Für Mac herunterladen", cta_download_windows="🪟 Für Windows herunterladen",
+    cta_download="💻 Für Mac herunterladen", cta_download_windows="🪟 Für Windows herunterladen", cta_ms_store="🛍️ Im Microsoft Store holen",
     features_h2="Was die App kann",
     features=[
         ("🧳", 'Ansicht "Reisen / Aufenthalte"', "Deine gesamte Fotobibliothek automatisch nach Aufenthalt gruppiert (Zeit UND Ort, genau wie bei der iOS-App) — erkenne auf einen Blick, welche Reisen am meisten Platz beanspruchen."),
@@ -461,7 +462,7 @@ DESKTOP = {
     h1="La auténtica herramienta para ordenar miles de fotos",
     subtitle="PhotoCull es una aplicación de escritorio completa: muestra todo el carrete de tu iPhone agrupado por estancia, compara tus fotos una junto a otra y elimina en masa lo que ya no vale la pena conservar — directamente desde tu Mac o PC.",
     dl_note="Mac: gratis · macOS 11+ en Apple Silicon · firmada y notarizada por Apple<br>Windows: gratis · Windows 10/11 (64 bits) · para leer un iPhone hace falta la app gratuita Apple Devices de Microsoft Store · Windows puede mostrar un aviso de SmartScreen (la app aún no está firmada): Más información → Ejecutar de todas formas",
-    cta_download="💻 Descargar para Mac", cta_download_windows="🪟 Descargar para Windows",
+    cta_download="💻 Descargar para Mac", cta_download_windows="🪟 Descargar para Windows", cta_ms_store="🛍️ Obtener en Microsoft Store",
     features_h2="Qué hace la app",
     features=[
         ("🧳", 'Vista "Viajes / estancias"', "Toda tu biblioteca de fotos agrupada automáticamente por estancia (tiempo Y lugar, igual que la app de iOS) — detecta de un vistazo los viajes que ocupan más espacio."),
@@ -1009,6 +1010,7 @@ def render_photocull_home(lang):
       <div class="cta-row">
         <a class="btn btn-primary" href="{PHOTOCULL_DOWNLOAD_URL}" rel="noopener">{d['cta_download']}</a>
         <a class="btn btn-primary" href="{PHOTOCULL_WINDOWS_DOWNLOAD_URL}" rel="noopener">{d['cta_download_windows']}</a>
+        <a class="btn btn-primary" href="{MS_STORE_URL}" target="_blank" rel="noopener">{d['cta_ms_store']}</a>
       </div>
       <p style="margin-top:12px; font-size:14px;">{d['dl_note']}</p>
 
@@ -1554,6 +1556,7 @@ def llms_pages():
     ] if SITE == "tripsweep" else [
         f"- [PhotoCull home]({page_url('en', 'index.html')}): sort and bulk-delete photos from a Mac or Windows PC.",
         f"- [Download PhotoCull for Mac]({PHOTOCULL_DOWNLOAD_URL}): free, signed and notarized by Apple, macOS 11+ on Apple Silicon.",
+        f"- [PhotoCull on the Microsoft Store]({MS_STORE_URL}): the Windows app, installed from the Store.",
         f"- [Download PhotoCull for Windows]({PHOTOCULL_WINDOWS_DOWNLOAD_URL}): free, Windows 10/11 (64-bit); reading an iPhone needs the free Apple Devices app. Not code-signed yet, so SmartScreen may warn on first launch.",
     ]
     posts = [f"- [{p['h1']}]({page_url('en', 'blog-' + p['slug'] + '.html')}): {p['desc']}" for p in blog_posts("en")]
