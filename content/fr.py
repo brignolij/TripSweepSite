@@ -54,6 +54,8 @@ FAQ_PHOTOCULL = dict(
     h1="Questions et réponses",
     intro="Comment trier vos photos plus vite depuis un ordinateur, vider votre iPhone depuis un Mac ou un PC, et ce que PhotoCull fait (et ne fait jamais) avec vos photos.",
     qa=[
+        ('Comment trier les photos de mon iPhone sur ordinateur, Mac ou PC ?',
+         "Branchez l'iPhone à l'ordinateur avec un câble USB, déverrouillez-le et touchez « Se fier », puis ouvrez <a href=\"{pc}\">PhotoCull</a> : il regroupe votre pellicule par voyage, compare les photos similaires côte à côte et marque des centaines de photos en quelques clics. Guides pas à pas : <a href=\"{post:sort-iphone-photos-on-mac}\">sur Mac</a> et <a href=\"{post:sort-iphone-photos-on-pc}\">sur PC Windows</a>."),
         ("Pourquoi trier ses photos sur ordinateur plutôt que sur l'iPhone ?",
          "Un grand écran affiche plus de photos à la fois, une souris et un clavier en sélectionnent des centaines en quelques secondes, et comparer des photos côte à côte est plus facile que de faire des allers-retours. Trier une pellicule de plusieurs milliers de photos représente plusieurs séances sur un téléphone, et une session bien plus courte sur un Mac ou un PC."),
         ("Qu'est-ce que PhotoCull ?",

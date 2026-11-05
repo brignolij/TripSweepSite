@@ -54,6 +54,8 @@ FAQ_PHOTOCULL = dict(
     h1="Fragen und Antworten",
     intro="Wie du deine Fotos am Computer schneller sortierst, dein iPhone von einem Mac oder PC aus aufräumst und was PhotoCull mit deinen Fotos macht (und nie macht).",
     qa=[
+        ('Wie sortiere ich meine iPhone-Fotos am Computer, Mac oder PC?',
+         "Verbinde das iPhone per USB-Kabel mit dem Computer, entsperre es und tippe auf „Vertrauen“, dann öffne <a href=\"{pc}\">PhotoCull</a>: Es gruppiert deine Fotorolle nach Reise, vergleicht ähnliche Aufnahmen nebeneinander und markiert Hunderte Fotos mit wenigen Klicks. Schritt-für-Schritt-Anleitungen: <a href=\"{post:sort-iphone-photos-on-mac}\">am Mac</a> und <a href=\"{post:sort-iphone-photos-on-pc}\">am Windows-PC</a>."),
         ("Warum Fotos am Computer statt auf dem iPhone sortieren?",
          "Ein großer Bildschirm zeigt mehr Fotos auf einmal, mit Maus und Tastatur wählst du Hunderte in Sekunden aus, und Aufnahmen nebeneinander zu vergleichen ist einfacher, als hin und her zu blättern. Eine Fotomediathek mit Tausenden Fotos zu sortieren, kostet am Telefon mehrere Sitzungen und am Mac oder PC deutlich weniger Zeit."),
         ("Was ist PhotoCull?",

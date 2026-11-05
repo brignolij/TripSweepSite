@@ -54,6 +54,8 @@ FAQ_PHOTOCULL = dict(
     h1="Preguntas y respuestas",
     intro="Cómo ordenar tus fotos más rápido desde un ordenador, liberar espacio en tu iPhone desde un Mac o PC, y qué hace (y qué nunca hace) PhotoCull con tus fotos.",
     qa=[
+        ('¿Cómo ordeno las fotos del iPhone en el ordenador, Mac o PC?',
+         "Conecta el iPhone al ordenador con un cable USB, desbloquéalo y toca Confiar, y abre <a href=\"{pc}\">PhotoCull</a>: agrupa el carrete por viaje, compara las fotos parecidas lado a lado y marca cientos de fotos en pocos clics. Guías paso a paso: <a href=\"{post:sort-iphone-photos-on-mac}\">en el Mac</a> y <a href=\"{post:sort-iphone-photos-on-pc}\">en un PC con Windows</a>."),
         ("¿Por qué ordenar las fotos en el ordenador en lugar de en el iPhone?",
          "Una pantalla grande muestra más fotos a la vez, un ratón y un teclado seleccionan cientos en segundos, y comparar tomas lado a lado es más fácil que ir pasando de una a otra. Ordenar un carrete de miles de fotos son varias sesiones en el móvil y una sesión mucho más corta en un Mac o un PC."),
         ("¿Qué es PhotoCull?",

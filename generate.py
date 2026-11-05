@@ -101,8 +101,9 @@ def seo_meta(lang, page, title, desc, image_rel, og_type="website"):
     alt_locales = "\n".join(
         f'  <meta property="og:locale:alternate" content="{OG_LOCALE[l]}" />' for l in LANGS if l != lang
     )
-    return f'''  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2QKSMXT76"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('consent','default',{{analytics_storage:'granted',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'}});gtag('js',new Date());gtag('config','G-Z2QKSMXT76',{{storage:'none',allow_google_signals:false,allow_ad_personalization_signals:false}});document.addEventListener('click',function(e){{var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.href,p=h.indexOf('apps.apple.com')>-1?'ios':h.indexOf('apps.microsoft.com')>-1?'windows-store':h.indexOf('PhotoCull-Windows')>-1?'windows':h.indexOf('PhotoCull-Desktop')>-1?'mac':'';if(p)gtag('event','download_click',{{platform:p}});}});</script>
+    # gtag.js is injected after the page's load event so it never competes with the page itself; calls made before
+    # that wait in dataLayer. shortcut: a visitor leaving before "load" is not counted, fine for a light page.
+    return f'''  <script>window.addEventListener('load',function(){{var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-Z2QKSMXT76';document.head.appendChild(s);}});window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('consent','default',{{analytics_storage:'granted',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'}});gtag('js',new Date());gtag('config','G-Z2QKSMXT76',{{storage:'none',allow_google_signals:false,allow_ad_personalization_signals:false}});document.addEventListener('click',function(e){{var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.href,p=h.indexOf('apps.apple.com')>-1?'ios':h.indexOf('apps.microsoft.com')>-1?'windows-store':h.indexOf('PhotoCull-Windows')>-1?'windows':h.indexOf('PhotoCull-Desktop')>-1?'mac':'';if(p)gtag('event','download_click',{{platform:p}});}});</script>
   <meta name="google-site-verification" content="5HOh0hrLDaKSXUZ1k1-Y7yOrdBucjiu6-zij86Fq-xM" />
   <link rel="canonical" href="{url}" />
   <meta property="og:type" content="{og_type}" />
@@ -875,6 +876,8 @@ def render_index(lang):
       </div>
     </section>
 
+{guides_section(lang)}
+
     <footer>
       <div>{d['footer_copy']}</div>
       <div class="footer-links">
@@ -1036,6 +1039,8 @@ def render_photocull_home(lang):
         </p>
       </div>
     </section>
+
+{guides_section(lang)}
 
     <footer>
       <div>{d['footer_copy']}</div>
@@ -1326,7 +1331,8 @@ def link_tokens(text, lang, campaign):
               "{mac}": PHOTOCULL_DOWNLOAD_URL, "{win}": PHOTOCULL_WINDOWS_DOWNLOAD_URL}
     for k, v in tokens.items():
         text = text.replace(k, v)
-    return text
+    # {post:<slug>} links to one of the current product's articles.
+    return re.sub(r"\{post:([a-z0-9-]+)\}", lambda m: page_url(lang, f"blog-{m.group(1)}.html"), text)
 
 def cta_row(lang, campaign):
     if SITE == "tripsweep":
@@ -1392,6 +1398,11 @@ def render_faq(lang):
       </p>
 
 {qa_html}
+
+      <h2>{BLOG_UI[lang]['index'][SITE]['h1']}</h2>
+      <ul>
+{guide_links(lang)}
+      </ul>
 
       {cta_row(lang, 'faq')}
     </div>
@@ -1465,20 +1476,51 @@ def blog_foot(lang):
 def blog_posts(lang):
     return CONTENT[lang].BLOG[SITE]
 
-def render_blog_index(lang):
-    ui = BLOG_UI[lang]["index"][SITE]
-    cards = "\n".join(
+def blog_cards(lang):
+    return "\n".join(
         f'''        <div class="feature-card">
           <h3><a href="{path_for(lang, f"blog-{p['slug']}.html", lang)}">{p['h1']}</a></h3>
           <p>{p['desc']}</p>
         </div>''' for p in blog_posts(lang)
     )
+
+def guides_section(lang):
+    """The product's guides on its home page: internal links so the articles get crawled and ranked."""
+    return f'''    <section id="guides">
+      <h2>{BLOG_UI[lang]['index'][SITE]['h1']}</h2>
+      <div class="features">
+{blog_cards(lang)}
+      </div>
+    </section>'''
+
+def guide_links(lang, skip=None):
+    return "\n".join(
+        f'        <li><a href="{path_for(lang, f"blog-{o['slug']}.html", lang)}">{o['h1']}</a></li>' for o in blog_posts(lang) if o["slug"] != skip
+    )
+
+MONTHS = {
+    "en": "January February March April May June July August September October November December".split(),
+    "fr": "janvier février mars avril mai juin juillet août septembre octobre novembre décembre".split(),
+    "it": "gennaio febbraio marzo aprile maggio giugno luglio agosto settembre ottobre novembre dicembre".split(),
+    "de": "Januar Februar März April Mai Juni Juli August September Oktober November Dezember".split(),
+    "es": "enero febrero marzo abril mayo junio julio agosto septiembre octubre noviembre diciembre".split(),
+}
+DATE_FMT = {"en": "{m} {d}, {y}", "fr": "{d} {m} {y}", "it": "{d} {m} {y}", "de": "{d}. {m} {y}", "es": "{d} de {m} de {y}"}
+
+def human_date(lang, iso):
+    y, m, d = map(int, iso.split("-"))
+    return DATE_FMT[lang].format(d=d, m=MONTHS[lang][m - 1], y=y)
+
+assert human_date("de", "2026-11-05") == "5. November 2026" and human_date("en", "2026-01-31") == "January 31, 2026"
+
+def render_blog_index(lang):
+    ui = BLOG_UI[lang]["index"][SITE]
     return (blog_head(lang, "blog.html", ui) + f'''
     <section>
       <h1>{ui['h1']}</h1>
       <p style="text-align:center;">{ui['intro']}</p>
       <div class="features">
-{cards}
+{blog_cards(lang)}
       </div>
       {cta_row(lang, 'blog')}
     </section>
@@ -1486,14 +1528,15 @@ def render_blog_index(lang):
 
 def render_blog_post(lang, p):
     page = f"blog-{p['slug']}.html"
-    ld = f'  <script type="application/ld+json">{json.dumps({"@context": "https://schema.org", "@type": "Article", "headline": p["h1"], "description": p["desc"], "inLanguage": lang, "datePublished": POST_DATES[p["slug"]][0], "dateModified": POST_DATES[p["slug"]][1], "mainEntityOfPage": page_url(lang, page), "author": {"@type": "Person", "name": "Jeffrey Brignoli"}}, ensure_ascii=False)}</script>'
-    others = "\n".join(
-        f'        <li><a href="{path_for(lang, f"blog-{o['slug']}.html", lang)}">{o['h1']}</a></li>' for o in blog_posts(lang) if o["slug"] != p["slug"]
-    )
+    published, modified = POST_DATES[p["slug"]]
+    me = {"@type": "Person", "name": "Jeffrey Brignoli", "url": ORIGIN + "/"}
+    ld = f'  <script type="application/ld+json">{json.dumps({"@context": "https://schema.org", "@type": "Article", "headline": p["h1"], "description": p["desc"], "image": SITE_ORIGIN + "/" + HERO_IMAGE[SITE].format(lang=lang), "inLanguage": lang, "datePublished": published, "dateModified": modified, "mainEntityOfPage": page_url(lang, page), "author": me, "publisher": me}, ensure_ascii=False)}</script>'
+    others = guide_links(lang, skip=p["slug"])
     body = link_tokens(p["body"], lang, f"site-{lang}-blog-{p['slug']}")
     return (blog_head(lang, page, p, ld) + f'''
     <article class="legal">
       <h1>{p['h1']}</h1>
+      <p class="post-meta">Jeffrey Brignoli · <time datetime="{modified}">{human_date(lang, modified)}</time></p>
 {body}
       {cta_row(lang, 'blog-' + p['slug'])}
       <h2>{BLOG_UI[lang]['more']}</h2>

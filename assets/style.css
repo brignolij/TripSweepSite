@@ -360,6 +360,11 @@ footer .footer-links {
   font-size: 15px;
 }
 
+.legal .post-meta {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
 .legal {
   padding: 48px 0 64px;
 }
