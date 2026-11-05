@@ -9,12 +9,12 @@ BLOG_UI = dict(
     index={
         "tripsweep": dict(
             title="Blog TripSweep : libérer de l'espace sur iPhone, photos en double",
-            desc="Guides pratiques pour libérer de l'espace sur iPhone, supprimer les photos en double et similaires et faire le tri dans vos anciens voyages, sans iCloud et sans envoyer vos photos nulle part.",
+            desc="Guides pratiques pour libérer de l'espace sur iPhone, supprimer doublons et photos similaires et trier vos anciens voyages, sans iCloud ni envoi de photos.",
             h1="Guides pour faire le ménage dans vos photos iPhone",
             intro="Des guides courts et pratiques pour libérer de l'espace sur votre iPhone, supprimer les doublons et ne garder que les meilleures photos."),
         "photocull": dict(
             title="Blog PhotoCull : trier ses photos sur Mac ou PC, vider son iPhone",
-            desc="Guides pour trier des milliers de photos plus vite sur grand écran, comparer les photos similaires côte à côte et vider votre iPhone depuis un Mac ou un PC Windows.",
+            desc="Guides pour trier des milliers de photos plus vite sur grand écran, comparer les photos similaires et vider votre iPhone depuis un Mac ou un PC.",
             h1="Guides pour trier vos photos sur ordinateur",
             intro="Pourquoi un grand écran change la vitesse à laquelle vous triez vos photos, et comment s'en servir pour vider votre iPhone."),
     },
@@ -48,8 +48,8 @@ FAQ_TRIPSWEEP_EXTRA = [
 ]
 
 FAQ_PHOTOCULL = dict(
-    title="FAQ PhotoCull : trier et supprimer ses photos sur Mac ou PC Windows",
-    desc="Comment trier des milliers de photos sur ordinateur, comparer les photos similaires, libérer de l'espace sur iPhone depuis un Mac ou un PC et supprimer en toute sécurité : les réponses sur PhotoCull, 100 % sur l'appareil.",
+    title="FAQ PhotoCull : trier et supprimer ses photos sur Mac ou PC",
+    desc="Trier des milliers de photos sur ordinateur, comparer les similaires, libérer votre iPhone depuis un Mac ou un PC : les réponses sur PhotoCull.",
     nav_home="PhotoCull", nav_desktop="Application iOS",
     h1="Questions et réponses",
     intro="Comment trier vos photos plus vite depuis un ordinateur, vider votre iPhone depuis un Mac ou un PC, et ce que PhotoCull fait (et ne fait jamais) avec vos photos.",
@@ -180,9 +180,60 @@ dict(slug="clean-up-vacation-photos",
       <p>Pour faire de même sur grand écran, <a href="{pc}">PhotoCull</a> affiche les voyages de votre iPhone sur un Mac ou un PC Windows.</p>"""),
 ],
 "photocull": [
+dict(slug="sort-iphone-photos-on-mac",
+     title="Comment trier les photos de son iPhone sur Mac",
+     desc="Triez des milliers de photos d'iPhone sur votre Mac : ce que Photos et Transfert d'images savent faire, et une méthode plus rapide pour trier.",
+     h1="Comment trier les photos de son iPhone sur Mac",
+     body="""      <p>Trier une pellicule pleine sur l'iPhone, ce sont des heures de tapotements. Sur un Mac, vous voyez bien plus de photos à la fois, vous sélectionnez à la souris et vous comparez sur grand écran. Voici comment faire, avec les outils de macOS et avec une application dédiée.</p>
+
+      <h2>Avec les outils intégrés à macOS</h2>
+      <ul>
+        <li><strong>Photos :</strong> importe une copie des photos de l'iPhone sur le Mac. Pratique comme sauvegarde, mais il ne vous dit pas quoi supprimer sur l'iPhone.</li>
+        <li><strong>Transfert d'images :</strong> liste les photos de l'iPhone comme de simples fichiers, sans regroupement par voyage ni comparaison des photos similaires.</li>
+      </ul>
+      <p>Les deux fonctionnent, mais avec des milliers de photos, vous faites toujours défiler une seule longue liste.</p>
+
+      <h2>Avec PhotoCull, étape par étape</h2>
+      <p><strong>1. Installez PhotoCull.</strong> <a href="{mac}">Téléchargez-le gratuitement</a> : macOS 11 ou ultérieur sur Apple Silicon, signé et notarisé par Apple.</p>
+      <p><strong>2. Branchez l'iPhone.</strong> Connectez-le avec un câble USB, déverrouillez-le et touchez « Se fier ».</p>
+      <p><strong>3. Triez voyage par voyage.</strong> La vue Voyages regroupe votre pellicule par date et par lieu et indique la place prise par chaque voyage. Commencez par le plus lourd.</p>
+      <p><strong>4. Comparez et marquez.</strong> Les photos similaires portent un badge : ouvrez-en jusqu'à six côte à côte, gardez la meilleure et marquez les autres, ainsi que les captures d'écran et les grosses vidéos inutiles.</p>
+      <p><strong>5. Supprimez sans risque.</strong> La suppression est appliquée sur l'iPhone par l'<a href="{ts}">app TripSweep</a>, gratuite, via « Supprimés récemment » : vous avez 30 jours pour changer d'avis.</p>
+
+      <h2>Bon à savoir</h2>
+      <ul>
+        <li>Tout reste sur votre Mac et votre iPhone : pas de compte, pas de cloud, aucun envoi.</li>
+        <li>PhotoCull ne modifie jamais vos originaux et ne supprime que ce que vous confirmez.</li>
+        <li>Depuis un Mac, la version gratuite permet 6 suppressions par jour, TripSweep Pro 15, et Pro + Desktop est illimité. Parcourir et trier est gratuit, et trier un dossier de photos sur le Mac n'est jamais limité.</li>
+      </ul>"""),
+dict(slug="sort-iphone-photos-on-pc",
+     title="Comment trier les photos de son iPhone sur PC Windows",
+     desc="Triez des milliers de photos d'iPhone sur Windows 10 ou 11 : ce que montrent l'app Photos et l'Explorateur, et une méthode plus rapide pour trier.",
+     h1="Comment trier les photos de son iPhone sur PC Windows",
+     body="""      <p>Un iPhone et un ordinateur Windows ? Vous pouvez quand même trier vos photos sur grand écran plutôt que sur le téléphone. Voici ce que Windows sait faire seul, et une méthode plus rapide.</p>
+
+      <h2>Avec les outils intégrés à Windows</h2>
+      <ul>
+        <li><strong>App Photos :</strong> importe une copie des photos de l'iPhone sur le PC. Bien pour une sauvegarde, mais elle ne vous aide pas à choisir quoi supprimer.</li>
+        <li><strong>Explorateur de fichiers :</strong> affiche les photos de l'iPhone dans des dossiers comme 100APPLE, nommées IMG_0001 et ainsi de suite, sans voyages ni comparaison des photos similaires.</li>
+      </ul>
+
+      <h2>Avec PhotoCull, étape par étape</h2>
+      <p><strong>1. Installez Apple Devices.</strong> Installez l'app gratuite Apple Devices depuis le Microsoft Store : Windows en a besoin pour lire un iPhone.</p>
+      <p><strong>2. Installez PhotoCull.</strong> Depuis le Microsoft Store ou en <a href="{win}">le téléchargeant gratuitement</a> (Windows 10/11, 64 bits). Le téléchargement n'est pas encore signé, SmartScreen peut donc afficher un avertissement au premier lancement.</p>
+      <p><strong>3. Branchez l'iPhone.</strong> Connectez-le avec un câble USB, déverrouillez-le et touchez « Se fier ».</p>
+      <p><strong>4. Triez voyage par voyage.</strong> La vue Voyages regroupe votre pellicule par date et par lieu et indique la place prise par chaque voyage. Commencez par le plus lourd.</p>
+      <p><strong>5. Comparez, marquez, supprimez.</strong> Les photos similaires portent un badge : comparez-en jusqu'à six côte à côte, gardez la meilleure et marquez les autres. La suppression est appliquée sur l'iPhone par l'<a href="{ts}">app TripSweep</a>, gratuite, via « Supprimés récemment » : vous avez 30 jours pour changer d'avis.</p>
+
+      <h2>Bon à savoir</h2>
+      <ul>
+        <li>Tout reste sur votre PC et votre iPhone : pas de compte, pas de cloud, aucun envoi.</li>
+        <li>PhotoCull ne modifie jamais vos originaux et ne supprime que ce que vous confirmez.</li>
+        <li>Parcourir et trier est gratuit, et trier un dossier de photos déjà sur le PC n'est jamais limité.</li>
+      </ul>"""),
 dict(slug="sort-photos-on-computer",
      title="Trier des milliers de photos plus vite sur Mac ou PC Windows",
-     desc="Pourquoi trier ses photos sur grand écran est tellement plus rapide que sur un téléphone, et une méthode simple pour venir à bout de milliers de photos en une seule séance.",
+     desc="Pourquoi trier ses photos sur grand écran va bien plus vite que sur un téléphone, et une méthode simple pour en trier des milliers en une séance.",
      h1="Comment trier des milliers de photos plus vite sur Mac ou PC",
      body="""      <p>Si votre pellicule contient dix mille photos, la trier sur l'écran d'un téléphone est un chantier que vous ne finirez jamais. Sur un ordinateur, ça peut tenir en une soirée. Voici pourquoi, et une méthode qui marche.</p>
 

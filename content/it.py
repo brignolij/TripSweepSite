@@ -8,13 +8,13 @@ BLOG_UI = dict(
     cross_label={"tripsweep": "App desktop", "photocull": "App iOS"},
     index={
         "tripsweep": dict(
-            title="Blog TripSweep: liberare spazio su iPhone, eliminare foto duplicate",
-            desc="Guide pratiche per liberare spazio su iPhone, eliminare foto duplicate e simili e fare ordine nei vecchi viaggi, senza iCloud e senza inviare le tue foto a nessuno.",
+            title="Blog TripSweep: spazio su iPhone e foto duplicate",
+            desc="Guide pratiche per liberare spazio su iPhone, eliminare foto duplicate e simili e riordinare i vecchi viaggi, senza iCloud e senza inviare le tue foto.",
             h1="Guide per fare ordine nelle foto del tuo iPhone",
             intro="Guide brevi e pratiche per liberare spazio su iPhone, eliminare i duplicati e tenere solo gli scatti migliori."),
         "photocull": dict(
-            title="Blog PhotoCull: ordinare foto su Mac o PC, liberare spazio su iPhone",
-            desc="Guide per ordinare migliaia di foto più in fretta su un grande schermo, confrontare scatti simili fianco a fianco e liberare spazio su iPhone da un Mac o da un PC Windows.",
+            title="Blog PhotoCull: ordinare le foto su Mac o PC",
+            desc="Guide per ordinare migliaia di foto più in fretta su un grande schermo, confrontare scatti simili e liberare spazio su iPhone da un Mac o un PC.",
             h1="Guide per ordinare le tue foto dal computer",
             intro="Perché un grande schermo cambia la velocità con cui ordini le foto e come sfruttarlo per liberare spazio su iPhone."),
     },
@@ -49,7 +49,7 @@ FAQ_TRIPSWEEP_EXTRA = [
 
 FAQ_PHOTOCULL = dict(
     title="FAQ PhotoCull: ordinare ed eliminare foto da un Mac o PC Windows",
-    desc="Come ordinare migliaia di foto dal computer, confrontare scatti simili, liberare spazio su iPhone da Mac o PC ed eliminare in sicurezza: risposte su PhotoCull, 100% sul dispositivo.",
+    desc="Come ordinare migliaia di foto dal computer, confrontare scatti simili, liberare spazio su iPhone da Mac o PC ed eliminare in sicurezza: risposte su PhotoCull.",
     nav_home="PhotoCull", nav_desktop="App iOS",
     h1="Domande e risposte",
     intro="Come ordinare le tue foto più in fretta dal computer, liberare spazio su iPhone da un Mac o PC, e cosa fa (e non fa mai) PhotoCull con le tue foto.",
@@ -155,7 +155,7 @@ dict(slug="delete-duplicate-photos-iphone",
       <h2>Preferisci un grande schermo?</h2>
       <p>Con <a href="{pc}">PhotoCull</a> su un Mac o PC Windows puoi confrontare fino a sei foto simili fianco a fianco e selezionarne centinaia con pochi clic.</p>"""),
 dict(slug="clean-up-vacation-photos",
-     title="Come fare ordine nelle vecchie foto delle vacanze e tenere le migliori",
+     title="Come riordinare le foto delle vacanze e tenere le migliori",
      desc="Trasforma mille foto di vacanza in un album da conservare: raggruppa per viaggio, elimina gli scatti quasi identici, tieni i momenti migliori.",
      h1="Come fare ordine nelle vecchie foto delle vacanze e tenere le migliori",
      body="""      <p>Un viaggio di una settimana produce facilmente mille foto e video, e la maggior parte sono quasi copie di pochi bei scatti. Ordinarli a viaggio appena concluso è facile; farlo un anno dopo è una seccatura. Questo metodo funziona in entrambi i casi.</p>
@@ -180,6 +180,57 @@ dict(slug="clean-up-vacation-photos",
       <p>Per fare lo stesso su un grande schermo, <a href="{pc}">PhotoCull</a> mostra i viaggi del tuo iPhone su un Mac o PC Windows.</p>"""),
 ],
 "photocull": [
+dict(slug="sort-iphone-photos-on-mac",
+     title="Come ordinare le foto dell'iPhone sul Mac",
+     desc="Ordina migliaia di foto dell'iPhone sul Mac: cosa fanno Foto e Acquisizione Immagine, e un metodo più rapido per raggruppare, confrontare ed eliminare.",
+     h1="Come ordinare le foto dell'iPhone sul Mac",
+     body="""      <p>Ordinare un rullino pieno sull'iPhone vuol dire ore di tocchi. Sul Mac vedi molte più foto insieme, selezioni con il mouse e confronti gli scatti su un grande schermo. Ecco come fare, con gli strumenti di macOS e con un'app dedicata.</p>
+
+      <h2>Con gli strumenti integrati in macOS</h2>
+      <ul>
+        <li><strong>Foto:</strong> importa una copia delle foto dell'iPhone sul Mac. Utile come backup, ma non ti dice cosa eliminare sull'iPhone.</li>
+        <li><strong>Acquisizione Immagine:</strong> elenca le foto dell'iPhone come semplici file, senza raggrupparle per viaggio né confrontare gli scatti simili.</li>
+      </ul>
+      <p>Funzionano entrambi, ma con migliaia di foto scorri comunque un unico lungo elenco.</p>
+
+      <h2>Con PhotoCull, passo dopo passo</h2>
+      <p><strong>1. Installa PhotoCull.</strong> <a href="{mac}">Scaricalo gratis</a>: macOS 11 o successivo su Apple Silicon, firmato e autenticato da Apple.</p>
+      <p><strong>2. Collega l'iPhone.</strong> Collegalo con un cavo USB, sbloccalo e tocca Autorizza.</p>
+      <p><strong>3. Ordina un viaggio alla volta.</strong> La vista Viaggi raggruppa il rullino per data e luogo e mostra lo spazio occupato da ogni viaggio. Inizia dal più pesante.</p>
+      <p><strong>4. Confronta e seleziona.</strong> Le foto simili hanno un badge: aprine fino a sei fianco a fianco, tieni la migliore e seleziona le altre, insieme a screenshot e video pesanti che non ti servono.</p>
+      <p><strong>5. Elimina in sicurezza.</strong> L'eliminazione viene applicata sull'iPhone dall'<a href="{ts}">app TripSweep</a>, gratuita, tramite «Eliminati di recente»: hai 30 giorni per cambiare idea.</p>
+
+      <h2>Da sapere</h2>
+      <ul>
+        <li>Tutto resta sul tuo Mac e sul tuo iPhone: nessun account, nessun cloud, nessun invio.</li>
+        <li>PhotoCull non modifica mai gli originali ed elimina solo ciò che confermi.</li>
+        <li>Dal Mac, la versione gratuita consente 6 eliminazioni al giorno, TripSweep Pro 15 e Pro + Desktop è illimitato. Sfogliare e ordinare è gratis, e ordinare una cartella di foto sul Mac non ha mai limiti.</li>
+      </ul>"""),
+dict(slug="sort-iphone-photos-on-pc",
+     title="Come ordinare le foto dell'iPhone su un PC Windows",
+     desc="Ordina migliaia di foto dell'iPhone su Windows 10 o 11: cosa mostrano l'app Foto ed Esplora file, e un metodo più rapido per ordinare ed eliminare.",
+     h1="Come ordinare le foto dell'iPhone su un PC Windows",
+     body="""      <p>Hai un iPhone ma un computer Windows? Puoi comunque ordinare le foto su un grande schermo invece che sul telefono. Ecco cosa sa fare Windows da solo, e un metodo più rapido.</p>
+
+      <h2>Con gli strumenti integrati in Windows</h2>
+      <ul>
+        <li><strong>App Foto:</strong> importa una copia delle foto dell'iPhone sul PC. Va bene per un backup, ma non ti aiuta a scegliere cosa eliminare.</li>
+        <li><strong>Esplora file:</strong> mostra le foto dell'iPhone in cartelle come 100APPLE, con nomi come IMG_0001, senza viaggi né confronto degli scatti simili.</li>
+      </ul>
+
+      <h2>Con PhotoCull, passo dopo passo</h2>
+      <p><strong>1. Installa Apple Devices.</strong> Installa l'app gratuita Apple Devices dal Microsoft Store: Windows ne ha bisogno per leggere un iPhone.</p>
+      <p><strong>2. Installa PhotoCull.</strong> Dal Microsoft Store oppure <a href="{win}">scaricandolo gratis</a> (Windows 10/11, 64 bit). Il download non è ancora firmato, quindi SmartScreen può mostrare un avviso al primo avvio.</p>
+      <p><strong>3. Collega l'iPhone.</strong> Collegalo con un cavo USB, sbloccalo e tocca Autorizza.</p>
+      <p><strong>4. Ordina un viaggio alla volta.</strong> La vista Viaggi raggruppa il rullino per data e luogo e mostra lo spazio occupato da ogni viaggio. Inizia dal più pesante.</p>
+      <p><strong>5. Confronta, seleziona, elimina.</strong> Le foto simili hanno un badge: confrontane fino a sei fianco a fianco, tieni la migliore e seleziona le altre. L'eliminazione viene applicata sull'iPhone dall'<a href="{ts}">app TripSweep</a>, gratuita, tramite «Eliminati di recente»: hai 30 giorni per cambiare idea.</p>
+
+      <h2>Da sapere</h2>
+      <ul>
+        <li>Tutto resta sul tuo PC e sul tuo iPhone: nessun account, nessun cloud, nessun invio.</li>
+        <li>PhotoCull non modifica mai gli originali ed elimina solo ciò che confermi.</li>
+        <li>Sfogliare e ordinare è gratis, e ordinare una cartella di foto già sul PC non ha mai limiti.</li>
+      </ul>"""),
 dict(slug="sort-photos-on-computer",
      title="Come ordinare migliaia di foto più in fretta su Mac o PC Windows",
      desc="Perché ordinare le foto su un grande schermo è molto più veloce che sul telefono, e un metodo semplice per esaminare migliaia di foto in una sola sessione.",

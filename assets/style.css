@@ -232,6 +232,7 @@ nav.links a:hover {
 .phone-frame img {
   display: block;
   width: 100%;
+  height: auto;
   border-radius: 32px;
 }
 

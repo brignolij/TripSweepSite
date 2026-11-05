@@ -172,8 +172,8 @@ def desktop_url(lang):
 
 INDEX = {
 "en": dict(
-    title="TripSweep — photo cleaner: duplicates, similar photos, screenshots and old trips",
-    desc="Sort your photos by trip or by type: identical copies, similar and blurry photos, screenshots, large videos. Free up gigabytes, back up and share — even without GPS. 100% on-device.",
+    title="TripSweep — photo cleaner for duplicate and similar photos",
+    desc="Sort photos by trip or by type — duplicates, similar and blurry shots, screenshots, large videos — and free up gigabytes on your iPhone. 100% on-device.",
     nav_desktop="Desktop app", nav_features="Features", nav_privacy_anchor="Privacy", nav_privacy="Privacy Policy",
     h1="Finally, an easy way to clear out your photo library",
     subtitle="TripSweep groups your photos and videos by trip (or by event and month when they have no location), shows what's taking up space, and sorts out what you don't need — identical copies, similar and blurry photos, screenshots, large videos. Keep the best shot, delete the rest, without ever sending your photos anywhere.",
@@ -208,8 +208,8 @@ INDEX = {
     footer_desktop="Desktop app", footer_privacy="Privacy", footer_kofi="Ko-fi", footer_github="GitHub",
 ),
 "fr": dict(
-    title="TripSweep — nettoyeur de photos : doublons, photos similaires, captures d'écran et vieux voyages",
-    desc="Triez vos photos par séjour ou par type : copies identiques, photos similaires et floues, captures d'écran, grosses vidéos. Libérez des gigaoctets, sauvegardez, partagez — même sans GPS. 100 % sur l'appareil.",
+    title="TripSweep — supprimez doublons et photos similaires",
+    desc="Triez vos photos par séjour ou par type — doublons, photos similaires et floues, captures, grosses vidéos — et libérez des gigaoctets. 100 % sur l'appareil.",
     nav_desktop="Application de bureau", nav_features="Fonctionnalités", nav_privacy_anchor="Confidentialité", nav_privacy="Politique de confidentialité",
     h1="Enfin un moyen simple de faire le tri dans votre photothèque",
     subtitle="TripSweep regroupe vos photos et vidéos par séjour (ou par événement et par mois quand elles n'ont pas de position), montre ce qui prend de la place et repère ce dont vous n'avez pas besoin : copies identiques, photos similaires et floues, captures d'écran, grosses vidéos. Gardez la meilleure prise, supprimez le reste, sans jamais envoyer vos photos où que ce soit.",
@@ -244,8 +244,8 @@ INDEX = {
     footer_desktop="Application de bureau", footer_privacy="Confidentialité", footer_kofi="Ko-fi", footer_github="GitHub",
 ),
 "it": dict(
-    title="TripSweep — pulizia foto: duplicati, foto simili, screenshot e vecchi viaggi",
-    desc="Ordina le foto per soggiorno o per tipo: copie identiche, foto simili e sfocate, screenshot, video pesanti. Libera gigabyte, salva e condividi — anche senza GPS. 100% sul dispositivo.",
+    title="TripSweep — pulizia foto: duplicati e foto simili",
+    desc="Ordina le foto per soggiorno o per tipo — duplicati, foto simili e sfocate, screenshot, video pesanti — e libera gigabyte. 100% sul dispositivo.",
     nav_desktop="App desktop", nav_features="Funzionalità", nav_privacy_anchor="Privacy", nav_privacy="Informativa sulla privacy",
     h1="Finalmente un modo semplice per fare ordine nella tua libreria foto",
     subtitle="TripSweep raggruppa le tue foto e i tuoi video per soggiorno (o per evento e per mese quando non hanno una posizione), mostra cosa occupa spazio e individua ciò che non ti serve: copie identiche, foto simili e sfocate, screenshot, video pesanti. Tieni lo scatto migliore ed elimina il resto, senza mai inviare le tue foto da nessuna parte.",
@@ -280,8 +280,8 @@ INDEX = {
     footer_desktop="App desktop", footer_privacy="Privacy", footer_kofi="Ko-fi", footer_github="GitHub",
 ),
 "de": dict(
-    title="TripSweep — Foto aufräumen: Duplikate, ähnliche Fotos, Bildschirmfotos und alte Reisen",
-    desc="Sortiere deine Fotos nach Reise oder nach Typ: identische Kopien, ähnliche und unscharfe Fotos, Bildschirmfotos, große Videos. Gib Gigabytes frei, sichere und teile — auch ohne GPS. 100 % auf dem Gerät.",
+    title="TripSweep — Fotos aufräumen: Duplikate und ähnliche Fotos",
+    desc="Sortiere Fotos nach Reise oder Typ — Duplikate, ähnliche und unscharfe Fotos, Bildschirmfotos, große Videos — und gib Gigabytes frei. 100 % auf dem Gerät.",
     nav_desktop="Desktop-App", nav_features="Funktionen", nav_privacy_anchor="Datenschutz", nav_privacy="Datenschutzerklärung",
     h1="Endlich ein einfacher Weg, deine Fotomediathek aufzuräumen",
     subtitle="TripSweep gruppiert deine Fotos und Videos nach Reise (oder nach Ereignis und Monat, wenn sie keinen Standort haben), zeigt, was Platz braucht, und findet, was du nicht brauchst: identische Kopien, ähnliche und unscharfe Fotos, Bildschirmfotos, große Videos. Behalte das beste Foto, lösche den Rest – ohne deine Fotos jemals irgendwohin zu senden.",
@@ -316,8 +316,8 @@ INDEX = {
     footer_desktop="Desktop-App", footer_privacy="Datenschutz", footer_kofi="Ko-fi", footer_github="GitHub",
 ),
 "es": dict(
-    title="TripSweep — limpiador de fotos: duplicados, fotos similares, capturas y viajes antiguos",
-    desc="Ordena tus fotos por viaje o por tipo: copias idénticas, fotos similares y borrosas, capturas de pantalla, vídeos grandes. Libera gigas, guarda y comparte — incluso sin GPS. 100 % en el dispositivo.",
+    title="TripSweep — limpiador de fotos: duplicados y fotos similares",
+    desc="Ordena tus fotos por viaje o por tipo — duplicados, fotos similares y borrosas, capturas, vídeos grandes — y libera gigas. 100 % en el dispositivo.",
     nav_desktop="Aplicación de escritorio", nav_features="Funciones", nav_privacy_anchor="Privacidad", nav_privacy="Política de privacidad",
     h1="Por fin, una forma sencilla de ordenar tu fototeca",
     subtitle="TripSweep agrupa tus fotos y vídeos por viaje (o por evento y por mes cuando no tienen ubicación), muestra qué ocupa espacio y detecta lo que no necesitas: copias idénticas, fotos similares y borrosas, capturas de pantalla, vídeos grandes. Quédate con la mejor toma, elimina el resto, sin enviar nunca tus fotos a ningún sitio.",
@@ -355,11 +355,11 @@ INDEX = {
 
 DESKTOP = {
 "en": dict(
-    title="PhotoCull for Mac and Windows — the photo sorting tool",
-    desc="The desktop app that sorts your photos by trip, compares and bulk-deletes — 100% on-device, no subscription.",
+    title="PhotoCull — sort your iPhone photos on a Mac or PC",
+    desc="Sort your iPhone photos from your computer, Mac or Windows PC: grouped by trip, similar shots side by side, bulk delete. Free, 100% on-device.",
     nav_ios="iOS app", nav_features="Features", nav_privacy="Privacy",
     badge="🖥️ Desktop app (macOS · Windows)",
-    h1="The real tool for sorting thousands of photos",
+    h1="Sort thousands of iPhone photos on your Mac or PC",
     subtitle="PhotoCull is a full desktop application: it shows your entire iPhone camera roll grouped by trip, compares your photos side by side, and bulk-deletes what's no longer worth keeping — right from your Mac or PC.",
     dl_note="Mac: free · macOS 11+ on Apple Silicon · signed and notarized by Apple<br>Windows: free · Windows 10/11 (64-bit) · reading an iPhone needs the free Apple Devices app from the Microsoft Store · Windows may show a SmartScreen warning (the app is not signed yet): More info → Run anyway",
     cta_download="💻 Download for Mac", cta_download_windows="🪟 Download for Windows", cta_ms_store="🛍️ Get it from the Microsoft Store",
@@ -380,11 +380,11 @@ DESKTOP = {
     footer_ios="iOS app", footer_privacy="Privacy", footer_kofi="Ko-fi", footer_github="GitHub",
 ),
 "fr": dict(
-    title="PhotoCull pour Mac et Windows — l'outil de tri de photos",
-    desc="L'application de bureau qui trie vos photos par séjour, compare et supprime en masse — 100 % sur l'appareil, sans abonnement.",
+    title="PhotoCull — trier les photos de l'iPhone sur Mac ou PC",
+    desc="Triez les photos de votre iPhone depuis votre ordinateur, Mac ou PC Windows : par séjour, photos similaires côte à côte, suppression en masse. Gratuit.",
     nav_ios="Application iOS", nav_features="Fonctionnalités", nav_privacy="Confidentialité",
     badge="🖥️ Application de bureau (macOS · Windows)",
-    h1="Le vrai outil pour trier des milliers de photos",
+    h1="Triez des milliers de photos d'iPhone sur Mac ou PC",
     subtitle="PhotoCull est une application de bureau à part entière : elle affiche tout le rouleau de votre iPhone regroupé par séjour, compare vos photos côte à côte, et supprime en masse ce qui ne vaut plus la peine d'être gardé — directement depuis votre Mac ou votre PC.",
     dl_note="Mac : gratuit · macOS 11+ sur puce Apple · signé et notarisé par Apple<br>Windows : gratuit · Windows 10/11 (64 bits) · lire un iPhone demande l'app gratuite Apple Devices du Microsoft Store · Windows peut afficher un avertissement SmartScreen (l'app n'est pas encore signée) : Informations complémentaires → Exécuter quand même",
     cta_download="💻 Télécharger pour Mac", cta_download_windows="🪟 Télécharger pour Windows", cta_ms_store="🛍️ Obtenir sur le Microsoft Store",
@@ -405,11 +405,11 @@ DESKTOP = {
     footer_ios="Application iOS", footer_privacy="Confidentialité", footer_kofi="Ko-fi", footer_github="GitHub",
 ),
 "it": dict(
-    title="PhotoCull per Mac e Windows — lo strumento per ordinare le foto",
-    desc="L'app desktop che ordina le tue foto per soggiorno, confronta ed elimina in blocco — 100% sul dispositivo, senza abbonamento.",
+    title="PhotoCull — ordinare le foto dell'iPhone su Mac o PC",
+    desc="Ordina le foto del tuo iPhone dal computer, Mac o PC Windows: per soggiorno, foto simili fianco a fianco, eliminazione in blocco. Gratis, 100% in locale.",
     nav_ios="App iOS", nav_features="Funzionalità", nav_privacy="Privacy",
     badge="🖥️ App desktop (macOS · Windows)",
-    h1="Il vero strumento per ordinare migliaia di foto",
+    h1="Ordina migliaia di foto dell'iPhone su Mac o PC",
     subtitle="PhotoCull è un'applicazione desktop a tutti gli effetti: mostra l'intero rullino del tuo iPhone raggruppato per soggiorno, confronta le tue foto affiancate ed elimina in blocco ciò che non vale più la pena tenere — direttamente dal tuo Mac o PC.",
     dl_note="Mac: gratuito · macOS 11+ su Apple Silicon · firmato e notarizzato da Apple<br>Windows: gratuito · Windows 10/11 (64 bit) · per leggere un iPhone serve l'app gratuita Apple Devices del Microsoft Store · Windows può mostrare un avviso SmartScreen (l'app non è ancora firmata): Ulteriori informazioni → Esegui comunque",
     cta_download="💻 Scarica per Mac", cta_download_windows="🪟 Scarica per Windows", cta_ms_store="🛍️ Scarica da Microsoft Store",
@@ -430,11 +430,11 @@ DESKTOP = {
     footer_ios="App iOS", footer_privacy="Privacy", footer_kofi="Ko-fi", footer_github="GitHub",
 ),
 "de": dict(
-    title="PhotoCull für Mac und Windows — das Foto-Sortierwerkzeug",
-    desc="Die Desktop-App, die deine Fotos nach Aufenthalt sortiert, vergleicht und in großen Mengen löscht — 100 % auf dem Gerät, ohne Abo.",
+    title="PhotoCull — iPhone-Fotos am Mac oder PC sortieren",
+    desc="Sortiere deine iPhone-Fotos am Computer, Mac oder Windows-PC: nach Reise gruppiert, ähnliche Fotos nebeneinander, Massenlöschung. Kostenlos, 100 % lokal.",
     nav_ios="iOS-App", nav_features="Funktionen", nav_privacy="Datenschutz",
     badge="🖥️ Desktop-App (macOS · Windows)",
-    h1="Das echte Werkzeug, um Tausende Fotos zu sortieren",
+    h1="Tausende iPhone-Fotos am Mac oder PC sortieren",
     subtitle="PhotoCull ist eine vollwertige Desktop-Anwendung: Sie zeigt deine gesamte iPhone-Fotorolle nach Aufenthalt gruppiert, vergleicht deine Fotos nebeneinander und löscht in großen Mengen, was sich nicht mehr zu behalten lohnt — direkt von deinem Mac oder PC aus.",
     dl_note="Mac: kostenlos · macOS 11+ auf Apple Silicon · von Apple signiert und notarisiert<br>Windows: kostenlos · Windows 10/11 (64 Bit) · zum Lesen eines iPhones wird die kostenlose App Apple Devices aus dem Microsoft Store benötigt · Windows zeigt eventuell eine SmartScreen-Warnung (die App ist noch nicht signiert): Weitere Informationen → Trotzdem ausführen",
     cta_download="💻 Für Mac herunterladen", cta_download_windows="🪟 Für Windows herunterladen", cta_ms_store="🛍️ Im Microsoft Store holen",
@@ -455,11 +455,11 @@ DESKTOP = {
     footer_ios="iOS-App", footer_privacy="Datenschutz", footer_kofi="Ko-fi", footer_github="GitHub",
 ),
 "es": dict(
-    title="PhotoCull para Mac y Windows — la herramienta para ordenar fotos",
-    desc="La aplicación de escritorio que ordena tus fotos por estancia, compara y elimina en masa — 100 % en el dispositivo, sin suscripción.",
+    title="PhotoCull — ordenar las fotos del iPhone en Mac o PC",
+    desc="Ordena las fotos de tu iPhone desde el ordenador, Mac o PC con Windows: por viaje, fotos parecidas lado a lado, borrado en masa. Gratis, 100 % local.",
     nav_ios="Aplicación iOS", nav_features="Funciones", nav_privacy="Privacidad",
     badge="🖥️ Aplicación de escritorio (macOS · Windows)",
-    h1="La auténtica herramienta para ordenar miles de fotos",
+    h1="Ordena miles de fotos del iPhone en tu Mac o PC",
     subtitle="PhotoCull es una aplicación de escritorio completa: muestra todo el carrete de tu iPhone agrupado por estancia, compara tus fotos una junto a otra y elimina en masa lo que ya no vale la pena conservar — directamente desde tu Mac o PC.",
     dl_note="Mac: gratis · macOS 11+ en Apple Silicon · firmada y notarizada por Apple<br>Windows: gratis · Windows 10/11 (64 bits) · para leer un iPhone hace falta la app gratuita Apple Devices de Microsoft Store · Windows puede mostrar un aviso de SmartScreen (la app aún no está firmada): Más información → Ejecutar de todas formas",
     cta_download="💻 Descargar para Mac", cta_download_windows="🪟 Descargar para Windows", cta_ms_store="🛍️ Obtener en Microsoft Store",
@@ -525,7 +525,7 @@ PRIVACY = {
 ),
 "fr": dict(
     title="Politique de confidentialité — TripSweep",
-    desc="La politique de confidentialité de TripSweep : aucune photo, vidéo ou position n'est jamais collectée, envoyée ou partagée. Tout se passe localement sur votre iPhone.",
+    desc="Politique de confidentialité de TripSweep : aucune photo, vidéo ou position n'est jamais collectée, envoyée ou partagée. Tout reste sur votre iPhone.",
     nav_home="Accueil",
     h1="Politique de confidentialité",
     updated="Dernière mise à jour : 3 novembre 2026",
@@ -795,6 +795,7 @@ def render_index(lang):
 {hreflang_links('index.html')}
 {seo_meta(lang, 'index.html', d['title'], d['desc'], f'assets/screenshots/tripsweep-mytrips-{lang}.jpg')}
 {software_app_ld_json("TripSweep", d['desc'], page_url(lang, 'index.html'), SITE_ORIGIN + '/assets/img/tripsweep-icon.png', "iOS", download_url=APP_STORE_URL)}
+  <script type="application/ld+json">{{"@context": "https://schema.org", "@type": "WebSite", "name": "TripSweep", "url": "{ORIGIN}/"}}</script>
   <meta name="apple-itunes-app" content="app-id={APP_STORE_ID}" />
   <link rel="stylesheet" href="{a('assets/style.css')}" />
 </head>
@@ -829,7 +830,7 @@ def render_index(lang):
       </p>
 
       <div class="phone-frame">
-        <img src="{a(f'assets/screenshots/tripsweep-mytrips-{lang}.jpg')}" alt="{d['hero_alt']}" />
+        <img src="{a(f'assets/screenshots/tripsweep-mytrips-{lang}.webp')}" width="500" height="1087" alt="{d['hero_alt']}" />
       </div>
     </section>
 
@@ -837,22 +838,22 @@ def render_index(lang):
       <h2>{d['preview_h2']}</h2>
       <div class="screens-row">
         <div class="phone-frame phone-frame-small">
-          <img src="{a(f'assets/screenshots/tripsweep-mytrips-{lang}.jpg')}" alt="{d['preview_alt1']}" loading="lazy" />
+          <img src="{a(f'assets/screenshots/tripsweep-mytrips-{lang}.webp')}" width="500" height="1087" alt="{d['preview_alt1']}" loading="lazy" />
         </div>
         <div class="phone-frame phone-frame-small">
-          <img src="{a(f'assets/screenshots/tripsweep-cleanup-{lang}.jpg')}" alt="{d['preview_alt5']}" loading="lazy" />
+          <img src="{a(f'assets/screenshots/tripsweep-cleanup-{lang}.webp')}" width="500" height="1087" alt="{d['preview_alt5']}" loading="lazy" />
         </div>
         <div class="phone-frame phone-frame-small">
-          <img src="{a(f'assets/screenshots/tripsweep-cleanup-similar-{lang}.jpg')}" alt="{d['preview_alt6']}" loading="lazy" />
+          <img src="{a(f'assets/screenshots/tripsweep-cleanup-similar-{lang}.webp')}" width="500" height="1087" alt="{d['preview_alt6']}" loading="lazy" />
         </div>
         <div class="phone-frame phone-frame-small">
-          <img src="{a(f'assets/screenshots/tripsweep-viewer-{lang}.jpg')}" alt="{d['preview_alt2']}" loading="lazy" />
+          <img src="{a(f'assets/screenshots/tripsweep-viewer-{lang}.webp')}" width="500" height="1087" alt="{d['preview_alt2']}" loading="lazy" />
         </div>
         <div class="phone-frame phone-frame-small">
-          <img src="{a(f'assets/screenshots/tripsweep-similar-{lang}.jpg')}" alt="{d['preview_alt3']}" loading="lazy" />
+          <img src="{a(f'assets/screenshots/tripsweep-similar-{lang}.webp')}" width="500" height="1087" alt="{d['preview_alt3']}" loading="lazy" />
         </div>
         <div class="phone-frame phone-frame-small">
-          <img src="{a(f'assets/screenshots/tripsweep-about-{lang}.jpg')}" alt="{d['preview_alt4']}" loading="lazy" />
+          <img src="{a(f'assets/screenshots/tripsweep-about-{lang}.webp')}" width="500" height="1087" alt="{d['preview_alt4']}" loading="lazy" />
         </div>
       </div>
     </section>
@@ -946,7 +947,7 @@ def render_desktop_shots(lang):
     a = lambda rel: asset_path(lang, rel)
     figures = "\n".join(
         f'''        <figure>
-          <a class="window-frame" href="{a(f'assets/screenshots/photocull-{key}-{lang}.jpg')}" target="_blank" rel="noopener"><img src="{a(f'assets/screenshots/photocull-{key}-{lang}.jpg')}" alt="{caption}" loading="lazy" /></a>
+          <a class="window-frame" href="{a(f'assets/screenshots/photocull-{key}-{lang}.jpg')}" target="_blank" rel="noopener"><img src="{a(f'assets/screenshots/photocull-{key}-{lang}.webp')}" width="1800" height="1165" alt="{caption}" loading="lazy" /></a>
           <figcaption>{caption}</figcaption>
         </figure>''' for key, caption in d["items"]
     )
@@ -1015,7 +1016,7 @@ def render_photocull_home(lang):
       <p style="margin-top:12px; font-size:14px;">{d['dl_note']}</p>
 
       <a class="window-frame" href="{a(f'assets/screenshots/photocull-grid-{lang}.jpg')}" target="_blank" rel="noopener">
-        <img src="{a(f'assets/screenshots/photocull-grid-{lang}.jpg')}" alt="{SHOTS[lang]['grid_alt']}" />
+        <img src="{a(f'assets/screenshots/photocull-grid-{lang}.webp')}" width="1800" height="1165" alt="{SHOTS[lang]['grid_alt']}" />
       </a>
     </section>
 
@@ -1160,7 +1161,7 @@ def render_privacy(lang):
 # Answers are plain text: the same string goes into the page and into the FAQPage JSON-LD.
 FAQ_TRIPSWEEP = {
 "en": dict(
-    title="TripSweep FAQ — free up iPhone storage, delete duplicate and similar photos",
+    title="TripSweep FAQ — iPhone storage, duplicate and similar photos",
     desc="How to free up space on your iPhone, find duplicate and similar photos, clean up old trips and recover deleted photos — answers about TripSweep, 100% on-device.",
     nav_home="iOS app", nav_desktop="Desktop app",
     h1="Questions and answers",
@@ -1188,8 +1189,8 @@ FAQ_TRIPSWEEP = {
     footer_privacy="Privacy", footer_kofi="Ko-fi",
 ),
 "fr": dict(
-    title="FAQ TripSweep — libérer de l'espace sur iPhone, supprimer les doublons et photos similaires",
-    desc="Comment libérer de l'espace sur votre iPhone, trouver les doublons et photos similaires, trier vos vieux voyages et récupérer une photo supprimée — les réponses sur TripSweep, 100 % sur l'appareil.",
+    title="FAQ TripSweep — espace iPhone, doublons et photos similaires",
+    desc="Libérer de l'espace sur iPhone, trouver doublons et photos similaires, trier vos voyages, récupérer une photo supprimée : les réponses sur TripSweep.",
     nav_home="Application iOS", nav_desktop="Application de bureau",
     h1="Questions et réponses",
     intro="Comment libérer de l'espace sur votre iPhone, trier les doublons et les photos similaires, et ce que TripSweep fait (et ne fait jamais) de vos photos.",
@@ -1216,8 +1217,8 @@ FAQ_TRIPSWEEP = {
     footer_privacy="Confidentialité", footer_kofi="Ko-fi",
 ),
 "it": dict(
-    title="FAQ TripSweep — liberare spazio su iPhone, eliminare foto doppie e simili",
-    desc="Come liberare spazio sul tuo iPhone, trovare foto doppie e simili, riordinare i vecchi viaggi e recuperare una foto eliminata — le risposte su TripSweep, 100% sul dispositivo.",
+    title="FAQ TripSweep — spazio su iPhone, foto doppie e simili",
+    desc="Liberare spazio su iPhone, trovare foto doppie e simili, riordinare i viaggi e recuperare una foto eliminata: le risposte su TripSweep, 100% sul dispositivo.",
     nav_home="App iOS", nav_desktop="App desktop",
     h1="Domande e risposte",
     intro="Come liberare spazio sul tuo iPhone, ordinare doppioni e foto simili, e cosa fa (e non fa mai) TripSweep con le tue foto.",
@@ -1244,8 +1245,8 @@ FAQ_TRIPSWEEP = {
     footer_privacy="Privacy", footer_kofi="Ko-fi",
 ),
 "de": dict(
-    title="TripSweep FAQ — iPhone-Speicher freigeben, doppelte und ähnliche Fotos löschen",
-    desc="Wie du Speicher auf dem iPhone freigibst, doppelte und ähnliche Fotos findest, alte Reisen aufräumst und gelöschte Fotos zurückholst — Antworten zu TripSweep, 100 % auf dem Gerät.",
+    title="TripSweep FAQ — iPhone-Speicher, doppelte und ähnliche Fotos",
+    desc="iPhone-Speicher freigeben, doppelte und ähnliche Fotos finden, alte Reisen aufräumen, gelöschte Fotos zurückholen: Antworten zu TripSweep.",
     nav_home="iOS-App", nav_desktop="Desktop-App",
     h1="Fragen und Antworten",
     intro="Wie du Speicher auf dem iPhone freigibst, Duplikate und ähnliche Fotos sortierst, und was TripSweep mit deinen Fotos macht (und nie macht).",
@@ -1272,8 +1273,8 @@ FAQ_TRIPSWEEP = {
     footer_privacy="Datenschutz", footer_kofi="Ko-fi",
 ),
 "es": dict(
-    title="FAQ de TripSweep — liberar espacio en el iPhone, eliminar fotos duplicadas y similares",
-    desc="Cómo liberar espacio en tu iPhone, encontrar fotos duplicadas y similares, ordenar viajes antiguos y recuperar una foto eliminada — respuestas sobre TripSweep, 100 % en el dispositivo.",
+    title="FAQ de TripSweep — espacio en el iPhone y fotos duplicadas",
+    desc="Liberar espacio en el iPhone, encontrar fotos duplicadas y similares, ordenar viajes y recuperar una foto eliminada: respuestas sobre TripSweep.",
     nav_home="Aplicación iOS", nav_desktop="Aplicación de escritorio",
     h1="Preguntas y respuestas",
     intro="Cómo liberar espacio en tu iPhone, ordenar duplicados y fotos similares, y qué hace (y nunca hace) TripSweep con tus fotos.",
@@ -1485,7 +1486,7 @@ def render_blog_index(lang):
 
 def render_blog_post(lang, p):
     page = f"blog-{p['slug']}.html"
-    ld = f'  <script type="application/ld+json">{json.dumps({"@context": "https://schema.org", "@type": "Article", "headline": p["h1"], "description": p["desc"], "inLanguage": lang, "datePublished": LASTMOD, "dateModified": LASTMOD, "mainEntityOfPage": page_url(lang, page), "author": {"@type": "Person", "name": "Jeffrey Brignoli"}}, ensure_ascii=False)}</script>'
+    ld = f'  <script type="application/ld+json">{json.dumps({"@context": "https://schema.org", "@type": "Article", "headline": p["h1"], "description": p["desc"], "inLanguage": lang, "datePublished": POST_DATES[p["slug"]][0], "dateModified": POST_DATES[p["slug"]][1], "mainEntityOfPage": page_url(lang, page), "author": {"@type": "Person", "name": "Jeffrey Brignoli"}}, ensure_ascii=False)}</script>'
     others = "\n".join(
         f'        <li><a href="{path_for(lang, f"blog-{o['slug']}.html", lang)}">{o['h1']}</a></li>' for o in blog_posts(lang) if o["slug"] != p["slug"]
     )
@@ -1505,6 +1506,19 @@ def render_blog_post(lang, p):
 
 LASTMOD = "2026-11-03"
 
+# Per-article (published, modified). Never tie these to LASTMOD: a date that moves on every rebuild reads
+# as fake freshness to search engines. Bump "modified" only when an article's text really changes.
+POST_DATES = {
+    "free-up-iphone-storage": ("2026-11-03", "2026-11-03"),
+    "delete-duplicate-photos-iphone": ("2026-11-03", "2026-11-03"),
+    "clean-up-vacation-photos": ("2026-11-03", "2026-11-03"),
+    "sort-photos-on-computer": ("2026-11-03", "2026-11-03"),
+    "free-up-iphone-from-mac-or-pc": ("2026-11-03", "2026-11-03"),
+    "compare-similar-photos-keep-the-best": ("2026-11-03", "2026-11-03"),
+    "sort-iphone-photos-on-mac": ("2026-11-05", "2026-11-05"),
+    "sort-iphone-photos-on-pc": ("2026-11-05", "2026-11-05"),
+}
+
 # ---------------------------------------------------------------------------
 # Build: one output folder per site (sites/<site>/), assets copied alongside
 # ---------------------------------------------------------------------------
@@ -1523,6 +1537,7 @@ def site_pages():
     return pages + (["privacy.html"] if SITE == "tripsweep" else [])
 
 def sitemap_entry(page):
+    lastmod = POST_DATES[page[5:-5]][1] if page.startswith("blog-") else LASTMOD
     urls = []
     for lang in LANGS:
         alt_links = "\n".join(
@@ -1531,7 +1546,7 @@ def sitemap_entry(page):
         alt_links += f'\n      <xhtml:link rel="alternate" hreflang="x-default" href="{page_url("en", page)}" />'
         urls.append(f'''  <url>
     <loc>{page_url(lang, page)}</loc>
-    <lastmod>{LASTMOD}</lastmod>
+    <lastmod>{lastmod}</lastmod>
 {alt_links}
   </url>''')
     return "\n".join(urls)
@@ -1541,7 +1556,7 @@ ROBOTS = "User-agent: *\nAllow: /\n\n" + "\n".join(
     ["GPTBot", "ChatGPT-User", "Google-Extended", "ClaudeBot", "anthropic-ai", "PerplexityBot", "CCBot"]
 )
 
-LLMS_SUMMARY = '''> TripSweep is an iOS app (an Android version is also available) that groups your photos and
+LLMS_SUMMARY = '''> TripSweep is an iOS app that groups your photos and
 > videos by trip, or by event and month when they have no GPS location, shows what's
 > taking up space, and sorts out what you don't need by type — identical copies, similar
 > and blurry photos, screenshots, large videos — so you keep the best shot and delete
@@ -1604,6 +1619,12 @@ def build(site):
 OUT = os.path.join(ROOT, "sites", "web")
 shutil.rmtree(os.path.join(ROOT, "sites"), ignore_errors=True)
 shutil.copytree(os.path.join(ROOT, "assets"), os.path.join(OUT, "assets"))
+# WebP copies of the screenshots for <img> (~40% lighter); the JPEGs stay for og:image and the lightbox links.
+# Needs cwebp locally (brew install webp); CI only uploads sites/web.
+import concurrent.futures, glob, subprocess
+with concurrent.futures.ThreadPoolExecutor() as pool:
+    list(pool.map(lambda jpg: subprocess.run(["cwebp", "-quiet", "-q", "80", jpg, "-o", jpg[:-4] + ".webp"], check=True),
+                  glob.glob(os.path.join(OUT, "assets", "screenshots", "*.jpg"))))
 entries, pages = [], []
 for _site in SITES:
     e, p = build(_site)
@@ -1615,6 +1636,32 @@ write("sitemap.xml", '''<?xml version="1.0" encoding="UTF-8"?>
 ''' + "\n".join(entries) + "\n</urlset>\n")
 write("robots.txt", ROBOTS + f"\nSitemap: {ORIGIN}/sitemap.xml\n")
 write("llms.txt", llms_txt(pages))
+# IndexNow (Bing, Yandex, Seznam...): the key file at the root proves we own the host; indexnow.py submits the URLs.
+INDEXNOW_KEY = "f54b5a3b2091456fabc9484cf44f84b7"
+write(f"{INDEXNOW_KEY}.txt", INDEXNOW_KEY)
+# GitHub Pages serves /404.html for any missing path, at that path: links must be absolute.
+write("404.html", f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>Page not found — TripSweep</title>
+  <link rel="icon" type="image/png" href="/assets/img/favicon-tripsweep.png" />
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+  <main>
+    <section style="text-align:center;">
+      <h1>Page not found</h1>
+      <p>This page does not exist or has moved.</p>
+      <p><a href="/">TripSweep</a> · <a href="/fr/">Français</a> · <a href="/it/">Italiano</a> · <a href="/de/">Deutsch</a> · <a href="/es/">Español</a></p>
+      <p><a href="/desktop.html">PhotoCull for Mac and Windows</a></p>
+    </section>
+  </main>
+</body>
+</html>
+''')
 write("CNAME", ORIGIN.split("//")[1] + "\n")
 shutil.copy(os.path.join(ROOT, "versions.json"), os.path.join(OUT, "versions.json"))
 

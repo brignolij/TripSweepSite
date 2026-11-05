@@ -8,12 +8,12 @@ BLOG_UI = dict(
     cross_label={"tripsweep": "Desktop app", "photocull": "iOS app"},
     index={
         "tripsweep": dict(
-            title="TripSweep blog — free up iPhone storage, delete duplicate and similar photos",
+            title="TripSweep blog — free up iPhone storage, delete duplicates",
             desc="Practical guides to free up iPhone storage, remove duplicate and similar photos and clean up old trips, without iCloud and without sending your photos anywhere.",
             h1="Guides to clean up your iPhone photos",
             intro="Short, practical guides to free up space on your iPhone, delete duplicates and keep only the best shots."),
         "photocull": dict(
-            title="PhotoCull blog — sort photos on a Mac or PC, free up your iPhone from a computer",
+            title="PhotoCull blog — sort photos on a Mac or PC",
             desc="Guides to sort thousands of photos faster on a big screen, compare similar shots side by side and clear your iPhone from a Mac or Windows PC.",
             h1="Guides to sort your photos on a computer",
             intro="Why a big screen changes how fast you can sort photos, and how to use it to clear your iPhone."),
@@ -49,7 +49,7 @@ FAQ_TRIPSWEEP_EXTRA = [
 
 FAQ_PHOTOCULL = dict(
     title="PhotoCull FAQ — sort and delete photos from a Mac or Windows PC",
-    desc="How to sort thousands of photos on a computer, compare similar shots, free up an iPhone from a Mac or PC and delete safely — answers about PhotoCull, 100% on-device.",
+    desc="How to sort thousands of photos on a computer, compare similar shots, free up an iPhone from a Mac or PC and delete safely: answers about PhotoCull.",
     nav_home="PhotoCull", nav_desktop="iOS app",
     h1="Questions and answers",
     intro="How to sort your photos faster from a computer, clear your iPhone from a Mac or PC, and what PhotoCull does (and never does) with your photos.",
@@ -180,6 +180,57 @@ dict(slug="clean-up-vacation-photos",
       <p>To do the same on a big screen, <a href="{pc}">PhotoCull</a> shows your iPhone's trips on a Mac or Windows PC.</p>"""),
 ],
 "photocull": [
+dict(slug="sort-iphone-photos-on-mac",
+     title="How to sort your iPhone photos on a Mac",
+     desc="Sort thousands of iPhone photos on your Mac: what Photos and Image Capture can and can't do, and a faster way to group, compare and delete.",
+     h1="How to sort your iPhone photos on a Mac",
+     body="""      <p>Sorting a full camera roll on the iPhone means hours of tapping. On a Mac you see far more photos at once, select with the mouse and compare shots on a big screen. Here is how to do it, with the tools built into macOS and with a dedicated app.</p>
+
+      <h2>With the tools built into macOS</h2>
+      <ul>
+        <li><strong>Photos:</strong> imports a copy of your iPhone photos to the Mac. Useful as a backup, but it doesn't tell you what to delete on the iPhone.</li>
+        <li><strong>Image Capture:</strong> lists the iPhone's photos as plain files, with no grouping by trip and no way to compare similar shots.</li>
+      </ul>
+      <p>Both work, but with thousands of photos you are still scrolling one long list.</p>
+
+      <h2>With PhotoCull, step by step</h2>
+      <p><strong>1. Install PhotoCull.</strong> <a href="{mac}">Download it for free</a>: macOS 11 or later on Apple Silicon, signed and notarized by Apple.</p>
+      <p><strong>2. Plug in the iPhone.</strong> Connect it with a USB cable, unlock it and tap Trust.</p>
+      <p><strong>3. Sort trip by trip.</strong> The Trips view groups your camera roll by date and place and shows the space each trip takes. Start with the heaviest.</p>
+      <p><strong>4. Compare and mark.</strong> Similar photos carry a badge: open up to six side by side, keep the best and mark the rest, along with screenshots and big videos you don't need.</p>
+      <p><strong>5. Delete safely.</strong> The deletion is applied on the iPhone by the free <a href="{ts}">TripSweep app</a> through “Recently Deleted”, so you have 30 days to change your mind.</p>
+
+      <h2>Good to know</h2>
+      <ul>
+        <li>Everything stays on your Mac and your iPhone: no account, no cloud, no upload.</li>
+        <li>PhotoCull never modifies your originals and only deletes what you confirm.</li>
+        <li>From a Mac, free allows 6 deletions a day, TripSweep Pro 15, and Pro + Desktop is unlimited. Browsing and sorting are free, and sorting a folder of photos on the Mac is never limited.</li>
+      </ul>"""),
+dict(slug="sort-iphone-photos-on-pc",
+     title="How to sort your iPhone photos on a Windows PC",
+     desc="Sort thousands of iPhone photos on Windows 10 or 11: what the Photos app and File Explorer show, and a faster way to group, compare and delete.",
+     h1="How to sort your iPhone photos on a Windows PC",
+     body="""      <p>An iPhone and a Windows computer? You can still sort your photos on a big screen instead of the phone. Here is what Windows can do on its own, and a faster method.</p>
+
+      <h2>With the tools built into Windows</h2>
+      <ul>
+        <li><strong>Photos app:</strong> imports a copy of your iPhone photos to the PC. Good for a backup, but it doesn't help you choose what to delete.</li>
+        <li><strong>File Explorer:</strong> shows the iPhone's photos in folders such as 100APPLE, named IMG_0001 and so on, with no trips and no comparison of similar shots.</li>
+      </ul>
+
+      <h2>With PhotoCull, step by step</h2>
+      <p><strong>1. Install Apple Devices.</strong> Get the free Apple Devices app from the Microsoft Store: Windows needs it to read an iPhone.</p>
+      <p><strong>2. Install PhotoCull.</strong> Get it from the Microsoft Store or <a href="{win}">download it for free</a> (Windows 10/11, 64-bit). The download is not code-signed yet, so SmartScreen may warn on first launch.</p>
+      <p><strong>3. Plug in the iPhone.</strong> Connect it with a USB cable, unlock it and tap Trust.</p>
+      <p><strong>4. Sort trip by trip.</strong> The Trips view groups your camera roll by date and place and shows the space each trip takes. Start with the heaviest.</p>
+      <p><strong>5. Compare, mark, delete.</strong> Similar photos carry a badge: compare up to six side by side, keep the best and mark the rest. The deletion is applied on the iPhone by the free <a href="{ts}">TripSweep app</a> through “Recently Deleted”, so you have 30 days to change your mind.</p>
+
+      <h2>Good to know</h2>
+      <ul>
+        <li>Everything stays on your PC and your iPhone: no account, no cloud, no upload.</li>
+        <li>PhotoCull never modifies your originals and only deletes what you confirm.</li>
+        <li>Browsing and sorting are free, and sorting a folder of photos already on the PC is never limited.</li>
+      </ul>"""),
 dict(slug="sort-photos-on-computer",
      title="How to sort thousands of photos faster on a Mac or Windows PC",
      desc="Why sorting photos on a big screen is so much faster than on a phone, and a simple method to go through thousands of photos in one sitting.",

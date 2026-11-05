@@ -8,13 +8,13 @@ BLOG_UI = dict(
     cross_label={"tripsweep": "Desktop-App", "photocull": "iOS-App"},
     index={
         "tripsweep": dict(
-            title="TripSweep Blog – iPhone Speicher freigeben, doppelte Fotos löschen",
-            desc="Praktische Anleitungen, um iPhone Speicher freizugeben, doppelte und ähnliche Fotos zu löschen und alte Reisen aufzuräumen – ohne iCloud und ohne dass deine Fotos irgendwohin gesendet werden.",
+            title="TripSweep Blog – doppelte Fotos löschen, Speicher freigeben",
+            desc="Praktische Anleitungen: iPhone-Speicher freigeben, doppelte und ähnliche Fotos löschen, alte Reisen aufräumen – ohne iCloud und ohne Upload deiner Fotos.",
             h1="Anleitungen zum Aufräumen deiner iPhone-Fotos",
             intro="Kurze, praktische Anleitungen, um Speicherplatz auf deinem iPhone freizugeben, Duplikate zu löschen und nur die besten Aufnahmen zu behalten."),
         "photocull": dict(
-            title="PhotoCull Blog – Fotos am Mac oder PC sortieren, iPhone vom Computer aus aufräumen",
-            desc="Anleitungen, um Tausende Fotos auf einem großen Bildschirm schneller zu sortieren, ähnliche Aufnahmen nebeneinander zu vergleichen und dein iPhone von einem Mac oder Windows-PC aus aufzuräumen.",
+            title="PhotoCull Blog – Fotos am Mac oder PC sortieren",
+            desc="Anleitungen, um Tausende Fotos am großen Bildschirm schneller zu sortieren, ähnliche Aufnahmen zu vergleichen und dein iPhone vom Mac oder PC aus aufzuräumen.",
             h1="Anleitungen zum Sortieren deiner Fotos am Computer",
             intro="Warum ein großer Bildschirm das Sortieren von Fotos so viel schneller macht und wie du damit dein iPhone aufräumst."),
     },
@@ -48,8 +48,8 @@ FAQ_TRIPSWEEP_EXTRA = [
 ]
 
 FAQ_PHOTOCULL = dict(
-    title="PhotoCull FAQ – Fotos am Mac oder Windows-PC sortieren und löschen",
-    desc="Wie du Tausende Fotos am Computer sortierst, ähnliche Aufnahmen vergleichst, iPhone Speicher von einem Mac oder PC aus freigibst und sicher löschst – Antworten zu PhotoCull, 100 % auf dem Gerät.",
+    title="PhotoCull FAQ – Fotos am Mac oder PC sortieren und löschen",
+    desc="Tausende Fotos am Computer sortieren, ähnliche Aufnahmen vergleichen, iPhone-Speicher vom Mac oder PC aus freigeben und sicher löschen: Antworten zu PhotoCull.",
     nav_home="PhotoCull", nav_desktop="iOS-App",
     h1="Fragen und Antworten",
     intro="Wie du deine Fotos am Computer schneller sortierst, dein iPhone von einem Mac oder PC aus aufräumst und was PhotoCull mit deinen Fotos macht (und nie macht).",
@@ -180,9 +180,60 @@ dict(slug="clean-up-vacation-photos",
       <p>Um dasselbe auf einem großen Bildschirm zu tun, zeigt <a href="{pc}">PhotoCull</a> die Reisen deines iPhones an einem Mac oder Windows-PC.</p>"""),
 ],
 "photocull": [
+dict(slug="sort-iphone-photos-on-mac",
+     title="iPhone-Fotos am Mac sortieren: so geht's",
+     desc="Tausende iPhone-Fotos am Mac sortieren: was Fotos und Digitale Bilder können und was nicht, und ein schnellerer Weg zum Gruppieren und Löschen.",
+     h1="So sortierst du deine iPhone-Fotos am Mac",
+     body="""      <p>Eine volle Fotorolle auf dem iPhone zu sortieren heißt stundenlang tippen. Am Mac siehst du viel mehr Fotos auf einmal, wählst mit der Maus aus und vergleichst Aufnahmen auf einem großen Bildschirm. So geht es, mit den Werkzeugen von macOS und mit einer eigenen App.</p>
+
+      <h2>Mit den Werkzeugen von macOS</h2>
+      <ul>
+        <li><strong>Fotos:</strong> importiert eine Kopie deiner iPhone-Fotos auf den Mac. Nützlich als Backup, aber es sagt dir nicht, was du auf dem iPhone löschen kannst.</li>
+        <li><strong>Digitale Bilder:</strong> listet die Fotos des iPhone als einfache Dateien auf, ohne Gruppierung nach Reise und ohne Vergleich ähnlicher Aufnahmen.</li>
+      </ul>
+      <p>Beides funktioniert, aber bei Tausenden Fotos scrollst du trotzdem durch eine einzige lange Liste.</p>
+
+      <h2>Mit PhotoCull, Schritt für Schritt</h2>
+      <p><strong>1. PhotoCull installieren.</strong> <a href="{mac}">Kostenlos herunterladen</a>: macOS 11 oder neuer auf Apple Silicon, von Apple signiert und notarisiert.</p>
+      <p><strong>2. iPhone anschließen.</strong> Verbinde es per USB-Kabel, entsperre es und tippe auf „Vertrauen“.</p>
+      <p><strong>3. Reise für Reise sortieren.</strong> Die Ansicht „Reisen“ gruppiert deine Fotorolle nach Datum und Ort und zeigt, wie viel Platz jede Reise belegt. Fang mit der größten an.</p>
+      <p><strong>4. Vergleichen und markieren.</strong> Ähnliche Fotos tragen ein Abzeichen: Öffne bis zu sechs nebeneinander, behalte das beste und markiere den Rest, dazu Bildschirmfotos und große Videos, die du nicht brauchst.</p>
+      <p><strong>5. Sicher löschen.</strong> Die Löschung wird auf dem iPhone von der kostenlosen <a href="{ts}">TripSweep-App</a> über „Zuletzt gelöscht“ ausgeführt: Du hast 30 Tage Zeit, es dir anders zu überlegen.</p>
+
+      <h2>Gut zu wissen</h2>
+      <ul>
+        <li>Alles bleibt auf deinem Mac und deinem iPhone: kein Konto, keine Cloud, kein Upload.</li>
+        <li>PhotoCull verändert nie deine Originale und löscht nur, was du bestätigst.</li>
+        <li>Vom Mac aus erlaubt die Gratisversion 6 Löschungen pro Tag, TripSweep Pro 15, und Pro + Desktop ist unbegrenzt. Durchsehen und Sortieren sind kostenlos, und das Sortieren eines Fotoordners auf dem Mac ist nie begrenzt.</li>
+      </ul>"""),
+dict(slug="sort-iphone-photos-on-pc",
+     title="iPhone-Fotos am Windows-PC sortieren: so geht's",
+     desc="Tausende iPhone-Fotos unter Windows 10 oder 11 sortieren: was die Fotos-App und der Explorer zeigen, und ein schnellerer Weg zum Sortieren und Löschen.",
+     h1="So sortierst du deine iPhone-Fotos am Windows-PC",
+     body="""      <p>iPhone, aber ein Windows-Computer? Du kannst deine Fotos trotzdem auf einem großen Bildschirm sortieren statt auf dem Telefon. Hier steht, was Windows allein kann, und ein schnellerer Weg.</p>
+
+      <h2>Mit den Werkzeugen von Windows</h2>
+      <ul>
+        <li><strong>Fotos-App:</strong> importiert eine Kopie deiner iPhone-Fotos auf den PC. Gut als Backup, aber sie hilft dir nicht bei der Entscheidung, was weg kann.</li>
+        <li><strong>Datei-Explorer:</strong> zeigt die Fotos des iPhone in Ordnern wie 100APPLE, benannt IMG_0001 und so weiter, ohne Reisen und ohne Vergleich ähnlicher Aufnahmen.</li>
+      </ul>
+
+      <h2>Mit PhotoCull, Schritt für Schritt</h2>
+      <p><strong>1. Apple Devices installieren.</strong> Installiere die kostenlose App Apple Devices aus dem Microsoft Store: Windows braucht sie, um ein iPhone zu lesen.</p>
+      <p><strong>2. PhotoCull installieren.</strong> Aus dem Microsoft Store oder <a href="{win}">kostenlos herunterladen</a> (Windows 10/11, 64 Bit). Der Download ist noch nicht signiert, daher kann SmartScreen beim ersten Start warnen.</p>
+      <p><strong>3. iPhone anschließen.</strong> Verbinde es per USB-Kabel, entsperre es und tippe auf „Vertrauen“.</p>
+      <p><strong>4. Reise für Reise sortieren.</strong> Die Ansicht „Reisen“ gruppiert deine Fotorolle nach Datum und Ort und zeigt, wie viel Platz jede Reise belegt. Fang mit der größten an.</p>
+      <p><strong>5. Vergleichen, markieren, löschen.</strong> Ähnliche Fotos tragen ein Abzeichen: Vergleiche bis zu sechs nebeneinander, behalte das beste und markiere den Rest. Die Löschung wird auf dem iPhone von der kostenlosen <a href="{ts}">TripSweep-App</a> über „Zuletzt gelöscht“ ausgeführt: Du hast 30 Tage Zeit, es dir anders zu überlegen.</p>
+
+      <h2>Gut zu wissen</h2>
+      <ul>
+        <li>Alles bleibt auf deinem PC und deinem iPhone: kein Konto, keine Cloud, kein Upload.</li>
+        <li>PhotoCull verändert nie deine Originale und löscht nur, was du bestätigst.</li>
+        <li>Durchsehen und Sortieren sind kostenlos, und das Sortieren eines Fotoordners, der schon auf dem PC liegt, ist nie begrenzt.</li>
+      </ul>"""),
 dict(slug="sort-photos-on-computer",
      title="Tausende Fotos am Mac oder Windows-PC schneller sortieren",
-     desc="Warum das Sortieren von Fotos auf einem großen Bildschirm so viel schneller geht als am Telefon, und eine einfache Methode, Tausende Fotos in einer Sitzung durchzugehen.",
+     desc="Warum das Sortieren am großen Bildschirm so viel schneller geht als am Telefon – und eine einfache Methode für Tausende Fotos in einer Sitzung.",
      h1="So sortierst du Tausende Fotos schneller am Mac oder PC",
      body="""      <p>Wenn deine Fotomediathek zehntausend Fotos enthält, ist das Sortieren auf dem Telefonbildschirm ein Projekt, das du nie abschließen wirst. Am Computer kann es ein einziger Abend sein. Hier steht, warum, und eine Methode, die funktioniert.</p>
 
@@ -240,7 +291,7 @@ dict(slug="free-up-iphone-from-mac-or-pc",
       <p>Die Schritte sind unter Windows 10 und 11 dieselben. Installiere zuerst die kostenlose App Apple Devices aus dem Microsoft Store, damit PhotoCull das iPhone lesen kann. Die App ist noch nicht codesigniert, daher warnt SmartScreen beim ersten Start eventuell.</p>"""),
 dict(slug="compare-similar-photos-keep-the-best",
      title="Ähnliche Fotos nebeneinander vergleichen und das beste behalten",
-     desc="Eine einfache Routine, um unter fast identischen Fotos die beste Aufnahme zu wählen: worauf du achten solltest und wie es auf einem großen Bildschirm schnell geht.",
+     desc="Eine einfache Routine, um unter fast identischen Fotos die beste Aufnahme zu wählen: worauf du achtest und wie es am großen Bildschirm schnell geht.",
      h1="So vergleichst du ähnliche Fotos und behältst das beste",
      body="""      <p>Du hast sechs Fotos desselben Moments gemacht und alle sehen gut aus. Mit der richtigen Methode dauert die Wahl der besten Sekunden, mit der falschen mehrere Minuten.</p>
 

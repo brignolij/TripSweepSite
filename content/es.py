@@ -8,13 +8,13 @@ BLOG_UI = dict(
     cross_label={"tripsweep": "App de escritorio", "photocull": "App para iOS"},
     index={
         "tripsweep": dict(
-            title="Blog de TripSweep: libera espacio en el iPhone y borra fotos duplicadas",
-            desc="Guías prácticas para liberar espacio en el iPhone, eliminar fotos duplicadas y parecidas y limpiar viajes antiguos, sin iCloud y sin enviar tus fotos a ningún sitio.",
+            title="Blog de TripSweep: espacio en el iPhone y fotos duplicadas",
+            desc="Guías prácticas para liberar espacio en el iPhone, eliminar fotos duplicadas y parecidas y limpiar viajes antiguos, sin iCloud y sin enviar tus fotos.",
             h1="Guías para limpiar las fotos de tu iPhone",
             intro="Guías breves y prácticas para liberar espacio en tu iPhone, borrar duplicados y quedarte solo con las mejores fotos."),
         "photocull": dict(
             title="Blog de PhotoCull: ordena fotos en Mac o PC y libera tu iPhone",
-            desc="Guías para ordenar miles de fotos más rápido en una pantalla grande, comparar fotos parecidas lado a lado y liberar espacio en el iPhone desde un Mac o un PC con Windows.",
+            desc="Guías para ordenar miles de fotos más rápido en una pantalla grande, comparar fotos parecidas y liberar espacio en el iPhone desde un Mac o un PC.",
             h1="Guías para ordenar tus fotos en el ordenador",
             intro="Por qué una pantalla grande cambia la rapidez con la que ordenas fotos, y cómo aprovecharla para liberar espacio en tu iPhone."),
     },
@@ -49,7 +49,7 @@ FAQ_TRIPSWEEP_EXTRA = [
 
 FAQ_PHOTOCULL = dict(
     title="FAQ de PhotoCull: ordena y borra fotos desde un Mac o un PC",
-    desc="Cómo ordenar miles de fotos en el ordenador, comparar fotos parecidas, liberar espacio en el iPhone desde un Mac o PC y borrar con seguridad: respuestas sobre PhotoCull, 100 % en el dispositivo.",
+    desc="Cómo ordenar miles de fotos en el ordenador, comparar fotos parecidas, liberar espacio en el iPhone desde un Mac o PC y borrar con seguridad.",
     nav_home="PhotoCull", nav_desktop="App para iOS",
     h1="Preguntas y respuestas",
     intro="Cómo ordenar tus fotos más rápido desde un ordenador, liberar espacio en tu iPhone desde un Mac o PC, y qué hace (y qué nunca hace) PhotoCull con tus fotos.",
@@ -155,7 +155,7 @@ dict(slug="delete-duplicate-photos-iphone",
       <h2>¿Prefieres una pantalla grande?</h2>
       <p>Con <a href="{pc}">PhotoCull</a> en un Mac o un PC con Windows puedes comparar hasta seis fotos parecidas lado a lado y marcar cientos con unos pocos clics.</p>"""),
 dict(slug="clean-up-vacation-photos",
-     title="Cómo limpiar fotos de vacaciones antiguas y quedarte con las mejores",
+     title="Cómo limpiar fotos de vacaciones y quedarte con las mejores",
      desc="Convierte mil fotos de vacaciones en un álbum para guardar: agrupa por viaje, elimina las tomas casi idénticas y conserva lo mejor.",
      h1="Cómo limpiar fotos de vacaciones antiguas y quedarte con las mejores",
      body="""      <p>Un viaje de una semana produce fácilmente mil fotos y vídeos, y la mayoría son casi copias de unas pocas buenas tomas. Ordenarlas con el viaje reciente es fácil; ordenarlas un año después es un rollo. Este método sirve para ambos casos.</p>
@@ -180,8 +180,59 @@ dict(slug="clean-up-vacation-photos",
       <p>Para hacer lo mismo en una pantalla grande, <a href="{pc}">PhotoCull</a> muestra los viajes de tu iPhone en un Mac o un PC con Windows.</p>"""),
 ],
 "photocull": [
+dict(slug="sort-iphone-photos-on-mac",
+     title="Cómo ordenar las fotos del iPhone en el Mac",
+     desc="Ordena miles de fotos del iPhone en tu Mac: qué hacen Fotos y Captura de Imagen, y una forma más rápida de agrupar, comparar y borrar.",
+     h1="Cómo ordenar las fotos del iPhone en el Mac",
+     body="""      <p>Ordenar un carrete lleno en el iPhone son horas de toques. En un Mac ves muchas más fotos a la vez, seleccionas con el ratón y comparas en una pantalla grande. Así se hace, con las herramientas de macOS y con una app dedicada.</p>
+
+      <h2>Con las herramientas de macOS</h2>
+      <ul>
+        <li><strong>Fotos:</strong> importa una copia de las fotos del iPhone al Mac. Útil como copia de seguridad, pero no te dice qué borrar en el iPhone.</li>
+        <li><strong>Captura de Imagen:</strong> muestra las fotos del iPhone como simples archivos, sin agruparlas por viaje ni comparar las fotos parecidas.</li>
+      </ul>
+      <p>Las dos funcionan, pero con miles de fotos sigues desplazándote por una única lista larga.</p>
+
+      <h2>Con PhotoCull, paso a paso</h2>
+      <p><strong>1. Instala PhotoCull.</strong> <a href="{mac}">Descárgalo gratis</a>: macOS 11 o posterior en Apple Silicon, firmado y notarizado por Apple.</p>
+      <p><strong>2. Conecta el iPhone.</strong> Conéctalo con un cable USB, desbloquéalo y toca Confiar.</p>
+      <p><strong>3. Ordena viaje a viaje.</strong> La vista Viajes agrupa el carrete por fecha y lugar y muestra el espacio que ocupa cada viaje. Empieza por el más pesado.</p>
+      <p><strong>4. Compara y marca.</strong> Las fotos parecidas llevan una insignia: abre hasta seis lado a lado, quédate con la mejor y marca el resto, junto con capturas de pantalla y vídeos grandes que no necesites.</p>
+      <p><strong>5. Borra con seguridad.</strong> El borrado lo aplica en el iPhone la <a href="{ts}">app TripSweep</a>, gratuita, a través de « Eliminados recientemente »: tienes 30 días para cambiar de opinión.</p>
+
+      <h2>Conviene saber</h2>
+      <ul>
+        <li>Todo se queda en tu Mac y tu iPhone: sin cuenta, sin nube, sin envíos.</li>
+        <li>PhotoCull nunca modifica tus originales y solo borra lo que confirmas.</li>
+        <li>Desde un Mac, la versión gratuita permite 6 borrados al día, TripSweep Pro 15, y Pro + Desktop no tiene límite. Explorar y ordenar es gratis, y ordenar una carpeta de fotos en el Mac nunca tiene límite.</li>
+      </ul>"""),
+dict(slug="sort-iphone-photos-on-pc",
+     title="Cómo ordenar las fotos del iPhone en un PC con Windows",
+     desc="Ordena miles de fotos del iPhone en Windows 10 u 11: qué muestran la app Fotos y el Explorador, y una forma más rápida de ordenar y borrar.",
+     h1="Cómo ordenar las fotos del iPhone en un PC con Windows",
+     body="""      <p>¿iPhone pero ordenador con Windows? Puedes ordenar tus fotos en una pantalla grande en lugar del teléfono. Esto es lo que Windows hace por sí solo, y un método más rápido.</p>
+
+      <h2>Con las herramientas de Windows</h2>
+      <ul>
+        <li><strong>App Fotos:</strong> importa una copia de las fotos del iPhone al PC. Sirve como copia de seguridad, pero no te ayuda a elegir qué borrar.</li>
+        <li><strong>Explorador de archivos:</strong> muestra las fotos del iPhone en carpetas como 100APPLE, con nombres como IMG_0001, sin viajes ni comparación de fotos parecidas.</li>
+      </ul>
+
+      <h2>Con PhotoCull, paso a paso</h2>
+      <p><strong>1. Instala Apple Devices.</strong> Instala la app gratuita Apple Devices de Microsoft Store: Windows la necesita para leer un iPhone.</p>
+      <p><strong>2. Instala PhotoCull.</strong> Desde Microsoft Store o <a href="{win}">descargándolo gratis</a> (Windows 10/11, 64 bits). La descarga aún no está firmada, así que SmartScreen puede avisar en el primer inicio.</p>
+      <p><strong>3. Conecta el iPhone.</strong> Conéctalo con un cable USB, desbloquéalo y toca Confiar.</p>
+      <p><strong>4. Ordena viaje a viaje.</strong> La vista Viajes agrupa el carrete por fecha y lugar y muestra el espacio que ocupa cada viaje. Empieza por el más pesado.</p>
+      <p><strong>5. Compara, marca, borra.</strong> Las fotos parecidas llevan una insignia: compara hasta seis lado a lado, quédate con la mejor y marca el resto. El borrado lo aplica en el iPhone la <a href="{ts}">app TripSweep</a>, gratuita, a través de « Eliminados recientemente »: tienes 30 días para cambiar de opinión.</p>
+
+      <h2>Conviene saber</h2>
+      <ul>
+        <li>Todo se queda en tu PC y tu iPhone: sin cuenta, sin nube, sin envíos.</li>
+        <li>PhotoCull nunca modifica tus originales y solo borra lo que confirmas.</li>
+        <li>Explorar y ordenar es gratis, y ordenar una carpeta de fotos que ya está en el PC nunca tiene límite.</li>
+      </ul>"""),
 dict(slug="sort-photos-on-computer",
-     title="Cómo ordenar miles de fotos más rápido en un Mac o un PC con Windows",
+     title="Cómo ordenar miles de fotos más rápido en un Mac o PC",
      desc="Por qué ordenar fotos en una pantalla grande es mucho más rápido que en el móvil, y un método sencillo para repasar miles de fotos en una sola sesión.",
      h1="Cómo ordenar miles de fotos más rápido en un Mac o un PC",
      body="""      <p>Si tu carrete tiene diez mil fotos, ordenarlas en la pantalla del móvil es un proyecto que nunca acabarás. En un ordenador puede ser cosa de una tarde. Aquí te explico por qué y un método que funciona.</p>
@@ -210,7 +261,7 @@ dict(slug="sort-photos-on-computer",
         <li>Borra al final de cada viaje, para que se note el avance.</li>
       </ul>"""),
 dict(slug="free-up-iphone-from-mac-or-pc",
-     title="Cómo liberar espacio en el iPhone desde un Mac o un PC con Windows",
+     title="Cómo liberar espacio en el iPhone desde un Mac o PC",
      desc="Conecta tu iPhone, ordena fotos en una pantalla grande y borra lo que no necesitas, sin iCloud y sin enviar nada a internet.",
      h1="Cómo liberar espacio en el iPhone desde un Mac o un PC con Windows",
      body="""      <p>Limpiar un iPhone lleno desde el propio iPhone es tedioso. Desde un ordenador ves muchas más fotos a la vez y decides más rápido. Este es el proceso completo.</p>
