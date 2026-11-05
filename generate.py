@@ -1664,5 +1664,6 @@ write("404.html", f'''<!DOCTYPE html>
 ''')
 write("CNAME", ORIGIN.split("//")[1] + "\n")
 shutil.copy(os.path.join(ROOT, "versions.json"), os.path.join(OUT, "versions.json"))
+shutil.copy(os.path.join(ROOT, "BingSiteAuth.xml"), OUT)  # Bing Webmaster Tools ownership proof
 
 print("ALL DONE")
