@@ -47,6 +47,12 @@ APP_STORE_ID = "6813028251"
 # link: the pt=... value). Apple only attributes ct= installs to a campaign when pt is present.
 APP_STORE_PT = "519915"
 
+PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.tripsweep.app"
+
+def play_link(campaign):
+    """Google Play link with a UTM referrer, so Play Console acquisition reports show which page brought the install."""
+    return f"{PLAY_STORE_URL}&referrer=utm_source%3Dsite%26utm_campaign%3D{campaign}"
+
 def store_link(campaign):
     """App Store link tagged with a campaign token, so App Analytics shows which page brought the install."""
     pt = f"pt={APP_STORE_PT}&" if APP_STORE_PT else ""
@@ -103,7 +109,7 @@ def seo_meta(lang, page, title, desc, image_rel, og_type="website"):
     )
     # gtag.js is injected after the page's load event so it never competes with the page itself; calls made before
     # that wait in dataLayer. shortcut: a visitor leaving before "load" is not counted, fine for a light page.
-    return f'''  <script>window.addEventListener('load',function(){{var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-Z2QKSMXT76';document.head.appendChild(s);}});window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('consent','default',{{analytics_storage:'granted',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'}});gtag('js',new Date());gtag('config','G-Z2QKSMXT76',{{storage:'none',allow_google_signals:false,allow_ad_personalization_signals:false}});document.addEventListener('click',function(e){{var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.href,p=h.indexOf('apps.apple.com')>-1?'ios':h.indexOf('apps.microsoft.com')>-1?'windows-store':h.indexOf('PhotoCull-Windows')>-1?'windows':h.indexOf('PhotoCull-Desktop')>-1?'mac':'';if(p)gtag('event','download_click',{{platform:p}});}});</script>
+    return f'''  <script>window.addEventListener('load',function(){{var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-Z2QKSMXT76';document.head.appendChild(s);}});window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('consent','default',{{analytics_storage:'granted',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'}});gtag('js',new Date());gtag('config','G-Z2QKSMXT76',{{storage:'none',allow_google_signals:false,allow_ad_personalization_signals:false}});document.addEventListener('click',function(e){{var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.href,p=h.indexOf('apps.apple.com')>-1?'ios':h.indexOf('play.google.com')>-1?'android':h.indexOf('apps.microsoft.com')>-1?'windows-store':h.indexOf('PhotoCull-Windows')>-1?'windows':h.indexOf('PhotoCull-Desktop')>-1?'mac':'';if(p)gtag('event','download_click',{{platform:p}});}});</script>
   <meta name="google-site-verification" content="5HOh0hrLDaKSXUZ1k1-Y7yOrdBucjiu6-zij86Fq-xM" />
   <link rel="canonical" href="{url}" />
   <meta property="og:type" content="{og_type}" />
@@ -179,6 +185,7 @@ INDEX = {
     h1="Finally, an easy way to clear out your photo library",
     subtitle="TripSweep groups your photos and videos by trip (or by event and month when they have no location), shows what's taking up space, and sorts out what you don't need — identical copies, similar and blurry photos, screenshots, large videos. Keep the best shot, delete the rest, without ever sending your photos anywhere.",
     cta_store="📱 Download on the App Store",
+    cta_play="🤖 Get it on Google Play",
     cta_desktop_link="→ Also check out PhotoCull for Mac and Windows, the desktop app that sorts your photos",
     hero_alt="List of trips in TripSweep, with the share of similar photos for each trip",
     preview_h2="A look at the app",
@@ -215,6 +222,7 @@ INDEX = {
     h1="Enfin un moyen simple de faire le tri dans votre photothèque",
     subtitle="TripSweep regroupe vos photos et vidéos par séjour (ou par événement et par mois quand elles n'ont pas de position), montre ce qui prend de la place et repère ce dont vous n'avez pas besoin : copies identiques, photos similaires et floues, captures d'écran, grosses vidéos. Gardez la meilleure prise, supprimez le reste, sans jamais envoyer vos photos où que ce soit.",
     cta_store="📱 Télécharger sur l'App Store",
+    cta_play="🤖 Disponible sur Google Play",
     cta_desktop_link="→ Découvrir aussi PhotoCull pour Mac et Windows, l'application de bureau qui trie vos photos",
     hero_alt="Liste des séjours dans TripSweep, avec la part de photos similaires de chaque séjour",
     preview_h2="Un aperçu de l'app",
@@ -251,6 +259,7 @@ INDEX = {
     h1="Finalmente un modo semplice per fare ordine nella tua libreria foto",
     subtitle="TripSweep raggruppa le tue foto e i tuoi video per soggiorno (o per evento e per mese quando non hanno una posizione), mostra cosa occupa spazio e individua ciò che non ti serve: copie identiche, foto simili e sfocate, screenshot, video pesanti. Tieni lo scatto migliore ed elimina il resto, senza mai inviare le tue foto da nessuna parte.",
     cta_store="📱 Scarica su App Store",
+    cta_play="🤖 Disponibile su Google Play",
     cta_desktop_link="→ Scopri anche PhotoCull per Mac e Windows, l'app desktop che ordina le tue foto",
     hero_alt="Elenco dei soggiorni in TripSweep, con la quota di foto simili di ogni soggiorno",
     preview_h2="Uno sguardo all'app",
@@ -287,6 +296,7 @@ INDEX = {
     h1="Endlich ein einfacher Weg, deine Fotomediathek aufzuräumen",
     subtitle="TripSweep gruppiert deine Fotos und Videos nach Reise (oder nach Ereignis und Monat, wenn sie keinen Standort haben), zeigt, was Platz braucht, und findet, was du nicht brauchst: identische Kopien, ähnliche und unscharfe Fotos, Bildschirmfotos, große Videos. Behalte das beste Foto, lösche den Rest – ohne deine Fotos jemals irgendwohin zu senden.",
     cta_store="📱 Im App Store laden",
+    cta_play="🤖 Jetzt bei Google Play",
     cta_desktop_link="→ Entdecke auch PhotoCull für Mac und Windows, die Desktop-App, die deine Fotos sortiert",
     hero_alt="Liste der Aufenthalte in TripSweep mit dem Anteil ähnlicher Fotos je Aufenthalt",
     preview_h2="Ein Blick auf die App",
@@ -323,6 +333,7 @@ INDEX = {
     h1="Por fin, una forma sencilla de ordenar tu fototeca",
     subtitle="TripSweep agrupa tus fotos y vídeos por viaje (o por evento y por mes cuando no tienen ubicación), muestra qué ocupa espacio y detecta lo que no necesitas: copias idénticas, fotos similares y borrosas, capturas de pantalla, vídeos grandes. Quédate con la mejor toma, elimina el resto, sin enviar nunca tus fotos a ningún sitio.",
     cta_store="📱 Descargar en el App Store",
+    cta_play="🤖 Disponible en Google Play",
     cta_desktop_link="→ Descubre también PhotoCull para Mac y Windows, la aplicación de escritorio que ordena tus fotos",
     hero_alt="Lista de estancias en TripSweep, con la parte de fotos similares de cada estancia",
     preview_h2="Un vistazo a la app",
@@ -795,7 +806,7 @@ def render_index(lang):
   <link rel="icon" type="image/png" href="{a('assets/img/favicon-tripsweep.png')}" />
 {hreflang_links('index.html')}
 {seo_meta(lang, 'index.html', d['title'], d['desc'], f'assets/screenshots/tripsweep-mytrips-{lang}.jpg')}
-{software_app_ld_json("TripSweep", d['desc'], page_url(lang, 'index.html'), SITE_ORIGIN + '/assets/img/tripsweep-icon.png', "iOS", download_url=APP_STORE_URL)}
+{software_app_ld_json("TripSweep", d['desc'], page_url(lang, 'index.html'), SITE_ORIGIN + '/assets/img/tripsweep-icon.png', "iOS, Android", download_url=APP_STORE_URL)}
   <script type="application/ld+json">{{"@context": "https://schema.org", "@type": "WebSite", "name": "TripSweep", "url": "{ORIGIN}/"}}</script>
   <meta name="apple-itunes-app" content="app-id={APP_STORE_ID}" />
   <link rel="stylesheet" href="{a('assets/style.css')}" />
@@ -825,6 +836,7 @@ def render_index(lang):
       </p>
       <div class="cta-row">
         <a class="btn btn-primary" href="{store_link(f'site-{lang}-home')}" target="_blank" rel="noopener">{d['cta_store']}</a>
+        <a class="btn btn-primary" href="{play_link(f'site-{lang}-home')}" target="_blank" rel="noopener">{d['cta_play']}</a>
       </div>
       <p style="margin-top:20px; font-size:14px;">
         <a href="{cross_url(lang)}">{d['cta_desktop_link']}</a>
@@ -1326,8 +1338,8 @@ def home_url(site, lang):
     return ORIGIN + ("/" if lang == "en" else f"/{lang}/") + ("" if f == "index.html" else f)
 
 def link_tokens(text, lang, campaign):
-    """Answers and articles write {ts} / {pc} / {store} / {mac} / {win} for links; resolved per language."""
-    tokens = {"{ts}": home_url("tripsweep", lang), "{pc}": home_url("photocull", lang), "{store}": store_link(campaign),
+    """Answers and articles write {ts} / {pc} / {store} / {play} / {mac} / {win} for links; resolved per language."""
+    tokens = {"{ts}": home_url("tripsweep", lang), "{pc}": home_url("photocull", lang), "{store}": store_link(campaign), "{play}": play_link(campaign),
               "{mac}": PHOTOCULL_DOWNLOAD_URL, "{win}": PHOTOCULL_WINDOWS_DOWNLOAD_URL}
     for k, v in tokens.items():
         text = text.replace(k, v)
@@ -1338,6 +1350,7 @@ def cta_row(lang, campaign):
     if SITE == "tripsweep":
         return f'''<div class="cta-row">
         <a class="btn btn-primary" href="{store_link(f'site-{lang}-{campaign}')}" target="_blank" rel="noopener">{BLOG_UI[lang]['cta_store']}</a>
+        <a class="btn btn-primary" href="{play_link(f'site-{lang}-{campaign}')}" target="_blank" rel="noopener">{BLOG_UI[lang]['cta_play']}</a>
       </div>'''
     return f'''<div class="cta-row">
         <a class="btn btn-primary" href="{PHOTOCULL_DOWNLOAD_URL}" rel="noopener">{BLOG_UI[lang]['cta_mac']}</a>
@@ -1599,7 +1612,7 @@ ROBOTS = "User-agent: *\nAllow: /\n\n" + "\n".join(
     ["GPTBot", "ChatGPT-User", "Google-Extended", "ClaudeBot", "anthropic-ai", "PerplexityBot", "CCBot"]
 )
 
-LLMS_SUMMARY = '''> TripSweep is an iOS app that groups your photos and
+LLMS_SUMMARY = '''> TripSweep is an iOS and Android app that groups your photos and
 > videos by trip, or by event and month when they have no GPS location, shows what's
 > taking up space, and sorts out what you don't need by type — identical copies, similar
 > and blurry photos, screenshots, large videos — so you keep the best shot and delete
@@ -1610,7 +1623,8 @@ LLMS_SUMMARY = '''> TripSweep is an iOS app that groups your photos and
 def llms_pages():
     own = [
         f"- [TripSweep on the App Store]({APP_STORE_URL}): download the iOS app.",
-        f"- [TripSweep home]({page_url('en', 'index.html')}): grouping by trip, event or month, a Cleanup tab, review, backup, sharing and deletion on iPhone.",
+        f"- [TripSweep on Google Play]({PLAY_STORE_URL}): download the Android app (Android 11+).",
+        f"- [TripSweep home]({page_url('en', 'index.html')}): grouping by trip, event or month, a Cleanup tab, review, backup, sharing and deletion on iPhone and Android.",
     ] if SITE == "tripsweep" else [
         f"- [PhotoCull home]({page_url('en', 'index.html')}): sort and bulk-delete photos from a Mac or Windows PC.",
         f"- [Download PhotoCull for Mac]({PHOTOCULL_DOWNLOAD_URL}): free, signed and notarized by Apple, macOS 11+ on Apple Silicon.",

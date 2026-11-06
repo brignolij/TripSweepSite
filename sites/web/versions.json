@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-11-03",
+  "updated": "2026-11-06",
   "apps": {
     "ios": {
-      "version": "1.5",
+      "version": "1.5.4",
       "url": "https://apps.apple.com/app/tripsweep/id6813028251"
     },
     "android": {
-      "version": "1.4.0",
+      "version": "1.4.3",
       "url": "https://play.google.com/store/apps/details?id=com.tripsweep.app"
     },
     "desktop": {

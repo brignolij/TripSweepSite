@@ -4,6 +4,7 @@
 BLOG_UI = dict(
     nav="Blog", privacy="Privacy", more="Continua a leggere",
     cta_store="📱 Scarica TripSweep su App Store",
+    cta_play="🤖 Scarica TripSweep su Google Play",
     cta_mac="💻 Scarica PhotoCull per Mac", cta_win="🪟 Scarica PhotoCull per Windows",
     cross_label={"tripsweep": "App desktop", "photocull": "App iOS"},
     index={
@@ -44,7 +45,7 @@ FAQ_TRIPSWEEP_EXTRA = [
     ("Posso eliminare le foto in blocco dal computer invece di toccare il telefono?",
      "Sì, con <a href=\"{pc}\">PhotoCull</a> su un Mac o un PC Windows. Selezioni le foto sul grande schermo e l'eliminazione viene applicata sul tuo iPhone da TripSweep tramite «Eliminati di recente». La versione gratuita consente 6 foto al giorno dal Mac (vedi i piani nella pagina di TripSweep), Pro 15, e Pro + Desktop elimina il limite."),
     ("Quali iPhone e versioni di iOS supporta TripSweep?",
-     "TripSweep richiede iOS 18 o successivo. L'analisi delle foto simili usa il framework Vision di Apple ed è più veloce sugli iPhone recenti, ma funziona su tutti i modelli supportati."),
+     "TripSweep richiede iOS 18 o successivo. L'analisi delle foto simili usa il framework Vision di Apple ed è più veloce sugli iPhone recenti, ma funziona su tutti i modelli supportati. Su Android richiede Android 11 o successivo ed è disponibile su <a href=\"{play}\">Google Play</a>."),
 ]
 
 FAQ_PHOTOCULL = dict(

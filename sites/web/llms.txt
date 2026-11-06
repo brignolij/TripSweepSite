@@ -1,6 +1,6 @@
 # TripSweep & PhotoCull
 
-> TripSweep is an iOS app that groups your photos and
+> TripSweep is an iOS and Android app that groups your photos and
 > videos by trip, or by event and month when they have no GPS location, shows what's
 > taking up space, and sorts out what you don't need by type — identical copies, similar
 > and blurry photos, screenshots, large videos — so you keep the best shot and delete
@@ -11,7 +11,8 @@
 ## Pages
 
 - [TripSweep on the App Store](https://apps.apple.com/app/tripsweep/id6813028251): download the iOS app.
-- [TripSweep home](https://tripsweep.idealy.ch/): grouping by trip, event or month, a Cleanup tab, review, backup, sharing and deletion on iPhone.
+- [TripSweep on Google Play](https://play.google.com/store/apps/details?id=com.tripsweep.app): download the Android app (Android 11+).
+- [TripSweep home](https://tripsweep.idealy.ch/): grouping by trip, event or month, a Cleanup tab, review, backup, sharing and deletion on iPhone and Android.
 - [TripSweep FAQ](https://tripsweep.idealy.ch/faq.html): questions and answers.
 - [TripSweep blog](https://tripsweep.idealy.ch/blog.html): guides.
 - [How to free up iPhone storage without paying for iCloud](https://tripsweep.idealy.ch/blog-free-up-iphone-storage.html): Where your iPhone storage really goes and the fastest ways to free gigabytes of photos and videos without paying for more iCloud.

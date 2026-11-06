@@ -4,6 +4,7 @@
 BLOG_UI = dict(
     nav="Blog", privacy="Datenschutz", more="Weiterlesen",
     cta_store="📱 TripSweep im App Store laden",
+    cta_play="🤖 TripSweep bei Google Play laden",
     cta_mac="💻 PhotoCull für Mac laden", cta_win="🪟 PhotoCull für Windows laden",
     cross_label={"tripsweep": "Desktop-App", "photocull": "iOS-App"},
     index={
@@ -44,7 +45,7 @@ FAQ_TRIPSWEEP_EXTRA = [
     ("Kann ich Fotos gesammelt vom Computer löschen, statt auf dem Telefon zu tippen?",
      "Ja, mit <a href=\"{pc}\">PhotoCull</a> auf einem Mac oder Windows-PC. Du markierst die Fotos auf dem großen Bildschirm, und das Löschen wird von TripSweep über „Zuletzt gelöscht“ auf deinem iPhone ausgeführt. Die kostenlose Version erlaubt 6 Fotos pro Tag vom Mac aus (siehe die Tarife auf der TripSweep-Seite), Pro 15, und Pro + Desktop hebt das Limit auf."),
     ("Welche iPhones und iOS-Versionen unterstützt TripSweep?",
-     "TripSweep benötigt iOS 18 oder neuer. Die Analyse ähnlicher Fotos nutzt das Vision-Framework von Apple und ist auf neueren iPhones schneller, funktioniert aber auf jedem unterstützten Modell."),
+     "TripSweep benötigt iOS 18 oder neuer. Die Analyse ähnlicher Fotos nutzt das Vision-Framework von Apple und ist auf neueren iPhones schneller, funktioniert aber auf jedem unterstützten Modell. Auf Android braucht TripSweep Android 11 oder neuer und ist bei <a href=\"{play}\">Google Play</a> erhältlich."),
 ]
 
 FAQ_PHOTOCULL = dict(
