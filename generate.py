@@ -373,7 +373,6 @@ DESKTOP = {
     badge="🖥️ Desktop app (macOS · Windows)",
     h1="Sort thousands of iPhone photos on your Mac or PC",
     subtitle="PhotoCull is a full desktop application: it shows your entire iPhone camera roll grouped by trip, compares your photos side by side, and bulk-deletes what's no longer worth keeping — right from your Mac or PC.",
-    dl_note="Mac: free · macOS 11+ on Apple Silicon · signed and notarized by Apple<br>Windows: free · Windows 10/11 (64-bit) · reading an iPhone needs the free Apple Devices app from the Microsoft Store · Windows may show a SmartScreen warning (the app is not signed yet): More info → Run anyway",
     cta_download="💻 Download for Mac", cta_download_windows="🪟 Download for Windows", cta_ms_store="🛍️ Get it from the Microsoft Store",
     features_h2="What the app does",
     features=[
@@ -398,7 +397,6 @@ DESKTOP = {
     badge="🖥️ Application de bureau (macOS · Windows)",
     h1="Triez des milliers de photos d'iPhone sur Mac ou PC",
     subtitle="PhotoCull est une application de bureau à part entière : elle affiche tout le rouleau de votre iPhone regroupé par séjour, compare vos photos côte à côte, et supprime en masse ce qui ne vaut plus la peine d'être gardé — directement depuis votre Mac ou votre PC.",
-    dl_note="Mac : gratuit · macOS 11+ sur puce Apple · signé et notarisé par Apple<br>Windows : gratuit · Windows 10/11 (64 bits) · lire un iPhone demande l'app gratuite Apple Devices du Microsoft Store · Windows peut afficher un avertissement SmartScreen (l'app n'est pas encore signée) : Informations complémentaires → Exécuter quand même",
     cta_download="💻 Télécharger pour Mac", cta_download_windows="🪟 Télécharger pour Windows", cta_ms_store="🛍️ Obtenir sur le Microsoft Store",
     features_h2="Ce que fait l'app",
     features=[
@@ -423,7 +421,6 @@ DESKTOP = {
     badge="🖥️ App desktop (macOS · Windows)",
     h1="Ordina migliaia di foto dell'iPhone su Mac o PC",
     subtitle="PhotoCull è un'applicazione desktop a tutti gli effetti: mostra l'intero rullino del tuo iPhone raggruppato per soggiorno, confronta le tue foto affiancate ed elimina in blocco ciò che non vale più la pena tenere — direttamente dal tuo Mac o PC.",
-    dl_note="Mac: gratuito · macOS 11+ su Apple Silicon · firmato e notarizzato da Apple<br>Windows: gratuito · Windows 10/11 (64 bit) · per leggere un iPhone serve l'app gratuita Apple Devices del Microsoft Store · Windows può mostrare un avviso SmartScreen (l'app non è ancora firmata): Ulteriori informazioni → Esegui comunque",
     cta_download="💻 Scarica per Mac", cta_download_windows="🪟 Scarica per Windows", cta_ms_store="🛍️ Scarica da Microsoft Store",
     features_h2="Cosa fa l'app",
     features=[
@@ -448,7 +445,6 @@ DESKTOP = {
     badge="🖥️ Desktop-App (macOS · Windows)",
     h1="Tausende iPhone-Fotos am Mac oder PC sortieren",
     subtitle="PhotoCull ist eine vollwertige Desktop-Anwendung: Sie zeigt deine gesamte iPhone-Fotorolle nach Aufenthalt gruppiert, vergleicht deine Fotos nebeneinander und löscht in großen Mengen, was sich nicht mehr zu behalten lohnt — direkt von deinem Mac oder PC aus.",
-    dl_note="Mac: kostenlos · macOS 11+ auf Apple Silicon · von Apple signiert und notarisiert<br>Windows: kostenlos · Windows 10/11 (64 Bit) · zum Lesen eines iPhones wird die kostenlose App Apple Devices aus dem Microsoft Store benötigt · Windows zeigt eventuell eine SmartScreen-Warnung (die App ist noch nicht signiert): Weitere Informationen → Trotzdem ausführen",
     cta_download="💻 Für Mac herunterladen", cta_download_windows="🪟 Für Windows herunterladen", cta_ms_store="🛍️ Im Microsoft Store holen",
     features_h2="Was die App kann",
     features=[
@@ -473,7 +469,6 @@ DESKTOP = {
     badge="🖥️ Aplicación de escritorio (macOS · Windows)",
     h1="Ordena miles de fotos del iPhone en tu Mac o PC",
     subtitle="PhotoCull es una aplicación de escritorio completa: muestra todo el carrete de tu iPhone agrupado por estancia, compara tus fotos una junto a otra y elimina en masa lo que ya no vale la pena conservar — directamente desde tu Mac o PC.",
-    dl_note="Mac: gratis · macOS 11+ en Apple Silicon · firmada y notarizada por Apple<br>Windows: gratis · Windows 10/11 (64 bits) · para leer un iPhone hace falta la app gratuita Apple Devices de Microsoft Store · Windows puede mostrar un aviso de SmartScreen (la app aún no está firmada): Más información → Ejecutar de todas formas",
     cta_download="💻 Descargar para Mac", cta_download_windows="🪟 Descargar para Windows", cta_ms_store="🛍️ Obtener en Microsoft Store",
     features_h2="Qué hace la app",
     features=[
@@ -1028,7 +1023,6 @@ def render_photocull_home(lang):
         <a class="btn btn-primary" href="{PHOTOCULL_WINDOWS_DOWNLOAD_URL}" rel="noopener">{d['cta_download_windows']}</a>
         <a class="btn btn-primary" href="{MS_STORE_URL}" target="_blank" rel="noopener">{d['cta_ms_store']}</a>
       </div>
-      <p style="margin-top:12px; font-size:14px;">{d['dl_note']}</p>
 
       <a class="window-frame" href="{a(f'assets/screenshots/photocull-grid-{lang}.jpg')}" target="_blank" rel="noopener">
         <img src="{a(f'assets/screenshots/photocull-grid-{lang}.webp')}" width="1800" height="1165" alt="{SHOTS[lang]['grid_alt']}" />
