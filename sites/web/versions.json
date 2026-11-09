@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-11-06",
+  "updated": "2026-11-09",
   "apps": {
     "ios": {
       "version": "1.5.4",
@@ -11,7 +11,7 @@
       "url": "https://play.google.com/store/apps/details?id=com.tripsweep.app"
     },
     "desktop": {
-      "version": "1.2.1",
+      "version": "1.3.0",
       "url": "https://tripsweep.idealy.ch/desktop.html",
       "downloads": {
         "mac": "https://github.com/brignolij/TripSweepSite/releases/latest/download/PhotoCull-Desktop.zip",
