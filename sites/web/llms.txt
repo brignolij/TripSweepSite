@@ -29,6 +29,9 @@
 - [How to sort thousands of photos faster on a Mac or PC](https://tripsweep.idealy.ch/desktop-blog-sort-photos-on-computer.html): Why sorting photos on a big screen is so much faster than on a phone, and a simple method to go through thousands of photos in one sitting.
 - [How to free up your iPhone from a Mac or Windows PC](https://tripsweep.idealy.ch/desktop-blog-free-up-iphone-from-mac-or-pc.html): Plug in your iPhone, sort photos on a big screen and delete what you don't need, without iCloud and without sending anything online.
 - [How to compare similar photos and keep the best one](https://tripsweep.idealy.ch/desktop-blog-compare-similar-photos-keep-the-best.html): A simple routine to choose the best shot among near-identical photos: what to look at, and how to do it quickly on a big screen.
+- [How to find duplicate and similar photos on a Mac](https://tripsweep.idealy.ch/desktop-blog-find-duplicate-photos-on-mac.html): Find exact copies, bursts and near-identical shots in your Mac's photo folders or on an external drive, keep the best and send the rest to the Trash.
+- [How to find duplicate and similar photos on Windows 10 or 11](https://tripsweep.idealy.ch/desktop-blog-find-duplicate-photos-on-windows.html): Find exact copies, bursts and near-identical shots in your PC's photo folders or on an external drive, keep the best and send the rest to the Recycle Bin.
+- [How to sort a big folder of photos, or a whole external drive](https://tripsweep.idealy.ch/desktop-blog-sort-photo-folder-external-drive.html): Old backups, camera cards, an external drive full of photos: a simple method to sort thousands of files by trip, remove near-duplicates and keep the best.
 - [Privacy Policy](https://tripsweep.idealy.ch/privacy.html): what data is used, where it goes (nowhere), and why.
 
 ## Languages

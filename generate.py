@@ -1567,6 +1567,9 @@ POST_DATES = {
     "compare-similar-photos-keep-the-best": ("2026-11-03", "2026-11-03"),
     "sort-iphone-photos-on-mac": ("2026-11-05", "2026-11-05"),
     "sort-iphone-photos-on-pc": ("2026-11-05", "2026-11-05"),
+    "find-duplicate-photos-on-mac": ("2026-11-10", "2026-11-10"),
+    "find-duplicate-photos-on-windows": ("2026-11-10", "2026-11-10"),
+    "sort-photo-folder-external-drive": ("2026-11-10", "2026-11-10"),
 }
 
 # ---------------------------------------------------------------------------

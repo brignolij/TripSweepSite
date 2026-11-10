@@ -73,6 +73,8 @@ FAQ_PHOTOCULL = dict(
          "Utilisez un câble USB, déverrouillez l'iPhone et touchez « Se fier à cet ordinateur » quand on vous le demande. Sur Mac, rien d'autre n'est nécessaire. Sur Windows, installez l'app gratuite Apple Devices depuis le Microsoft Store, qui fournit le pilote permettant à PhotoCull de lire l'iPhone."),
         ("Ai-je besoin de l'app iOS TripSweep ?",
          "Pas pour parcourir, comparer et trier. Vous en avez besoin uniquement pour supprimer des photos de l'iPhone, car la suppression est appliquée sur le téléphone. Les dossiers de votre ordinateur peuvent être triés sans elle."),
+        ("Comment trouver les photos en double dans un dossier sur mon Mac ou mon PC ?",
+         "Ouvrez le dossier dans PhotoCull (« Ouvrir un dossier », ou glissez-le sur la fenêtre). Il parcourt les sous-dossiers, compare ce que montrent les photos et appose le même badge « ≈ N » sur les copies exactes, les rafales et les prises quasi identiques. Gardez la meilleure de chaque groupe et envoyez le reste à la Corbeille. Guides : <a href=\"{post:find-duplicate-photos-on-mac}\">sur Mac</a>, <a href=\"{post:find-duplicate-photos-on-windows}\">sur Windows</a>."),
         ("Puis-je utiliser PhotoCull sur des photos stockées sur mon ordinateur, et non sur un iPhone ?",
          "Oui. Ouvrez n'importe quel dossier : PhotoCull y repère les photos similaires, affiche les badges sur celles-ci et vous laisse comparer et supprimer sans limite quotidienne."),
         ("Comment PhotoCull détecte-t-il les photos similaires ?",
@@ -318,5 +320,83 @@ dict(slug="compare-similar-photos-keep-the-best",
 
       <h2>Gardez, sans regret</h2>
       <p>Quand vous hésitez, gardez-en deux. Les suppressions sur un iPhone passent par « Supprimés récemment » pendant 30 jours, vous pouvez donc encore changer d'avis.</p>"""),
+dict(slug="find-duplicate-photos-on-mac",
+     title="Trouver les photos en double et similaires sur Mac",
+     desc="Trouvez copies exactes, rafales et prises quasi identiques dans vos dossiers photos ou sur un disque externe, gardez la meilleure et supprimez le reste.",
+     h1="Comment trouver les photos en double et similaires sur Mac",
+     body="""      <p>Des années d'imports, de cartes mémoire et de sauvegardes laissent les mêmes photos éparpillées dans des dossiers sur un Mac. Certaines sont des copies exactes ; la plupart sont des prises quasi identiques du même instant. Voici comment trouver les deux, garder la meilleure et libérer de la place, sans toucher à votre photothèque Photos.</p>
+
+      <h2>Ce que propose macOS</h2>
+      <ul>
+        <li><strong>Finder :</strong> trier un dossier par nom ou par taille aide à repérer les copies évidentes comme « IMG_1234 copie.jpg », mais pas deux prises différentes de la même scène.</li>
+        <li><strong>Photos :</strong> son album Doublons ne couvre que les photos déjà présentes dans la photothèque Photos, pas vos autres dossiers ni vos disques.</li>
+      </ul>
+
+      <h2>Avec PhotoCull, étape par étape</h2>
+      <p><strong>1. Installez PhotoCull.</strong> <a href="{mac}">Téléchargez-le gratuitement</a> : macOS 11 ou ultérieur sur Apple Silicon, signé et notarisé par Apple.</p>
+      <p><strong>2. Ouvrez le dossier.</strong> Cliquez sur « Ouvrir un dossier », ou glissez un dossier sur la fenêtre. Les sous-dossiers sont inclus, les disques externes aussi.</p>
+      <p><strong>3. Regardez les badges.</strong> PhotoCull compare le contenu des photos, pas leurs noms : les copies exactes, les rafales et les prises quasi identiques portent le même badge « ≈ N ».</p>
+      <p><strong>4. Gardez la meilleure.</strong> Ouvrez un groupe pour comparer jusqu'à six photos côte à côte, gardez la plus nette et marquez les autres.</p>
+      <p><strong>5. Supprimez sans risque.</strong> Les fichiers marqués vont dans la Corbeille du Mac, où « Remettre » les restaure si vous changez d'avis.</p>
+
+      <h2>Bon à savoir</h2>
+      <ul>
+        <li>Les fichiers JPEG, HEIC, PNG, TIFF, WebP et RAW (CR2, CR3, NEF, ARW, RAF, ORF, RW2, DNG) sont pris en charge, ainsi que les vidéos MOV et MP4.</li>
+        <li>Les photos sont datées d'après leurs données EXIF : des dossiers copiés restent classés selon le jour de la prise de vue.</li>
+        <li>Trier un dossier est gratuit et jamais limité. Tout se passe sur votre Mac : pas de compte, aucun envoi.</li>
+        <li>Les photothèques Photos et les paquets d'applications présents dans le dossier sont ignorés : PhotoCull ne fouille jamais les fichiers d'une autre application.</li>
+      </ul>"""),
+dict(slug="find-duplicate-photos-on-windows",
+     title="Trouver les photos en double et similaires sur Windows",
+     desc="Trouvez copies exactes, rafales et prises quasi identiques dans vos dossiers photos ou sur un disque externe, gardez la meilleure et supprimez le reste.",
+     h1="Comment trouver les photos en double et similaires sur Windows 10 ou 11",
+     body="""      <p>Sauvegardes de téléphone, cartes mémoire et anciennes copies laissent les mêmes photos dans plusieurs dossiers d'un PC. Certaines sont de vrais doublons, la plupart sont des prises quasi identiques. Voici comment trouver les deux et faire le ménage sans risque.</p>
+
+      <h2>Ce que propose Windows</h2>
+      <ul>
+        <li><strong>Explorateur de fichiers :</strong> trier par nom, taille ou date aide pour les copies évidentes, mais il ne sait pas que deux fichiers différents montrent la même scène.</li>
+        <li><strong>L'app Photos :</strong> pratique pour afficher et importer, mais sans outil pour repérer les prises similaires et choisir la meilleure.</li>
+      </ul>
+
+      <h2>Avec PhotoCull, étape par étape</h2>
+      <p><strong>1. Installez PhotoCull.</strong> Obtenez-le gratuitement <a href="{win}">pour Windows 10 ou 11</a> (64 bits), ou depuis le Microsoft Store.</p>
+      <p><strong>2. Ouvrez le dossier.</strong> Cliquez sur « Ouvrir un dossier », ou glissez un dossier sur la fenêtre. Les sous-dossiers et les disques externes sont inclus.</p>
+      <p><strong>3. Regardez les badges.</strong> PhotoCull compare ce que montrent les photos, pas leurs noms de fichiers : les copies exactes, les rafales et les prises quasi identiques portent le même badge « ≈ N ».</p>
+      <p><strong>4. Gardez la meilleure.</strong> Comparez jusqu'à six photos côte à côte, gardez la plus nette, marquez les autres.</p>
+      <p><strong>5. Supprimez sans risque.</strong> Les fichiers marqués vont dans la Corbeille de Windows : vous pouvez les restaurer.</p>
+
+      <h2>Bon à savoir</h2>
+      <ul>
+        <li>Les fichiers JPEG, HEIC, PNG, TIFF, WebP et RAW (CR2, CR3, NEF, ARW, RAF, ORF, RW2, DNG) sont pris en charge, ainsi que les vidéos MOV et MP4. Les miniatures HEIC nécessitent l'extension gratuite Extensions d'image HEIF de Microsoft.</li>
+        <li>Les photos sont datées d'après leurs données EXIF : des dossiers copiés restent classés selon le jour de la prise de vue.</li>
+        <li>Trier un dossier est gratuit et jamais limité. Tout se passe sur votre PC : pas de compte, aucun envoi.</li>
+      </ul>"""),
+dict(slug="sort-photo-folder-external-drive",
+     title="Trier un gros dossier de photos ou un disque dur externe",
+     desc="Vieilles sauvegardes, cartes mémoire, disque externe plein de photos : une méthode simple pour trier des milliers de fichiers par voyage et garder le meilleur.",
+     h1="Comment trier un gros dossier de photos, ou tout un disque dur externe",
+     body="""      <p>Tout le monde en a un : un dossier « Photos à trier », une vieille sauvegarde de téléphone, un disque externe rempli en dix ans. Des milliers de fichiers, aucun ordre, beaucoup de quasi-doublons. Voici une méthode pour en venir à bout en une seule séance.</p>
+
+      <h2>1. Ouvrez tout le dossier d'un coup</h2>
+      <p>N'avancez pas dossier par dossier. Ouvrez le dossier racine dans <a href="{pc}">PhotoCull</a> (« Ouvrir un dossier », ou glissez-le sur la fenêtre) : les sous-dossiers sont inclus, et chaque photo est datée d'après ses données EXIF plutôt que d'après le jour où elle a été copiée.</p>
+
+      <h2>2. Laissez les voyages apparaître</h2>
+      <p>La vue Voyages regroupe les photos par date et par lieu et indique la place prise par chaque groupe. Dix ans de fichiers deviennent une liste de voyages et d'événements, et vous commencez par les plus lourds.</p>
+
+      <h2>3. Réduisez les quasi-doublons</h2>
+      <p>Les rafales, les prises répétées et les copies d'une même photo portent un badge « ≈ N ». Comparez-en jusqu'à six côte à côte, gardez la meilleure, marquez les autres. Cette étape seule supprime souvent une grande partie des fichiers.</p>
+
+      <h2>4. Marquez les restes évidents</h2>
+      <p>Captures d'écran, photos floues, vidéos accidentelles : marquez-les au passage. Rien n'est supprimé tant que vous n'avez pas confirmé.</p>
+
+      <h2>5. Supprimez sans risque</h2>
+      <p>Les fichiers confirmés vont dans la Corbeille sur Mac ou dans la Corbeille de Windows, une erreur peut donc être rattrapée. Videz-la quand vous êtes sûr de vous.</p>
+
+      <h2>Bon à savoir</h2>
+      <ul>
+        <li>Les fichiers RAW d'appareils photo (CR2, CR3, NEF, ARW, RAF, ORF, RW2, DNG) sont pris en charge, comme les JPEG, HEIC, PNG et les vidéos.</li>
+        <li>Trier des dossiers est gratuit et jamais limité, sur Mac (<a href="{mac}">télécharger</a>) comme sous Windows (<a href="{win}">télécharger</a>).</li>
+        <li>Vos originaux ne sont jamais modifiés : la seule modification de PhotoCull est la suppression que vous confirmez.</li>
+      </ul>"""),
 ],
 }

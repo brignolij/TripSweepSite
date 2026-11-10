@@ -73,6 +73,8 @@ FAQ_PHOTOCULL = dict(
          "Verwende ein USB-Kabel, entsperre das iPhone und tippe auf „Vertrauen“, wenn du dazu aufgefordert wirst. Am Mac ist nichts weiter nötig. Installiere unter Windows die kostenlose App Apple Devices aus dem Microsoft Store, die den Treiber bereitstellt, mit dem PhotoCull das iPhone lesen kann."),
         ("Brauche ich die iOS-App TripSweep?",
          "Nicht zum Durchsehen, Vergleichen und Sortieren. Du brauchst sie nur, um Fotos vom iPhone zu löschen, weil das Löschen auf dem Telefon ausgeführt wird. Ordner auf deinem Computer lassen sich auch ohne sie sortieren."),
+        ("Wie finde ich doppelte Fotos in einem Ordner auf meinem Mac oder PC?",
+         "Öffne den Ordner in PhotoCull („Ordner öffnen“ oder per Drag-and-drop ins Fenster ziehen). Die App durchsucht auch die Unterordner, vergleicht, was auf den Fotos zu sehen ist, und versieht exakte Kopien, Serienaufnahmen und fast identische Aufnahmen mit demselben „≈ N“-Abzeichen. Behalte die beste Aufnahme jeder Gruppe und schicke den Rest in den Papierkorb. Anleitungen: <a href=\"{post:find-duplicate-photos-on-mac}\">am Mac</a>, <a href=\"{post:find-duplicate-photos-on-windows}\">unter Windows</a>."),
         ("Kann ich PhotoCull für Fotos auf meinem Computer verwenden, nicht auf einem iPhone?",
          "Ja. Öffne einen beliebigen Ordner: PhotoCull findet darin ähnliche Fotos, zeigt Markierungen an den ähnlichen und lässt dich ohne Tageslimit vergleichen und löschen."),
         ("Wie findet PhotoCull ähnliche Fotos?",
@@ -318,5 +320,83 @@ dict(slug="compare-similar-photos-keep-the-best",
 
       <h2>Behalten statt bereuen</h2>
       <p>Wenn du unsicher bist, behalte zwei. Löschungen auf einem iPhone laufen 30 Tage über „Zuletzt gelöscht“, du kannst es dir also noch anders überlegen.</p>"""),
+dict(slug="find-duplicate-photos-on-mac",
+     title="Doppelte und ähnliche Fotos am Mac finden und löschen",
+     desc="Doppelte Fotos am Mac finden: exakte Kopien, Serien und fast identische Aufnahmen in Ordnern oder auf einer externen Festplatte, den Rest in den Papierkorb.",
+     h1="So findest du doppelte und ähnliche Fotos am Mac",
+     body="""      <p>Jahre voller Importe, Speicherkarten und Backups verteilen dieselben Fotos auf viele Ordner deines Macs. Manche sind exakte Kopien, die meisten sind fast identische Aufnahmen desselben Moments. So findest du beides, behältst die beste Aufnahme und gibst Speicherplatz frei, ohne deine Fotos-Mediathek anzufassen.</p>
+
+      <h2>Was macOS bietet</h2>
+      <ul>
+        <li><strong>Finder:</strong> Ein Ordner nach Name oder Größe sortiert verrät offensichtliche Kopien wie „IMG_1234 Kopie.jpg“, aber keine zwei verschiedenen Aufnahmen derselben Szene.</li>
+        <li><strong>Fotos:</strong> Das Album „Duplikate“ deckt nur Fotos ab, die schon in der Fotos-Mediathek liegen, nicht deine anderen Ordner oder Festplatten.</li>
+      </ul>
+
+      <h2>Mit PhotoCull, Schritt für Schritt</h2>
+      <p><strong>1. PhotoCull installieren.</strong> <a href="{mac}">Kostenlos herunterladen</a>: macOS 11 oder neuer auf Apple Silicon, von Apple signiert und notarisiert.</p>
+      <p><strong>2. Ordner öffnen.</strong> Klicke auf „Ordner öffnen“ oder ziehe einen Ordner ins Fenster. Unterordner sind eingeschlossen, ebenso externe Festplatten.</p>
+      <p><strong>3. Auf die Abzeichen achten.</strong> PhotoCull vergleicht den Inhalt der Fotos, nicht ihre Namen: Exakte Kopien, Serienaufnahmen und fast identische Aufnahmen tragen dasselbe „≈ N“-Abzeichen.</p>
+      <p><strong>4. Die beste Aufnahme behalten.</strong> Öffne eine Gruppe, vergleiche bis zu sechs Fotos nebeneinander, behalte das schärfste und markiere den Rest.</p>
+      <p><strong>5. Sicher löschen.</strong> Markierte Dateien landen im Papierkorb deines Macs, wo du sie mit „Zurücklegen“ wiederherstellen kannst, falls du es dir anders überlegst.</p>
+
+      <h2>Gut zu wissen</h2>
+      <ul>
+        <li>Unterstützt werden JPEG, HEIC, PNG, TIFF, WebP und RAW-Dateien (CR2, CR3, NEF, ARW, RAF, ORF, RW2, DNG) sowie MOV- und MP4-Videos.</li>
+        <li>Fotos werden nach ihren EXIF-Daten datiert, kopierte Ordner sortieren sich also weiterhin nach dem Tag der Aufnahme.</li>
+        <li>Das Sortieren eines Ordners ist kostenlos und nie begrenzt. Alles läuft auf deinem Mac: kein Konto, kein Upload.</li>
+        <li>Fotos-Mediatheken und App-Pakete im Ordner werden übersprungen, PhotoCull wühlt also nie in den Dateien einer anderen App.</li>
+      </ul>"""),
+dict(slug="find-duplicate-photos-on-windows",
+     title="Doppelte und ähnliche Fotos unter Windows finden",
+     desc="Doppelte Fotos unter Windows finden: exakte Kopien, Serien und fast identische Aufnahmen in Ordnern oder auf externen Festplatten, den Rest in den Papierkorb.",
+     h1="So findest du doppelte und ähnliche Fotos unter Windows 10 oder 11",
+     body="""      <p>Handy-Backups, Speicherkarten und alte Kopien legen dieselben Fotos in mehreren Ordnern deines PCs ab. Manche sind exakte Duplikate, die meisten sind fast identische Aufnahmen. So findest du beides und räumst sicher auf.</p>
+
+      <h2>Was Windows bietet</h2>
+      <ul>
+        <li><strong>Datei-Explorer:</strong> Sortieren nach Name, Größe oder Datum hilft bei offensichtlichen Kopien, erkennt aber nicht, dass zwei verschiedene Dateien dieselbe Szene zeigen.</li>
+        <li><strong>Fotos-App:</strong> gut zum Ansehen und Importieren, aber ohne Werkzeug, um ähnliche Aufnahmen zu finden und die beste auszuwählen.</li>
+      </ul>
+
+      <h2>Mit PhotoCull, Schritt für Schritt</h2>
+      <p><strong>1. PhotoCull installieren.</strong> Kostenlos <a href="{win}">für Windows 10 oder 11</a> (64 Bit) herunterladen oder aus dem Microsoft Store holen.</p>
+      <p><strong>2. Ordner öffnen.</strong> Klicke auf „Ordner öffnen“ oder ziehe einen Ordner ins Fenster. Unterordner und externe Festplatten sind eingeschlossen.</p>
+      <p><strong>3. Auf die Abzeichen achten.</strong> PhotoCull vergleicht, was die Fotos zeigen, nicht ihre Dateinamen: Exakte Kopien, Serienaufnahmen und fast identische Aufnahmen tragen dasselbe „≈ N“-Abzeichen.</p>
+      <p><strong>4. Die beste Aufnahme behalten.</strong> Vergleiche bis zu sechs Fotos nebeneinander, behalte das schärfste und markiere den Rest.</p>
+      <p><strong>5. Sicher löschen.</strong> Markierte Dateien landen im Papierkorb, du kannst sie also wiederherstellen.</p>
+
+      <h2>Gut zu wissen</h2>
+      <ul>
+        <li>Unterstützt werden JPEG, HEIC, PNG, TIFF, WebP und RAW-Dateien (CR2, CR3, NEF, ARW, RAF, ORF, RW2, DNG) sowie MOV- und MP4-Videos. Für HEIC-Vorschaubilder braucht Windows die kostenlosen HEIF-Bilderweiterungen von Microsoft.</li>
+        <li>Fotos werden nach ihren EXIF-Daten datiert, kopierte Ordner sortieren sich also weiterhin nach dem Tag der Aufnahme.</li>
+        <li>Das Sortieren eines Ordners ist kostenlos und nie begrenzt. Alles läuft auf deinem PC: kein Konto, kein Upload.</li>
+      </ul>"""),
+dict(slug="sort-photo-folder-external-drive",
+     title="Großen Fotoordner oder externe Festplatte sortieren",
+     desc="Alte Backups, Speicherkarten, eine externe Festplatte voller Fotos: eine einfache Methode, Tausende Dateien nach Reisen zu sortieren und Doppelte zu entfernen.",
+     h1="So sortierst du einen großen Fotoordner oder eine ganze externe Festplatte",
+     body="""      <p>Jeder hat so einen: einen Ordner „Fotos sortieren“, ein altes Handy-Backup, eine externe Festplatte, die über zehn Jahre voll geworden ist. Tausende Dateien, keine Ordnung, viele fast identische Aufnahmen. Hier eine Methode, die du in einer Sitzung schaffst.</p>
+
+      <h2>1. Den ganzen Ordner auf einmal öffnen</h2>
+      <p>Geh nicht Ordner für Ordner vor. Öffne den obersten Ordner in <a href="{pc}">PhotoCull</a> („Ordner öffnen“ oder ins Fenster ziehen): Unterordner sind eingeschlossen, und jedes Foto wird nach seinen EXIF-Daten datiert, nicht nach dem Tag, an dem es kopiert wurde.</p>
+
+      <h2>2. Die Reisen sichtbar machen</h2>
+      <p>Die Ansicht „Reisen“ gruppiert Fotos nach Datum und Ort und zeigt den Speicherplatz jeder Gruppe. Zehn Jahre Dateien werden zu einer Liste von Reisen und Ereignissen, und du beginnst mit der größten.</p>
+
+      <h2>3. Die Beinahe-Kopien zusammenfassen</h2>
+      <p>Serienaufnahmen, wiederholte Versuche und Kopien derselben Aufnahme tragen ein „≈ N“-Abzeichen. Vergleiche bis zu sechs nebeneinander, behalte die beste und markiere den Rest. Allein dieser Schritt entfernt oft einen großen Teil der Dateien.</p>
+
+      <h2>4. Das Offensichtliche markieren</h2>
+      <p>Bildschirmfotos, verwackelte Aufnahmen, versehentliche Videos: Markiere sie nebenbei. Gelöscht wird erst, wenn du bestätigst.</p>
+
+      <h2>5. Sicher löschen</h2>
+      <p>Bestätigte Dateien landen im Papierkorb (am Mac wie unter Windows), ein Fehler lässt sich also rückgängig machen. Leere ihn erst, wenn du sicher bist.</p>
+
+      <h2>Gut zu wissen</h2>
+      <ul>
+        <li>RAW-Dateien von Kameras (CR2, CR3, NEF, ARW, RAF, ORF, RW2, DNG) werden neben JPEG, HEIC, PNG und Videos unterstützt.</li>
+        <li>Das Sortieren von Ordnern ist kostenlos und nie begrenzt, am Mac (<a href="{mac}">Download</a>) und unter Windows (<a href="{win}">Download</a>).</li>
+        <li>Deine Originale werden nie verändert: Die einzige Änderung von PhotoCull ist das Löschen, das du bestätigst.</li>
+      </ul>"""),
 ],
 }

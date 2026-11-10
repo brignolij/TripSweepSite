@@ -73,6 +73,8 @@ FAQ_PHOTOCULL = dict(
          "Use a USB cable, unlock the iPhone and tap “Trust” when asked. On a Mac nothing else is needed. On Windows, install the free Apple Devices app from the Microsoft Store, which provides the driver that lets PhotoCull read the iPhone."),
         ("Do I need the TripSweep iOS app?",
          "Not to browse, compare and sort. You need it only to delete photos from the iPhone, because the deletion is applied on the phone. Folders on your computer can be sorted without it."),
+        ("How do I find duplicate photos in a folder on my Mac or PC?",
+         "Open the folder in PhotoCull (Open folder, or drop it onto the window). It looks through the subfolders, compares what the photos show and puts the same “≈ N” badge on exact copies, bursts and near-identical shots. Keep the best of each group and send the rest to the Trash or Recycle Bin. Guides: <a href=\"{post:find-duplicate-photos-on-mac}\">on a Mac</a>, <a href=\"{post:find-duplicate-photos-on-windows}\">on Windows</a>."),
         ("Can I use PhotoCull on photos stored on my computer, not on an iPhone?",
          "Yes. Open any folder: PhotoCull finds similar photos in it, shows the badges on the similar ones and lets you compare and delete with no daily limit."),
         ("How does PhotoCull find similar photos?",
@@ -318,5 +320,83 @@ dict(slug="compare-similar-photos-keep-the-best",
 
       <h2>Keep, don't regret</h2>
       <p>When you are unsure, keep two. Deletions on an iPhone go through “Recently Deleted” for 30 days, so you can still change your mind.</p>"""),
+dict(slug="find-duplicate-photos-on-mac",
+     title="How to find duplicate and similar photos on a Mac",
+     desc="Find exact copies, bursts and near-identical shots in your Mac's photo folders or on an external drive, keep the best and send the rest to the Trash.",
+     h1="How to find duplicate and similar photos on a Mac",
+     body="""      <p>Years of imports, camera cards and backups leave the same photos scattered across folders on a Mac. Some are exact copies; most are near-identical shots of the same moment. Here is how to find both, keep the best and free the space, without touching your Photos library.</p>
+
+      <h2>What macOS offers</h2>
+      <ul>
+        <li><strong>Finder:</strong> sorting a folder by name or size helps spot obvious copies such as “IMG_1234 copy.jpg”, but not two different shots of the same scene.</li>
+        <li><strong>Photos:</strong> its Duplicates album only covers photos already in the Photos library, not your other folders or drives.</li>
+      </ul>
+
+      <h2>With PhotoCull, step by step</h2>
+      <p><strong>1. Install PhotoCull.</strong> <a href="{mac}">Download it for free</a>: macOS 11 or later on Apple Silicon, signed and notarized by Apple.</p>
+      <p><strong>2. Open the folder.</strong> Click Open folder, or drop a folder onto the window. Subfolders are included, and so are external drives.</p>
+      <p><strong>3. Look at the badges.</strong> PhotoCull compares the content of the photos, not their names: exact copies, bursts and near-identical shots get the same “≈ N” badge.</p>
+      <p><strong>4. Keep the best one.</strong> Open a group to compare up to six photos side by side, keep the sharpest and mark the rest.</p>
+      <p><strong>5. Delete safely.</strong> Marked files go to the Mac's Trash, where Put Back restores them if you change your mind.</p>
+
+      <h2>Good to know</h2>
+      <ul>
+        <li>JPEG, HEIC, PNG, TIFF, WebP and RAW files (CR2, CR3, NEF, ARW, RAF, ORF, RW2, DNG) are supported, as well as MOV and MP4 videos.</li>
+        <li>Photos are dated from their EXIF data, so copied folders still sort by the day they were taken.</li>
+        <li>Sorting a folder is free and never limited. Everything runs on your Mac: no account, no upload.</li>
+        <li>Photos libraries and app bundles inside the folder are skipped, so PhotoCull never digs into another app's files.</li>
+      </ul>"""),
+dict(slug="find-duplicate-photos-on-windows",
+     title="How to find duplicate and similar photos on Windows",
+     desc="Find exact copies, bursts and near-identical shots in your PC's photo folders or on an external drive, keep the best and send the rest to the Recycle Bin.",
+     h1="How to find duplicate and similar photos on Windows 10 or 11",
+     body="""      <p>Phone backups, camera cards and old copies leave the same photos in several folders on a PC. Some are exact duplicates, most are near-identical shots. Here is how to find both and clean them up safely.</p>
+
+      <h2>What Windows offers</h2>
+      <ul>
+        <li><strong>File Explorer:</strong> sorting by name, size or date helps with obvious copies, but it can't tell that two different files show the same scene.</li>
+        <li><strong>The Photos app:</strong> good for viewing and importing, with no tool to find similar shots and pick the best.</li>
+      </ul>
+
+      <h2>With PhotoCull, step by step</h2>
+      <p><strong>1. Install PhotoCull.</strong> Get it for free <a href="{win}">for Windows 10 or 11</a> (64-bit), or from the Microsoft Store.</p>
+      <p><strong>2. Open the folder.</strong> Click Open folder, or drop a folder onto the window. Subfolders and external drives are included.</p>
+      <p><strong>3. Look at the badges.</strong> PhotoCull compares what the photos show, not their file names: exact copies, bursts and near-identical shots get the same “≈ N” badge.</p>
+      <p><strong>4. Keep the best one.</strong> Compare up to six photos side by side, keep the sharpest, mark the rest.</p>
+      <p><strong>5. Delete safely.</strong> Marked files go to the Recycle Bin, so you can restore them.</p>
+
+      <h2>Good to know</h2>
+      <ul>
+        <li>JPEG, HEIC, PNG, TIFF, WebP and RAW files (CR2, CR3, NEF, ARW, RAF, ORF, RW2, DNG) are supported, as well as MOV and MP4 videos. HEIC thumbnails need Microsoft's free HEIF Image Extensions.</li>
+        <li>Photos are dated from their EXIF data, so copied folders still sort by the day they were taken.</li>
+        <li>Sorting a folder is free and never limited. Everything runs on your PC: no account, no upload.</li>
+      </ul>"""),
+dict(slug="sort-photo-folder-external-drive",
+     title="How to sort a big folder of photos on a Mac or PC",
+     desc="Old backups, camera cards, an external drive full of photos: a simple method to sort thousands of files by trip, remove near-duplicates and keep the best.",
+     h1="How to sort a big folder of photos, or a whole external drive",
+     body="""      <p>Everyone has one: a folder called “Photos to sort”, an old phone backup, an external drive filled over ten years. Thousands of files, no order, many near-duplicates. Here is a method to get through it in one sitting.</p>
+
+      <h2>1. Open the whole folder at once</h2>
+      <p>Don't go folder by folder. Open the top folder in <a href="{pc}">PhotoCull</a> (Open folder, or drop it onto the window): subfolders are included, and each photo is dated from its EXIF data rather than from the day it was copied.</p>
+
+      <h2>2. Let the trips appear</h2>
+      <p>The Trips view groups photos by date and place and shows the space each group takes. Ten years of files become a list of trips and events, and you start with the heaviest.</p>
+
+      <h2>3. Collapse the near-duplicates</h2>
+      <p>Bursts, repeated takes and copies of the same shot carry a “≈ N” badge. Compare up to six side by side, keep the best one, mark the rest. This step alone often removes a large share of the files.</p>
+
+      <h2>4. Mark the obvious leftovers</h2>
+      <p>Screenshots, blurry shots, accidental videos: mark them as you go. Nothing is deleted until you confirm.</p>
+
+      <h2>5. Delete safely</h2>
+      <p>Confirmed files go to the Trash on a Mac or the Recycle Bin on Windows, so a mistake can be undone. Empty it once you are sure.</p>
+
+      <h2>Good to know</h2>
+      <ul>
+        <li>RAW files from cameras (CR2, CR3, NEF, ARW, RAF, ORF, RW2, DNG) are supported alongside JPEG, HEIC, PNG and videos.</li>
+        <li>Sorting folders is free and never limited, on Mac (<a href="{mac}">download</a>) and Windows (<a href="{win}">download</a>).</li>
+        <li>Your originals are never modified: the only change PhotoCull makes is the deletion you confirm.</li>
+      </ul>"""),
 ],
 }

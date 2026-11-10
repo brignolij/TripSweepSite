@@ -73,6 +73,8 @@ FAQ_PHOTOCULL = dict(
          "Usa un cavo USB, sblocca l'iPhone e tocca «Autorizza» quando richiesto. Su Mac non serve altro. Su Windows, installa la app gratuita Apple Devices dal Microsoft Store, che fornisce il driver con cui PhotoCull può leggere l'iPhone."),
         ("Mi serve l'app iOS TripSweep?",
          "Non per sfogliare, confrontare e ordinare. Ti serve solo per eliminare le foto dall'iPhone, perché l'eliminazione viene applicata sul telefono. Le cartelle sul tuo computer si possono ordinare senza."),
+        ("Come trovo le foto duplicate in una cartella del Mac o del PC?",
+         "Apri la cartella in PhotoCull («Apri cartella», oppure trascinala sulla finestra). L'app esplora le sottocartelle, confronta il contenuto delle foto e applica lo stesso badge «≈ N» a copie esatte, raffiche e scatti quasi identici. Tieni il migliore di ogni gruppo e sposta il resto nel Cestino. Guide: <a href=\"{post:find-duplicate-photos-on-mac}\">sul Mac</a>, <a href=\"{post:find-duplicate-photos-on-windows}\">su Windows</a>."),
         ("Posso usare PhotoCull su foto salvate sul mio computer, non su un iPhone?",
          "Sì. Apri una cartella qualsiasi: PhotoCull trova le foto simili al suo interno, mostra i badge su quelle simili e ti permette di confrontare ed eliminare senza limite giornaliero."),
         ("Come trova PhotoCull le foto simili?",
@@ -318,5 +320,83 @@ dict(slug="compare-similar-photos-keep-the-best",
 
       <h2>Tieni, senza rimpianti</h2>
       <p>Quando hai dubbi, tienine due. Le eliminazioni su un iPhone passano da «Eliminati di recente» per 30 giorni, quindi puoi ancora cambiare idea.</p>"""),
+dict(slug="find-duplicate-photos-on-mac",
+     title="Come trovare foto duplicate e simili sul Mac",
+     desc="Trova copie esatte, raffiche e scatti quasi identici nelle cartelle di foto del Mac o su un disco esterno, tieni il migliore e sposta il resto nel Cestino.",
+     h1="Come trovare foto duplicate e simili sul Mac",
+     body="""      <p>Anni di importazioni, schede della fotocamera e backup lasciano le stesse foto sparse in tante cartelle del Mac. Alcune sono copie esatte; la maggior parte sono scatti quasi identici dello stesso momento. Ecco come trovare entrambe, tenere la migliore e liberare spazio, senza toccare la libreria di Foto.</p>
+
+      <h2>Cosa offre macOS</h2>
+      <ul>
+        <li><strong>Finder:</strong> ordinare una cartella per nome o dimensione aiuta a individuare le copie evidenti come «IMG_1234 copia.jpg», ma non due scatti diversi della stessa scena.</li>
+        <li><strong>Foto:</strong> l'album Duplicati copre solo le foto già presenti nella libreria di Foto, non le altre cartelle né i dischi.</li>
+      </ul>
+
+      <h2>Con PhotoCull, passo dopo passo</h2>
+      <p><strong>1. Installa PhotoCull.</strong> <a href="{mac}">Scaricalo gratis</a>: macOS 11 o successivo su Apple Silicon, firmato e autenticato da Apple.</p>
+      <p><strong>2. Apri la cartella.</strong> Clicca su «Apri cartella» oppure trascina una cartella sulla finestra. Le sottocartelle sono incluse, così come i dischi esterni.</p>
+      <p><strong>3. Guarda i badge.</strong> PhotoCull confronta il contenuto delle foto, non i nomi: copie esatte, raffiche e scatti quasi identici ricevono lo stesso badge «≈ N».</p>
+      <p><strong>4. Tieni la migliore.</strong> Apri un gruppo per confrontare fino a sei foto fianco a fianco, tieni la più nitida e seleziona le altre.</p>
+      <p><strong>5. Elimina in sicurezza.</strong> I file selezionati vanno nel Cestino del Mac, dove «Ripristina» li rimette al loro posto se cambi idea.</p>
+
+      <h2>Da sapere</h2>
+      <ul>
+        <li>Sono supportati JPEG, HEIC, PNG, TIFF, WebP e file RAW (CR2, CR3, NEF, ARW, RAF, ORF, RW2, DNG), oltre ai video MOV e MP4.</li>
+        <li>Le foto sono datate in base ai dati EXIF, quindi anche le cartelle copiate restano ordinate per il giorno dello scatto.</li>
+        <li>Ordinare una cartella è gratis e senza limiti. Tutto funziona sul tuo Mac: nessun account, nessun invio.</li>
+        <li>Le librerie di Foto e i pacchetti di app dentro la cartella vengono ignorati, così PhotoCull non entra mai nei file di un'altra app.</li>
+      </ul>"""),
+dict(slug="find-duplicate-photos-on-windows",
+     title="Come trovare foto duplicate e simili su Windows",
+     desc="Trova copie esatte, raffiche e scatti quasi identici nelle cartelle di foto del PC o su un disco esterno, tieni il migliore e sposta il resto nel Cestino.",
+     h1="Come trovare foto duplicate e simili su Windows 10 o 11",
+     body="""      <p>Backup del telefono, schede della fotocamera e vecchie copie lasciano le stesse foto in più cartelle del PC. Alcune sono duplicati esatti, la maggior parte sono scatti quasi identici. Ecco come trovare entrambi e fare pulizia in sicurezza.</p>
+
+      <h2>Cosa offre Windows</h2>
+      <ul>
+        <li><strong>Esplora file:</strong> ordinare per nome, dimensione o data aiuta con le copie evidenti, ma non capisce che due file diversi mostrano la stessa scena.</li>
+        <li><strong>App Foto:</strong> ottima per visualizzare e importare, ma senza uno strumento per trovare scatti simili e scegliere il migliore.</li>
+      </ul>
+
+      <h2>Con PhotoCull, passo dopo passo</h2>
+      <p><strong>1. Installa PhotoCull.</strong> Scaricalo gratis <a href="{win}">per Windows 10 o 11</a> (64 bit), oppure dal Microsoft Store.</p>
+      <p><strong>2. Apri la cartella.</strong> Clicca su «Apri cartella» oppure trascina una cartella sulla finestra. Sottocartelle e dischi esterni sono inclusi.</p>
+      <p><strong>3. Guarda i badge.</strong> PhotoCull confronta ciò che mostrano le foto, non i nomi dei file: copie esatte, raffiche e scatti quasi identici ricevono lo stesso badge «≈ N».</p>
+      <p><strong>4. Tieni la migliore.</strong> Confronta fino a sei foto fianco a fianco, tieni la più nitida e seleziona le altre.</p>
+      <p><strong>5. Elimina in sicurezza.</strong> I file selezionati vanno nel Cestino, quindi puoi ripristinarli.</p>
+
+      <h2>Da sapere</h2>
+      <ul>
+        <li>Sono supportati JPEG, HEIC, PNG, TIFF, WebP e file RAW (CR2, CR3, NEF, ARW, RAF, ORF, RW2, DNG), oltre ai video MOV e MP4. Per le anteprime HEIC servono le Estensioni immagine HEIF gratuite di Microsoft.</li>
+        <li>Le foto sono datate in base ai dati EXIF, quindi anche le cartelle copiate restano ordinate per il giorno dello scatto.</li>
+        <li>Ordinare una cartella è gratis e senza limiti. Tutto funziona sul tuo PC: nessun account, nessun invio.</li>
+      </ul>"""),
+dict(slug="sort-photo-folder-external-drive",
+     title="Come ordinare una grande cartella di foto su Mac o PC",
+     desc="Vecchi backup, schede SD, un disco esterno pieno di foto: un metodo semplice per ordinare migliaia di file per viaggio ed eliminare le quasi copie.",
+     h1="Come ordinare una grande cartella di foto, o un intero disco esterno",
+     body="""      <p>Ce l'abbiamo tutti: una cartella chiamata «Foto da ordinare», un vecchio backup del telefono, un disco esterno riempito in dieci anni. Migliaia di file, nessun ordine, tante quasi copie. Ecco un metodo per sistemare tutto in una sola sessione.</p>
+
+      <h2>1. Apri tutta la cartella in una volta</h2>
+      <p>Non andare cartella per cartella. Apri la cartella principale in <a href="{pc}">PhotoCull</a> («Apri cartella», oppure trascinala sulla finestra): le sottocartelle sono incluse e ogni foto è datata in base ai dati EXIF, non al giorno in cui è stata copiata.</p>
+
+      <h2>2. Lascia emergere i viaggi</h2>
+      <p>La vista Viaggi raggruppa le foto per data e luogo e mostra lo spazio occupato da ciascun gruppo. Dieci anni di file diventano un elenco di viaggi ed eventi, e parti dal più pesante.</p>
+
+      <h2>3. Riduci le quasi copie</h2>
+      <p>Raffiche, scatti ripetuti e copie della stessa foto hanno un badge «≈ N». Confrontane fino a sei fianco a fianco, tieni la migliore e seleziona le altre. Questo passaggio da solo spesso elimina buona parte dei file.</p>
+
+      <h2>4. Seleziona gli scarti più ovvi</h2>
+      <p>Screenshot, foto mosse, video accidentali: selezionali man mano. Nulla viene eliminato finché non confermi.</p>
+
+      <h2>5. Elimina in sicurezza</h2>
+      <p>I file confermati vanno nel Cestino su Mac o nel Cestino di Windows, quindi un errore si può annullare. Svuotalo quando sei sicuro.</p>
+
+      <h2>Da sapere</h2>
+      <ul>
+        <li>I file RAW delle fotocamere (CR2, CR3, NEF, ARW, RAF, ORF, RW2, DNG) sono supportati insieme a JPEG, HEIC, PNG e video.</li>
+        <li>Ordinare le cartelle è gratis e senza limiti, su Mac (<a href="{mac}">download</a>) e Windows (<a href="{win}">download</a>).</li>
+        <li>I tuoi originali non vengono mai modificati: l'unica modifica di PhotoCull è l'eliminazione che confermi.</li>
+      </ul>"""),
 ],
 }

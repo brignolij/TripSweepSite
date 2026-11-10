@@ -73,6 +73,8 @@ FAQ_PHOTOCULL = dict(
          "Usa un cable USB, desbloquea el iPhone y toca « Confiar » cuando te lo pida. En un Mac no hace falta nada más. En Windows, instala la app gratuita Apple Devices desde Microsoft Store, que incluye el controlador que permite a PhotoCull leer el iPhone."),
         ("¿Necesito la app TripSweep para iOS?",
          "No para explorar, comparar y ordenar. Solo la necesitas para borrar fotos del iPhone, porque el borrado se aplica en el móvil. Las carpetas de tu ordenador se pueden ordenar sin ella."),
+        ("¿Cómo busco fotos duplicadas en una carpeta de mi Mac o PC?",
+         "Abre la carpeta en PhotoCull (« Abrir carpeta », o arrástrala a la ventana). Recorre las subcarpetas, compara lo que muestran las fotos y pone la misma insignia «≈ N» a las copias exactas, las ráfagas y las tomas casi idénticas. Conserva la mejor de cada grupo y manda el resto a la Papelera (Mac) o a la Papelera de reciclaje (Windows). Guías: <a href=\"{post:find-duplicate-photos-on-mac}\">en el Mac</a> y <a href=\"{post:find-duplicate-photos-on-windows}\">en Windows</a>."),
         ("¿Puedo usar PhotoCull con fotos guardadas en mi ordenador, no en un iPhone?",
          "Sí. Abre cualquier carpeta: PhotoCull encuentra las fotos parecidas, muestra las insignias en ellas y te permite comparar y borrar sin límite diario."),
         ("¿Cómo encuentra PhotoCull las fotos parecidas?",
@@ -318,5 +320,83 @@ dict(slug="compare-similar-photos-keep-the-best",
 
       <h2>Conserva sin arrepentirte</h2>
       <p>Cuando dudes, quédate con dos. Los borrados en un iPhone pasan por « Eliminados recientemente » durante 30 días, así que aún puedes cambiar de opinión.</p>"""),
+dict(slug="find-duplicate-photos-on-mac",
+     title="Cómo buscar fotos duplicadas y parecidas en un Mac",
+     desc="Encuentra copias exactas, ráfagas y tomas casi idénticas en las carpetas de tu Mac o en un disco externo, conserva la mejor y manda el resto a la Papelera.",
+     h1="Cómo buscar fotos duplicadas y parecidas en un Mac",
+     body="""      <p>Años de importaciones, tarjetas de cámara y copias de seguridad dejan las mismas fotos repartidas por las carpetas de un Mac. Algunas son copias exactas; la mayoría son tomas casi idénticas del mismo momento. Así se encuentran las dos, te quedas con la mejor y recuperas espacio, sin tocar tu biblioteca de Fotos.</p>
+
+      <h2>Qué ofrece macOS</h2>
+      <ul>
+        <li><strong>Finder:</strong> ordenar una carpeta por nombre o tamaño ayuda a detectar copias evidentes como «IMG_1234 copia.jpg», pero no dos tomas distintas de la misma escena.</li>
+        <li><strong>Fotos:</strong> su álbum Duplicados solo abarca las fotos que ya están en la biblioteca de Fotos, no tus otras carpetas ni discos.</li>
+      </ul>
+
+      <h2>Con PhotoCull, paso a paso</h2>
+      <p><strong>1. Instala PhotoCull.</strong> <a href="{mac}">Descárgalo gratis</a>: macOS 11 o posterior en Apple Silicon, firmado y notarizado por Apple.</p>
+      <p><strong>2. Abre la carpeta.</strong> Pulsa « Abrir carpeta » o arrastra una carpeta a la ventana. Se incluyen las subcarpetas y también los discos externos.</p>
+      <p><strong>3. Mira las insignias.</strong> PhotoCull compara el contenido de las fotos, no sus nombres: las copias exactas, las ráfagas y las tomas casi idénticas llevan la misma insignia «≈ N».</p>
+      <p><strong>4. Quédate con la mejor.</strong> Abre un grupo para comparar hasta seis fotos lado a lado, conserva la más nítida y marca el resto.</p>
+      <p><strong>5. Borra con seguridad.</strong> Los archivos marcados van a la Papelera del Mac, donde « Recuperar » los devuelve si cambias de opinión.</p>
+
+      <h2>Conviene saber</h2>
+      <ul>
+        <li>Admite JPEG, HEIC, PNG, TIFF, WebP y archivos RAW (CR2, CR3, NEF, ARW, RAF, ORF, RW2, DNG), además de vídeos MOV y MP4.</li>
+        <li>Las fotos se fechan con sus datos EXIF, así que las carpetas copiadas se siguen ordenando por el día en que se hicieron.</li>
+        <li>Ordenar una carpeta es gratis y nunca tiene límite. Todo se ejecuta en tu Mac: sin cuenta, sin envíos.</li>
+        <li>Las bibliotecas de Fotos y los paquetes de apps que haya dentro de la carpeta se omiten, así que PhotoCull nunca husmea en los archivos de otra app.</li>
+      </ul>"""),
+dict(slug="find-duplicate-photos-on-windows",
+     title="Cómo buscar fotos duplicadas y parecidas en Windows",
+     desc="Encuentra copias exactas, ráfagas y tomas casi idénticas en tu PC o en un disco externo, conserva la mejor y manda el resto a la Papelera de reciclaje.",
+     h1="Cómo buscar fotos duplicadas y parecidas en Windows 10 u 11",
+     body="""      <p>Las copias de seguridad del móvil, las tarjetas de cámara y las copias antiguas dejan las mismas fotos en varias carpetas de un PC. Algunas son duplicados exactos, la mayoría son tomas casi idénticas. Así se encuentran las dos y se limpia todo con seguridad.</p>
+
+      <h2>Qué ofrece Windows</h2>
+      <ul>
+        <li><strong>Explorador de archivos:</strong> ordenar por nombre, tamaño o fecha ayuda con las copias evidentes, pero no sabe que dos archivos distintos muestran la misma escena.</li>
+        <li><strong>La app Fotos:</strong> buena para ver e importar, pero sin ninguna herramienta para encontrar tomas parecidas y elegir la mejor.</li>
+      </ul>
+
+      <h2>Con PhotoCull, paso a paso</h2>
+      <p><strong>1. Instala PhotoCull.</strong> Consíguelo gratis <a href="{win}">para Windows 10 u 11</a> (64 bits), o en Microsoft Store.</p>
+      <p><strong>2. Abre la carpeta.</strong> Pulsa « Abrir carpeta » o arrastra una carpeta a la ventana. Se incluyen las subcarpetas y los discos externos.</p>
+      <p><strong>3. Mira las insignias.</strong> PhotoCull compara lo que muestran las fotos, no los nombres de archivo: las copias exactas, las ráfagas y las tomas casi idénticas llevan la misma insignia «≈ N».</p>
+      <p><strong>4. Quédate con la mejor.</strong> Compara hasta seis fotos lado a lado, conserva la más nítida y marca el resto.</p>
+      <p><strong>5. Borra con seguridad.</strong> Los archivos marcados van a la Papelera de reciclaje, así que puedes restaurarlos.</p>
+
+      <h2>Conviene saber</h2>
+      <ul>
+        <li>Admite JPEG, HEIC, PNG, TIFF, WebP y archivos RAW (CR2, CR3, NEF, ARW, RAF, ORF, RW2, DNG), además de vídeos MOV y MP4. Las miniaturas HEIC requieren las Extensiones de imagen HEIF gratuitas de Microsoft.</li>
+        <li>Las fotos se fechan con sus datos EXIF, así que las carpetas copiadas se siguen ordenando por el día en que se hicieron.</li>
+        <li>Ordenar una carpeta es gratis y nunca tiene límite. Todo se ejecuta en tu PC: sin cuenta, sin envíos.</li>
+      </ul>"""),
+dict(slug="sort-photo-folder-external-drive",
+     title="Cómo ordenar una carpeta enorme de fotos en un Mac o PC",
+     desc="Copias antiguas, tarjetas de cámara, un disco externo lleno: un método sencillo para ordenar miles de fotos por viaje, quitar casi copias y conservar lo mejor.",
+     h1="Cómo ordenar una carpeta enorme de fotos, o un disco externo entero",
+     body="""      <p>Todos tenemos una: una carpeta llamada «Fotos por ordenar», una copia antigua del móvil, un disco externo que se ha ido llenando durante diez años. Miles de archivos, sin orden y con muchas casi copias. Este es un método para despacharlo en una sola sesión.</p>
+
+      <h2>1. Abre toda la carpeta de una vez</h2>
+      <p>No vayas carpeta por carpeta. Abre la carpeta principal en <a href="{pc}">PhotoCull</a> (« Abrir carpeta », o arrástrala a la ventana): se incluyen las subcarpetas y cada foto se fecha con sus datos EXIF, no por el día en que se copió.</p>
+
+      <h2>2. Deja que aparezcan los viajes</h2>
+      <p>La vista Viajes agrupa las fotos por fecha y lugar y muestra el espacio que ocupa cada grupo. Diez años de archivos se convierten en una lista de viajes y eventos, y empiezas por el más pesado.</p>
+
+      <h2>3. Reduce las casi copias</h2>
+      <p>Las ráfagas, las tomas repetidas y las copias de una misma foto llevan una insignia «≈ N». Compara hasta seis lado a lado, conserva la mejor y marca el resto. Solo con este paso suele desaparecer buena parte de los archivos.</p>
+
+      <h2>4. Marca lo que sobra a simple vista</h2>
+      <p>Capturas de pantalla, fotos movidas, vídeos accidentales: márcalos sobre la marcha. No se borra nada hasta que confirmes.</p>
+
+      <h2>5. Borra con seguridad</h2>
+      <p>Los archivos confirmados van a la Papelera en un Mac o a la Papelera de reciclaje en Windows, así que un error se puede deshacer. Vacíala cuando estés seguro.</p>
+
+      <h2>Conviene saber</h2>
+      <ul>
+        <li>Se admiten los archivos RAW de cámara (CR2, CR3, NEF, ARW, RAF, ORF, RW2, DNG) junto con JPEG, HEIC, PNG y vídeos.</li>
+        <li>Ordenar carpetas es gratis y nunca tiene límite, en Mac (<a href="{mac}">descarga</a>) y en Windows (<a href="{win}">descarga</a>).</li>
+        <li>Tus originales no se modifican nunca: el único cambio que hace PhotoCull es el borrado que confirmas.</li>
+      </ul>"""),
 ],
 }
