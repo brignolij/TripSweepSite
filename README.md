@@ -4,27 +4,32 @@ Two photo cleanup apps that run 100% on your devices: no account, no cloud, no u
 
 **Website: [tripsweep.idealy.ch](https://tripsweep.idealy.ch/)** · [Français](https://tripsweep.idealy.ch/fr/) · [Italiano](https://tripsweep.idealy.ch/it/) · [Deutsch](https://tripsweep.idealy.ch/de/) · [Español](https://tripsweep.idealy.ch/es/)
 
-## TripSweep for iPhone
+## TripSweep for iPhone and Android
 
 TripSweep groups your photos and videos by trip (or by event and month when they have no location), shows what takes up space, and finds identical copies, similar and blurry photos, screenshots and large videos, so you keep the best shot and delete the rest in a few taps.
 
 - [Download TripSweep on the App Store](https://apps.apple.com/app/tripsweep/id6813028251) (iOS 18+)
+- [Get TripSweep on Google Play](https://play.google.com/store/apps/details?id=com.tripsweep.app) (Android 11+)
 - [TripSweep website](https://tripsweep.idealy.ch/) · [FAQ](https://tripsweep.idealy.ch/faq.html)
 
 ## PhotoCull for Mac and Windows
 
-PhotoCull sorts your iPhone photos on a computer: your camera roll grouped by trip, similar shots compared side by side (up to six at once) and hundreds of photos deleted in a few clicks. It also sorts any folder of photos on your computer, and never modifies your originals.
+PhotoCull sorts your iPhone or Android photos on a computer: your camera roll grouped by trip, similar shots compared side by side (up to six at once) and hundreds of photos deleted in a few clicks. It also sorts any folder of photos on your computer, and never modifies your originals.
 
 - **Mac:** [download PhotoCull for Mac](https://github.com/brignolij/TripSweepSite/releases/latest/download/PhotoCull-Desktop.zip). Free, macOS 11+ on Apple Silicon, signed and notarized by Apple.
 - **Windows:** [get it from the Microsoft Store](https://apps.microsoft.com/detail/9n6wv393b3pl) or [download the zip](https://github.com/brignolij/TripSweepSite/releases/latest/download/PhotoCull-Windows-x64.zip). Free, Windows 10/11 (64-bit). Reading an iPhone needs the free Apple Devices app from the Microsoft Store. The zip is not code-signed yet, so SmartScreen may warn on first launch.
+- **Phones:** an iPhone connects by USB; an Android phone connects over Wi-Fi (Mac and Windows) or by USB (Windows), with the free TripSweep app open on its Deletion tab.
 - [PhotoCull website](https://tripsweep.idealy.ch/desktop.html) · [FAQ](https://tripsweep.idealy.ch/desktop-faq.html)
 
 ## Guides
 
 - [How to sort your iPhone photos on a Mac](https://tripsweep.idealy.ch/desktop-blog-sort-iphone-photos-on-mac.html)
 - [How to sort your iPhone photos on a Windows PC](https://tripsweep.idealy.ch/desktop-blog-sort-iphone-photos-on-pc.html)
+- [How to sort your Android photos on a Mac](https://tripsweep.idealy.ch/desktop-blog-sort-android-photos-on-mac.html)
+- [How to sort your Android photos on a Windows PC](https://tripsweep.idealy.ch/desktop-blog-sort-android-photos-on-pc.html)
 - [How to free up iPhone storage without paying for iCloud](https://tripsweep.idealy.ch/blog-free-up-iphone-storage.html)
 - [How to delete duplicate and similar photos on your iPhone](https://tripsweep.idealy.ch/blog-delete-duplicate-photos-iphone.html)
+- [How to free up Android storage without paying for Google One](https://tripsweep.idealy.ch/blog-free-up-android-storage.html)
 - All guides: [TripSweep blog](https://tripsweep.idealy.ch/blog.html) · [PhotoCull blog](https://tripsweep.idealy.ch/desktop-blog.html), each in five languages.
 
 ## Privacy

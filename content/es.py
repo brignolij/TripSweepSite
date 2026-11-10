@@ -6,7 +6,9 @@ BLOG_UI = dict(
     cta_store="📱 Descarga TripSweep en la App Store",
     cta_play="🤖 Descarga TripSweep en Google Play",
     cta_mac="💻 Descarga PhotoCull para Mac", cta_win="🪟 Descarga PhotoCull para Windows",
-    cross_label={"tripsweep": "App de escritorio", "photocull": "App para iOS"},
+    cross_label={"tripsweep": "App de escritorio", "photocull": "App móvil"},
+    twin_android="¿Usas un móvil Android? Lee la guía para Android:",
+    twin_iphone="¿Usas un iPhone? Lee la guía para iPhone:",
     index={
         "tripsweep": dict(
             title="Blog de TripSweep: espacio en el iPhone y fotos duplicadas",
@@ -15,9 +17,9 @@ BLOG_UI = dict(
             intro="Guías breves y prácticas para liberar espacio en tu iPhone, borrar duplicados y quedarte solo con las mejores fotos."),
         "photocull": dict(
             title="Blog de PhotoCull: ordena fotos en Mac o PC y libera tu iPhone",
-            desc="Guías para ordenar miles de fotos más rápido en una pantalla grande, comparar fotos parecidas y liberar espacio en el iPhone desde un Mac o un PC.",
+            desc="Guías para ordenar miles de fotos más rápido en una pantalla grande, comparar fotos parecidas y liberar un iPhone o un móvil Android desde un Mac o un PC.",
             h1="Guías para ordenar tus fotos en el ordenador",
-            intro="Por qué una pantalla grande cambia la rapidez con la que ordenas fotos, y cómo aprovecharla para liberar espacio en tu iPhone."),
+            intro="Por qué una pantalla grande cambia la rapidez con la que ordenas fotos, y cómo aprovecharla para liberar espacio en tu iPhone o móvil Android."),
     },
 )
 
@@ -50,10 +52,10 @@ FAQ_TRIPSWEEP_EXTRA = [
 
 FAQ_PHOTOCULL = dict(
     title="FAQ de PhotoCull: ordena y borra fotos desde un Mac o un PC",
-    desc="Cómo ordenar miles de fotos en el ordenador, comparar fotos parecidas, liberar espacio en el iPhone desde un Mac o PC y borrar con seguridad.",
-    nav_home="PhotoCull", nav_desktop="App para iOS",
+    desc="Cómo ordenar miles de fotos en el ordenador, comparar fotos parecidas, liberar un iPhone o un móvil Android desde un Mac o PC: respuestas sobre PhotoCull.",
+    nav_home="PhotoCull", nav_desktop="App móvil",
     h1="Preguntas y respuestas",
-    intro="Cómo ordenar tus fotos más rápido desde un ordenador, liberar espacio en tu iPhone desde un Mac o PC, y qué hace (y qué nunca hace) PhotoCull con tus fotos.",
+    intro="Cómo ordenar tus fotos más rápido desde un ordenador, liberar espacio en tu iPhone o móvil Android desde un Mac o PC, y qué hace (y qué nunca hace) PhotoCull con tus fotos.",
     qa=[
         ('¿Cómo ordeno las fotos del iPhone en el ordenador, Mac o PC?',
          "Conecta el iPhone al ordenador con un cable USB, desbloquéalo y toca Confiar, y abre <a href=\"{pc}\">PhotoCull</a>: agrupa el carrete por viaje, compara las fotos parecidas lado a lado y marca cientos de fotos en pocos clics. Guías paso a paso: <a href=\"{post:sort-iphone-photos-on-mac}\">en el Mac</a> y <a href=\"{post:sort-iphone-photos-on-pc}\">en un PC con Windows</a>."),
@@ -71,8 +73,18 @@ FAQ_PHOTOCULL = dict(
          "No. Los borrados en el iPhone pasan siempre por el álbum « Eliminados recientemente » de la app Fotos, donde las fotos permanecen 30 días y se pueden recuperar. PhotoCull nunca hace un borrado permanente inmediato."),
         ("¿Cómo conecto mi iPhone a PhotoCull?",
          "Usa un cable USB, desbloquea el iPhone y toca « Confiar » cuando te lo pida. En un Mac no hace falta nada más. En Windows, instala la app gratuita Apple Devices desde Microsoft Store, que incluye el controlador que permite a PhotoCull leer el iPhone."),
+        ("¿Puedo ordenar las fotos de un móvil Android en mi Mac o PC?",
+         "Sí. PhotoCull se conecta a un móvil Android por wifi en un Mac o en un PC con Windows, o por USB en Windows. Tienes la misma vista Viajes, la misma comparación lado a lado y el mismo borrado en bloque que con un iPhone. El móvil necesita la <a href=\"{play}\">app TripSweep</a> gratuita (Android 11 o posterior), abierta en su pestaña Eliminación."),
+        ("¿Cómo conecto mi móvil Android por wifi?",
+         "Pon el móvil y el ordenador en la misma red wifi y abre la pestaña Eliminación de TripSweep en el móvil. En PhotoCull, haz clic en « Teléfono Android » y elige tu móvil; después autoriza el ordenador en el móvil: el mismo código de 4 dígitos aparece en las dos pantallas. Esto se hace una sola vez; la próxima vez se reconecta solo. <a href=\"{post:sort-android-photos-on-mac}\">Guía paso a paso para Mac</a>."),
+        ("¿Por qué mi Mac no ve mi móvil Android por USB?",
+         "macOS no admite de serie la forma en que los móviles Android comparten archivos por USB (MTP), así que normalmente el Mac no los ve. Usa la conexión por wifi: funciona en todos los Mac, sin instalar ningún controlador. En Windows funcionan tanto el USB como el wifi."),
+        ("¿Es segura la conexión wifi con mi móvil?",
+         "Sí. El móvil y el ordenador se comunican solo dentro de tu red local, con una conexión cifrada, y únicamente después de que hayas autorizado ese ordenador en el móvil con un código que coincide en ambos. Nada pasa por internet, y puedes revocar un ordenador desde TripSweep cuando quieras."),
+        ("¿Qué pasa con las fotos que borro en un móvil Android?",
+         "Confirmas el borrado en el móvil, en TripSweep, y las fotos van a la papelera del móvil, donde permanecen 30 días y se pueden recuperar. PhotoCull nunca borra nada de forma permanente por su cuenta."),
         ("¿Necesito la app TripSweep para iOS?",
-         "No para explorar, comparar y ordenar. Solo la necesitas para borrar fotos del iPhone, porque el borrado se aplica en el móvil. Las carpetas de tu ordenador se pueden ordenar sin ella."),
+         "No para explorar, comparar y ordenar un iPhone. Solo la necesitas para borrar fotos del iPhone, porque el borrado se aplica en el móvil. Un móvil Android necesita la app TripSweep para Android para poder conectarse. Las carpetas de tu ordenador se pueden ordenar sin ninguna de las dos."),
         ("¿Cómo busco fotos duplicadas en una carpeta de mi Mac o PC?",
          "Abre la carpeta en PhotoCull (« Abrir carpeta », o arrástrala a la ventana). Recorre las subcarpetas, compara lo que muestran las fotos y pone la misma insignia «≈ N» a las copias exactas, las ráfagas y las tomas casi idénticas. Conserva la mejor de cada grupo y manda el resto a la Papelera (Mac) o a la Papelera de reciclaje (Windows). Guías: <a href=\"{post:find-duplicate-photos-on-mac}\">en el Mac</a> y <a href=\"{post:find-duplicate-photos-on-windows}\">en Windows</a>."),
         ("¿Puedo usar PhotoCull con fotos guardadas en mi ordenador, no en un iPhone?",
@@ -183,6 +195,55 @@ dict(slug="clean-up-vacation-photos",
       <h2>Cómo ayuda TripSweep</h2>
       <p><a href="{ts}">TripSweep</a> agrupa tus fotos y vídeos por viaje (o por evento y mes cuando no hay GPS), muestra cuántos gigas de fotos parecidas contiene cada viaje, sugiere la mejor toma de cada grupo y exporta o comparte un viaje completo. Puedes excluir tu casa y tu trabajo para que el día a día no parezca un viaje. Todo se ejecuta en tu iPhone, sin conexión.</p>
       <p>Para hacer lo mismo en una pantalla grande, <a href="{pc}">PhotoCull</a> muestra los viajes de tu iPhone en un Mac o un PC con Windows.</p>"""),
+dict(slug="free-up-android-storage",
+     title="Cómo liberar espacio en Android sin Google One",
+     desc="Dónde se va realmente el almacenamiento de tu Android y las formas más rápidas de liberar gigas de fotos y vídeos sin pagar más por la nube.",
+     h1="Cómo liberar espacio en Android sin pagar por Google One",
+     body="""      <p>« Almacenamiento lleno » en un móvil Android casi siempre significa fotos y vídeos. Ajustes → Almacenamiento lo muestra con claridad, y la mayor parte de ese espacio son fotos que no vas a volver a mirar. Así se recupera sin comprar más almacenamiento en la nube.</p>
+
+      <h2>1. Empieza por lo que más pesa</h2>
+      <p>Los vídeos largos son la victoria más rápida: unos minutos de vídeo en 4K ocupan tanto como cientos de fotos. Ordénalos por tamaño, mira los primeros segundos y borra los que no vas a volver a abrir.</p>
+
+      <h2>2. Borra las fotos parecidas, no solo las duplicadas</h2>
+      <p>Las apps de limpieza encuentran copias exactas, pero el verdadero desperdicio está en las tomas casi idénticas: ráfagas, cinco intentos de la misma foto de grupo, tres selfis seguidos. Conserva la mejor de cada grupo y borra el resto.</p>
+
+      <h2>3. Elimina capturas de pantalla y fotos borrosas</h2>
+      <p>Las capturas de pantalla de entradas, mapas y conversaciones se acumulan sin que te des cuenta, igual que las fotos accidentales o borrosas. Se revisan rápido todas juntas.</p>
+
+      <h2>4. Vacía la papelera</h2>
+      <p>Las fotos borradas suelen esperar 30 días en la papelera y siguen ocupando espacio. Cuando estés conforme con tus decisiones, vacíala para recuperar de verdad el almacenamiento.</p>
+
+      <h2>5. Limpia los viajes antiguos, uno por uno</h2>
+      <p>Las vacaciones antiguas son el mayor bloque de fotos que nunca miras. Ir viaje por viaje es más fácil que desplazarse por miles de fotos: elige el viaje más pesado, conserva lo mejor y borra lo que sobra.</p>
+
+      <h2>Cómo te lo facilita TripSweep</h2>
+      <p><a href="{ts}">TripSweep</a> hace estos pasos por ti en el móvil. Su pestaña Limpieza lista las copias idénticas, las fotos parecidas, las fotos borrosas, las capturas de pantalla y los vídeos grandes, cada uno con el espacio que ocupa, y tus viajes se agrupan automáticamente. Es gratuita en <a href="{play}">Google Play</a> (Android 11 o posterior) y funciona 100 % en el móvil.</p>
+      <p>Si prefieres una pantalla grande, <a href="{pc}">PhotoCull</a> hace la misma clasificación en un Mac o un PC con Windows, conectado por wifi.</p>
+
+      <h2>¿Necesito Google One?</h2>
+      <p>El almacenamiento en la nube es una buena copia de seguridad, pero no es una herramienta de limpieza: guarda todo, duplicados incluidos. Limpiar primero significa que necesitas menos espacio, estés donde estés.</p>"""),
+dict(slug="delete-duplicate-photos-android",
+     title="Cómo borrar fotos duplicadas y parecidas en Android",
+     desc="Encuentra duplicados exactos, ráfagas y tomas casi idénticas en tu móvil Android, conserva la mejor y borra el resto con seguridad.",
+     h1="Cómo borrar fotos duplicadas y parecidas en tu móvil Android",
+     body="""      <p>Los duplicados se comen en silencio el almacenamiento de un móvil Android. Algunos son copias exactas, pero la mayoría son tomas casi idénticas del mismo momento. Así se encuentran ambos tipos y se limpian con seguridad.</p>
+
+      <h2>Duplicadas y parecidas no son lo mismo</h2>
+      <p>Una foto duplicada es el mismo archivo guardado dos veces, por ejemplo tras una descarga, una app de mensajería o una restauración. Una foto parecida es otra toma de la misma escena: una ráfaga, varios intentos de una foto de grupo, un selfi repetido hasta que salió bien. Los limpiadores de archivos detectan el primer tipo; el segundo ocupa mucho más espacio.</p>
+
+      <h2>Qué ofrece Android</h2>
+      <p>Las apps de gestión de archivos pueden listar archivos duplicados exactos, y tu galería muestra las ráfagas. Ninguna compara por ti las tomas casi idénticas ni te ayuda a elegir la mejor, así que acabas pasando de una foto a otra una por una.</p>
+
+      <h2>Una forma más rápida</h2>
+      <p><strong>1. Agrupa por escena.</strong> <a href="{ts}">TripSweep</a> compara el contenido de tus fotos, no sus nombres, y agrupa las tomas de la misma escena: una ráfaga de diez pasa a ser una sola decisión.</p>
+      <p><strong>2. Conserva la mejor.</strong> Propone una toma por grupo; puedes conservar otra, conservar varias u omitir el grupo.</p>
+      <p><strong>3. Borra con seguridad.</strong> Las fotos borradas van a la papelera del móvil durante 30 días, así que un error se puede deshacer.</p>
+
+      <h2>Conviene saber</h2>
+      <ul>
+        <li>Todo se ejecuta en el móvil: sin cuenta, sin envíos. TripSweep es gratuita en <a href="{play}">Google Play</a> (Android 11 o posterior).</li>
+        <li>Para un carrete entero, comparar en una pantalla grande con <a href="{pc}">PhotoCull</a> en un Mac o un PC es todavía más rápido.</li>
+      </ul>"""),
 ],
 "photocull": [
 dict(slug="sort-iphone-photos-on-mac",
@@ -397,6 +458,83 @@ dict(slug="sort-photo-folder-external-drive",
         <li>Se admiten los archivos RAW de cámara (CR2, CR3, NEF, ARW, RAF, ORF, RW2, DNG) junto con JPEG, HEIC, PNG y vídeos.</li>
         <li>Ordenar carpetas es gratis y nunca tiene límite, en Mac (<a href="{mac}">descarga</a>) y en Windows (<a href="{win}">descarga</a>).</li>
         <li>Tus originales no se modifican nunca: el único cambio que hace PhotoCull es el borrado que confirmas.</li>
+      </ul>"""),
+dict(slug="sort-android-photos-on-mac",
+     title="Cómo ordenar las fotos de Android en un Mac",
+     desc="Un Mac no lee los móviles Android por USB. Cómo ordenar miles de fotos de Android en el Mac por wifi y borrar lo que no necesitas.",
+     h1="Cómo ordenar las fotos de Android en un Mac",
+     body="""      <p>Conecta un móvil Android a un Mac y, casi siempre, no pasa nada: macOS no lee los móviles Android por USB como lo hace Windows. Y sin embargo un Mac es el mejor sitio para ordenar un carrete grande, con una pantalla amplia, un ratón y comparación lado a lado. Esto es lo que funciona.</p>
+
+      <h2>Lo que macOS puede hacer por sí solo</h2>
+      <ul>
+        <li><strong>Captura de Imagen:</strong> puede ver el móvil si eliges « Transferir fotos » (PTP) en la notificación USB, pero solo como una lista plana de archivos, sin agrupar y sin forma de comparar fotos parecidas.</li>
+        <li><strong>Android File Transfer de Google:</strong> ya no tiene mantenimiento y, de todos modos, solo copia archivos.</li>
+        <li><strong>Subir a la nube:</strong> enviarlo todo a un servicio online solo para ordenarlo es lento, gasta tus datos y deja tus fotos en el servidor de otra persona.</li>
+      </ul>
+
+      <h2>Con PhotoCull, por wifi, paso a paso</h2>
+      <p><strong>1. Instala las dos apps.</strong> <a href="{mac}">Descarga PhotoCull para Mac</a> gratis (macOS 11 o posterior en Apple Silicon) e instala en el móvil la <a href="{play}">app TripSweep de Google Play</a>, gratuita (Android 11 o posterior).</p>
+      <p><strong>2. La misma red wifi.</strong> Conecta el móvil a la misma red wifi que el Mac y abre la pestaña Eliminación de TripSweep.</p>
+      <p><strong>3. Conéctate una vez.</strong> En PhotoCull, haz clic en « Teléfono Android » y elige tu móvil. Autoriza el Mac en el móvil: el mismo código de 4 dígitos aparece en las dos pantallas. La próxima vez se reconecta solo.</p>
+      <p><strong>4. Ordena viaje a viaje.</strong> La vista Viajes agrupa el carrete por fecha y lugar, con el espacio que ocupa cada viaje. Las fotos parecidas llevan una insignia: compara hasta seis lado a lado, quédate con la mejor y marca el resto.</p>
+      <p><strong>5. Borra con seguridad.</strong> Haz clic en Borrar y confirma en el móvil, en TripSweep. Las fotos van a la papelera del móvil durante 30 días, así que un error se puede deshacer.</p>
+
+      <h2>Conviene saber</h2>
+      <ul>
+        <li>La conexión no sale de tu red local y está cifrada; nada pasa por internet.</li>
+        <li>PhotoCull nunca modifica tus originales y solo borra lo que confirmas en el móvil.</li>
+        <li>Desde el ordenador, la versión gratuita permite 6 borrados al día, TripSweep Pro 15, y Pro + Desktop es ilimitado. Explorar y ordenar es siempre gratis.</li>
+        <li>¿Tienes también un iPhone? Se conecta al Mac con un cable USB.</li>
+      </ul>"""),
+dict(slug="sort-android-photos-on-pc",
+     title="Cómo ordenar las fotos de Android en un PC con Windows",
+     desc="Ordena miles de fotos de Android en Windows 10 u 11: qué muestran el Explorador y la app Fotos, y una forma más rápida de agrupar y borrar.",
+     h1="Cómo ordenar las fotos de Android en un PC con Windows",
+     body="""      <p>Windows lee bien los móviles Android, pero leer no es ordenar. Con miles de fotos, las herramientas integradas te dejan desplazándote por una lista interminable de nombres de archivo. Esto es lo que hacen, y una forma más rápida de liberar el móvil desde tu PC.</p>
+
+      <h2>Con las herramientas de Windows</h2>
+      <ul>
+        <li><strong>Explorador de archivos:</strong> tras elegir « Transferencia de archivos » en el móvil, su carpeta DCIM aparece como archivos. Puedes borrar desde ahí, pero sin agrupar y sin forma de comparar fotos parecidas.</li>
+        <li><strong>App Fotos:</strong> importa una copia al PC. Una buena copia de seguridad, pero no te dice qué quitar del móvil.</li>
+        <li><strong>Enlace Móvil:</strong> solo muestra las fotos recientes, de una en una.</li>
+      </ul>
+
+      <h2>Con PhotoCull, paso a paso</h2>
+      <p><strong>1. Instala las dos apps.</strong> Consigue PhotoCull gratis <a href="{win}">para Windows 10 u 11</a> y la <a href="{play}">app TripSweep de Google Play</a>, gratuita, en el móvil (Android 11 o posterior).</p>
+      <p><strong>2. Conecta por USB o wifi.</strong> Por USB: conecta el móvil y elige « Transferencia de archivos » en su notificación USB. Por wifi: pon ambos en la misma red. Después abre la pestaña Eliminación de TripSweep y haz clic en « Teléfono Android » en PhotoCull.</p>
+      <p><strong>3. Ordena viaje a viaje.</strong> La vista Viajes agrupa el carrete por fecha y lugar y muestra el espacio que ocupa cada viaje. Empieza por el más pesado.</p>
+      <p><strong>4. Compara y marca.</strong> Las fotos parecidas llevan una insignia: abre hasta seis lado a lado, quédate con la mejor y marca el resto, junto con capturas de pantalla y vídeos grandes.</p>
+      <p><strong>5. Borra con seguridad.</strong> Confirma en el móvil, en TripSweep: las fotos van a la papelera del móvil durante 30 días.</p>
+
+      <h2>Conviene saber</h2>
+      <ul>
+        <li>Todo se queda en tu PC y tu móvil: sin cuenta, sin nube, sin envíos.</li>
+        <li>Borrar desde el Explorador de archivos es inmediato y permanente; hacerlo con TripSweep conserva la red de seguridad de 30 días.</li>
+        <li>Desde el PC, la versión gratuita permite 6 borrados al día, TripSweep Pro 15, y Pro + Desktop es ilimitado. Ordenar una carpeta del PC nunca tiene límite.</li>
+      </ul>"""),
+dict(slug="free-up-android-from-mac-or-pc",
+     title="Cómo liberar espacio en Android desde un Mac o un PC",
+     desc="Conecta tu móvil Android, ordena las fotos en una pantalla grande y borra lo que no necesitas, sin pagar Google One y sin subir nada.",
+     h1="Cómo liberar espacio en tu móvil Android desde un Mac o un PC",
+     body="""      <p>Cuando un móvil Android se queda sin espacio, casi siempre la causa son las fotos y los vídeos. Limpiarlos en una pantalla pequeña es lento. Desde un ordenador ves más a la vez y decides más rápido, sin comprar más almacenamiento en la nube.</p>
+
+      <h2>Por qué ayuda un ordenador</h2>
+      <p>Una pantalla grande muestra decenas de fotos a la vez, un ratón selecciona cientos en segundos y comparar tomas casi idénticas lado a lado es mucho más fácil que ir deslizando de una a otra. Un carrete que en el móvil te llevaría una tarde, se despacha en minutos.</p>
+
+      <h2>El método</h2>
+      <p><strong>1. Conecta el móvil.</strong> Instala <a href="{pc}">PhotoCull</a> en tu Mac o PC y la <a href="{play}">app TripSweep</a>, gratuita, en el móvil. Conéctate por wifi (Mac y Windows) o por USB (Windows), con TripSweep abierta en la pestaña Eliminación.</p>
+      <p><strong>2. Empieza por lo que más pesa.</strong> La vista Viajes muestra el espacio que ocupa cada viaje; los vídeos largos y las vacaciones antiguas suelen liberar más.</p>
+      <p><strong>3. Elimina las tomas casi idénticas.</strong> Las ráfagas y las tomas repetidas de la misma escena llevan una insignia. Compáralas lado a lado, quédate con la mejor y marca el resto.</p>
+      <p><strong>4. Limpia capturas de pantalla y fotos borrosas.</strong> Rara vez merecen quedarse y se marcan rápido todas juntas.</p>
+      <p><strong>5. Confirma en el móvil.</strong> TripSweep aplica el borrado y envía las fotos a la papelera del móvil, donde permanecen 30 días. Vacía la papelera cuando estés seguro para recuperar el espacio.</p>
+
+      <h2>¿Necesito Google One?</h2>
+      <p>El almacenamiento en la nube es una buena copia de seguridad, pero lo guarda todo, duplicados incluidos. Limpiar primero significa que necesitas menos almacenamiento, en el móvil y en la nube.</p>
+
+      <h2>Conviene saber</h2>
+      <ul>
+        <li>Sin cuenta y sin envíos: el móvil y el ordenador se comunican por tu propia red o por cable.</li>
+        <li>Desde el ordenador, la versión gratuita permite 6 borrados al día, Pro 15, y Pro + Desktop es ilimitado.</li>
       </ul>"""),
 ],
 }

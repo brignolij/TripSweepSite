@@ -180,7 +180,7 @@ def desktop_url(lang):
 INDEX = {
 "en": dict(
     title="TripSweep — photo cleaner for duplicate and similar photos",
-    desc="Sort photos by trip or by type — duplicates, similar and blurry shots, screenshots, large videos — and free up gigabytes on your iPhone. 100% on-device.",
+    desc="Sort photos by trip or by type — duplicates, similar and blurry shots, screenshots, large videos — and free up gigabytes on iPhone or Android.",
     nav_desktop="Desktop app", nav_features="Features", nav_privacy_anchor="Privacy", nav_privacy="Privacy Policy",
     h1="Finally, an easy way to clear out your photo library",
     subtitle="TripSweep groups your photos and videos by trip (or by event and month when they have no location), shows what's taking up space, and sorts out what you don't need — identical copies, similar and blurry photos, screenshots, large videos. Keep the best shot, delete the rest, without ever sending your photos anywhere.",
@@ -367,124 +367,164 @@ INDEX = {
 
 DESKTOP = {
 "en": dict(
-    title="PhotoCull — sort your iPhone photos on a Mac or PC",
-    desc="Sort your iPhone photos from your computer, Mac or Windows PC: grouped by trip, similar shots side by side, bulk delete. Free, 100% on-device.",
-    nav_ios="iOS app", nav_features="Features", nav_privacy="Privacy",
+    title="PhotoCull — sort iPhone and Android photos on Mac or PC",
+    desc="Sort your iPhone or Android photos from a Mac or Windows PC: grouped by trip, similar shots side by side, bulk delete. Free, 100% on-device.",
+    nav_ios="Mobile app", nav_features="Features", nav_privacy="Privacy",
     badge="🖥️ Desktop app (macOS · Windows)",
-    h1="Sort thousands of iPhone photos on your Mac or PC",
-    subtitle="PhotoCull is a full desktop application: it shows your entire iPhone camera roll grouped by trip, compares your photos side by side, and bulk-deletes what's no longer worth keeping — right from your Mac or PC.",
+    h1="Sort thousands of iPhone and Android photos on your Mac or PC",
+    subtitle="PhotoCull is a full desktop application: it shows your entire iPhone or Android camera roll grouped by trip, compares your photos side by side, and bulk-deletes what's no longer worth keeping — right from your Mac or PC.",
     cta_download="💻 Download for Mac", cta_download_windows="🪟 Download for Windows", cta_ms_store="🛍️ Get it from the Microsoft Store",
     features_h2="What the app does",
     features=[
         ("🧳", 'The "Trips" view', "Your entire photo library automatically grouped by trip (time AND location, just like the iOS app) — spot at a glance which trips take up the most space."),
         ("🔍", "Side-by-side comparison", "Show up to 6 similar photos at once to pick the best one — perfect for sorting through bursts and near-duplicates."),
-        ("🗑️", "Safe bulk deletion", "Mark hundreds of photos in a few clicks. The actual deletion goes through the companion app on your iPhone and “Recently Deleted” (30 days) — never an immediate permanent delete."),
+        ("🗑️", "Safe bulk deletion", "Mark hundreds of photos in a few clicks. The actual deletion goes through the TripSweep app on your phone and its trash (30 days) — never an immediate permanent delete."),
         ("⚖️", "The size that counts", "Sort and filter by single-day trip, by excluded place (home, work...), by size — the same filters as the iOS app, built for speed."),
-        ("🔌", "Direct connection to your iPhone", "Plug in your iPhone via USB (or use simulation mode to try it out): PhotoCull reads your camera roll directly, with no iCloud and no server involved."),
+        ("🔌", "Direct connection to your phone", "Plug in your iPhone by USB, or connect your Android phone over Wi-Fi (or USB on Windows): PhotoCull reads your camera roll directly, with no cloud and no server involved."),
         ("🔒", "100% on-device", "No photo, no GPS location is ever sent anywhere. Place recognition runs entirely locally, with no account and no subscription."),
     ],
-    strip_h2="Pairs with the TripSweep iOS app",
-    strip_p_before="Browsing, comparing and sorting your iPhone's photos works on its own: just plug it in via USB. To actually delete photos from the iPhone, you also need ",
-    strip_p_link="the free TripSweep iOS app",
-    strip_p_after=", which applies the deletion on the phone through “Recently Deleted” and makes trip analysis near-instant. Folders on your Mac or PC can be sorted without it.",
+    connect_h2="Connect your phone in a minute",
+    connect_intro="At first launch, PhotoCull asks where your photos are and walks you through it.",
+    connect=[
+        ("📱", "iPhone, by USB", "Mac and Windows. Plug in the iPhone, unlock it and tap Trust, then click Connect iPhone. On Windows, install the free Apple Devices app first."),
+        ("📶", "Android, over Wi-Fi", "Mac and Windows. Open the Deletion tab of TripSweep on the phone, click Android phone in PhotoCull and pick your phone. Allow the computer once: the same 4-digit code shows on both screens."),
+        ("🔌", "Android, by USB", "Windows. Plug in the phone, choose File transfer in its USB notification, then click Android phone and Connect over USB. A Mac can't read Android phones over USB: use Wi-Fi."),
+        ("📁", "A folder", "Any folder on your computer or on a drive: click Open folder or drop it onto the window. No phone needed, no daily limit."),
+    ],
+    strip_h2="Works with TripSweep on iPhone and Android",
+    strip_p_before="Browsing, comparing and sorting your phone's photos works on its own. To actually delete photos from the phone, you also need ",
+    strip_p_link="the free TripSweep app",
+    strip_p_after=" on the iPhone or Android phone: it applies the deletion on the phone through its trash (30 days) and makes trip analysis near-instant. Folders on your Mac or PC can be sorted without it.",
     footer_copy="© 2026 PhotoCull. Developed by Jeffrey Brignoli.",
-    footer_ios="iOS app", footer_privacy="Privacy", footer_kofi="Ko-fi", footer_github="GitHub",
+    footer_ios="Mobile app", footer_privacy="Privacy", footer_kofi="Ko-fi", footer_github="GitHub",
 ),
 "fr": dict(
-    title="PhotoCull — trier les photos de l'iPhone sur Mac ou PC",
-    desc="Triez les photos de votre iPhone depuis votre ordinateur, Mac ou PC Windows : par séjour, photos similaires côte à côte, suppression en masse. Gratuit.",
-    nav_ios="Application iOS", nav_features="Fonctionnalités", nav_privacy="Confidentialité",
+    title="PhotoCull — trier ses photos iPhone et Android sur Mac ou PC",
+    desc="Triez les photos de votre iPhone ou Android depuis un Mac ou un PC Windows : par séjour, photos similaires côte à côte, suppression en masse. Gratuit.",
+    nav_ios="Application mobile", nav_features="Fonctionnalités", nav_privacy="Confidentialité",
     badge="🖥️ Application de bureau (macOS · Windows)",
-    h1="Triez des milliers de photos d'iPhone sur Mac ou PC",
-    subtitle="PhotoCull est une application de bureau à part entière : elle affiche tout le rouleau de votre iPhone regroupé par séjour, compare vos photos côte à côte, et supprime en masse ce qui ne vaut plus la peine d'être gardé — directement depuis votre Mac ou votre PC.",
+    h1="Triez des milliers de photos d'iPhone et d'Android sur Mac ou PC",
+    subtitle="PhotoCull est une application de bureau à part entière : elle affiche tout le rouleau de votre iPhone ou de votre téléphone Android regroupé par séjour, compare vos photos côte à côte, et supprime en masse ce qui ne vaut plus la peine d'être gardé — directement depuis votre Mac ou votre PC.",
     cta_download="💻 Télécharger pour Mac", cta_download_windows="🪟 Télécharger pour Windows", cta_ms_store="🛍️ Obtenir sur le Microsoft Store",
     features_h2="Ce que fait l'app",
     features=[
         ("🧳", 'Vue "Voyages / séjours"', "Toute votre photothèque regroupée automatiquement par séjour (temps ET lieu, comme l'app iOS) — pour repérer d'un coup d'œil les voyages qui prennent le plus de place."),
         ("🔍", "Comparaison côte à côte", "Affichez jusqu'à 6 photos similaires en même temps pour choisir la meilleure — idéal pour trier les rafales et les quasi-doublons."),
-        ("🗑️", "Suppression en masse, en toute sécurité", "Marquez des centaines de photos en quelques clics. La suppression réelle passe par l'app compagnon sur votre iPhone et « Récemment supprimés » (30 jours) — jamais de suppression définitive immédiate."),
+        ("🗑️", "Suppression en masse, en toute sécurité", "Marquez des centaines de photos en quelques clics. La suppression réelle passe par l'app TripSweep sur votre téléphone et sa corbeille (30 jours) — jamais de suppression définitive immédiate."),
         ("⚖️", "Le poids qui compte", "Triez et filtrez par séjour d'1 jour, par lieu exclu (domicile, travail...), par poids — les mêmes filtres que sur l'app iOS, pensés pour aller vite."),
-        ("🔌", "Connexion directe à l'iPhone", "Branchez votre iPhone en USB (ou utilisez le mode simulation pour tester) : PhotoCull lit votre rouleau directement, sans passer par iCloud ni aucun serveur."),
+        ("🔌", "Connexion directe au téléphone", "Branchez votre iPhone en USB, ou connectez votre téléphone Android en Wi-Fi (ou en USB sous Windows) : PhotoCull lit votre rouleau directement, sans cloud ni serveur."),
         ("🔒", "100 % sur l'appareil", "Aucune photo, aucune position GPS n'est jamais envoyée où que ce soit. La reconnaissance des lieux fonctionne entièrement en local, sans compte ni abonnement."),
     ],
-    strip_h2="Fonctionne avec l'app iOS TripSweep",
-    strip_p_before="Parcourir, comparer et trier les photos de votre iPhone fonctionne seul : branchez-le en USB. Pour supprimer réellement des photos de l'iPhone, il faut aussi ",
-    strip_p_link="l'app iOS TripSweep (gratuite)",
-    strip_p_after=", qui applique la suppression sur le téléphone via « Récemment supprimés » et rend l'analyse des séjours quasi instantanée. Les dossiers du Mac ou du PC se trient sans elle.",
+    connect_h2="Connectez votre téléphone en une minute",
+    connect_intro="Au premier lancement, PhotoCull demande où sont vos photos et vous guide pas à pas.",
+    connect=[
+        ("📱", "iPhone, en USB", "Mac et Windows. Branchez l'iPhone, déverrouillez-le et touchez « Se fier », puis cliquez sur « Connecter l'iPhone ». Sous Windows, installez d'abord l'app gratuite Appareils Apple."),
+        ("📶", "Android, en Wi-Fi", "Mac et Windows. Ouvrez l'onglet « Suppression » de TripSweep sur le téléphone, cliquez sur « Téléphone Android » dans PhotoCull et choisissez votre téléphone. Autorisez l'ordinateur une fois : le même code à 4 chiffres s'affiche des deux côtés."),
+        ("🔌", "Android, en USB", "Windows. Branchez le téléphone, choisissez « Transfert de fichiers » dans sa notification USB, puis cliquez sur « Téléphone Android » et « Connecter en USB ». Un Mac ne lit pas les téléphones Android en USB : passez par le Wi-Fi."),
+        ("📁", "Un dossier", "N'importe quel dossier de votre ordinateur ou d'un disque : cliquez sur « Ouvrir un dossier » ou glissez-le sur la fenêtre. Sans téléphone, sans limite quotidienne."),
+    ],
+    strip_h2="Fonctionne avec TripSweep sur iPhone et Android",
+    strip_p_before="Parcourir, comparer et trier les photos de votre téléphone fonctionne seul. Pour supprimer réellement des photos du téléphone, il faut aussi ",
+    strip_p_link="l'app TripSweep (gratuite)",
+    strip_p_after=" sur l'iPhone ou le téléphone Android : elle applique la suppression sur le téléphone via sa corbeille (30 jours) et rend l'analyse des séjours quasi instantanée. Les dossiers du Mac ou du PC se trient sans elle.",
     footer_copy="© 2026 PhotoCull. Développé par Jeffrey Brignoli.",
-    footer_ios="Application iOS", footer_privacy="Confidentialité", footer_kofi="Ko-fi", footer_github="GitHub",
+    footer_ios="Application mobile", footer_privacy="Confidentialité", footer_kofi="Ko-fi", footer_github="GitHub",
 ),
 "it": dict(
-    title="PhotoCull — ordinare le foto dell'iPhone su Mac o PC",
-    desc="Ordina le foto del tuo iPhone dal computer, Mac o PC Windows: per soggiorno, foto simili fianco a fianco, eliminazione in blocco. Gratis, 100% in locale.",
-    nav_ios="App iOS", nav_features="Funzionalità", nav_privacy="Privacy",
+    title="PhotoCull — ordinare foto iPhone e Android su Mac o PC",
+    desc="Ordina le foto del tuo iPhone o Android da un Mac o PC Windows: per soggiorno, foto simili fianco a fianco, eliminazione in blocco. Gratis, 100% in locale.",
+    nav_ios="App mobile", nav_features="Funzionalità", nav_privacy="Privacy",
     badge="🖥️ App desktop (macOS · Windows)",
-    h1="Ordina migliaia di foto dell'iPhone su Mac o PC",
-    subtitle="PhotoCull è un'applicazione desktop a tutti gli effetti: mostra l'intero rullino del tuo iPhone raggruppato per soggiorno, confronta le tue foto affiancate ed elimina in blocco ciò che non vale più la pena tenere — direttamente dal tuo Mac o PC.",
+    h1="Ordina migliaia di foto di iPhone e Android su Mac o PC",
+    subtitle="PhotoCull è un'applicazione desktop a tutti gli effetti: mostra l'intero rullino del tuo iPhone o telefono Android raggruppato per soggiorno, confronta le tue foto affiancate ed elimina in blocco ciò che non vale più la pena tenere — direttamente dal tuo Mac o PC.",
     cta_download="💻 Scarica per Mac", cta_download_windows="🪟 Scarica per Windows", cta_ms_store="🛍️ Scarica da Microsoft Store",
     features_h2="Cosa fa l'app",
     features=[
         ("🧳", 'Vista "Viaggi / soggiorni"', "Tutta la tua libreria foto raggruppata automaticamente per soggiorno (tempo E luogo, come l'app iOS) — per individuare a colpo d'occhio i viaggi che occupano più spazio."),
         ("🔍", "Confronto affiancato", "Mostra fino a 6 foto simili contemporaneamente per scegliere la migliore — ideale per ordinare raffiche e quasi-duplicati."),
-        ("🗑️", "Eliminazione in blocco, in tutta sicurezza", "Contrassegna centinaia di foto in pochi clic. L'eliminazione effettiva passa dall'app compagna sul tuo iPhone e da «Eliminati di recente» (30 giorni) — mai un'eliminazione definitiva immediata."),
+        ("🗑️", "Eliminazione in blocco, in tutta sicurezza", "Contrassegna centinaia di foto in pochi clic. L'eliminazione effettiva passa dall'app TripSweep sul telefono e dal suo cestino (30 giorni) — mai un'eliminazione definitiva immediata."),
         ("⚖️", "La dimensione che conta", "Ordina e filtra per soggiorno di 1 giorno, per luogo escluso (casa, lavoro...), per dimensione — gli stessi filtri dell'app iOS, pensati per la velocità."),
-        ("🔌", "Connessione diretta all'iPhone", "Collega il tuo iPhone via USB (oppure usa la modalità simulazione per provarla): PhotoCull legge il tuo rullino direttamente, senza passare da iCloud né da alcun server."),
+        ("🔌", "Connessione diretta al telefono", "Collega l'iPhone via USB, oppure il telefono Android via Wi-Fi (o USB su Windows): PhotoCull legge il rullino direttamente, senza cloud né server."),
         ("🔒", "100% sul dispositivo", "Nessuna foto, nessuna posizione GPS viene mai inviata altrove. Il riconoscimento dei luoghi funziona interamente in locale, senza account né abbonamento."),
     ],
-    strip_h2="Funziona con l'app iOS TripSweep",
-    strip_p_before="Sfogliare, confrontare e ordinare le foto del tuo iPhone funziona da solo: collegalo via USB. Per eliminare davvero le foto dall'iPhone serve anche ",
-    strip_p_link="l'app iOS TripSweep (gratuita)",
-    strip_p_after=", che applica l'eliminazione sul telefono tramite «Eliminati di recente» e rende l'analisi dei soggiorni quasi istantanea. Le cartelle del Mac o del PC si ordinano anche senza.",
+    connect_h2="Collega il telefono in un minuto",
+    connect_intro="Al primo avvio PhotoCull chiede dove sono le tue foto e ti guida passo passo.",
+    connect=[
+        ("📱", "iPhone, via USB", "Mac e Windows. Collega l'iPhone, sbloccalo e tocca «Autorizza», poi fai clic su «Connetti l'iPhone». Su Windows installa prima l'app gratuita Dispositivi Apple."),
+        ("📶", "Android, via Wi-Fi", "Mac e Windows. Apri la scheda Eliminazione di TripSweep sul telefono, fai clic su «Telefono Android» in PhotoCull e scegli il telefono. Autorizza il computer una volta: lo stesso codice a 4 cifre appare su entrambi gli schermi."),
+        ("🔌", "Android, via USB", "Windows. Collega il telefono, scegli «Trasferimento file» nella notifica USB, poi fai clic su «Telefono Android» e «Collega via USB». Un Mac non legge i telefoni Android via USB: usa il Wi-Fi."),
+        ("📁", "Una cartella", "Qualsiasi cartella del computer o di un disco: fai clic su «Apri cartella» o trascinala sulla finestra. Nessun telefono, nessun limite giornaliero."),
+    ],
+    strip_h2="Funziona con TripSweep su iPhone e Android",
+    strip_p_before="Sfogliare, confrontare e ordinare le foto del telefono funziona da solo. Per eliminare davvero le foto dal telefono serve anche ",
+    strip_p_link="l'app TripSweep (gratuita)",
+    strip_p_after=" sull'iPhone o sul telefono Android: applica l'eliminazione sul telefono tramite il suo cestino (30 giorni) e rende l'analisi dei soggiorni quasi istantanea. Le cartelle del Mac o del PC si ordinano anche senza.",
     footer_copy="© 2026 PhotoCull. Sviluppato da Jeffrey Brignoli.",
-    footer_ios="App iOS", footer_privacy="Privacy", footer_kofi="Ko-fi", footer_github="GitHub",
+    footer_ios="App mobile", footer_privacy="Privacy", footer_kofi="Ko-fi", footer_github="GitHub",
 ),
 "de": dict(
-    title="PhotoCull — iPhone-Fotos am Mac oder PC sortieren",
-    desc="Sortiere deine iPhone-Fotos am Computer, Mac oder Windows-PC: nach Reise gruppiert, ähnliche Fotos nebeneinander, Massenlöschung. Kostenlos, 100 % lokal.",
-    nav_ios="iOS-App", nav_features="Funktionen", nav_privacy="Datenschutz",
+    title="PhotoCull — iPhone- & Android-Fotos am Mac oder PC sortieren",
+    desc="Sortiere deine iPhone- oder Android-Fotos am Mac oder Windows-PC: nach Reise gruppiert, ähnliche Fotos nebeneinander, Massenlöschung. Kostenlos, 100 % lokal.",
+    nav_ios="Mobile App", nav_features="Funktionen", nav_privacy="Datenschutz",
     badge="🖥️ Desktop-App (macOS · Windows)",
-    h1="Tausende iPhone-Fotos am Mac oder PC sortieren",
-    subtitle="PhotoCull ist eine vollwertige Desktop-Anwendung: Sie zeigt deine gesamte iPhone-Fotorolle nach Aufenthalt gruppiert, vergleicht deine Fotos nebeneinander und löscht in großen Mengen, was sich nicht mehr zu behalten lohnt — direkt von deinem Mac oder PC aus.",
+    h1="Tausende iPhone- und Android-Fotos am Mac oder PC sortieren",
+    subtitle="PhotoCull ist eine vollwertige Desktop-Anwendung: Sie zeigt die gesamte Fotorolle deines iPhones oder Android-Telefons nach Aufenthalt gruppiert, vergleicht deine Fotos nebeneinander und löscht in großen Mengen, was sich nicht mehr zu behalten lohnt — direkt von deinem Mac oder PC aus.",
     cta_download="💻 Für Mac herunterladen", cta_download_windows="🪟 Für Windows herunterladen", cta_ms_store="🛍️ Im Microsoft Store holen",
     features_h2="Was die App kann",
     features=[
         ("🧳", 'Ansicht "Reisen / Aufenthalte"', "Deine gesamte Fotobibliothek automatisch nach Aufenthalt gruppiert (Zeit UND Ort, genau wie bei der iOS-App) — erkenne auf einen Blick, welche Reisen am meisten Platz beanspruchen."),
         ("🔍", "Seite-an-Seite-Vergleich", "Zeige bis zu 6 ähnliche Fotos gleichzeitig an, um das beste auszuwählen — ideal zum Sortieren von Serienbildern und Beinahe-Duplikaten."),
-        ("🗑️", "Sicheres Löschen in großen Mengen", "Markiere Hunderte von Fotos in wenigen Klicks. Das eigentliche Löschen läuft über die Begleit-App auf deinem iPhone und „Kürzlich gelöscht“ (30 Tage) — nie ein sofortiges endgültiges Löschen."),
+        ("🗑️", "Sicheres Löschen in großen Mengen", "Markiere Hunderte von Fotos in wenigen Klicks. Das eigentliche Löschen läuft über die TripSweep-App auf deinem Telefon und dessen Papierkorb (30 Tage) — nie ein sofortiges endgültiges Löschen."),
         ("⚖️", "Die Größe, die zählt", "Sortiere und filtere nach eintägigem Aufenthalt, nach ausgeschlossenem Ort (Zuhause, Arbeit...), nach Größe — dieselben Filter wie bei der iOS-App, auf Geschwindigkeit ausgelegt."),
-        ("🔌", "Direkte Verbindung zum iPhone", "Schließe dein iPhone per USB an (oder nutze den Simulationsmodus zum Testen): PhotoCull liest deine Fotorolle direkt, ganz ohne iCloud und ohne Server."),
+        ("🔌", "Direkte Verbindung zum Telefon", "Schließe dein iPhone per USB an oder verbinde dein Android-Telefon per WLAN (oder USB unter Windows): PhotoCull liest deine Fotorolle direkt, ganz ohne Cloud und ohne Server."),
         ("🔒", "100 % auf dem Gerät", "Kein Foto, kein GPS-Standort wird jemals irgendwohin gesendet. Die Ortserkennung läuft vollständig lokal, ohne Konto und ohne Abo."),
     ],
-    strip_h2="Funktioniert mit der iOS-App TripSweep",
-    strip_p_before="Die Fotos deines iPhones durchsuchen, vergleichen und sortieren funktioniert allein: Schließe es einfach per USB an. Um Fotos wirklich vom iPhone zu löschen, brauchst du außerdem ",
-    strip_p_link="die iOS-App TripSweep (kostenlos)",
-    strip_p_after=", die das Löschen auf dem Telefon über „Kürzlich gelöscht“ ausführt und die Analyse der Aufenthalte nahezu augenblicklich macht. Ordner auf deinem Mac oder PC lassen sich auch ohne sie sortieren.",
+    connect_h2="Telefon in einer Minute verbinden",
+    connect_intro="Beim ersten Start fragt PhotoCull, wo deine Fotos sind, und führt dich Schritt für Schritt.",
+    connect=[
+        ("📱", "iPhone, per USB", "Mac und Windows. Schließe das iPhone an, entsperre es und tippe auf „Vertrauen“, dann klicke auf „iPhone verbinden“. Unter Windows zuerst die kostenlose App Apple-Geräte installieren."),
+        ("📶", "Android, per WLAN", "Mac und Windows. Öffne in TripSweep auf dem Telefon den Tab „Löschen“, klicke in PhotoCull auf „Android-Telefon“ und wähle dein Telefon. Erlaube den Computer einmal: Auf beiden Bildschirmen erscheint derselbe 4-stellige Code."),
+        ("🔌", "Android, per USB", "Windows. Schließe das Telefon an, wähle „Dateiübertragung“ in der USB-Benachrichtigung, dann klicke auf „Android-Telefon“ und „Per USB verbinden“. Ein Mac liest Android-Telefone nicht per USB: nutze WLAN."),
+        ("📁", "Ein Ordner", "Jeder Ordner auf deinem Computer oder einem Laufwerk: Klicke auf „Ordner öffnen“ oder ziehe ihn auf das Fenster. Kein Telefon nötig, kein Tageslimit."),
+    ],
+    strip_h2="Funktioniert mit TripSweep auf iPhone und Android",
+    strip_p_before="Die Fotos deines Telefons durchsuchen, vergleichen und sortieren funktioniert allein. Um Fotos wirklich vom Telefon zu löschen, brauchst du außerdem ",
+    strip_p_link="die kostenlose App TripSweep",
+    strip_p_after=" auf dem iPhone oder Android-Telefon: Sie führt das Löschen über den Papierkorb des Telefons (30 Tage) aus und macht die Analyse der Aufenthalte nahezu augenblicklich. Ordner auf deinem Mac oder PC lassen sich auch ohne sie sortieren.",
     footer_copy="© 2026 PhotoCull. Entwickelt von Jeffrey Brignoli.",
-    footer_ios="iOS-App", footer_privacy="Datenschutz", footer_kofi="Ko-fi", footer_github="GitHub",
+    footer_ios="Mobile App", footer_privacy="Datenschutz", footer_kofi="Ko-fi", footer_github="GitHub",
 ),
 "es": dict(
-    title="PhotoCull — ordenar las fotos del iPhone en Mac o PC",
-    desc="Ordena las fotos de tu iPhone desde el ordenador, Mac o PC con Windows: por viaje, fotos parecidas lado a lado, borrado en masa. Gratis, 100 % local.",
-    nav_ios="Aplicación iOS", nav_features="Funciones", nav_privacy="Privacidad",
+    title="PhotoCull — ordenar fotos de iPhone y Android en Mac o PC",
+    desc="Ordena las fotos de tu iPhone o Android desde un Mac o PC con Windows: por viaje, fotos parecidas lado a lado, borrado en masa. Gratis, 100 % local.",
+    nav_ios="App móvil", nav_features="Funciones", nav_privacy="Privacidad",
     badge="🖥️ Aplicación de escritorio (macOS · Windows)",
-    h1="Ordena miles de fotos del iPhone en tu Mac o PC",
-    subtitle="PhotoCull es una aplicación de escritorio completa: muestra todo el carrete de tu iPhone agrupado por estancia, compara tus fotos una junto a otra y elimina en masa lo que ya no vale la pena conservar — directamente desde tu Mac o PC.",
+    h1="Ordena miles de fotos de iPhone y Android en tu Mac o PC",
+    subtitle="PhotoCull es una aplicación de escritorio completa: muestra todo el carrete de tu iPhone o teléfono Android agrupado por estancia, compara tus fotos una junto a otra y elimina en masa lo que ya no vale la pena conservar — directamente desde tu Mac o PC.",
     cta_download="💻 Descargar para Mac", cta_download_windows="🪟 Descargar para Windows", cta_ms_store="🛍️ Obtener en Microsoft Store",
     features_h2="Qué hace la app",
     features=[
         ("🧳", 'Vista "Viajes / estancias"', "Toda tu biblioteca de fotos agrupada automáticamente por estancia (tiempo Y lugar, igual que la app de iOS) — detecta de un vistazo los viajes que ocupan más espacio."),
         ("🔍", "Comparación lado a lado", "Muestra hasta 6 fotos similares a la vez para elegir la mejor — ideal para ordenar ráfagas y casi duplicados."),
-        ("🗑️", "Eliminación en masa, con total seguridad", "Marca cientos de fotos en pocos clics. La eliminación real pasa por la app complementaria en tu iPhone y por «Eliminados recientemente» (30 días) — nunca una eliminación definitiva inmediata."),
+        ("🗑️", "Eliminación en masa, con total seguridad", "Marca cientos de fotos en pocos clics. La eliminación real pasa por la app TripSweep en tu teléfono y su papelera (30 días) — nunca una eliminación definitiva inmediata."),
         ("⚖️", "El tamaño que importa", "Ordena y filtra por estancia de 1 día, por lugar excluido (casa, trabajo...), por tamaño — los mismos filtros que en la app de iOS, pensados para ir rápido."),
-        ("🔌", "Conexión directa con el iPhone", "Conecta tu iPhone por USB (o usa el modo de simulación para probarlo): PhotoCull lee tu carrete directamente, sin pasar por iCloud ni por ningún servidor."),
+        ("🔌", "Conexión directa con el teléfono", "Conecta tu iPhone por USB, o tu teléfono Android por wifi (o USB en Windows): PhotoCull lee tu carrete directamente, sin nube ni servidor."),
         ("🔒", "100 % en el dispositivo", "Ninguna foto ni ubicación GPS se envía nunca a ningún sitio. El reconocimiento de lugares funciona completamente en local, sin cuenta ni suscripción."),
     ],
-    strip_h2="Funciona con la app de iOS TripSweep",
-    strip_p_before="Explorar, comparar y ordenar las fotos de tu iPhone funciona por sí solo: conéctalo por USB. Para eliminar de verdad fotos del iPhone también necesitas ",
-    strip_p_link="la app de iOS TripSweep (gratuita)",
-    strip_p_after=", que aplica la eliminación en el teléfono a través de «Eliminados recientemente» y hace casi instantáneo el análisis de estancias. Las carpetas del Mac o del PC se ordenan sin ella.",
+    connect_h2="Conecta tu teléfono en un minuto",
+    connect_intro="En el primer inicio, PhotoCull pregunta dónde están tus fotos y te guía paso a paso.",
+    connect=[
+        ("📱", "iPhone, por USB", "Mac y Windows. Conecta el iPhone, desbloquéalo y toca «Confiar», luego haz clic en «Conectar el iPhone». En Windows, instala antes la app gratuita Dispositivos Apple."),
+        ("📶", "Android, por wifi", "Mac y Windows. Abre la pestaña Eliminación de TripSweep en el teléfono, haz clic en «Teléfono Android» en PhotoCull y elige tu teléfono. Autoriza el ordenador una vez: el mismo código de 4 cifras aparece en ambas pantallas."),
+        ("🔌", "Android, por USB", "Windows. Conecta el teléfono, elige «Transferencia de archivos» en su notificación USB y haz clic en «Teléfono Android» y «Conectar por USB». Un Mac no lee teléfonos Android por USB: usa el wifi."),
+        ("📁", "Una carpeta", "Cualquier carpeta de tu ordenador o de un disco: haz clic en «Abrir carpeta» o arrástrala a la ventana. Sin teléfono, sin límite diario."),
+    ],
+    strip_h2="Funciona con TripSweep en iPhone y Android",
+    strip_p_before="Explorar, comparar y ordenar las fotos de tu teléfono funciona por sí solo. Para eliminar de verdad fotos del teléfono también necesitas ",
+    strip_p_link="la app TripSweep (gratuita)",
+    strip_p_after=" en el iPhone o el teléfono Android: aplica la eliminación en el teléfono a través de su papelera (30 días) y hace casi instantáneo el análisis de estancias. Las carpetas del Mac o del PC se ordenan sin ella.",
     footer_copy="© 2026 PhotoCull. Desarrollado por Jeffrey Brignoli.",
-    footer_ios="Aplicación iOS", footer_privacy="Privacidad", footer_kofi="Ko-fi", footer_github="GitHub",
+    footer_ios="App móvil", footer_privacy="Privacidad", footer_kofi="Ko-fi", footer_github="GitHub",
 ),
 }
 
@@ -709,51 +749,51 @@ PRICING = {
     h2="Free, with two one-time upgrades",
     intro="No subscription, ever. Browsing, comparing and sorting are always free. The plans only set how many photos you can delete per day.",
     plans=[
-        ("Free", "$0", "Browse, compare and sort everything. Delete 3 times a day on the iPhone, and up to 6 photos a day from the Mac."),
-        ("Pro", "$4.99 · one time", "Unlimited deletion on the iPhone, unlimited custom places and bulk actions across trips. Up to 15 photos a day from the Mac."),
-        ("Pro + Desktop", "$24.99 · one time", "Everything in Pro, plus unlimited deletion from PhotoCull on your Mac."),
+        ("Free", "$0", "Browse, compare and sort everything. Delete 3 times a day on the phone, and up to 6 photos a day from the computer."),
+        ("Pro", "$4.99 · one time", "Unlimited deletion on the phone, unlimited custom places and bulk actions across trips. Up to 15 photos a day from the computer."),
+        ("Pro + Desktop", "$24.99 on iPhone · $14.99 on Android · one time", "Everything in Pro, plus unlimited deletion from PhotoCull on your computer."),
     ],
-    note="Prices in USD; the App Store shows them in your currency. You buy in the TripSweep iOS app and PhotoCull follows through your iPhone. Sorting a folder on your Mac is never limited.",
+    note="Prices in USD; the App Store and Google Play show them in your currency. You buy in the TripSweep app on your phone, and PhotoCull follows through the phone. Sorting a folder on your computer is never limited.",
 ),
 "fr": dict(
     h2="Gratuit, avec deux options en achat unique",
     intro="Jamais d'abonnement. Parcourir, comparer et trier est toujours gratuit. Les formules ne fixent que le nombre de photos supprimables par jour.",
     plans=[
-        ("Gratuit", "0 $", "Parcourez, comparez et triez tout. 3 suppressions par jour sur l'iPhone, et jusqu'à 6 photos par jour depuis le Mac."),
-        ("Pro", "4,99 $ · achat unique", "Suppression illimitée sur l'iPhone, lieux personnalisés illimités et actions groupées sur plusieurs séjours. Jusqu'à 15 photos par jour depuis le Mac."),
-        ("Pro + Desktop", "24,99 $ · achat unique", "Tout Pro, plus la suppression illimitée depuis PhotoCull sur votre Mac."),
+        ("Gratuit", "0 $", "Parcourez, comparez et triez tout. 3 suppressions par jour sur le téléphone, et jusqu'à 6 photos par jour depuis l'ordinateur."),
+        ("Pro", "4,99 $ · achat unique", "Suppression illimitée sur le téléphone, lieux personnalisés illimités et actions groupées sur plusieurs séjours. Jusqu'à 15 photos par jour depuis l'ordinateur."),
+        ("Pro + Desktop", "24,99 $ sur iPhone · 14,99 $ sur Android · achat unique", "Tout Pro, plus la suppression illimitée depuis PhotoCull sur votre ordinateur."),
     ],
-    note="Prix en dollars US ; l'App Store les affiche dans votre devise. L'achat se fait dans l'app iOS TripSweep et PhotoCull suit via votre iPhone. Trier un dossier du Mac n'est jamais limité.",
+    note="Prix en dollars US ; l'App Store et Google Play les affichent dans votre devise. L'achat se fait dans l'app TripSweep du téléphone et PhotoCull suit via le téléphone. Trier un dossier de l'ordinateur n'est jamais limité.",
 ),
 "it": dict(
     h2="Gratis, con due upgrade a pagamento unico",
     intro="Mai un abbonamento. Sfogliare, confrontare e ordinare è sempre gratis. I piani stabiliscono solo quante foto puoi eliminare al giorno.",
     plans=[
-        ("Gratis", "0 $", "Sfoglia, confronta e ordina tutto. 3 eliminazioni al giorno su iPhone e fino a 6 foto al giorno dal Mac."),
-        ("Pro", "4,99 $ · acquisto unico", "Eliminazione illimitata su iPhone, luoghi personalizzati illimitati e azioni di gruppo su più soggiorni. Fino a 15 foto al giorno dal Mac."),
-        ("Pro + Desktop", "24,99 $ · acquisto unico", "Tutto Pro, più l'eliminazione illimitata da PhotoCull sul tuo Mac."),
+        ("Gratis", "0 $", "Sfoglia, confronta e ordina tutto. 3 eliminazioni al giorno sul telefono e fino a 6 foto al giorno dal computer."),
+        ("Pro", "4,99 $ · acquisto unico", "Eliminazione illimitata sul telefono, luoghi personalizzati illimitati e azioni di gruppo su più soggiorni. Fino a 15 foto al giorno dal computer."),
+        ("Pro + Desktop", "24,99 $ su iPhone · 14,99 $ su Android · acquisto unico", "Tutto Pro, più l'eliminazione illimitata da PhotoCull sul tuo computer."),
     ],
-    note="Prezzi in dollari USA; l'App Store li mostra nella tua valuta. L'acquisto si fa nell'app iOS TripSweep e PhotoCull lo segue tramite l'iPhone. Ordinare una cartella del Mac non è mai limitato.",
+    note="Prezzi in dollari USA; l'App Store e Google Play li mostrano nella tua valuta. L'acquisto si fa nell'app TripSweep sul telefono e PhotoCull lo segue tramite il telefono. Ordinare una cartella del computer non è mai limitato.",
 ),
 "de": dict(
     h2="Kostenlos, mit zwei Einmal-Upgrades",
     intro="Nie ein Abo. Durchsuchen, Vergleichen und Sortieren ist immer kostenlos. Die Pläne legen nur fest, wie viele Fotos du pro Tag löschen kannst.",
     plans=[
-        ("Kostenlos", "0 $", "Alles durchsuchen, vergleichen und sortieren. 3 Löschvorgänge pro Tag auf dem iPhone und bis zu 6 Fotos pro Tag vom Mac aus."),
-        ("Pro", "4,99 $ · einmalig", "Unbegrenztes Löschen auf dem iPhone, unbegrenzt eigene Orte und Sammelaktionen für mehrere Aufenthalte. Bis zu 15 Fotos pro Tag vom Mac aus."),
-        ("Pro + Desktop", "24,99 $ · einmalig", "Alles von Pro, plus unbegrenztes Löschen über PhotoCull auf deinem Mac."),
+        ("Kostenlos", "0 $", "Alles durchsuchen, vergleichen und sortieren. 3 Löschvorgänge pro Tag auf dem Telefon und bis zu 6 Fotos pro Tag vom Computer aus."),
+        ("Pro", "4,99 $ · einmalig", "Unbegrenztes Löschen auf dem Telefon, unbegrenzt eigene Orte und Sammelaktionen für mehrere Aufenthalte. Bis zu 15 Fotos pro Tag vom Computer aus."),
+        ("Pro + Desktop", "24,99 $ auf dem iPhone · 14,99 $ auf Android · einmalig", "Alles von Pro, plus unbegrenztes Löschen über PhotoCull auf deinem Computer."),
     ],
-    note="Preise in US-Dollar; der App Store zeigt sie in deiner Währung an. Du kaufst in der iOS-App TripSweep, PhotoCull folgt über dein iPhone. Einen Ordner auf dem Mac zu sortieren ist nie begrenzt.",
+    note="Preise in US-Dollar; App Store und Google Play zeigen sie in deiner Währung an. Du kaufst in der TripSweep-App auf dem Telefon, PhotoCull folgt über das Telefon. Einen Ordner auf dem Computer zu sortieren ist nie begrenzt.",
 ),
 "es": dict(
     h2="Gratis, con dos mejoras de pago único",
     intro="Nunca una suscripción. Explorar, comparar y ordenar es siempre gratis. Los planes solo fijan cuántas fotos puedes eliminar al día.",
     plans=[
-        ("Gratis", "0 $", "Explora, compara y ordena todo. 3 eliminaciones al día en el iPhone y hasta 6 fotos al día desde el Mac."),
-        ("Pro", "4,99 $ · pago único", "Eliminación ilimitada en el iPhone, lugares personalizados ilimitados y acciones masivas en varias estancias. Hasta 15 fotos al día desde el Mac."),
-        ("Pro + Desktop", "24,99 $ · pago único", "Todo Pro, más eliminación ilimitada desde PhotoCull en tu Mac."),
+        ("Gratis", "0 $", "Explora, compara y ordena todo. 3 eliminaciones al día en el teléfono y hasta 6 fotos al día desde el ordenador."),
+        ("Pro", "4,99 $ · pago único", "Eliminación ilimitada en el teléfono, lugares personalizados ilimitados y acciones masivas en varias estancias. Hasta 15 fotos al día desde el ordenador."),
+        ("Pro + Desktop", "24,99 $ en iPhone · 14,99 $ en Android · pago único", "Todo Pro, más eliminación ilimitada desde PhotoCull en tu ordenador."),
     ],
-    note="Precios en dólares estadounidenses; la App Store los muestra en tu moneda. Compras en la app de iOS TripSweep y PhotoCull lo sigue a través de tu iPhone. Ordenar una carpeta del Mac nunca está limitado.",
+    note="Precios en dólares estadounidenses; la App Store y Google Play los muestran en tu moneda. Compras en la app TripSweep del teléfono y PhotoCull lo sigue a través del teléfono. Ordenar una carpeta del ordenador nunca está limitado.",
 ),
 }
 
@@ -912,6 +952,7 @@ SHOTS = {
         ("review", "Review a group of similar photos side by side: keep the best, mark the rest."),
         ("compare", "Compare up to 6 photos at once in full screen."),
         ("trips", "Your library grouped by trip, with the space each one takes."),
+        ("android", "Connect an Android phone over Wi-Fi: allow the computer once, from the phone."),
     ],
 ),
 "fr": dict(
@@ -921,6 +962,7 @@ SHOTS = {
         ("review", "Passez en revue un groupe de photos similaires côte à côte : gardez la meilleure, marquez les autres."),
         ("compare", "Comparez jusqu'à 6 photos à la fois en plein écran."),
         ("trips", "Votre photothèque regroupée par séjour, avec la place que chacun occupe."),
+        ("android", "Connectez un téléphone Android en Wi-Fi : autorisez l'ordinateur une fois, depuis le téléphone."),
     ],
 ),
 "it": dict(
@@ -930,6 +972,7 @@ SHOTS = {
         ("review", "Rivedi un gruppo di foto simili affiancate: tieni la migliore, segna le altre."),
         ("compare", "Confronta fino a 6 foto alla volta a schermo intero."),
         ("trips", "La tua libreria raggruppata per soggiorno, con lo spazio occupato da ciascuno."),
+        ("android", "Collega un telefono Android via Wi-Fi: autorizza il computer una volta, dal telefono."),
     ],
 ),
 "de": dict(
@@ -939,6 +982,7 @@ SHOTS = {
         ("review", "Eine Gruppe ähnlicher Fotos nebeneinander prüfen: das beste behalten, den Rest markieren."),
         ("compare", "Bis zu 6 Fotos gleichzeitig im Vollbild vergleichen."),
         ("trips", "Deine Mediathek nach Aufenthalten gruppiert, mit dem Platz, den jeder belegt."),
+        ("android", "Ein Android-Telefon per WLAN verbinden: den Computer einmal am Telefon erlauben."),
     ],
 ),
 "es": dict(
@@ -948,6 +992,7 @@ SHOTS = {
         ("review", "Revisa un grupo de fotos similares una al lado de otra: conserva la mejor, marca el resto."),
         ("compare", "Compara hasta 6 fotos a la vez a pantalla completa."),
         ("trips", "Tu fototeca agrupada por estancia, con el espacio que ocupa cada una."),
+        ("android", "Conecta un teléfono Android por wifi: autoriza el ordenador una vez, desde el teléfono."),
     ],
 ),
 }
@@ -980,6 +1025,13 @@ def render_photocull_home(lang):
           <h3>{title}</h3>
           <p>{text}</p>
         </div>''' for icon, title, text in d["features"]
+    )
+    connect_html = "\n".join(
+        f'''        <div class="feature-card">
+          <span class="icon">{icon}</span>
+          <h3>{title}</h3>
+          <p>{text}</p>
+        </div>''' for icon, title, text in d["connect"]
     )
     return f'''<!DOCTYPE html>
 <html lang="{lang}">
@@ -1029,7 +1081,15 @@ def render_photocull_home(lang):
       </a>
     </section>
 
-{render_desktop_shots(lang)}    <section id="fonctionnalites">
+{render_desktop_shots(lang)}    <section id="connexion">
+      <h2>{d['connect_h2']}</h2>
+      <p style="text-align:center;">{d['connect_intro']}</p>
+      <div class="features" style="grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));">
+{connect_html}
+      </div>
+    </section>
+
+    <section id="fonctionnalites">
       <h2>{d['features_h2']}</h2>
       <div class="features">
 {features_html}
@@ -1043,6 +1103,10 @@ def render_photocull_home(lang):
           {d['strip_p_before']}
           <a href="{cross_url(lang)}">{d['strip_p_link']}</a>{d['strip_p_after']}
         </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="{store_link(f'site-{lang}-photocull-home')}" target="_blank" rel="noopener">{BLOG_UI[lang]['cta_store']}</a>
+          <a class="btn btn-primary" href="{play_link(f'site-{lang}-photocull-home')}" target="_blank" rel="noopener">{BLOG_UI[lang]['cta_play']}</a>
+        </div>
       </div>
     </section>
 
@@ -1533,6 +1597,27 @@ def render_blog_index(lang):
     </section>
 ''' + blog_foot(lang))
 
+# iPhone article -> its Android twin (same product blog); each one links to the other.
+TWINS = {
+    "free-up-iphone-storage": "free-up-android-storage",
+    "delete-duplicate-photos-iphone": "delete-duplicate-photos-android",
+    "sort-iphone-photos-on-mac": "sort-android-photos-on-mac",
+    "sort-iphone-photos-on-pc": "sort-android-photos-on-pc",
+    "free-up-iphone-from-mac-or-pc": "free-up-android-from-mac-or-pc",
+}
+
+def twin_note(lang, slug):
+    """One line under the article date pointing to the twin guide for the other phone."""
+    if slug in TWINS:
+        other, label = TWINS[slug], BLOG_UI[lang]["twin_android"]
+    else:
+        other = next((k for k, v in TWINS.items() if v == slug), None)
+        label = BLOG_UI[lang]["twin_iphone"]
+    post = next((o for o in blog_posts(lang) if o["slug"] == other), None) if other else None
+    if not post:
+        return ""
+    return f'      <p><strong>{label}</strong> <a href="{path_for(lang, f"blog-{other}.html", lang)}">{post["h1"]}</a></p>\n'
+
 def render_blog_post(lang, p):
     page = f"blog-{p['slug']}.html"
     published, modified = POST_DATES[p["slug"]]
@@ -1544,7 +1629,7 @@ def render_blog_post(lang, p):
     <article class="legal">
       <h1>{p['h1']}</h1>
       <p class="post-meta">Jeffrey Brignoli · <time datetime="{modified}">{human_date(lang, modified)}</time></p>
-{body}
+{twin_note(lang, p['slug'])}{body}
       {cta_row(lang, 'blog-' + p['slug'])}
       <h2>{BLOG_UI[lang]['more']}</h2>
       <ul>
@@ -1570,6 +1655,11 @@ POST_DATES = {
     "find-duplicate-photos-on-mac": ("2026-11-10", "2026-11-10"),
     "find-duplicate-photos-on-windows": ("2026-11-10", "2026-11-10"),
     "sort-photo-folder-external-drive": ("2026-11-10", "2026-11-10"),
+    "sort-android-photos-on-mac": ("2026-11-10", "2026-11-10"),
+    "sort-android-photos-on-pc": ("2026-11-10", "2026-11-10"),
+    "free-up-android-from-mac-or-pc": ("2026-11-10", "2026-11-10"),
+    "free-up-android-storage": ("2026-11-10", "2026-11-10"),
+    "delete-duplicate-photos-android": ("2026-11-10", "2026-11-10"),
 }
 
 # ---------------------------------------------------------------------------
@@ -1614,7 +1704,7 @@ LLMS_SUMMARY = '''> TripSweep is an iOS and Android app that groups your photos 
 > taking up space, and sorts out what you don't need by type — identical copies, similar
 > and blurry photos, screenshots, large videos — so you keep the best shot and delete
 > the rest in a few taps. PhotoCull is its desktop companion (macOS and Windows) for bulk
-> photo review and cleanup on a big screen. Both run 100% on-device: no photo, video, or
+> photo review and cleanup of an iPhone or Android phone on a big screen. Both run 100% on-device: no photo, video, or
 > location data is ever collected, sent, or shared.'''
 
 def llms_pages():
@@ -1623,7 +1713,7 @@ def llms_pages():
         f"- [TripSweep on Google Play]({PLAY_STORE_URL}): download the Android app (Android 11+).",
         f"- [TripSweep home]({page_url('en', 'index.html')}): grouping by trip, event or month, a Cleanup tab, review, backup, sharing and deletion on iPhone and Android.",
     ] if SITE == "tripsweep" else [
-        f"- [PhotoCull home]({page_url('en', 'index.html')}): sort and bulk-delete photos from a Mac or Windows PC.",
+        f"- [PhotoCull home]({page_url('en', 'index.html')}): sort and bulk-delete iPhone and Android photos from a Mac or Windows PC (iPhone by USB; Android over Wi-Fi, or USB on Windows).",
         f"- [Download PhotoCull for Mac]({PHOTOCULL_DOWNLOAD_URL}): free, signed and notarized by Apple, macOS 11+ on Apple Silicon.",
         f"- [PhotoCull on the Microsoft Store]({MS_STORE_URL}): the Windows app, installed from the Store.",
         f"- [Download PhotoCull for Windows]({PHOTOCULL_WINDOWS_DOWNLOAD_URL}): free, Windows 10/11 (64-bit); reading an iPhone needs the free Apple Devices app. Not code-signed yet, so SmartScreen may warn on first launch.",
@@ -1633,8 +1723,8 @@ def llms_pages():
                   f"- [{SITES[SITE]['brand']} blog]({page_url('en', 'blog.html')}): guides."] + posts
 
 def llms_txt(pages):
-    pricing = ("- TripSweep plans (one-time purchases, no subscription): Free, Pro ($4.99) and Pro + Desktop ($24.99). "
-               "Pro + Desktop removes the daily limit on photos deleted from PhotoCull on a Mac (free: 6 a day, Pro: 15).\n") if SHOW_PRICING else ""
+    pricing = ("- TripSweep plans (one-time purchases, no subscription, on iPhone and Android): Free, Pro ($4.99) and Pro + Desktop ($24.99 on iPhone, $14.99 on Android). "
+               "Pro + Desktop removes the daily limit on photos deleted from PhotoCull on a computer (free: 6 a day, Pro: 15).\n") if SHOW_PRICING else ""
     return f'''# TripSweep & PhotoCull
 
 {LLMS_SUMMARY}

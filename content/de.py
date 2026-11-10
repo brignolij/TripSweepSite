@@ -6,7 +6,9 @@ BLOG_UI = dict(
     cta_store="📱 TripSweep im App Store laden",
     cta_play="🤖 TripSweep bei Google Play laden",
     cta_mac="💻 PhotoCull für Mac laden", cta_win="🪟 PhotoCull für Windows laden",
-    cross_label={"tripsweep": "Desktop-App", "photocull": "iOS-App"},
+    cross_label={"tripsweep": "Desktop-App", "photocull": "Mobile App"},
+    twin_android="Du nutzt ein Android-Telefon? Lies die Android-Anleitung:",
+    twin_iphone="Du nutzt ein iPhone? Lies die iPhone-Anleitung:",
     index={
         "tripsweep": dict(
             title="TripSweep Blog – doppelte Fotos löschen, Speicher freigeben",
@@ -15,9 +17,9 @@ BLOG_UI = dict(
             intro="Kurze, praktische Anleitungen, um Speicherplatz auf deinem iPhone freizugeben, Duplikate zu löschen und nur die besten Aufnahmen zu behalten."),
         "photocull": dict(
             title="PhotoCull Blog – Fotos am Mac oder PC sortieren",
-            desc="Anleitungen, um Tausende Fotos am großen Bildschirm schneller zu sortieren, ähnliche Aufnahmen zu vergleichen und dein iPhone vom Mac oder PC aus aufzuräumen.",
+            desc="Tausende Fotos am großen Bildschirm schneller sortieren, ähnliche Aufnahmen vergleichen und iPhone oder Android-Telefon vom Mac oder PC aus aufräumen.",
             h1="Anleitungen zum Sortieren deiner Fotos am Computer",
-            intro="Warum ein großer Bildschirm das Sortieren von Fotos so viel schneller macht und wie du damit dein iPhone aufräumst."),
+            intro="Warum ein großer Bildschirm das Sortieren von Fotos so viel schneller macht und wie du damit dein iPhone oder Android-Telefon aufräumst."),
     },
 )
 
@@ -50,10 +52,10 @@ FAQ_TRIPSWEEP_EXTRA = [
 
 FAQ_PHOTOCULL = dict(
     title="PhotoCull FAQ – Fotos am Mac oder PC sortieren und löschen",
-    desc="Tausende Fotos am Computer sortieren, ähnliche Aufnahmen vergleichen, iPhone-Speicher vom Mac oder PC aus freigeben und sicher löschen: Antworten zu PhotoCull.",
-    nav_home="PhotoCull", nav_desktop="iOS-App",
+    desc="Tausende Fotos am Computer sortieren, ähnliche Aufnahmen vergleichen, iPhone oder Android-Telefon vom Mac oder PC aus aufräumen: Antworten zu PhotoCull.",
+    nav_home="PhotoCull", nav_desktop="Mobile App",
     h1="Fragen und Antworten",
-    intro="Wie du deine Fotos am Computer schneller sortierst, dein iPhone von einem Mac oder PC aus aufräumst und was PhotoCull mit deinen Fotos macht (und nie macht).",
+    intro="Wie du deine Fotos am Computer schneller sortierst, dein iPhone oder Android-Telefon von einem Mac oder PC aus aufräumst und was PhotoCull mit deinen Fotos macht (und nie macht).",
     qa=[
         ('Wie sortiere ich meine iPhone-Fotos am Computer, Mac oder PC?',
          "Verbinde das iPhone per USB-Kabel mit dem Computer, entsperre es und tippe auf „Vertrauen“, dann öffne <a href=\"{pc}\">PhotoCull</a>: Es gruppiert deine Fotorolle nach Reise, vergleicht ähnliche Aufnahmen nebeneinander und markiert Hunderte Fotos mit wenigen Klicks. Schritt-für-Schritt-Anleitungen: <a href=\"{post:sort-iphone-photos-on-mac}\">am Mac</a> und <a href=\"{post:sort-iphone-photos-on-pc}\">am Windows-PC</a>."),
@@ -71,8 +73,18 @@ FAQ_PHOTOCULL = dict(
          "Nein. Löschungen auf dem iPhone laufen immer über das Album „Zuletzt gelöscht“ der Fotos-App, wo Fotos 30 Tage lang bleiben und wiederhergestellt werden können. PhotoCull führt nie ein sofortiges, endgültiges Löschen aus."),
         ("Wie verbinde ich mein iPhone mit PhotoCull?",
          "Verwende ein USB-Kabel, entsperre das iPhone und tippe auf „Vertrauen“, wenn du dazu aufgefordert wirst. Am Mac ist nichts weiter nötig. Installiere unter Windows die kostenlose App Apple Devices aus dem Microsoft Store, die den Treiber bereitstellt, mit dem PhotoCull das iPhone lesen kann."),
+        ("Kann ich die Fotos eines Android-Telefons an meinem Mac oder PC sortieren?",
+         "Ja. PhotoCull verbindet sich mit einem Android-Telefon per WLAN an einem Mac oder Windows-PC oder per USB unter Windows. Du bekommst dieselbe Reiseansicht, denselben Vergleich nebeneinander und dasselbe gesammelte Löschen wie beim iPhone. Das Telefon braucht die kostenlose <a href=\"{play}\">TripSweep-App</a> (Android 11 oder neuer), geöffnet im Tab „Löschen“."),
+        ("Wie verbinde ich mein Android-Telefon per WLAN?",
+         "Bringe Telefon und Computer in dasselbe WLAN und öffne in TripSweep auf dem Telefon den Tab „Löschen“. Klicke in PhotoCull auf „Android-Telefon“ und wähle dein Telefon, dann erlaubst du den Computer auf dem Telefon: Auf beiden Bildschirmen erscheint derselbe 4-stellige Code. Das machst du nur einmal; beim nächsten Mal verbindet es sich von selbst. <a href=\"{post:sort-android-photos-on-mac}\">Schritt-für-Schritt-Anleitung für den Mac</a>."),
+        ("Warum sieht mein Mac mein Android-Telefon nicht per USB?",
+         "macOS unterstützt die Art, wie Android-Telefone Dateien per USB freigeben (MTP), von Haus aus nicht, deshalb sieht ein Mac sie meist nicht. Nutze stattdessen die WLAN-Verbindung: Sie funktioniert an jedem Mac, ohne Treiber. Unter Windows funktionieren USB und WLAN."),
+        ("Ist die WLAN-Verbindung zu meinem Telefon sicher?",
+         "Ja. Telefon und Computer sprechen nur in deinem lokalen Netzwerk miteinander, über eine verschlüsselte Verbindung, und erst nachdem du den Computer auf dem Telefon mit einem übereinstimmenden Code erlaubt hast. Nichts läuft über das Internet, und du kannst einen Computer jederzeit in TripSweep wieder sperren."),
+        ("Was passiert mit Fotos, die ich auf einem Android-Telefon lösche?",
+         "Du bestätigst das Löschen auf dem Telefon in TripSweep, und die Fotos landen im Papierkorb des Telefons, wo sie 30 Tage bleiben und wiederhergestellt werden können. PhotoCull löscht von sich aus nie etwas endgültig."),
         ("Brauche ich die iOS-App TripSweep?",
-         "Nicht zum Durchsehen, Vergleichen und Sortieren. Du brauchst sie nur, um Fotos vom iPhone zu löschen, weil das Löschen auf dem Telefon ausgeführt wird. Ordner auf deinem Computer lassen sich auch ohne sie sortieren."),
+         "Nicht zum Durchsehen, Vergleichen und Sortieren eines iPhones. Du brauchst sie nur, um Fotos vom iPhone zu löschen, weil das Löschen auf dem Telefon ausgeführt wird. Ein Android-Telefon braucht die TripSweep-App für Android, um sich überhaupt zu verbinden. Ordner auf deinem Computer lassen sich auch ohne beide sortieren."),
         ("Wie finde ich doppelte Fotos in einem Ordner auf meinem Mac oder PC?",
          "Öffne den Ordner in PhotoCull („Ordner öffnen“ oder per Drag-and-drop ins Fenster ziehen). Die App durchsucht auch die Unterordner, vergleicht, was auf den Fotos zu sehen ist, und versieht exakte Kopien, Serienaufnahmen und fast identische Aufnahmen mit demselben „≈ N“-Abzeichen. Behalte die beste Aufnahme jeder Gruppe und schicke den Rest in den Papierkorb. Anleitungen: <a href=\"{post:find-duplicate-photos-on-mac}\">am Mac</a>, <a href=\"{post:find-duplicate-photos-on-windows}\">unter Windows</a>."),
         ("Kann ich PhotoCull für Fotos auf meinem Computer verwenden, nicht auf einem iPhone?",
@@ -183,6 +195,55 @@ dict(slug="clean-up-vacation-photos",
       <h2>Wie TripSweep hilft</h2>
       <p><a href="{ts}">TripSweep</a> gruppiert deine Fotos und Videos nach Reise (oder nach Ereignis und Monat, wenn es kein GPS gibt), zeigt, wie viele Gigabyte ähnlicher Fotos jede Reise enthält, schlägt die beste Aufnahme jeder Gruppe vor und exportiert oder teilt eine ganze Reise. Du kannst Zuhause und Arbeit ausschließen, damit der Alltag nicht wie eine Reise aussieht. Alles läuft auf deinem iPhone, offline.</p>
       <p>Um dasselbe auf einem großen Bildschirm zu tun, zeigt <a href="{pc}">PhotoCull</a> die Reisen deines iPhones an einem Mac oder Windows-PC.</p>"""),
+dict(slug="free-up-android-storage",
+     title="Android-Speicher freigeben ohne Google One",
+     desc="Wohin der Speicher deines Android-Telefons wirklich geht und wie du am schnellsten Gigabyte an Fotos und Videos freigibst, ohne mehr Cloud-Speicher zu bezahlen.",
+     h1="Android-Speicher freigeben, ohne für Google One zu bezahlen",
+     body="""      <p>„Speicher voll“ auf einem Android-Telefon bedeutet fast immer: Fotos und Videos. Das zeigt dir Einstellungen → Speicher deutlich, und der Großteil davon sind Aufnahmen, die du dir nie wieder ansehen wirst. So bekommst du den Platz zurück, ohne mehr Cloud-Speicher zu kaufen.</p>
+
+      <h2>1. Beginne mit dem, was am meisten wiegt</h2>
+      <p>Große Videos bringen den schnellsten Erfolg: Ein paar Minuten 4K-Video brauchen so viel Platz wie Hunderte Fotos. Sortiere sie nach Größe, sieh dir die ersten Sekunden an und lösche die, die du nie wieder öffnen wirst.</p>
+
+      <h2>2. Ähnliche Fotos löschen, nicht nur Duplikate</h2>
+      <p>Aufräum-Apps finden exakte Kopien, aber die eigentliche Verschwendung sind fast identische Aufnahmen: Serienaufnahmen, fünf Versuche für dasselbe Gruppenfoto, drei Selfies hintereinander. Behalte das beste jeder Gruppe und lösche den Rest.</p>
+
+      <h2>3. Screenshots und unscharfe Fotos entfernen</h2>
+      <p>Screenshots von Tickets, Karten und Unterhaltungen sammeln sich unbemerkt an, ebenso unscharfe oder versehentliche Aufnahmen. Als Stapel lassen sie sich schnell durchsehen.</p>
+
+      <h2>4. Den Papierkorb leeren</h2>
+      <p>Gelöschte Fotos warten meist 30 Tage im Papierkorb und belegen weiter Speicher. Wenn du mit deiner Auswahl zufrieden bist, leere ihn, um den Speicherplatz tatsächlich zurückzubekommen.</p>
+
+      <h2>5. Alte Reisen aufräumen, eine nach der anderen</h2>
+      <p>Alte Urlaube sind der größte Block an Fotos, die du dir nie ansiehst. Reise für Reise vorzugehen ist einfacher, als durch Tausende Fotos zu scrollen: Nimm die größte Reise, behalte die Highlights, lösche den Rest.</p>
+
+      <h2>Wie TripSweep das schneller macht</h2>
+      <p><a href="{ts}">TripSweep</a> erledigt diese Schritte für dich direkt auf dem Telefon. Der Tab „Aufräumen“ listet identische Kopien, ähnliche Fotos, unscharfe Fotos, Screenshots und große Videos auf, jeweils mit dem belegten Speicherplatz, und deine Reisen werden automatisch gruppiert. Die App ist kostenlos bei <a href="{play}">Google Play</a> erhältlich (Android 11 oder neuer) und arbeitet 100 % auf dem Telefon.</p>
+      <p>Wenn du einen großen Bildschirm bevorzugst, erledigt <a href="{pc}">PhotoCull</a> dieselbe Sortierung an einem Mac oder Windows-PC, verbunden per WLAN.</p>
+
+      <h2>Brauche ich Google One?</h2>
+      <p>Cloud-Speicher ist ein gutes Backup, aber kein Aufräumwerkzeug: Er speichert alles, auch die Duplikate. Wer zuerst aufräumt, braucht weniger Speicherplatz, egal wo.</p>"""),
+dict(slug="delete-duplicate-photos-android",
+     title="Doppelte und ähnliche Fotos auf Android löschen",
+     desc="Finde exakte Duplikate, Serienaufnahmen und fast identische Aufnahmen auf deinem Android-Telefon, behalte die beste und lösche den Rest sicher.",
+     h1="So löschst du doppelte und ähnliche Fotos auf deinem Android-Telefon",
+     body="""      <p>Duplikate fressen unbemerkt den Speicher eines Android-Telefons. Manche sind exakte Kopien, die meisten aber fast identische Aufnahmen desselben Moments. So findest du beides und räumst sicher auf.</p>
+
+      <h2>Duplikate und ähnliche Fotos sind nicht dasselbe</h2>
+      <p>Ein exaktes Duplikat ist dieselbe Datei, zweimal gespeichert, zum Beispiel nach einem Download, einer Messenger-App oder einer Wiederherstellung. Ein ähnliches Foto ist eine andere Aufnahme derselben Szene: eine Serienaufnahme, mehrere Versuche für ein Gruppenfoto, ein Selfie, das so lange wiederholt wurde, bis es gefiel. Datei-Reiniger finden die erste Art; die zweite braucht weit mehr Platz.</p>
+
+      <h2>Was Android bietet</h2>
+      <p>Datei-Manager-Apps können exakte Duplikate auflisten, und deine Galerie zeigt Serienaufnahmen. Keine von beiden vergleicht fast identische Aufnahmen für dich oder hilft dir, die beste zu wählen, sodass du am Ende Foto für Foto hin und her blätterst.</p>
+
+      <h2>Ein schnellerer Weg</h2>
+      <p><strong>1. Nach Szene gruppieren.</strong> <a href="{ts}">TripSweep</a> vergleicht den Inhalt deiner Fotos, nicht ihre Namen, und gruppiert Aufnahmen derselben Szene, sodass aus einer Serie von zehn Bildern eine einzige Entscheidung wird.</p>
+      <p><strong>2. Die beste behalten.</strong> Es schlägt ein Foto pro Gruppe vor; du kannst ein anderes behalten, mehrere behalten oder die Gruppe überspringen.</p>
+      <p><strong>3. Sicher löschen.</strong> Gelöschte Fotos landen 30 Tage im Papierkorb des Telefons, ein Fehler lässt sich also rückgängig machen.</p>
+
+      <h2>Gut zu wissen</h2>
+      <ul>
+        <li>Alles läuft auf dem Telefon: kein Konto, kein Upload. TripSweep ist kostenlos bei <a href="{play}">Google Play</a> erhältlich (Android 11 oder neuer).</li>
+        <li>Für eine ganze Fotorolle geht der Vergleich am großen Bildschirm mit <a href="{pc}">PhotoCull</a> an einem Mac oder PC noch schneller.</li>
+      </ul>"""),
 ],
 "photocull": [
 dict(slug="sort-iphone-photos-on-mac",
@@ -397,6 +458,83 @@ dict(slug="sort-photo-folder-external-drive",
         <li>RAW-Dateien von Kameras (CR2, CR3, NEF, ARW, RAF, ORF, RW2, DNG) werden neben JPEG, HEIC, PNG und Videos unterstützt.</li>
         <li>Das Sortieren von Ordnern ist kostenlos und nie begrenzt, am Mac (<a href="{mac}">Download</a>) und unter Windows (<a href="{win}">Download</a>).</li>
         <li>Deine Originale werden nie verändert: Die einzige Änderung von PhotoCull ist das Löschen, das du bestätigst.</li>
+      </ul>"""),
+dict(slug="sort-android-photos-on-mac",
+     title="Android-Fotos am Mac sortieren: so geht's",
+     desc="Ein Mac liest Android-Telefone nicht per USB. So sortierst du Tausende Android-Fotos trotzdem am Mac, per WLAN, und löschst, was du nicht brauchst.",
+     h1="So sortierst du deine Android-Fotos am Mac",
+     body="""      <p>Schließt du ein Android-Telefon an einen Mac an, passiert meist nichts: macOS liest Android-Telefone nicht per USB, wie Windows es tut. Dabei ist ein Mac der beste Ort, um eine große Fotorolle zu sortieren, mit großem Bildschirm, Maus und Vergleich nebeneinander. Das funktioniert.</p>
+
+      <h2>Was macOS allein kann</h2>
+      <ul>
+        <li><strong>Digitale Bilder:</strong> sieht das Telefon eventuell, wenn du in der USB-Benachrichtigung „Fotos übertragen“ (PTP) wählst, aber nur als flache Dateiliste, ohne Gruppierung und ohne Vergleich ähnlicher Aufnahmen.</li>
+        <li><strong>Android File Transfer von Google:</strong> wird nicht mehr gepflegt und kopiert ohnehin nur Dateien.</li>
+        <li><strong>Cloud-Upload:</strong> alles an einen Online-Dienst zu senden, nur um es zu sortieren, ist langsam, verbraucht dein Datenvolumen und legt deine Fotos auf dem Server eines anderen ab.</li>
+      </ul>
+
+      <h2>Mit PhotoCull, per WLAN, Schritt für Schritt</h2>
+      <p><strong>1. Beide Apps installieren.</strong> <a href="{mac}">PhotoCull für Mac kostenlos herunterladen</a> (macOS 11 oder neuer auf Apple Silicon) und die kostenlose <a href="{play}">TripSweep-App aus Google Play</a> auf dem Telefon installieren (Android 11 oder neuer).</p>
+      <p><strong>2. Dasselbe WLAN.</strong> Bringe das Telefon in dasselbe WLAN wie den Mac und öffne in TripSweep den Tab „Löschen“.</p>
+      <p><strong>3. Einmal verbinden.</strong> Klicke in PhotoCull auf „Android-Telefon“ und wähle dein Telefon. Erlaube den Mac auf dem Telefon: Auf beiden Bildschirmen erscheint derselbe 4-stellige Code. Beim nächsten Mal verbindet es sich von selbst.</p>
+      <p><strong>4. Reise für Reise sortieren.</strong> Die Ansicht „Reisen“ gruppiert die Fotorolle nach Datum und Ort und zeigt, wie viel Platz jede Reise belegt. Ähnliche Fotos tragen ein Abzeichen: Vergleiche bis zu sechs nebeneinander, behalte das beste und markiere den Rest.</p>
+      <p><strong>5. Sicher löschen.</strong> Klicke auf „Löschen“ und bestätige auf dem Telefon in TripSweep. Die Fotos landen 30 Tage im Papierkorb des Telefons, ein Fehler lässt sich also rückgängig machen.</p>
+
+      <h2>Gut zu wissen</h2>
+      <ul>
+        <li>Die Verbindung bleibt in deinem lokalen Netzwerk und ist verschlüsselt; nichts läuft über das Internet.</li>
+        <li>PhotoCull verändert nie deine Originale und löscht nur, was du auf dem Telefon bestätigst.</li>
+        <li>Vom Computer aus erlaubt die Gratisversion 6 Löschungen pro Tag, TripSweep Pro 15, und Pro + Desktop ist unbegrenzt. Durchsehen und Sortieren sind immer kostenlos.</li>
+        <li>Du hast auch ein iPhone? Es wird stattdessen per USB-Kabel mit dem Mac verbunden.</li>
+      </ul>"""),
+dict(slug="sort-android-photos-on-pc",
+     title="Android-Fotos am Windows-PC sortieren: so geht's",
+     desc="Tausende Android-Fotos unter Windows 10 oder 11 sortieren: was Datei-Explorer und Fotos-App zeigen, und ein schnellerer Weg zum Vergleichen und Löschen.",
+     h1="So sortierst du deine Android-Fotos am Windows-PC",
+     body="""      <p>Windows liest Android-Telefone gut, aber Lesen ist noch kein Sortieren. Bei Tausenden Fotos lassen dich die integrierten Werkzeuge durch eine einzige lange Liste von Dateinamen scrollen. Hier steht, was sie können, und ein schnellerer Weg, das Telefon von deinem PC aus aufzuräumen.</p>
+
+      <h2>Mit den Werkzeugen von Windows</h2>
+      <ul>
+        <li><strong>Datei-Explorer:</strong> Nachdem du am Telefon „Dateiübertragung“ gewählt hast, erscheint der Ordner DCIM als Dateien. Du kannst dort löschen, aber ohne Gruppierung und ohne Vergleich ähnlicher Aufnahmen.</li>
+        <li><strong>Fotos-App:</strong> importiert eine Kopie auf den PC. Gut als Backup, aber sie sagt dir nicht, was du vom Telefon entfernen kannst.</li>
+        <li><strong>Smartphone-Link:</strong> zeigt nur die letzten Fotos, eines nach dem anderen.</li>
+      </ul>
+
+      <h2>Mit PhotoCull, Schritt für Schritt</h2>
+      <p><strong>1. Beide Apps installieren.</strong> Hole dir PhotoCull kostenlos <a href="{win}">für Windows 10 oder 11</a> und die kostenlose <a href="{play}">TripSweep-App aus Google Play</a> auf dem Telefon (Android 11 oder neuer).</p>
+      <p><strong>2. Per USB oder WLAN verbinden.</strong> Per USB: Schließe das Telefon an und wähle in der USB-Benachrichtigung „Dateiübertragung“. Per WLAN: Bringe beide in dasselbe Netzwerk. Öffne dann in TripSweep den Tab „Löschen“ und klicke in PhotoCull auf „Android-Telefon“.</p>
+      <p><strong>3. Reise für Reise sortieren.</strong> Die Ansicht „Reisen“ gruppiert die Fotorolle nach Datum und Ort und zeigt, wie viel Platz jede Reise belegt. Fang mit der größten an.</p>
+      <p><strong>4. Vergleichen und markieren.</strong> Ähnliche Fotos tragen ein Abzeichen: Öffne bis zu sechs nebeneinander, behalte das beste und markiere den Rest, dazu Screenshots und große Videos.</p>
+      <p><strong>5. Sicher löschen.</strong> Bestätige auf dem Telefon in TripSweep: Die Fotos landen 30 Tage im Papierkorb des Telefons.</p>
+
+      <h2>Gut zu wissen</h2>
+      <ul>
+        <li>Alles bleibt auf deinem PC und deinem Telefon: kein Konto, keine Cloud, kein Upload.</li>
+        <li>Das Löschen im Datei-Explorer ist sofort und endgültig; über TripSweep bleibt das Sicherheitsnetz von 30 Tagen erhalten.</li>
+        <li>Vom PC aus erlaubt die Gratisversion 6 Löschungen pro Tag, TripSweep Pro 15, und Pro + Desktop ist unbegrenzt. Das Sortieren eines Ordners auf dem PC ist nie begrenzt.</li>
+      </ul>"""),
+dict(slug="free-up-android-from-mac-or-pc",
+     title="Android-Speicher freigeben: vom Mac oder PC aus aufräumen",
+     desc="Verbinde dein Android-Telefon, sortiere Fotos am großen Bildschirm und lösche, was du nicht brauchst, ohne Google One und ohne etwas hochzuladen.",
+     h1="So gibst du Android-Speicher von einem Mac oder PC aus frei",
+     body="""      <p>Wenn einem Android-Telefon der Platz ausgeht, sind fast immer Fotos und Videos der Grund. Sie am kleinen Bildschirm aufzuräumen ist mühsam. Am Computer siehst du mehr auf einmal und entscheidest schneller, ohne mehr Cloud-Speicher zu kaufen.</p>
+
+      <h2>Warum ein Computer hilft</h2>
+      <p>Ein großer Bildschirm zeigt Dutzende Fotos auf einmal, mit der Maus wählst du Hunderte in Sekunden aus, und fast identische Aufnahmen nebeneinander zu vergleichen ist viel einfacher, als hin und her zu wischen. Eine Fotorolle, die am Telefon einen ganzen Abend dauert, ist in Minuten erledigt.</p>
+
+      <h2>Die Methode</h2>
+      <p><strong>1. Das Telefon verbinden.</strong> Installiere <a href="{pc}">PhotoCull</a> auf deinem Mac oder PC und die kostenlose <a href="{play}">TripSweep-App</a> auf dem Telefon. Verbinde per WLAN (Mac und Windows) oder per USB (Windows), mit TripSweep geöffnet im Tab „Löschen“.</p>
+      <p><strong>2. Mit dem Schwersten beginnen.</strong> Die Ansicht „Reisen“ zeigt den Platz jeder Reise; lange Videos und alte Urlaube geben meist am meisten frei.</p>
+      <p><strong>3. Die Beinahe-Kopien entfernen.</strong> Serienaufnahmen und wiederholte Aufnahmen derselben Szene tragen ein Abzeichen. Vergleiche sie nebeneinander, behalte die beste und markiere den Rest.</p>
+      <p><strong>4. Screenshots und unscharfe Aufnahmen entfernen.</strong> Sie haben selten einen Platz verdient und sind als Stapel schnell markiert.</p>
+      <p><strong>5. Auf dem Telefon bestätigen.</strong> TripSweep führt das Löschen aus und verschiebt die Fotos in den Papierkorb des Telefons, wo sie 30 Tage bleiben. Leere den Papierkorb, wenn du sicher bist, um den Platz zurückzubekommen.</p>
+
+      <h2>Brauche ich Google One?</h2>
+      <p>Cloud-Speicher ist ein gutes Backup, aber er behält alles, auch die Duplikate. Wer zuerst aufräumt, braucht weniger Speicherplatz, auf dem Telefon und in der Cloud.</p>
+
+      <h2>Gut zu wissen</h2>
+      <ul>
+        <li>Kein Konto und kein Upload: Telefon und Computer sprechen über dein eigenes Netzwerk oder Kabel miteinander.</li>
+        <li>Vom Computer aus erlaubt die Gratisversion 6 Löschungen pro Tag, Pro 15, und Pro + Desktop ist unbegrenzt.</li>
       </ul>"""),
 ],
 }
