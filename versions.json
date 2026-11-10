@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-11-09",
+  "updated": "2026-11-10",
   "apps": {
     "ios": {
-      "version": "1.5.4",
+      "version": "1.5.5",
       "url": "https://apps.apple.com/app/tripsweep/id6813028251"
     },
     "android": {
-      "version": "1.4.3",
+      "version": "1.5.0",
       "url": "https://play.google.com/store/apps/details?id=com.tripsweep.app"
     },
     "desktop": {
@@ -18,7 +18,7 @@
         "windows": "https://github.com/brignolij/TripSweepSite/releases/latest/download/PhotoCull-Windows-x64.zip"
       },
       "windowsStore": {
-        "version": "1.0.2.0",
+        "version": "1.3.1.0",
         "url": "https://apps.microsoft.com/detail/9N6WV393B3PL"
       }
     }
