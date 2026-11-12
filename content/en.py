@@ -45,7 +45,7 @@ FAQ_TRIPSWEEP_EXTRA = [
     ("Can I review my iPhone photos on a big screen instead of the phone?",
      "Yes. <a href=\"{pc}\">PhotoCull</a> is the free desktop companion for Mac and Windows: it shows your iPhone's camera roll grouped by trip, compares similar photos side by side and lets you mark hundreds of photos in a few clicks. <a href=\"{pc}\">Learn more about PhotoCull</a>."),
     ("Can I delete photos in bulk from my computer instead of tapping on the phone?",
-     "Yes, with <a href=\"{pc}\">PhotoCull</a> on a Mac or Windows PC. You mark the photos on the big screen, and the deletion is applied on your iPhone by TripSweep through “Recently Deleted”. The free version allows 6 photos a day from the Mac (see the plans on the TripSweep page), Pro 15, and Pro + Desktop removes the limit."),
+     "Yes, with <a href=\"{pc}\">PhotoCull</a> on a Mac or Windows PC. You mark the photos on the big screen and, with an iPhone, PhotoCull deletes them directly over the USB cable: no daily limit, nothing to buy, and no TripSweep needed. This requires iCloud Photos turned off on the iPhone, and macOS 27 or later on a Mac (Windows works too). The deletion is permanent on the iPhone, the photos do not go to “Recently Deleted”, but PhotoCull keeps a copy on your computer for 30 days by default. TripSweep remains an option: it deletes through “Recently Deleted” (30 days), and it is the way to go when iCloud Photos is on or on macOS 26 or earlier. Deletions requested from the computer through TripSweep, which is also how an Android phone works, are limited to 6 photos a day for free and 15 with Pro."),
     ("Which iPhones and iOS versions does TripSweep support?",
      "TripSweep needs iOS 18 or later. Similar-photo analysis uses Apple's Vision framework and is faster on recent iPhones, but works on every supported model. On Android, it needs Android 11 or later and is available on <a href=\"{play}\">Google Play</a>."),
 ]
@@ -66,11 +66,11 @@ FAQ_PHOTOCULL = dict(
         ("How do I sort thousands of photos quickly?",
          "Open the Trips view: your library is grouped by trip with the space each one takes, so you start with the heaviest. Inside a trip, mark photos in bulk, compare the similar ones side by side and keep the best shot of each group. The same filters as the iOS app (single-day trips, excluded places like home or work, size) narrow things down."),
         ("How do I free up my iPhone storage from a Mac or PC?",
-         "Plug in your iPhone by USB, open PhotoCull, mark the trips and photos you no longer need, and confirm. The deletion is applied on the iPhone by the free <a href=\"{ts}\">TripSweep app</a> through “Recently Deleted”, so it frees space as soon as you empty that album."),
+         "Plug in your iPhone by USB, open PhotoCull, mark the trips and photos you no longer need, and confirm. PhotoCull deletes them directly over the USB cable, as long as iCloud Photos is off (and on macOS 27 or later on a Mac). The deletion is permanent on the iPhone, with a copy kept on your computer for 30 days by default. If iCloud Photos is on, or your Mac runs macOS 26 or earlier, the free <a href=\"{ts}\">TripSweep app</a> applies the deletion through “Recently Deleted” instead, and the space comes back once you empty that album."),
         ("Can I delete photos from my iPhone directly from my computer?",
-         "Yes, from a Mac or a Windows PC, with the <a href=\"{ts}\">TripSweep app</a> installed on the iPhone. From a Mac, free allows 6 photos a day, Pro 15 and Pro + Desktop removes the limit."),
+         "Yes. With an iPhone, PhotoCull deletes the photos directly over the USB cable, from a Mac or a Windows PC, with no daily limit and nothing to buy; the TripSweep app is not needed. Three conditions: iCloud Photos is turned off on the iPhone (when it is on, Apple does not allow this deletion), a Mac runs macOS 27 or later (Windows works too), and you accept that the deletion is permanent on the iPhone: the photos do not go to “Recently Deleted”. By default, PhotoCull keeps a copy of each deleted item on your computer for 30 days, in a “PhotoCull Trash” folder in Pictures, so a mistake can be undone by importing the file again. Live Photos and edited photos are handled correctly (all their versions are deleted together), and PhotoCull shows the edited version of an edited photo. If a condition is not met, use the <a href=\"{ts}\">TripSweep app</a> on the iPhone: it applies the deletion through “Recently Deleted” (30 days), with a daily limit (6 photos a day for free, 15 with Pro)."),
         ("Is deleting from PhotoCull permanent?",
-         "No. Deletions on the iPhone always go through the Photos app's “Recently Deleted” album, where photos stay for 30 days and can be restored. PhotoCull never performs an immediate permanent delete."),
+         "It depends on the route. With an iPhone, direct deletion over USB is permanent on the iPhone: the photos do not go to “Recently Deleted”. By default, PhotoCull keeps a copy of each deleted item on your computer for 30 days, in a “PhotoCull Trash” folder in Pictures, so you can import it again. Through TripSweep, on an iPhone or an Android phone, the photos go to the phone's trash for 30 days and can be restored. In a folder on your computer, files go to the Trash or Recycle Bin."),
         ("How do I connect my iPhone to PhotoCull?",
          "Use a USB cable, unlock the iPhone and tap “Trust” when asked. On a Mac nothing else is needed. On Windows, install the free Apple Devices app from the Microsoft Store, which provides the driver that lets PhotoCull read the iPhone."),
         ("Can I sort an Android phone's photos on my Mac or PC?",
@@ -84,7 +84,7 @@ FAQ_PHOTOCULL = dict(
         ("What happens to photos I delete on an Android phone?",
          "You confirm the deletion on the phone, in TripSweep, and the photos go to the phone's trash, where they stay 30 days and can be restored. PhotoCull never deletes anything permanently on its own."),
         ("Do I need the TripSweep iOS app?",
-         "Not to browse, compare and sort an iPhone. You need it only to delete photos from the iPhone, because the deletion is applied on the phone. An Android phone needs the TripSweep Android app to connect at all. Folders on your computer can be sorted without either."),
+         "No. Browsing, comparing, sorting and, with an iPhone, deleting over USB all work without it (with iCloud Photos off, and macOS 27 or later on a Mac). It remains an option: it deletes through the iPhone's “Recently Deleted” (30 days), and it is the way to go when iCloud Photos is on or on macOS 26 or earlier. An Android phone, on the other hand, needs the TripSweep Android app to connect at all and to delete. Folders on your computer can be sorted without either."),
         ("How do I find duplicate photos in a folder on my Mac or PC?",
          "Open the folder in PhotoCull (Open folder, or drop it onto the window). It looks through the subfolders, compares what the photos show and puts the same “≈ N” badge on exact copies, bursts and near-identical shots. Keep the best of each group and send the rest to the Trash or Recycle Bin. Guides: <a href=\"{post:find-duplicate-photos-on-mac}\">on a Mac</a>, <a href=\"{post:find-duplicate-photos-on-windows}\">on Windows</a>."),
         ("Can I use PhotoCull on photos stored on my computer, not on an iPhone?",
@@ -98,7 +98,7 @@ FAQ_PHOTOCULL = dict(
         ("Which Macs does PhotoCull support?",
          "Macs with Apple Silicon running macOS 11 or later. The app is signed and notarized by Apple, so it opens without a security warning."),
         ("Is PhotoCull free? Is there a subscription?",
-         "PhotoCull is free to download and there is no subscription. Browsing, comparing and sorting are free, and sorting a folder on your computer is never limited. Deleting photos from an iPhone from a Mac is limited to 6 a day for free, 15 with TripSweep Pro and unlimited with Pro + Desktop (one-time purchases made in the TripSweep iOS app)."),
+         "PhotoCull is free to download and there is no subscription. Browsing, comparing and sorting are free, and sorting a folder on your computer is never limited. Deleting photos from an iPhone over USB has no daily limit and costs nothing. When the deletion goes through TripSweep (an Android phone, or an iPhone if you choose that route), it is limited to 6 photos a day for free and 15 with TripSweep Pro, a one-time purchase in the TripSweep app. Pro + Desktop is no longer sold; people who already bought it keep unlimited deletion."),
         ("Does PhotoCull send my photos to a server or the cloud?",
          "No. PhotoCull works 100% on-device: no account, no cloud, no photo, video or location is ever sent anywhere. Place recognition and similar-photo detection run on your computer. Only optional, anonymous usage statistics can be sent."),
         ("Will PhotoCull change or modify my original photos?",
@@ -264,13 +264,13 @@ dict(slug="sort-iphone-photos-on-mac",
       <p><strong>2. Plug in the iPhone.</strong> Connect it with a USB cable, unlock it and tap Trust.</p>
       <p><strong>3. Sort trip by trip.</strong> The Trips view groups your camera roll by date and place and shows the space each trip takes. Start with the heaviest.</p>
       <p><strong>4. Compare and mark.</strong> Similar photos carry a badge: open up to six side by side, keep the best and mark the rest, along with screenshots and big videos you don't need.</p>
-      <p><strong>5. Delete safely.</strong> The deletion is applied on the iPhone by the free <a href="{ts}">TripSweep app</a> through “Recently Deleted”, so you have 30 days to change your mind.</p>
+      <p><strong>5. Delete safely.</strong> With iCloud Photos off and macOS 27 or later, PhotoCull deletes the photos directly over the USB cable. The deletion is permanent on the iPhone: the photos do not go to “Recently Deleted”. By default, PhotoCull keeps a copy of each deleted item on your Mac for 30 days, in a “PhotoCull Trash” folder in Pictures, so a mistake can be undone by importing the file again. If iCloud Photos is on, or your Mac runs macOS 26 or earlier, use the free <a href="{ts}">TripSweep app</a> instead: it deletes through “Recently Deleted”, so you have 30 days to change your mind.</p>
 
       <h2>Good to know</h2>
       <ul>
         <li>Everything stays on your Mac and your iPhone: no account, no cloud, no upload.</li>
         <li>PhotoCull never modifies your originals and only deletes what you confirm.</li>
-        <li>From a Mac, free allows 6 deletions a day, TripSweep Pro 15, and Pro + Desktop is unlimited. Browsing and sorting are free, and sorting a folder of photos on the Mac is never limited.</li>
+        <li>From a Mac, direct deletion has no daily limit. Through TripSweep, free allows 6 deletions a day and Pro 15 (people who already bought Pro + Desktop keep unlimited). Browsing and sorting are free, and sorting a folder of photos on the Mac is never limited.</li>
       </ul>"""),
 dict(slug="sort-iphone-photos-on-pc",
      title="How to sort your iPhone photos on a Windows PC",
@@ -289,7 +289,7 @@ dict(slug="sort-iphone-photos-on-pc",
       <p><strong>2. Install PhotoCull.</strong> Get it from the Microsoft Store or <a href="{win}">download it for free</a> (Windows 10/11, 64-bit). The download is not code-signed yet, so SmartScreen may warn on first launch.</p>
       <p><strong>3. Plug in the iPhone.</strong> Connect it with a USB cable, unlock it and tap Trust.</p>
       <p><strong>4. Sort trip by trip.</strong> The Trips view groups your camera roll by date and place and shows the space each trip takes. Start with the heaviest.</p>
-      <p><strong>5. Compare, mark, delete.</strong> Similar photos carry a badge: compare up to six side by side, keep the best and mark the rest. The deletion is applied on the iPhone by the free <a href="{ts}">TripSweep app</a> through “Recently Deleted”, so you have 30 days to change your mind.</p>
+      <p><strong>5. Compare, mark, delete.</strong> Similar photos carry a badge: compare up to six side by side, keep the best and mark the rest. With iCloud Photos off, PhotoCull deletes them directly over the USB cable, with no daily limit. The deletion is permanent on the iPhone (no “Recently Deleted”), but by default PhotoCull keeps a copy of each deleted item on your PC for 30 days, in a “PhotoCull Trash” folder in Pictures. If iCloud Photos is on, use the free <a href="{ts}">TripSweep app</a> instead: it deletes through “Recently Deleted”, so you have 30 days to change your mind.</p>
 
       <h2>Good to know</h2>
       <ul>
@@ -318,7 +318,7 @@ dict(slug="sort-photos-on-computer",
 
       <h2>PhotoCull does exactly this</h2>
       <p><a href="{pc}">PhotoCull</a> is a free desktop app for Mac and Windows. Its Trips view groups the library by trip and shows the space each takes, similar photos carry a badge, and you can compare up to six side by side. It reads an iPhone over USB or any folder on your computer, works 100% on-device and never modifies your originals.</p>
-      <p>Deletions on an iPhone go through the free <a href="{ts}">TripSweep app</a> and “Recently Deleted”, so a mistake can be undone for 30 days. Sorting a folder on your computer is never limited.</p>
+      <p>With an iPhone, PhotoCull deletes directly over the USB cable when iCloud Photos is off (and on macOS 27 or later on a Mac). The deletion is permanent on the iPhone, with a copy kept on your computer for 30 days by default; otherwise the free <a href="{ts}">TripSweep app</a> deletes through “Recently Deleted”. Sorting a folder on your computer is never limited.</p>
 
       <h2>Tips for a long session</h2>
       <ul>
@@ -337,21 +337,21 @@ dict(slug="free-up-iphone-from-mac-or-pc",
         <li>A Mac (Apple Silicon, macOS 11+) or a Windows 10/11 PC.</li>
         <li>A USB cable. On Windows, also the free Apple Devices app from the Microsoft Store.</li>
         <li><a href="{pc}">PhotoCull</a>, free for both systems.</li>
-        <li>For deleting from the iPhone: the free <a href="{ts}">TripSweep app</a> on the iPhone.</li>
+        <li>For deleting from the iPhone: iCloud Photos turned off and, on a Mac, macOS 27 or later. Otherwise, the free <a href="{ts}">TripSweep app</a> on the iPhone.</li>
       </ul>
 
       <h2>Step by step</h2>
       <p><strong>1. Plug in and trust.</strong> Connect the iPhone, unlock it and tap Trust.</p>
       <p><strong>2. Open the Trips view.</strong> PhotoCull groups your camera roll by trip and shows the space each takes.</p>
       <p><strong>3. Sort the heaviest trips.</strong> Compare similar shots, keep the best, and mark the rest, plus screenshots and big videos you don't need.</p>
-      <p><strong>4. Confirm the deletion.</strong> From a Mac, the deletion is applied on the iPhone by TripSweep through “Recently Deleted”, on Windows too. Nothing is permanently erased at once.</p>
-      <p><strong>5. Empty “Recently Deleted”.</strong> The storage comes back once the album is emptied.</p>
+      <p><strong>4. Confirm the deletion.</strong> With iCloud Photos off (and macOS 27 or later on a Mac), PhotoCull deletes the photos directly over the USB cable, on Windows too. The deletion is permanent on the iPhone, but by default PhotoCull keeps a copy of each deleted item on your computer for 30 days, in a “PhotoCull Trash” folder in Pictures. Otherwise, TripSweep deletes through “Recently Deleted”.</p>
+      <p><strong>5. Empty “Recently Deleted” if you used TripSweep.</strong> Through TripSweep, the storage comes back once the album is emptied. Direct deletion does not use that album.</p>
 
       <h2>Is it safe?</h2>
-      <p>Yes: your photos stay on your devices, with no account, no cloud and no upload. Deleted photos stay 30 days in “Recently Deleted”, and PhotoCull only reads your photos until you confirm.</p>
+      <p>Yes: your photos stay on your devices, with no account, no cloud and no upload. PhotoCull only reads your photos until you confirm. A direct deletion is permanent on the iPhone, but a copy stays on your computer for 30 days by default; through TripSweep, deleted photos stay 30 days in “Recently Deleted”.</p>
 
       <h2>How many photos can I delete per day?</h2>
-      <p>From a Mac, free allows 6 photos a day, TripSweep Pro 15 and Pro + Desktop is unlimited (see the plans on the TripSweep page). All are one-time purchases with no subscription. Browsing, comparing and sorting are free, and sorting a folder on your computer is never limited.</p>
+      <p>With an iPhone, direct deletion over USB has no daily limit and nothing to buy. The limits only apply when the deletion goes through TripSweep (an Android phone, or an iPhone when iCloud Photos is on or the Mac runs macOS 26 or earlier): free allows 6 photos a day and TripSweep Pro 15, and people who already bought Pro + Desktop (no longer sold) keep unlimited. Pro is a one-time purchase with no subscription. Browsing, comparing and sorting are free, and sorting a folder on your computer is never limited.</p>
 
       <h2>On Windows</h2>
       <p>The steps are the same on Windows 10 and 11. Install the free Apple Devices app from the Microsoft Store first, so PhotoCull can read the iPhone. The app is not code-signed yet, so SmartScreen may warn on first launch.</p>"""),
@@ -380,7 +380,7 @@ dict(slug="compare-similar-photos-keep-the-best",
       <p>On the phone itself, the <a href="{ts}">TripSweep app</a> suggests the best shot of each group using sharpness, Apple's aesthetic score and faces, and its “Keep 1 per group” button handles a whole category at once.</p>
 
       <h2>Keep, don't regret</h2>
-      <p>When you are unsure, keep two. Deletions on an iPhone go through “Recently Deleted” for 30 days, so you can still change your mind.</p>"""),
+      <p>When you are unsure, keep two. Through TripSweep, deletions on an iPhone go through “Recently Deleted” for 30 days; with direct deletion over USB, PhotoCull keeps a copy on your computer for 30 days by default. Either way, you can still change your mind.</p>"""),
 dict(slug="find-duplicate-photos-on-mac",
      title="How to find duplicate and similar photos on a Mac",
      desc="Find exact copies, bursts and near-identical shots in your Mac's photo folders or on an external drive, keep the best and send the rest to the Trash.",
@@ -483,7 +483,7 @@ dict(slug="sort-android-photos-on-mac",
       <ul>
         <li>The connection stays on your local network and is encrypted; nothing goes through the internet.</li>
         <li>PhotoCull never modifies your originals and only deletes what you confirm on the phone.</li>
-        <li>From the computer, free allows 6 deletions a day, TripSweep Pro 15, and Pro + Desktop is unlimited. Browsing and sorting are always free.</li>
+        <li>From the computer, free allows 6 deletions a day, TripSweep Pro 15, and people who already bought Pro + Desktop keep unlimited. Browsing and sorting are always free.</li>
         <li>Got an iPhone too? It connects to the Mac with a USB cable instead.</li>
       </ul>"""),
 dict(slug="sort-android-photos-on-pc",
@@ -510,7 +510,7 @@ dict(slug="sort-android-photos-on-pc",
       <ul>
         <li>Everything stays on your PC and your phone: no account, no cloud, no upload.</li>
         <li>Deleting from File Explorer is immediate and permanent; going through TripSweep keeps the 30-day safety net.</li>
-        <li>From the PC, free allows 6 deletions a day, TripSweep Pro 15, and Pro + Desktop is unlimited. Sorting a folder on the PC is never limited.</li>
+        <li>From the PC, free allows 6 deletions a day, TripSweep Pro 15, and people who already bought Pro + Desktop keep unlimited. Sorting a folder on the PC is never limited.</li>
       </ul>"""),
 dict(slug="free-up-android-from-mac-or-pc",
      title="How to free up Android storage from a Mac or Windows PC",
@@ -534,7 +534,7 @@ dict(slug="free-up-android-from-mac-or-pc",
       <h2>Good to know</h2>
       <ul>
         <li>No account and no upload: the phone and the computer talk over your own network or cable.</li>
-        <li>From the computer, free allows 6 deletions a day, Pro 15, and Pro + Desktop is unlimited.</li>
+        <li>From the computer, free allows 6 deletions a day, Pro 15, and people who already bought Pro + Desktop keep unlimited.</li>
       </ul>"""),
 ],
 }

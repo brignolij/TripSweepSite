@@ -45,7 +45,7 @@ FAQ_TRIPSWEEP_EXTRA = [
     ("¿Puedo revisar las fotos de mi iPhone en una pantalla grande en lugar del móvil?",
      "Sí. <a href=\"{pc}\">PhotoCull</a> es la app de escritorio gratuita que acompaña a TripSweep, para Mac y Windows: muestra el carrete de tu iPhone agrupado por viaje, compara fotos parecidas lado a lado y te permite marcar cientos de fotos con unos pocos clics. <a href=\"{pc}\">Más información sobre PhotoCull</a>."),
     ("¿Puedo borrar fotos en bloque desde el ordenador en vez de tocar la pantalla del móvil?",
-     "Sí, con <a href=\"{pc}\">PhotoCull</a> en un Mac o un PC con Windows. Marcas las fotos en la pantalla grande y TripSweep aplica el borrado en tu iPhone a través de « Eliminados recientemente ». La versión gratuita permite 6 fotos al día desde el Mac (consulta los planes en la página de TripSweep), Pro 15, y Pro + Desktop elimina el límite."),
+     "Sí, con <a href=\"{pc}\">PhotoCull</a> en un Mac o un PC con Windows. Marcas las fotos en la pantalla grande y, con un iPhone, PhotoCull las borra directamente por el cable USB: sin límite diario, sin nada que comprar y sin TripSweep. Hace falta que Fotos en iCloud esté desactivado en el iPhone y, en un Mac, macOS 27 o posterior (también funciona en Windows). El borrado es definitivo en el iPhone, las fotos no pasan por « Eliminados recientemente », pero PhotoCull guarda por defecto una copia en tu ordenador durante 30 días. TripSweep sigue siendo una opción: borra a través de « Eliminados recientemente » (30 días) y es el camino cuando Fotos en iCloud está activado o con macOS 26 o anterior. Los borrados pedidos desde el ordenador a través de TripSweep, que es también como funciona un teléfono Android, están limitados a 6 fotos al día gratis y 15 con Pro."),
     ("¿Qué iPhone y qué versiones de iOS admite TripSweep?",
      "TripSweep requiere iOS 18 o posterior. El análisis de fotos parecidas usa el framework Vision de Apple y es más rápido en los iPhone recientes, pero funciona en todos los modelos compatibles. En Android requiere Android 11 o posterior y está disponible en <a href=\"{play}\">Google Play</a>."),
 ]
@@ -66,11 +66,11 @@ FAQ_PHOTOCULL = dict(
         ("¿Cómo ordeno miles de fotos rápidamente?",
          "Abre la vista Viajes: tu biblioteca aparece agrupada por viaje con el espacio que ocupa cada uno, así que empiezas por el más pesado. Dentro de un viaje, marca fotos en bloque, compara las parecidas lado a lado y conserva la mejor toma de cada grupo. Los mismos filtros que en la app para iOS (viajes de un solo día, lugares excluidos como casa o trabajo, tamaño) te ayudan a acotar."),
         ("¿Cómo libero espacio en el iPhone desde un Mac o un PC?",
-         "Conecta tu iPhone por USB, abre PhotoCull, marca los viajes y las fotos que ya no necesitas y confirma. El borrado se aplica en el iPhone mediante la <a href=\"{ts}\">app TripSweep</a>, gratuita, a través de « Eliminados recientemente », así que el espacio se libera en cuanto vacías ese álbum."),
+         "Conecta tu iPhone por USB, abre PhotoCull, marca los viajes y las fotos que ya no necesitas y confirma. PhotoCull las borra directamente por el cable USB, siempre que Fotos en iCloud esté desactivado (y, en un Mac, macOS 27 o posterior). El borrado es definitivo en el iPhone, con una copia que se guarda por defecto 30 días en tu ordenador. Si Fotos en iCloud está activado, o tu Mac tiene macOS 26 o anterior, es la <a href=\"{ts}\">app TripSweep</a>, gratuita, la que aplica el borrado a través de « Eliminados recientemente »; el espacio se recupera cuando vacías ese álbum."),
         ("¿Puedo borrar fotos del iPhone directamente desde el ordenador?",
-         "Sí, desde un Mac o un PC con Windows, con la <a href=\"{ts}\">app TripSweep</a> instalada en el iPhone. Desde un Mac, la versión gratuita permite 6 fotos al día, Pro 15 y Pro + Desktop elimina el límite."),
+         "Sí. Con un iPhone, PhotoCull borra las fotos directamente por el cable USB, desde un Mac o un PC con Windows, sin límite diario y sin nada que comprar; la app TripSweep no hace falta. Tres condiciones: Fotos en iCloud está desactivado en el iPhone (cuando está activado, Apple no permite este borrado), un Mac tiene macOS 27 o posterior (Windows también funciona) y aceptas que el borrado es definitivo en el iPhone: las fotos no pasan por « Eliminados recientemente ». Por defecto, PhotoCull guarda durante 30 días una copia de cada elemento borrado en tu ordenador, en una carpeta « PhotoCull Trash » dentro de Imágenes, de modo que un error se puede deshacer importando de nuevo el archivo. Las Live Photos y las fotos editadas se gestionan correctamente (todas sus versiones se borran juntas) y PhotoCull muestra la versión editada de una foto editada. Si no se cumple una condición, usa la <a href=\"{ts}\">app TripSweep</a> en el iPhone: aplica el borrado a través de « Eliminados recientemente » (30 días), con un límite diario (6 fotos al día gratis, 15 con Pro)."),
         ("¿Borrar desde PhotoCull es permanente?",
-         "No. Los borrados en el iPhone pasan siempre por el álbum « Eliminados recientemente » de la app Fotos, donde las fotos permanecen 30 días y se pueden recuperar. PhotoCull nunca hace un borrado permanente inmediato."),
+         "Depende del camino elegido. Con un iPhone, el borrado directo por USB es definitivo en el iPhone: las fotos no pasan por « Eliminados recientemente ». Por defecto, PhotoCull guarda durante 30 días una copia de cada elemento borrado en tu ordenador, en una carpeta « PhotoCull Trash » dentro de Imágenes, para poder importarlo de nuevo. A través de TripSweep, en un iPhone o en un teléfono Android, las fotos van a la papelera del teléfono durante 30 días y se pueden restaurar. En una carpeta de tu ordenador, los archivos van a la Papelera."),
         ("¿Cómo conecto mi iPhone a PhotoCull?",
          "Usa un cable USB, desbloquea el iPhone y toca « Confiar » cuando te lo pida. En un Mac no hace falta nada más. En Windows, instala la app gratuita Apple Devices desde Microsoft Store, que incluye el controlador que permite a PhotoCull leer el iPhone."),
         ("¿Puedo ordenar las fotos de un móvil Android en mi Mac o PC?",
@@ -84,7 +84,7 @@ FAQ_PHOTOCULL = dict(
         ("¿Qué pasa con las fotos que borro en un móvil Android?",
          "Confirmas el borrado en el móvil, en TripSweep, y las fotos van a la papelera del móvil, donde permanecen 30 días y se pueden recuperar. PhotoCull nunca borra nada de forma permanente por su cuenta."),
         ("¿Necesito la app TripSweep para iOS?",
-         "No para explorar, comparar y ordenar un iPhone. Solo la necesitas para borrar fotos del iPhone, porque el borrado se aplica en el móvil. Un móvil Android necesita la app TripSweep para Android para poder conectarse. Las carpetas de tu ordenador se pueden ordenar sin ninguna de las dos."),
+         "No. Explorar, comparar, ordenar y, con un iPhone, borrar por USB funcionan sin ella (con Fotos en iCloud desactivado y, en un Mac, macOS 27 o posterior). Sigue siendo una opción: borra a través de « Eliminados recientemente » del iPhone (30 días) y es el camino cuando Fotos en iCloud está activado o con macOS 26 o anterior. Un teléfono Android, en cambio, necesita la app TripSweep para Android para conectarse y para borrar. Las carpetas de tu ordenador se ordenan sin ninguna de las dos."),
         ("¿Cómo busco fotos duplicadas en una carpeta de mi Mac o PC?",
          "Abre la carpeta en PhotoCull (« Abrir carpeta », o arrástrala a la ventana). Recorre las subcarpetas, compara lo que muestran las fotos y pone la misma insignia «≈ N» a las copias exactas, las ráfagas y las tomas casi idénticas. Conserva la mejor de cada grupo y manda el resto a la Papelera (Mac) o a la Papelera de reciclaje (Windows). Guías: <a href=\"{post:find-duplicate-photos-on-mac}\">en el Mac</a> y <a href=\"{post:find-duplicate-photos-on-windows}\">en Windows</a>."),
         ("¿Puedo usar PhotoCull con fotos guardadas en mi ordenador, no en un iPhone?",
@@ -98,7 +98,7 @@ FAQ_PHOTOCULL = dict(
         ("¿Qué Mac admite PhotoCull?",
          "Mac con Apple Silicon y macOS 11 o posterior. La app está firmada y notarizada por Apple, así que se abre sin ninguna advertencia de seguridad."),
         ("¿PhotoCull es gratis? ¿Hay suscripción?",
-         "PhotoCull se descarga gratis y no hay suscripción. Explorar, comparar y ordenar es gratis, y ordenar una carpeta de tu ordenador nunca tiene límite. Borrar fotos de un iPhone desde un Mac está limitado a 6 al día en la versión gratuita, 15 con TripSweep Pro e ilimitado con Pro + Desktop (compras únicas que se hacen en la app TripSweep para iOS)."),
+         "PhotoCull se descarga gratis y no hay suscripción. Explorar, comparar y ordenar es gratis, y ordenar una carpeta de tu ordenador nunca tiene límite. Borrar fotos de un iPhone por USB no tiene límite diario y no cuesta nada. Cuando el borrado pasa por TripSweep (un teléfono Android, o un iPhone si eliges ese camino), está limitado a 6 fotos al día gratis y 15 con TripSweep Pro, una compra única en la app TripSweep. Pro + Desktop ya no se vende; quienes ya lo compraron conservan el borrado ilimitado."),
         ("¿PhotoCull envía mis fotos a un servidor o a la nube?",
          "No. PhotoCull funciona 100 % en el dispositivo: sin cuenta, sin nube, y ninguna foto, vídeo ni ubicación se envía a ningún sitio. El reconocimiento de lugares y la detección de fotos parecidas se ejecutan en tu ordenador. Solo se pueden enviar estadísticas de uso anónimas y desactivables."),
         ("¿PhotoCull cambiará o modificará mis fotos originales?",
@@ -264,13 +264,13 @@ dict(slug="sort-iphone-photos-on-mac",
       <p><strong>2. Conecta el iPhone.</strong> Conéctalo con un cable USB, desbloquéalo y toca Confiar.</p>
       <p><strong>3. Ordena viaje a viaje.</strong> La vista Viajes agrupa el carrete por fecha y lugar y muestra el espacio que ocupa cada viaje. Empieza por el más pesado.</p>
       <p><strong>4. Compara y marca.</strong> Las fotos parecidas llevan una insignia: abre hasta seis lado a lado, quédate con la mejor y marca el resto, junto con capturas de pantalla y vídeos grandes que no necesites.</p>
-      <p><strong>5. Borra con seguridad.</strong> El borrado lo aplica en el iPhone la <a href="{ts}">app TripSweep</a>, gratuita, a través de « Eliminados recientemente »: tienes 30 días para cambiar de opinión.</p>
+      <p><strong>5. Borra con seguridad.</strong> Con Fotos en iCloud desactivado y macOS 27 o posterior, PhotoCull borra las fotos directamente por el cable USB. El borrado es definitivo en el iPhone: las fotos no pasan por « Eliminados recientemente ». Por defecto, PhotoCull guarda durante 30 días una copia de cada elemento borrado en tu Mac, en una carpeta « PhotoCull Trash » dentro de Imágenes, de modo que un error se puede deshacer importando de nuevo el archivo. Si Fotos en iCloud está activado, o tu Mac tiene macOS 26 o anterior, usa en su lugar la <a href="{ts}">app TripSweep</a>, gratuita: borra a través de « Eliminados recientemente », así que tienes 30 días para cambiar de opinión.</p>
 
       <h2>Conviene saber</h2>
       <ul>
         <li>Todo se queda en tu Mac y tu iPhone: sin cuenta, sin nube, sin envíos.</li>
         <li>PhotoCull nunca modifica tus originales y solo borra lo que confirmas.</li>
-        <li>Desde un Mac, la versión gratuita permite 6 borrados al día, TripSweep Pro 15, y Pro + Desktop no tiene límite. Explorar y ordenar es gratis, y ordenar una carpeta de fotos en el Mac nunca tiene límite.</li>
+        <li>Desde un Mac, el borrado directo no tiene límite diario. A través de TripSweep, la versión gratuita permite 6 borrados al día y Pro 15 (quienes ya compraron Pro + Desktop conservan el ilimitado). Explorar y ordenar es gratis, y ordenar una carpeta de fotos en el Mac nunca tiene límite.</li>
       </ul>"""),
 dict(slug="sort-iphone-photos-on-pc",
      title="Cómo ordenar las fotos del iPhone en un PC con Windows",
@@ -289,7 +289,7 @@ dict(slug="sort-iphone-photos-on-pc",
       <p><strong>2. Instala PhotoCull.</strong> Desde Microsoft Store o <a href="{win}">descargándolo gratis</a> (Windows 10/11, 64 bits). La descarga aún no está firmada, así que SmartScreen puede avisar en el primer inicio.</p>
       <p><strong>3. Conecta el iPhone.</strong> Conéctalo con un cable USB, desbloquéalo y toca Confiar.</p>
       <p><strong>4. Ordena viaje a viaje.</strong> La vista Viajes agrupa el carrete por fecha y lugar y muestra el espacio que ocupa cada viaje. Empieza por el más pesado.</p>
-      <p><strong>5. Compara, marca, borra.</strong> Las fotos parecidas llevan una insignia: compara hasta seis lado a lado, quédate con la mejor y marca el resto. El borrado lo aplica en el iPhone la <a href="{ts}">app TripSweep</a>, gratuita, a través de « Eliminados recientemente »: tienes 30 días para cambiar de opinión.</p>
+      <p><strong>5. Compara, marca, borra.</strong> Las fotos parecidas llevan una insignia: compara hasta seis lado a lado, quédate con la mejor y marca el resto. Con Fotos en iCloud desactivado, PhotoCull las borra directamente por el cable USB, sin límite diario. El borrado es definitivo en el iPhone (sin « Eliminados recientemente »), pero por defecto PhotoCull guarda durante 30 días una copia de cada elemento borrado en tu PC, en una carpeta « PhotoCull Trash » dentro de Imágenes. Si Fotos en iCloud está activado, usa en su lugar la <a href="{ts}">app TripSweep</a>, gratuita: borra a través de « Eliminados recientemente », así que tienes 30 días para cambiar de opinión.</p>
 
       <h2>Conviene saber</h2>
       <ul>
@@ -318,7 +318,7 @@ dict(slug="sort-photos-on-computer",
 
       <h2>PhotoCull hace justo esto</h2>
       <p><a href="{pc}">PhotoCull</a> es una app de escritorio gratuita para Mac y Windows. Su vista Viajes agrupa la biblioteca por viaje y muestra el espacio que ocupa cada uno, las fotos parecidas llevan una insignia y puedes comparar hasta seis lado a lado. Lee un iPhone por USB o cualquier carpeta de tu ordenador, funciona 100 % en el dispositivo y nunca modifica tus originales.</p>
-      <p>Los borrados en un iPhone pasan por la <a href="{ts}">app TripSweep</a>, gratuita, y por « Eliminados recientemente », así que un error se puede deshacer durante 30 días. Ordenar una carpeta de tu ordenador nunca tiene límite.</p>
+      <p>Con un iPhone, PhotoCull borra directamente por el cable USB cuando Fotos en iCloud está desactivado (y, en un Mac, macOS 27 o posterior). El borrado es definitivo en el iPhone, con una copia que se guarda por defecto 30 días en tu ordenador; si no, la <a href="{ts}">app TripSweep</a>, gratuita, borra a través de « Eliminados recientemente ». Ordenar una carpeta de tu ordenador nunca tiene límite.</p>
 
       <h2>Consejos para una sesión larga</h2>
       <ul>
@@ -337,21 +337,21 @@ dict(slug="free-up-iphone-from-mac-or-pc",
         <li>Un Mac (Apple Silicon, macOS 11 o posterior) o un PC con Windows 10/11.</li>
         <li>Un cable USB. En Windows, además, la app gratuita Apple Devices de Microsoft Store.</li>
         <li><a href="{pc}">PhotoCull</a>, gratuito para ambos sistemas.</li>
-        <li>Para borrar desde el iPhone: la <a href="{ts}">app TripSweep</a>, gratuita, en el iPhone.</li>
+        <li>Para borrar desde el iPhone: Fotos en iCloud desactivado y, en un Mac, macOS 27 o posterior. Si no, la <a href="{ts}">app TripSweep</a>, gratuita, en el iPhone.</li>
       </ul>
 
       <h2>Paso a paso</h2>
       <p><strong>1. Conecta y confía.</strong> Conecta el iPhone, desbloquéalo y toca Confiar.</p>
       <p><strong>2. Abre la vista Viajes.</strong> PhotoCull agrupa tu carrete por viaje y muestra el espacio que ocupa cada uno.</p>
       <p><strong>3. Ordena los viajes más pesados.</strong> Compara las tomas parecidas, conserva la mejor y marca el resto, además de las capturas de pantalla y los vídeos grandes que no necesites.</p>
-      <p><strong>4. Confirma el borrado.</strong> Desde un Mac, TripSweep aplica el borrado en el iPhone a través de « Eliminados recientemente », y en Windows también. Nada se borra de forma permanente al instante.</p>
-      <p><strong>5. Vacía « Eliminados recientemente ».</strong> El espacio se recupera cuando se vacía el álbum.</p>
+      <p><strong>4. Confirma el borrado.</strong> Con Fotos en iCloud desactivado (y macOS 27 o posterior en un Mac), PhotoCull borra las fotos directamente por el cable USB, también en Windows. El borrado es definitivo en el iPhone, pero por defecto PhotoCull guarda durante 30 días una copia de cada elemento borrado en tu ordenador, en una carpeta « PhotoCull Trash » dentro de Imágenes. Si no, TripSweep borra a través de « Eliminados recientemente ».</p>
+      <p><strong>5. Vacía « Eliminados recientemente » si usaste TripSweep.</strong> Con TripSweep, el espacio se recupera cuando se vacía el álbum. El borrado directo no usa ese álbum.</p>
 
       <h2>¿Es seguro?</h2>
-      <p>Sí: tus fotos se quedan en tus dispositivos, sin cuenta, sin nube y sin subir nada. Las fotos borradas permanecen 30 días en « Eliminados recientemente », y PhotoCull solo lee tus fotos hasta que tú confirmas.</p>
+      <p>Sí: tus fotos se quedan en tus dispositivos, sin cuenta, sin nube y sin subir nada. PhotoCull solo lee tus fotos hasta que tú confirmas. Un borrado directo es definitivo en el iPhone, pero por defecto queda una copia 30 días en tu ordenador; con TripSweep, las fotos borradas permanecen 30 días en « Eliminados recientemente ».</p>
 
       <h2>¿Cuántas fotos puedo borrar al día?</h2>
-      <p>Desde un Mac, la versión gratuita permite 6 fotos al día, TripSweep Pro 15 y Pro + Desktop es ilimitado (consulta los planes en la página de TripSweep). Todas son compras únicas, sin suscripción. Explorar, comparar y ordenar es gratis, y ordenar una carpeta de tu ordenador nunca tiene límite.</p>
+      <p>Con un iPhone, el borrado directo por USB no tiene límite diario y no exige ninguna compra. Los límites solo se aplican cuando el borrado pasa por TripSweep (un teléfono Android, o un iPhone cuando Fotos en iCloud está activado o el Mac tiene macOS 26 o anterior): la versión gratuita permite 6 fotos al día y TripSweep Pro 15, y quienes ya compraron Pro + Desktop (que ya no se vende) conservan el ilimitado. Pro es una compra única, sin suscripción. Explorar, comparar y ordenar es gratis, y ordenar una carpeta de tu ordenador nunca tiene límite.</p>
 
       <h2>En Windows</h2>
       <p>Los pasos son los mismos en Windows 10 y 11. Instala primero la app gratuita Apple Devices de Microsoft Store, para que PhotoCull pueda leer el iPhone. La app todavía no está firmada digitalmente, así que SmartScreen puede mostrar una advertencia la primera vez que la abras.</p>"""),
@@ -380,7 +380,7 @@ dict(slug="compare-similar-photos-keep-the-best",
       <p>En el propio móvil, la <a href="{ts}">app TripSweep</a> sugiere la mejor toma de cada grupo según la nitidez, la puntuación estética de Apple y los rostros, y su botón « Conservar 1 por grupo » resuelve una categoría entera de una vez.</p>
 
       <h2>Conserva sin arrepentirte</h2>
-      <p>Cuando dudes, quédate con dos. Los borrados en un iPhone pasan por « Eliminados recientemente » durante 30 días, así que aún puedes cambiar de opinión.</p>"""),
+      <p>Cuando dudes, quédate con dos. Con TripSweep, los borrados en un iPhone pasan por « Eliminados recientemente » durante 30 días; con el borrado directo por USB, PhotoCull guarda por defecto una copia en tu ordenador durante 30 días. En ambos casos aún puedes cambiar de opinión.</p>"""),
 dict(slug="find-duplicate-photos-on-mac",
      title="Cómo buscar fotos duplicadas y parecidas en un Mac",
      desc="Encuentra copias exactas, ráfagas y tomas casi idénticas en las carpetas de tu Mac o en un disco externo, conserva la mejor y manda el resto a la Papelera.",
@@ -483,7 +483,7 @@ dict(slug="sort-android-photos-on-mac",
       <ul>
         <li>La conexión no sale de tu red local y está cifrada; nada pasa por internet.</li>
         <li>PhotoCull nunca modifica tus originales y solo borra lo que confirmas en el móvil.</li>
-        <li>Desde el ordenador, la versión gratuita permite 6 borrados al día, TripSweep Pro 15, y Pro + Desktop es ilimitado. Explorar y ordenar es siempre gratis.</li>
+        <li>Desde el ordenador, la versión gratuita permite 6 borrados al día, TripSweep Pro 15, y quienes ya compraron Pro + Desktop conservan el ilimitado. Explorar y ordenar es siempre gratis.</li>
         <li>¿Tienes también un iPhone? Se conecta al Mac con un cable USB.</li>
       </ul>"""),
 dict(slug="sort-android-photos-on-pc",
@@ -510,7 +510,7 @@ dict(slug="sort-android-photos-on-pc",
       <ul>
         <li>Todo se queda en tu PC y tu móvil: sin cuenta, sin nube, sin envíos.</li>
         <li>Borrar desde el Explorador de archivos es inmediato y permanente; hacerlo con TripSweep conserva la red de seguridad de 30 días.</li>
-        <li>Desde el PC, la versión gratuita permite 6 borrados al día, TripSweep Pro 15, y Pro + Desktop es ilimitado. Ordenar una carpeta del PC nunca tiene límite.</li>
+        <li>Desde el PC, la versión gratuita permite 6 borrados al día, TripSweep Pro 15, y quienes ya compraron Pro + Desktop conservan el ilimitado. Ordenar una carpeta del PC nunca tiene límite.</li>
       </ul>"""),
 dict(slug="free-up-android-from-mac-or-pc",
      title="Cómo liberar espacio en Android desde un Mac o un PC",
@@ -534,7 +534,7 @@ dict(slug="free-up-android-from-mac-or-pc",
       <h2>Conviene saber</h2>
       <ul>
         <li>Sin cuenta y sin envíos: el móvil y el ordenador se comunican por tu propia red o por cable.</li>
-        <li>Desde el ordenador, la versión gratuita permite 6 borrados al día, Pro 15, y Pro + Desktop es ilimitado.</li>
+        <li>Desde el ordenador, la versión gratuita permite 6 borrados al día, Pro 15, y quienes ya compraron Pro + Desktop conservan el ilimitado.</li>
       </ul>"""),
 ],
 }

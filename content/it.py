@@ -45,7 +45,7 @@ FAQ_TRIPSWEEP_EXTRA = [
     ("Posso controllare le foto del mio iPhone su un grande schermo invece che sul telefono?",
      "Sì. <a href=\"{pc}\">PhotoCull</a> è l'app desktop gratuita per Mac e Windows: mostra il rullino del tuo iPhone raggruppato per viaggio, confronta le foto simili fianco a fianco e ti permette di selezionare centinaia di foto con pochi clic. <a href=\"{pc}\">Scopri di più su PhotoCull</a>."),
     ("Posso eliminare le foto in blocco dal computer invece di toccare il telefono?",
-     "Sì, con <a href=\"{pc}\">PhotoCull</a> su un Mac o un PC Windows. Selezioni le foto sul grande schermo e l'eliminazione viene applicata sul tuo iPhone da TripSweep tramite «Eliminati di recente». La versione gratuita consente 6 foto al giorno dal Mac (vedi i piani nella pagina di TripSweep), Pro 15, e Pro + Desktop elimina il limite."),
+     "Sì, con <a href=\"{pc}\">PhotoCull</a> su un Mac o un PC Windows. Selezioni le foto sul grande schermo e, con un iPhone, PhotoCull le elimina direttamente tramite il cavo USB: senza limite giornaliero, senza nulla da acquistare e senza TripSweep. Serve che Foto di iCloud sia disattivato sull'iPhone e, su un Mac, macOS 27 o successivo (funziona anche su Windows). L'eliminazione è definitiva sull'iPhone, le foto non passano da «Eliminati di recente», ma PhotoCull conserva per impostazione predefinita una copia sul computer per 30 giorni. TripSweep resta un'opzione: elimina tramite «Eliminati di recente» (30 giorni) ed è la strada da seguire quando Foto di iCloud è attivo o con macOS 26 o precedente. Le eliminazioni richieste dal computer tramite TripSweep, che è anche il funzionamento di un telefono Android, sono limitate a 6 foto al giorno gratis e 15 con Pro."),
     ("Quali iPhone e versioni di iOS supporta TripSweep?",
      "TripSweep richiede iOS 18 o successivo. L'analisi delle foto simili usa il framework Vision di Apple ed è più veloce sugli iPhone recenti, ma funziona su tutti i modelli supportati. Su Android richiede Android 11 o successivo ed è disponibile su <a href=\"{play}\">Google Play</a>."),
 ]
@@ -66,11 +66,11 @@ FAQ_PHOTOCULL = dict(
         ("Come ordino rapidamente migliaia di foto?",
          "Apri la vista Viaggi: la tua libreria è raggruppata per viaggio con lo spazio occupato da ciascuno, così parti dal più pesante. All'interno di un viaggio, seleziona le foto in blocco, confronta quelle simili fianco a fianco e tieni lo scatto migliore di ogni gruppo. Gli stessi filtri dell'app iOS (viaggi di un solo giorno, luoghi esclusi come casa o lavoro, dimensione) restringono la ricerca."),
         ("Come libero spazio su iPhone da un Mac o PC?",
-         "Collega il tuo iPhone via USB, apri PhotoCull, seleziona i viaggi e le foto che non ti servono più e conferma. L'eliminazione viene applicata sull'iPhone dall'<a href=\"{ts}\">app TripSweep</a> gratuita tramite «Eliminati di recente», quindi libera spazio non appena svuoti quell'album."),
+         "Collega il tuo iPhone via USB, apri PhotoCull, seleziona i viaggi e le foto che non ti servono più e conferma. PhotoCull le elimina direttamente tramite il cavo USB, a patto che Foto di iCloud sia disattivato (e, su un Mac, macOS 27 o successivo). L'eliminazione è definitiva sull'iPhone, con una copia conservata per impostazione predefinita 30 giorni sul tuo computer. Se Foto di iCloud è attivo, o se il tuo Mac ha macOS 26 o precedente, è invece l'<a href=\"{ts}\">app TripSweep</a>, gratuita, ad applicare l'eliminazione tramite «Eliminati di recente»; lo spazio torna disponibile quando svuoti quell'album."),
         ("Posso eliminare le foto dal mio iPhone direttamente dal computer?",
-         "Sì, da un Mac o da un PC Windows, con l'<a href=\"{ts}\">app TripSweep</a> installata sull'iPhone. Da un Mac, la versione gratuita consente 6 foto al giorno, Pro 15 e Pro + Desktop elimina il limite."),
+         "Sì. Con un iPhone, PhotoCull elimina le foto direttamente tramite il cavo USB, da un Mac o da un PC Windows, senza limite giornaliero e senza nulla da acquistare; l'app TripSweep non serve. Tre condizioni: Foto di iCloud è disattivato sull'iPhone (quando è attivo, Apple non consente questa eliminazione), un Mac ha macOS 27 o successivo (funziona anche su Windows) e accetti che l'eliminazione sia definitiva sull'iPhone: le foto non passano da «Eliminati di recente». Per impostazione predefinita, PhotoCull conserva per 30 giorni una copia di ogni elemento eliminato sul tuo computer, in una cartella «PhotoCull Trash» dentro Immagini, così un errore si annulla importando di nuovo il file. Le Live Photo e le foto modificate sono gestite correttamente (tutte le loro versioni vengono eliminate insieme) e PhotoCull mostra la versione modificata di una foto modificata. Se una condizione non è soddisfatta, usa l'<a href=\"{ts}\">app TripSweep</a> sull'iPhone: applica l'eliminazione tramite «Eliminati di recente» (30 giorni), con un limite giornaliero (6 foto al giorno gratis, 15 con Pro)."),
         ("Eliminare da PhotoCull è definitivo?",
-         "No. Le eliminazioni sull'iPhone passano sempre dall'album «Eliminati di recente» dell'app Foto, dove le foto restano per 30 giorni e possono essere ripristinate. PhotoCull non esegue mai un'eliminazione definitiva immediata."),
+         "Dipende dal percorso scelto. Con un iPhone, l'eliminazione diretta via USB è definitiva sull'iPhone: le foto non passano da «Eliminati di recente». Per impostazione predefinita, PhotoCull conserva per 30 giorni una copia di ogni elemento eliminato sul tuo computer, in una cartella «PhotoCull Trash» dentro Immagini, per poterlo importare di nuovo. Tramite TripSweep, su un iPhone o su un telefono Android, le foto finiscono nel cestino del telefono per 30 giorni e si possono ripristinare. In una cartella del tuo computer, i file vanno nel Cestino."),
         ("Come collego il mio iPhone a PhotoCull?",
          "Usa un cavo USB, sblocca l'iPhone e tocca «Autorizza» quando richiesto. Su Mac non serve altro. Su Windows, installa la app gratuita Apple Devices dal Microsoft Store, che fornisce il driver con cui PhotoCull può leggere l'iPhone."),
         ("Posso ordinare le foto di un telefono Android dal Mac o dal PC?",
@@ -84,7 +84,7 @@ FAQ_PHOTOCULL = dict(
         ("Cosa succede alle foto che elimino su un telefono Android?",
          "Confermi l'eliminazione sul telefono, in TripSweep, e le foto finiscono nel cestino del telefono, dove restano 30 giorni e possono essere ripristinate. PhotoCull non elimina mai nulla in modo definitivo da solo."),
         ("Mi serve l'app iOS TripSweep?",
-         "Non per sfogliare, confrontare e ordinare un iPhone. Ti serve solo per eliminare le foto dall'iPhone, perché l'eliminazione viene applicata sul telefono. Un telefono Android richiede l'app TripSweep per Android anche solo per collegarsi. Le cartelle sul tuo computer si possono ordinare senza nessuna delle due."),
+         "No. Sfogliare, confrontare, ordinare e, con un iPhone, eliminare via USB funzionano senza (con Foto di iCloud disattivato e, su un Mac, macOS 27 o successivo). Resta un'opzione: elimina tramite «Eliminati di recente» dell'iPhone (30 giorni) ed è la strada da seguire quando Foto di iCloud è attivo o con macOS 26 o precedente. Un telefono Android, invece, ha bisogno dell'app TripSweep per Android per connettersi e per eliminare. Le cartelle del tuo computer si ordinano senza nessuna delle due."),
         ("Come trovo le foto duplicate in una cartella del Mac o del PC?",
          "Apri la cartella in PhotoCull («Apri cartella», oppure trascinala sulla finestra). L'app esplora le sottocartelle, confronta il contenuto delle foto e applica lo stesso badge «≈ N» a copie esatte, raffiche e scatti quasi identici. Tieni il migliore di ogni gruppo e sposta il resto nel Cestino. Guide: <a href=\"{post:find-duplicate-photos-on-mac}\">sul Mac</a>, <a href=\"{post:find-duplicate-photos-on-windows}\">su Windows</a>."),
         ("Posso usare PhotoCull su foto salvate sul mio computer, non su un iPhone?",
@@ -98,7 +98,7 @@ FAQ_PHOTOCULL = dict(
         ("Quali Mac supporta PhotoCull?",
          "Mac con Apple Silicon e macOS 11 o successivo. L'app è firmata e notarizzata da Apple, quindi si apre senza avvisi di sicurezza."),
         ("PhotoCull è gratuito? C'è un abbonamento?",
-         "PhotoCull si scarica gratis e non ci sono abbonamenti. Sfogliare, confrontare e ordinare è gratuito, e ordinare una cartella sul computer non ha mai limiti. L'eliminazione di foto da un iPhone tramite Mac è limitata a 6 al giorno gratis, 15 con TripSweep Pro e illimitata con Pro + Desktop (acquisti singoli effettuati nell'app iOS TripSweep)."),
+         "PhotoCull si scarica gratis e non ci sono abbonamenti. Sfogliare, confrontare e ordinare è gratuito, e ordinare una cartella del computer non ha mai limiti. Eliminare foto da un iPhone via USB non ha limite giornaliero e non costa nulla. Quando l'eliminazione passa da TripSweep (un telefono Android, o un iPhone se scegli questa strada) è limitata a 6 foto al giorno gratis e 15 con TripSweep Pro, un acquisto singolo nell'app TripSweep. Pro + Desktop non è più in vendita; chi l'ha già acquistato mantiene l'eliminazione illimitata."),
         ("PhotoCull invia le mie foto a un server o al cloud?",
          "No. PhotoCull funziona 100% sul dispositivo: nessun account, nessun cloud, nessuna foto, video o posizione viene mai inviata altrove. Il riconoscimento dei luoghi e il rilevamento delle foto simili avvengono sul tuo computer. Possono essere inviate solo statistiche d'uso anonime, disattivabili."),
         ("PhotoCull modifica le mie foto originali?",
@@ -264,13 +264,13 @@ dict(slug="sort-iphone-photos-on-mac",
       <p><strong>2. Collega l'iPhone.</strong> Collegalo con un cavo USB, sbloccalo e tocca Autorizza.</p>
       <p><strong>3. Ordina un viaggio alla volta.</strong> La vista Viaggi raggruppa il rullino per data e luogo e mostra lo spazio occupato da ogni viaggio. Inizia dal più pesante.</p>
       <p><strong>4. Confronta e seleziona.</strong> Le foto simili hanno un badge: aprine fino a sei fianco a fianco, tieni la migliore e seleziona le altre, insieme a screenshot e video pesanti che non ti servono.</p>
-      <p><strong>5. Elimina in sicurezza.</strong> L'eliminazione viene applicata sull'iPhone dall'<a href="{ts}">app TripSweep</a>, gratuita, tramite «Eliminati di recente»: hai 30 giorni per cambiare idea.</p>
+      <p><strong>5. Elimina in sicurezza.</strong> Con Foto di iCloud disattivato e macOS 27 o successivo, PhotoCull elimina le foto direttamente tramite il cavo USB. L'eliminazione è definitiva sull'iPhone: le foto non passano da «Eliminati di recente». Per impostazione predefinita, PhotoCull conserva per 30 giorni una copia di ogni elemento eliminato sul tuo Mac, in una cartella «PhotoCull Trash» dentro Immagini, così un errore si annulla importando di nuovo il file. Se Foto di iCloud è attivo, o il tuo Mac ha macOS 26 o precedente, usa invece l'<a href="{ts}">app TripSweep</a>, gratuita: elimina tramite «Eliminati di recente», quindi hai 30 giorni per cambiare idea.</p>
 
       <h2>Da sapere</h2>
       <ul>
         <li>Tutto resta sul tuo Mac e sul tuo iPhone: nessun account, nessun cloud, nessun invio.</li>
         <li>PhotoCull non modifica mai gli originali ed elimina solo ciò che confermi.</li>
-        <li>Dal Mac, la versione gratuita consente 6 eliminazioni al giorno, TripSweep Pro 15 e Pro + Desktop è illimitato. Sfogliare e ordinare è gratis, e ordinare una cartella di foto sul Mac non ha mai limiti.</li>
+        <li>Dal Mac, l'eliminazione diretta non ha limite giornaliero. Tramite TripSweep, la versione gratuita consente 6 eliminazioni al giorno e Pro 15 (chi ha già acquistato Pro + Desktop mantiene l'illimitato). Sfogliare e ordinare è gratis, e ordinare una cartella di foto sul Mac non ha mai limiti.</li>
       </ul>"""),
 dict(slug="sort-iphone-photos-on-pc",
      title="Come ordinare le foto dell'iPhone su un PC Windows",
@@ -289,7 +289,7 @@ dict(slug="sort-iphone-photos-on-pc",
       <p><strong>2. Installa PhotoCull.</strong> Dal Microsoft Store oppure <a href="{win}">scaricandolo gratis</a> (Windows 10/11, 64 bit). Il download non è ancora firmato, quindi SmartScreen può mostrare un avviso al primo avvio.</p>
       <p><strong>3. Collega l'iPhone.</strong> Collegalo con un cavo USB, sbloccalo e tocca Autorizza.</p>
       <p><strong>4. Ordina un viaggio alla volta.</strong> La vista Viaggi raggruppa il rullino per data e luogo e mostra lo spazio occupato da ogni viaggio. Inizia dal più pesante.</p>
-      <p><strong>5. Confronta, seleziona, elimina.</strong> Le foto simili hanno un badge: confrontane fino a sei fianco a fianco, tieni la migliore e seleziona le altre. L'eliminazione viene applicata sull'iPhone dall'<a href="{ts}">app TripSweep</a>, gratuita, tramite «Eliminati di recente»: hai 30 giorni per cambiare idea.</p>
+      <p><strong>5. Confronta, seleziona, elimina.</strong> Le foto simili hanno un badge: confrontane fino a sei fianco a fianco, tieni la migliore e seleziona le altre. Con Foto di iCloud disattivato, PhotoCull le elimina direttamente tramite il cavo USB, senza limite giornaliero. L'eliminazione è definitiva sull'iPhone (niente «Eliminati di recente»), ma per impostazione predefinita PhotoCull conserva per 30 giorni una copia di ogni elemento eliminato sul tuo PC, in una cartella «PhotoCull Trash» dentro Immagini. Se Foto di iCloud è attivo, usa invece l'<a href="{ts}">app TripSweep</a>, gratuita: elimina tramite «Eliminati di recente», quindi hai 30 giorni per cambiare idea.</p>
 
       <h2>Da sapere</h2>
       <ul>
@@ -318,7 +318,7 @@ dict(slug="sort-photos-on-computer",
 
       <h2>PhotoCull fa esattamente questo</h2>
       <p><a href="{pc}">PhotoCull</a> è un'app desktop gratuita per Mac e Windows. La sua vista Viaggi raggruppa la libreria per viaggio e mostra lo spazio occupato da ciascuno, le foto simili hanno un badge e puoi confrontarne fino a sei fianco a fianco. Legge un iPhone via USB o qualsiasi cartella sul tuo computer, funziona 100% sul dispositivo e non modifica mai i tuoi originali.</p>
-      <p>Le eliminazioni su un iPhone passano dall'<a href="{ts}">app TripSweep</a> gratuita e da «Eliminati di recente», quindi un errore si può annullare per 30 giorni. Ordinare una cartella sul computer non ha mai limiti.</p>
+      <p>Con un iPhone, PhotoCull elimina direttamente tramite il cavo USB quando Foto di iCloud è disattivato (e, su un Mac, macOS 27 o successivo). L'eliminazione è definitiva sull'iPhone, con una copia conservata per impostazione predefinita 30 giorni sul tuo computer; altrimenti l'<a href="{ts}">app TripSweep</a> gratuita elimina tramite «Eliminati di recente». Ordinare una cartella sul computer non ha mai limiti.</p>
 
       <h2>Consigli per una sessione lunga</h2>
       <ul>
@@ -337,21 +337,21 @@ dict(slug="free-up-iphone-from-mac-or-pc",
         <li>Un Mac (Apple Silicon, macOS 11+) o un PC Windows 10/11.</li>
         <li>Un cavo USB. Su Windows, anche la app gratuita Apple Devices dal Microsoft Store.</li>
         <li><a href="{pc}">PhotoCull</a>, gratuito per entrambi i sistemi.</li>
-        <li>Per eliminare dall'iPhone: l'<a href="{ts}">app TripSweep</a> gratuita sull'iPhone.</li>
+        <li>Per eliminare dall'iPhone: Foto di iCloud disattivato e, su un Mac, macOS 27 o successivo. Altrimenti, l'<a href="{ts}">app TripSweep</a> gratuita sull'iPhone.</li>
       </ul>
 
       <h2>Passo dopo passo</h2>
       <p><strong>1. Collega e autorizza.</strong> Collega l'iPhone, sbloccalo e tocca Autorizza.</p>
       <p><strong>2. Apri la vista Viaggi.</strong> PhotoCull raggruppa il tuo rullino per viaggio e mostra lo spazio occupato da ciascuno.</p>
       <p><strong>3. Ordina i viaggi più pesanti.</strong> Confronta gli scatti simili, tieni il migliore e seleziona il resto, più gli screenshot e i video pesanti che non ti servono.</p>
-      <p><strong>4. Conferma l'eliminazione.</strong> Da un Mac, l'eliminazione viene applicata sull'iPhone da TripSweep tramite «Eliminati di recente», e lo stesso vale su Windows. Nulla viene cancellato definitivamente subito.</p>
-      <p><strong>5. Svuota «Eliminati di recente».</strong> Lo spazio torna disponibile una volta svuotato l'album.</p>
+      <p><strong>4. Conferma l'eliminazione.</strong> Con Foto di iCloud disattivato (e macOS 27 o successivo su un Mac), PhotoCull elimina le foto direttamente tramite il cavo USB, anche su Windows. L'eliminazione è definitiva sull'iPhone, ma per impostazione predefinita PhotoCull conserva per 30 giorni una copia di ogni elemento eliminato sul tuo computer, in una cartella «PhotoCull Trash» dentro Immagini. Altrimenti, TripSweep elimina tramite «Eliminati di recente».</p>
+      <p><strong>5. Svuota «Eliminati di recente» se hai usato TripSweep.</strong> Tramite TripSweep, lo spazio torna disponibile una volta svuotato l'album. L'eliminazione diretta non usa quell'album.</p>
 
       <h2>È sicuro?</h2>
-      <p>Sì: le tue foto restano sui tuoi dispositivi, senza account, senza cloud e senza upload. Le foto eliminate restano 30 giorni in «Eliminati di recente», e PhotoCull si limita a leggere le tue foto finché non confermi.</p>
+      <p>Sì: le tue foto restano sui tuoi dispositivi, senza account, senza cloud e senza upload. PhotoCull si limita a leggere le tue foto finché non confermi. Un'eliminazione diretta è definitiva sull'iPhone, ma una copia resta per impostazione predefinita 30 giorni sul tuo computer; tramite TripSweep, le foto eliminate restano 30 giorni in «Eliminati di recente».</p>
 
       <h2>Quante foto posso eliminare al giorno?</h2>
-      <p>Da un Mac, la versione gratuita consente 6 foto al giorno, TripSweep Pro 15 e Pro + Desktop è illimitato (vedi i piani nella pagina di TripSweep). Sono tutti acquisti singoli, senza abbonamento. Sfogliare, confrontare e ordinare è gratuito, e ordinare una cartella sul computer non ha mai limiti.</p>
+      <p>Con un iPhone, l'eliminazione diretta via USB non ha limite giornaliero e non richiede alcun acquisto. I limiti valgono solo quando l'eliminazione passa da TripSweep (un telefono Android, oppure un iPhone quando Foto di iCloud è attivo o il Mac ha macOS 26 o precedente): la versione gratuita consente 6 foto al giorno e TripSweep Pro 15, e chi ha già acquistato Pro + Desktop (non più in vendita) mantiene l'illimitato. Pro è un acquisto singolo, senza abbonamento. Sfogliare, confrontare e ordinare è gratuito, e ordinare una cartella sul computer non ha mai limiti.</p>
 
       <h2>Su Windows</h2>
       <p>I passaggi sono gli stessi su Windows 10 e 11. Installa prima la app gratuita Apple Devices dal Microsoft Store, così PhotoCull può leggere l'iPhone. L'app non è ancora firmata digitalmente, quindi SmartScreen può mostrare un avviso al primo avvio.</p>"""),
@@ -380,7 +380,7 @@ dict(slug="compare-similar-photos-keep-the-best",
       <p>Sul telefono stesso, l'<a href="{ts}">app TripSweep</a> suggerisce lo scatto migliore di ogni gruppo in base a nitidezza, punteggio estetico di Apple e volti, e il suo pulsante «Tieni 1 per gruppo» gestisce un'intera categoria in una volta.</p>
 
       <h2>Tieni, senza rimpianti</h2>
-      <p>Quando hai dubbi, tienine due. Le eliminazioni su un iPhone passano da «Eliminati di recente» per 30 giorni, quindi puoi ancora cambiare idea.</p>"""),
+      <p>Quando hai dubbi, tienine due. Tramite TripSweep, le eliminazioni su un iPhone passano da «Eliminati di recente» per 30 giorni; con l'eliminazione diretta via USB, PhotoCull conserva per impostazione predefinita una copia sul tuo computer per 30 giorni. In entrambi i casi puoi ancora cambiare idea.</p>"""),
 dict(slug="find-duplicate-photos-on-mac",
      title="Come trovare foto duplicate e simili sul Mac",
      desc="Trova copie esatte, raffiche e scatti quasi identici nelle cartelle di foto del Mac o su un disco esterno, tieni il migliore e sposta il resto nel Cestino.",
@@ -483,7 +483,7 @@ dict(slug="sort-android-photos-on-mac",
       <ul>
         <li>La connessione resta sulla tua rete locale ed è cifrata; nulla passa da internet.</li>
         <li>PhotoCull non modifica mai gli originali ed elimina solo ciò che confermi sul telefono.</li>
-        <li>Dal computer, la versione gratuita consente 6 eliminazioni al giorno, TripSweep Pro 15 e Pro + Desktop è illimitato. Sfogliare e ordinare è sempre gratis.</li>
+        <li>Dal computer, la versione gratuita consente 6 eliminazioni al giorno, TripSweep Pro 15, e chi ha già acquistato Pro + Desktop mantiene l'illimitato. Sfogliare e ordinare è sempre gratis.</li>
         <li>Hai anche un iPhone? Si collega al Mac con un cavo USB.</li>
       </ul>"""),
 dict(slug="sort-android-photos-on-pc",
@@ -510,7 +510,7 @@ dict(slug="sort-android-photos-on-pc",
       <ul>
         <li>Tutto resta sul tuo PC e sul tuo telefono: nessun account, nessun cloud, nessun invio.</li>
         <li>Eliminare da Esplora file è immediato e definitivo; passando da TripSweep conservi la rete di sicurezza dei 30 giorni.</li>
-        <li>Dal PC, la versione gratuita consente 6 eliminazioni al giorno, TripSweep Pro 15 e Pro + Desktop è illimitato. Ordinare una cartella sul PC non ha mai limiti.</li>
+        <li>Dal PC, la versione gratuita consente 6 eliminazioni al giorno, TripSweep Pro 15, e chi ha già acquistato Pro + Desktop mantiene l'illimitato. Ordinare una cartella sul PC non ha mai limiti.</li>
       </ul>"""),
 dict(slug="free-up-android-from-mac-or-pc",
      title="Come liberare spazio su Android da un Mac o PC Windows",
@@ -534,7 +534,7 @@ dict(slug="free-up-android-from-mac-or-pc",
       <h2>Da sapere</h2>
       <ul>
         <li>Nessun account e nessun invio: telefono e computer comunicano sulla tua rete o via cavo.</li>
-        <li>Dal computer, la versione gratuita consente 6 eliminazioni al giorno, Pro 15 e Pro + Desktop è illimitato.</li>
+        <li>Dal computer, la versione gratuita consente 6 eliminazioni al giorno, Pro 15, e chi ha già acquistato Pro + Desktop mantiene l'illimitato.</li>
       </ul>"""),
 ],
 }
