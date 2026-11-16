@@ -7,8 +7,7 @@ LANGS = ["en", "fr", "it", "de", "es"]
 LANG_NAMES = {"en": "English", "fr": "Français", "it": "Italiano", "de": "Deutsch", "es": "Español"}
 
 def path_for(lang, page, from_lang):
-    page = mapped(page)
-    """Relative href from a page in from_lang to `page` (index.html/desktop.html/privacy.html) in `lang`."""
+    """Relative href from a page in from_lang to `page` (index.html, faq.html, privacy.html...) in `lang`."""
     if lang == from_lang:
         return page
     if from_lang == "en":
@@ -21,26 +20,16 @@ def asset_path(from_lang, rel):
     return ("" if from_lang == "en" else "../") + rel
 
 ORIGIN = "https://tripsweep.idealy.ch"
+# PhotoCull (desktop app) has its own site since 2026-11 (brignolij/PhotoCullSite); links to it are absolute.
+PHOTOCULL_ORIGIN = "https://photocull.idealy.ch"
 
-def mapped(page, site=None):
-    """File name of a page for a product: PhotoCull's pages sit next to TripSweep's as desktop.html, desktop-faq.html...
-    (the privacy policy is shared). Everything that builds a URL goes through here."""
-    if (site or SITE) == "tripsweep" or page == "privacy.html":
-        return page
-    return "desktop.html" if page == "index.html" else "desktop-" + page
+SITES = {"tripsweep": dict(origin=ORIGIN, brand="TripSweep", icon="tripsweep")}
+SITE = "tripsweep"
+SITE_ORIGIN = ORIGIN
 
-# Two products from one source, one site: every page below is rendered once per site (see the bottom of the file).
-SITES = {
-    "tripsweep": dict(origin=ORIGIN, brand="TripSweep", icon="tripsweep", other="photocull"),
-    "photocull": dict(origin=ORIGIN, brand="PhotoCull", icon="photocull", other="tripsweep"),
-}
-SITE = "tripsweep"  # set by the render loop
-SITE_ORIGIN = SITES[SITE]["origin"]
-
-def cross_url(lang, page="index.html"):
-    """URL of the OTHER product's `page`, same site."""
-    f = mapped(page, SITES[SITE]["other"])
-    return ORIGIN + ("/" if lang == "en" else f"/{lang}/") + ("" if f == "index.html" else f)
+def cross_url(lang):
+    """The PhotoCull site's home, in the same language."""
+    return PHOTOCULL_ORIGIN + ("/" if lang == "en" else f"/{lang}/")
 APP_STORE_URL = "https://apps.apple.com/app/tripsweep/id6813028251"
 APP_STORE_ID = "6813028251"
 # Provider token for App Store campaign links (App Store Connect > App Analytics > Acquisition > Campaigns > generate a
@@ -57,13 +46,7 @@ def store_link(campaign):
     """App Store link tagged with a campaign token, so App Analytics shows which page brought the install."""
     pt = f"pt={APP_STORE_PT}&" if APP_STORE_PT else ""
     return f"{APP_STORE_URL}?{pt}ct={campaign}&mt=8"
-# Stable "latest" link: always the newest PhotoCull release attached to this repository's GitHub Releases.
-PHOTOCULL_DOWNLOAD_URL = "https://github.com/brignolij/TripSweepSite/releases/latest/download/PhotoCull-Desktop.zip"
-# Windows build, attached to the SAME "latest" release as the Mac zip: every new release (Mac or Windows) must carry both
-# files, otherwise one of the two links 404s (`gh release upload <tag> dist/PhotoCull-Windows-x64.zip`).
-MS_STORE_URL = "https://apps.microsoft.com/detail/9n6wv393b3pl"
-PHOTOCULL_WINDOWS_DOWNLOAD_URL = "https://github.com/brignolij/TripSweepSite/releases/latest/download/PhotoCull-Windows-x64.zip"
-# Pricing section (Free / Pro) on both pages and in llms.txt. "Pro + Desktop" is no longer sold (owners keep it): it only
+# Pricing section (Free / Pro) on the home page and in llms.txt. "Pro + Desktop" is no longer sold (owners keep it): it only
 # appears as a one-sentence note. Set to False to hide the section.
 SHOW_PRICING = True
 
@@ -90,7 +73,6 @@ def hreflang_links(page):
     return "\n".join(links)
 
 def page_url(lang, page):
-    page = mapped(page)
     return SITE_ORIGIN + ("/" if lang == "en" else f"/{lang}/") + ("" if page == "index.html" else page)
 
 # BCP47-ish locale tags for og:locale (underscore, region guess) — close enough for OG's purposes,
@@ -172,10 +154,6 @@ def brand_html(lang):
         <img class="logo-img" src="{asset_path(lang, f"assets/img/{b['icon']}-icon-96.png")}" alt="" />
         {b['brand']}
       </a>'''
-
-def desktop_url(lang):
-    """Where the privacy policy's "desktop app" link goes: the PhotoCull site's home, wherever we are."""
-    return cross_url(lang) if SITE == "tripsweep" else path_for(lang, 'index.html', lang)
 
 INDEX = {
 "en": dict(
@@ -362,174 +340,6 @@ INDEX = {
     privacy_btn="Leer la política de privacidad completa",
     footer_copy="© 2026 TripSweep. Desarrollado por Jeffrey Brignoli.",
     footer_desktop="Aplicación de escritorio", footer_privacy="Privacidad", footer_kofi="Ko-fi", footer_github="GitHub",
-),
-}
-
-DESKTOP = {
-"en": dict(
-    title="PhotoCull — sort iPhone and Android photos on Mac or PC",
-    desc="Sort your iPhone or Android photos from a Mac or Windows PC: grouped by trip, similar shots side by side, bulk delete. Free, 100% on-device.",
-    nav_ios="Mobile app", nav_features="Features", nav_privacy="Privacy",
-    badge="🖥️ Desktop app (macOS · Windows)",
-    h1="Sort thousands of iPhone and Android photos on your Mac or PC",
-    subtitle="PhotoCull is a full desktop application: it shows your entire iPhone or Android camera roll grouped by trip, compares your photos side by side, and bulk-deletes what's no longer worth keeping — right from your Mac or PC.",
-    cta_download="💻 Download for Mac", cta_download_windows="🪟 Download for Windows", cta_ms_store="🛍️ Get it from the Microsoft Store",
-    features_h2="What the app does",
-    features=[
-        ("🧳", 'The "Trips" view', "Your entire photo library automatically grouped by trip (time AND location, just like the iOS app) — spot at a glance which trips take up the most space."),
-        ("🔍", "Side-by-side comparison", "Show up to 6 similar photos at once to pick the best one — perfect for sorting through bursts and near-duplicates."),
-        ("🗑️", "Safe bulk deletion", "Mark hundreds of photos in a few clicks. On an iPhone, PhotoCull deletes them directly over the USB cable and keeps a copy on your computer for 30 days by default; on an Android phone, the deletion goes through the TripSweep app and the phone's trash (30 days). Details and conditions below."),
-        ("⚖️", "The size that counts", "Sort and filter by single-day trip, by excluded place (home, work...), by size — the same filters as the iOS app, built for speed."),
-        ("🔌", "Direct connection to your phone", "Plug in your iPhone by USB, or connect your Android phone over Wi-Fi (or USB on Windows): PhotoCull reads your camera roll directly, with no cloud and no server involved."),
-        ("🔒", "100% on-device", "No photo, no GPS location is ever sent anywhere. Place recognition runs entirely locally, with no account and no subscription."),
-    ],
-    connect_h2="Connect your phone in a minute",
-    connect_intro="At first launch, PhotoCull asks where your photos are and walks you through it.",
-    connect=[
-        ("📱", "iPhone, by USB", "Mac and Windows. Plug in the iPhone, unlock it and tap Trust, then click Connect iPhone. On Windows, install the free Apple Devices app first."),
-        ("📶", "Android, over Wi-Fi", "Mac and Windows. Open the Deletion tab of TripSweep on the phone, click Android phone in PhotoCull and pick your phone. Allow the computer once: the same 4-digit code shows on both screens."),
-        ("🔌", "Android, by USB", "Windows. Plug in the phone, choose File transfer in its USB notification, then click Android phone and Connect over USB. A Mac can't read Android phones over USB: use Wi-Fi."),
-        ("📁", "A folder", "Any folder on your computer or on a drive: click Open folder or drop it onto the window. No phone needed, no daily limit."),
-    ],
-    strip_h2="Deleting from your computer: iPhone and Android",
-    strip_p1="<strong>iPhone:</strong> PhotoCull deletes the photos directly over the USB cable, with no daily limit and nothing to buy; the TripSweep app is not needed. It works with iCloud Photos turned off on the iPhone (when it is on, Apple does not allow this deletion) and, on a Mac, macOS 27 or later; Windows works too. The deletion is permanent on the iPhone: the photos do not go to “Recently Deleted”. By default, PhotoCull keeps a copy of each deleted item on your computer for 30 days, in a “PhotoCull Trash” folder in Pictures, so a mistake can be undone by importing the file again.",
-    strip_p_before="On an iPhone, ",
-    strip_p_link="the free TripSweep app",
-    strip_p_after=" stays an option: it deletes through the iPhone's own “Recently Deleted” (30 days), makes trip analysis near-instant, and is the way to go when iCloud Photos is on or your Mac runs macOS 26 or earlier. <strong>Android:</strong> the TripSweep app is required: it applies the deletion on the phone through its trash (30 days). Deletions that go through TripSweep have a daily limit: 6 photos a day for free, 15 with Pro. Folders on your Mac or PC can be sorted without it.",
-    footer_copy="© 2026 PhotoCull. Developed by Jeffrey Brignoli.",
-    footer_ios="Mobile app", footer_privacy="Privacy", footer_kofi="Ko-fi", footer_github="GitHub",
-),
-"fr": dict(
-    title="PhotoCull — trier ses photos iPhone et Android sur Mac ou PC",
-    desc="Triez les photos de votre iPhone ou Android depuis un Mac ou un PC Windows : par séjour, photos similaires côte à côte, suppression en masse. Gratuit.",
-    nav_ios="Application mobile", nav_features="Fonctionnalités", nav_privacy="Confidentialité",
-    badge="🖥️ Application de bureau (macOS · Windows)",
-    h1="Triez des milliers de photos d'iPhone et d'Android sur Mac ou PC",
-    subtitle="PhotoCull est une application de bureau à part entière : elle affiche tout le rouleau de votre iPhone ou de votre téléphone Android regroupé par séjour, compare vos photos côte à côte, et supprime en masse ce qui ne vaut plus la peine d'être gardé — directement depuis votre Mac ou votre PC.",
-    cta_download="💻 Télécharger pour Mac", cta_download_windows="🪟 Télécharger pour Windows", cta_ms_store="🛍️ Obtenir sur le Microsoft Store",
-    features_h2="Ce que fait l'app",
-    features=[
-        ("🧳", 'Vue "Voyages / séjours"', "Toute votre photothèque regroupée automatiquement par séjour (temps ET lieu, comme l'app iOS) — pour repérer d'un coup d'œil les voyages qui prennent le plus de place."),
-        ("🔍", "Comparaison côte à côte", "Affichez jusqu'à 6 photos similaires en même temps pour choisir la meilleure — idéal pour trier les rafales et les quasi-doublons."),
-        ("🗑️", "Suppression en masse, en toute sécurité", "Marquez des centaines de photos en quelques clics. Sur un iPhone, PhotoCull les supprime directement par le câble USB et garde par défaut une copie sur votre ordinateur pendant 30 jours ; sur un téléphone Android, la suppression passe par l'app TripSweep et la corbeille du téléphone (30 jours). Détails et conditions plus bas."),
-        ("⚖️", "Le poids qui compte", "Triez et filtrez par séjour d'1 jour, par lieu exclu (domicile, travail...), par poids — les mêmes filtres que sur l'app iOS, pensés pour aller vite."),
-        ("🔌", "Connexion directe au téléphone", "Branchez votre iPhone en USB, ou connectez votre téléphone Android en Wi-Fi (ou en USB sous Windows) : PhotoCull lit votre rouleau directement, sans cloud ni serveur."),
-        ("🔒", "100 % sur l'appareil", "Aucune photo, aucune position GPS n'est jamais envoyée où que ce soit. La reconnaissance des lieux fonctionne entièrement en local, sans compte ni abonnement."),
-    ],
-    connect_h2="Connectez votre téléphone en une minute",
-    connect_intro="Au premier lancement, PhotoCull demande où sont vos photos et vous guide pas à pas.",
-    connect=[
-        ("📱", "iPhone, en USB", "Mac et Windows. Branchez l'iPhone, déverrouillez-le et touchez « Se fier », puis cliquez sur « Connecter l'iPhone ». Sous Windows, installez d'abord l'app gratuite Appareils Apple."),
-        ("📶", "Android, en Wi-Fi", "Mac et Windows. Ouvrez l'onglet « Suppression » de TripSweep sur le téléphone, cliquez sur « Téléphone Android » dans PhotoCull et choisissez votre téléphone. Autorisez l'ordinateur une fois : le même code à 4 chiffres s'affiche des deux côtés."),
-        ("🔌", "Android, en USB", "Windows. Branchez le téléphone, choisissez « Transfert de fichiers » dans sa notification USB, puis cliquez sur « Téléphone Android » et « Connecter en USB ». Un Mac ne lit pas les téléphones Android en USB : passez par le Wi-Fi."),
-        ("📁", "Un dossier", "N'importe quel dossier de votre ordinateur ou d'un disque : cliquez sur « Ouvrir un dossier » ou glissez-le sur la fenêtre. Sans téléphone, sans limite quotidienne."),
-    ],
-    strip_h2="Supprimer depuis l'ordinateur : iPhone et Android",
-    strip_p1="<strong>iPhone :</strong> PhotoCull supprime les photos directement par le câble USB, sans limite quotidienne et sans rien à acheter ; l'app TripSweep n'est pas nécessaire. Cela fonctionne avec Photos iCloud désactivé sur l'iPhone (quand il est activé, Apple n'autorise pas cette suppression) et, sur un Mac, macOS 27 ou ultérieur ; Windows fonctionne aussi. La suppression est définitive sur l'iPhone : les photos ne passent pas par « Supprimés récemment ». Par défaut, PhotoCull garde pendant 30 jours une copie de chaque élément supprimé sur votre ordinateur, dans un dossier « PhotoCull Trash » du dossier Images, de sorte qu'une erreur peut être annulée en réimportant le fichier.",
-    strip_p_before="Sur un iPhone, ",
-    strip_p_link="l'app TripSweep (gratuite)",
-    strip_p_after=" reste une option : elle supprime via « Supprimés récemment » de l'iPhone (30 jours), rend l'analyse des séjours quasi instantanée, et c'est la voie à suivre quand Photos iCloud est activé ou que votre Mac est sous macOS 26 ou antérieur. <strong>Android :</strong> l'app TripSweep est indispensable : elle applique la suppression sur le téléphone via sa corbeille (30 jours). Les suppressions qui passent par TripSweep ont une limite quotidienne : 6 photos par jour en gratuit, 15 avec Pro. Les dossiers du Mac ou du PC se trient sans elle.",
-    footer_copy="© 2026 PhotoCull. Développé par Jeffrey Brignoli.",
-    footer_ios="Application mobile", footer_privacy="Confidentialité", footer_kofi="Ko-fi", footer_github="GitHub",
-),
-"it": dict(
-    title="PhotoCull — ordinare foto iPhone e Android su Mac o PC",
-    desc="Ordina le foto del tuo iPhone o Android da un Mac o PC Windows: per soggiorno, foto simili fianco a fianco, eliminazione in blocco. Gratis, 100% in locale.",
-    nav_ios="App mobile", nav_features="Funzionalità", nav_privacy="Privacy",
-    badge="🖥️ App desktop (macOS · Windows)",
-    h1="Ordina migliaia di foto di iPhone e Android su Mac o PC",
-    subtitle="PhotoCull è un'applicazione desktop a tutti gli effetti: mostra l'intero rullino del tuo iPhone o telefono Android raggruppato per soggiorno, confronta le tue foto affiancate ed elimina in blocco ciò che non vale più la pena tenere — direttamente dal tuo Mac o PC.",
-    cta_download="💻 Scarica per Mac", cta_download_windows="🪟 Scarica per Windows", cta_ms_store="🛍️ Scarica da Microsoft Store",
-    features_h2="Cosa fa l'app",
-    features=[
-        ("🧳", 'Vista "Viaggi / soggiorni"', "Tutta la tua libreria foto raggruppata automaticamente per soggiorno (tempo E luogo, come l'app iOS) — per individuare a colpo d'occhio i viaggi che occupano più spazio."),
-        ("🔍", "Confronto affiancato", "Mostra fino a 6 foto simili contemporaneamente per scegliere la migliore — ideale per ordinare raffiche e quasi-duplicati."),
-        ("🗑️", "Eliminazione in blocco, in tutta sicurezza", "Contrassegna centinaia di foto in pochi clic. Su un iPhone, PhotoCull le elimina direttamente tramite il cavo USB e conserva per impostazione predefinita una copia sul computer per 30 giorni; su un telefono Android, l'eliminazione passa dall'app TripSweep e dal cestino del telefono (30 giorni). Dettagli e condizioni più sotto."),
-        ("⚖️", "La dimensione che conta", "Ordina e filtra per soggiorno di 1 giorno, per luogo escluso (casa, lavoro...), per dimensione — gli stessi filtri dell'app iOS, pensati per la velocità."),
-        ("🔌", "Connessione diretta al telefono", "Collega l'iPhone via USB, oppure il telefono Android via Wi-Fi (o USB su Windows): PhotoCull legge il rullino direttamente, senza cloud né server."),
-        ("🔒", "100% sul dispositivo", "Nessuna foto, nessuna posizione GPS viene mai inviata altrove. Il riconoscimento dei luoghi funziona interamente in locale, senza account né abbonamento."),
-    ],
-    connect_h2="Collega il telefono in un minuto",
-    connect_intro="Al primo avvio PhotoCull chiede dove sono le tue foto e ti guida passo passo.",
-    connect=[
-        ("📱", "iPhone, via USB", "Mac e Windows. Collega l'iPhone, sbloccalo e tocca «Autorizza», poi fai clic su «Connetti l'iPhone». Su Windows installa prima l'app gratuita Dispositivi Apple."),
-        ("📶", "Android, via Wi-Fi", "Mac e Windows. Apri la scheda Eliminazione di TripSweep sul telefono, fai clic su «Telefono Android» in PhotoCull e scegli il telefono. Autorizza il computer una volta: lo stesso codice a 4 cifre appare su entrambi gli schermi."),
-        ("🔌", "Android, via USB", "Windows. Collega il telefono, scegli «Trasferimento file» nella notifica USB, poi fai clic su «Telefono Android» e «Collega via USB». Un Mac non legge i telefoni Android via USB: usa il Wi-Fi."),
-        ("📁", "Una cartella", "Qualsiasi cartella del computer o di un disco: fai clic su «Apri cartella» o trascinala sulla finestra. Nessun telefono, nessun limite giornaliero."),
-    ],
-    strip_h2="Eliminare dal computer: iPhone e Android",
-    strip_p1="<strong>iPhone:</strong> PhotoCull elimina le foto direttamente tramite il cavo USB, senza limite giornaliero e senza nulla da acquistare; l'app TripSweep non serve. Funziona con Foto di iCloud disattivato sull'iPhone (quando è attivo, Apple non consente questa eliminazione) e, su un Mac, macOS 27 o successivo; funziona anche su Windows. L'eliminazione è definitiva sull'iPhone: le foto non passano da «Eliminati di recente». Per impostazione predefinita, PhotoCull conserva per 30 giorni una copia di ogni elemento eliminato sul tuo computer, in una cartella «PhotoCull Trash» dentro Immagini, così un errore si annulla importando di nuovo il file.",
-    strip_p_before="Su un iPhone, ",
-    strip_p_link="l'app TripSweep (gratuita)",
-    strip_p_after=" resta un'opzione: elimina tramite «Eliminati di recente» dell'iPhone (30 giorni), rende l'analisi dei soggiorni quasi istantanea ed è la strada da seguire quando Foto di iCloud è attivo o il tuo Mac ha macOS 26 o precedente. <strong>Android:</strong> l'app TripSweep è necessaria: applica l'eliminazione sul telefono tramite il suo cestino (30 giorni). Le eliminazioni che passano da TripSweep hanno un limite giornaliero: 6 foto al giorno gratis, 15 con Pro. Le cartelle del Mac o del PC si ordinano senza.",
-    footer_copy="© 2026 PhotoCull. Sviluppato da Jeffrey Brignoli.",
-    footer_ios="App mobile", footer_privacy="Privacy", footer_kofi="Ko-fi", footer_github="GitHub",
-),
-"de": dict(
-    title="PhotoCull — iPhone- & Android-Fotos am Mac oder PC sortieren",
-    desc="Sortiere deine iPhone- oder Android-Fotos am Mac oder Windows-PC: nach Reise gruppiert, ähnliche Fotos nebeneinander, Massenlöschung. Kostenlos, 100 % lokal.",
-    nav_ios="Mobile App", nav_features="Funktionen", nav_privacy="Datenschutz",
-    badge="🖥️ Desktop-App (macOS · Windows)",
-    h1="Tausende iPhone- und Android-Fotos am Mac oder PC sortieren",
-    subtitle="PhotoCull ist eine vollwertige Desktop-Anwendung: Sie zeigt die gesamte Fotorolle deines iPhones oder Android-Telefons nach Aufenthalt gruppiert, vergleicht deine Fotos nebeneinander und löscht in großen Mengen, was sich nicht mehr zu behalten lohnt — direkt von deinem Mac oder PC aus.",
-    cta_download="💻 Für Mac herunterladen", cta_download_windows="🪟 Für Windows herunterladen", cta_ms_store="🛍️ Im Microsoft Store holen",
-    features_h2="Was die App kann",
-    features=[
-        ("🧳", 'Ansicht "Reisen / Aufenthalte"', "Deine gesamte Fotobibliothek automatisch nach Aufenthalt gruppiert (Zeit UND Ort, genau wie bei der iOS-App) — erkenne auf einen Blick, welche Reisen am meisten Platz beanspruchen."),
-        ("🔍", "Seite-an-Seite-Vergleich", "Zeige bis zu 6 ähnliche Fotos gleichzeitig an, um das beste auszuwählen — ideal zum Sortieren von Serienbildern und Beinahe-Duplikaten."),
-        ("🗑️", "Sicheres Löschen in großen Mengen", "Markiere Hunderte von Fotos in wenigen Klicks. Bei einem iPhone löscht PhotoCull sie direkt über das USB-Kabel und bewahrt standardmäßig 30 Tage lang eine Kopie auf deinem Computer auf; bei einem Android-Telefon läuft das Löschen über die TripSweep-App und den Papierkorb des Telefons (30 Tage). Details und Bedingungen weiter unten."),
-        ("⚖️", "Die Größe, die zählt", "Sortiere und filtere nach eintägigem Aufenthalt, nach ausgeschlossenem Ort (Zuhause, Arbeit...), nach Größe — dieselben Filter wie bei der iOS-App, auf Geschwindigkeit ausgelegt."),
-        ("🔌", "Direkte Verbindung zum Telefon", "Schließe dein iPhone per USB an oder verbinde dein Android-Telefon per WLAN (oder USB unter Windows): PhotoCull liest deine Fotorolle direkt, ganz ohne Cloud und ohne Server."),
-        ("🔒", "100 % auf dem Gerät", "Kein Foto, kein GPS-Standort wird jemals irgendwohin gesendet. Die Ortserkennung läuft vollständig lokal, ohne Konto und ohne Abo."),
-    ],
-    connect_h2="Telefon in einer Minute verbinden",
-    connect_intro="Beim ersten Start fragt PhotoCull, wo deine Fotos sind, und führt dich Schritt für Schritt.",
-    connect=[
-        ("📱", "iPhone, per USB", "Mac und Windows. Schließe das iPhone an, entsperre es und tippe auf „Vertrauen“, dann klicke auf „iPhone verbinden“. Unter Windows zuerst die kostenlose App Apple-Geräte installieren."),
-        ("📶", "Android, per WLAN", "Mac und Windows. Öffne in TripSweep auf dem Telefon den Tab „Löschen“, klicke in PhotoCull auf „Android-Telefon“ und wähle dein Telefon. Erlaube den Computer einmal: Auf beiden Bildschirmen erscheint derselbe 4-stellige Code."),
-        ("🔌", "Android, per USB", "Windows. Schließe das Telefon an, wähle „Dateiübertragung“ in der USB-Benachrichtigung, dann klicke auf „Android-Telefon“ und „Per USB verbinden“. Ein Mac liest Android-Telefone nicht per USB: nutze WLAN."),
-        ("📁", "Ein Ordner", "Jeder Ordner auf deinem Computer oder einem Laufwerk: Klicke auf „Ordner öffnen“ oder ziehe ihn auf das Fenster. Kein Telefon nötig, kein Tageslimit."),
-    ],
-    strip_h2="Vom Computer aus löschen: iPhone und Android",
-    strip_p1="<strong>iPhone:</strong> PhotoCull löscht die Fotos direkt über das USB-Kabel, ohne Tageslimit und ohne etwas zu kaufen; die TripSweep-App ist nicht nötig. Das funktioniert, wenn iCloud-Fotos auf dem iPhone ausgeschaltet ist (ist es eingeschaltet, erlaubt Apple dieses Löschen nicht) und auf einem Mac macOS 27 oder neuer läuft; Windows funktioniert auch. Das Löschen ist auf dem iPhone endgültig: Die Fotos landen nicht in „Zuletzt gelöscht“. Standardmäßig bewahrt PhotoCull 30 Tage lang eine Kopie jedes gelöschten Elements auf deinem Computer auf, in einem Ordner „PhotoCull Trash“ im Ordner Bilder, sodass sich ein Fehler durch erneutes Importieren der Datei rückgängig machen lässt.",
-    strip_p_before="Auf einem iPhone bleibt ",
-    strip_p_link="die kostenlose App TripSweep",
-    strip_p_after=" eine Option: Sie löscht über „Zuletzt gelöscht“ des iPhones (30 Tage), macht die Analyse der Aufenthalte nahezu augenblicklich und ist der Weg, wenn iCloud-Fotos eingeschaltet ist oder dein Mac macOS 26 oder älter hat. <strong>Android:</strong> Die TripSweep-App ist erforderlich: Sie führt das Löschen über den Papierkorb des Telefons (30 Tage) aus. Löschungen über TripSweep haben ein Tageslimit: 6 Fotos pro Tag kostenlos, 15 mit Pro. Ordner auf deinem Mac oder PC lassen sich ohne sie sortieren.",
-    footer_copy="© 2026 PhotoCull. Entwickelt von Jeffrey Brignoli.",
-    footer_ios="Mobile App", footer_privacy="Datenschutz", footer_kofi="Ko-fi", footer_github="GitHub",
-),
-"es": dict(
-    title="PhotoCull — ordenar fotos de iPhone y Android en Mac o PC",
-    desc="Ordena las fotos de tu iPhone o Android desde un Mac o PC con Windows: por viaje, fotos parecidas lado a lado, borrado en masa. Gratis, 100 % local.",
-    nav_ios="App móvil", nav_features="Funciones", nav_privacy="Privacidad",
-    badge="🖥️ Aplicación de escritorio (macOS · Windows)",
-    h1="Ordena miles de fotos de iPhone y Android en tu Mac o PC",
-    subtitle="PhotoCull es una aplicación de escritorio completa: muestra todo el carrete de tu iPhone o teléfono Android agrupado por estancia, compara tus fotos una junto a otra y elimina en masa lo que ya no vale la pena conservar — directamente desde tu Mac o PC.",
-    cta_download="💻 Descargar para Mac", cta_download_windows="🪟 Descargar para Windows", cta_ms_store="🛍️ Obtener en Microsoft Store",
-    features_h2="Qué hace la app",
-    features=[
-        ("🧳", 'Vista "Viajes / estancias"', "Toda tu biblioteca de fotos agrupada automáticamente por estancia (tiempo Y lugar, igual que la app de iOS) — detecta de un vistazo los viajes que ocupan más espacio."),
-        ("🔍", "Comparación lado a lado", "Muestra hasta 6 fotos similares a la vez para elegir la mejor — ideal para ordenar ráfagas y casi duplicados."),
-        ("🗑️", "Eliminación en masa, con total seguridad", "Marca cientos de fotos en pocos clics. En un iPhone, PhotoCull las elimina directamente por el cable USB y guarda por defecto una copia en tu ordenador durante 30 días; en un teléfono Android, la eliminación pasa por la app TripSweep y la papelera del teléfono (30 días). Detalles y condiciones más abajo."),
-        ("⚖️", "El tamaño que importa", "Ordena y filtra por estancia de 1 día, por lugar excluido (casa, trabajo...), por tamaño — los mismos filtros que en la app de iOS, pensados para ir rápido."),
-        ("🔌", "Conexión directa con el teléfono", "Conecta tu iPhone por USB, o tu teléfono Android por wifi (o USB en Windows): PhotoCull lee tu carrete directamente, sin nube ni servidor."),
-        ("🔒", "100 % en el dispositivo", "Ninguna foto ni ubicación GPS se envía nunca a ningún sitio. El reconocimiento de lugares funciona completamente en local, sin cuenta ni suscripción."),
-    ],
-    connect_h2="Conecta tu teléfono en un minuto",
-    connect_intro="En el primer inicio, PhotoCull pregunta dónde están tus fotos y te guía paso a paso.",
-    connect=[
-        ("📱", "iPhone, por USB", "Mac y Windows. Conecta el iPhone, desbloquéalo y toca «Confiar», luego haz clic en «Conectar el iPhone». En Windows, instala antes la app gratuita Dispositivos Apple."),
-        ("📶", "Android, por wifi", "Mac y Windows. Abre la pestaña Eliminación de TripSweep en el teléfono, haz clic en «Teléfono Android» en PhotoCull y elige tu teléfono. Autoriza el ordenador una vez: el mismo código de 4 cifras aparece en ambas pantallas."),
-        ("🔌", "Android, por USB", "Windows. Conecta el teléfono, elige «Transferencia de archivos» en su notificación USB y haz clic en «Teléfono Android» y «Conectar por USB». Un Mac no lee teléfonos Android por USB: usa el wifi."),
-        ("📁", "Una carpeta", "Cualquier carpeta de tu ordenador o de un disco: haz clic en «Abrir carpeta» o arrástrala a la ventana. Sin teléfono, sin límite diario."),
-    ],
-    strip_h2="Eliminar desde el ordenador: iPhone y Android",
-    strip_p1="<strong>iPhone:</strong> PhotoCull elimina las fotos directamente por el cable USB, sin límite diario y sin nada que comprar; la app TripSweep no hace falta. Funciona con Fotos en iCloud desactivado en el iPhone (cuando está activado, Apple no permite esta eliminación) y, en un Mac, macOS 27 o posterior; también funciona en Windows. La eliminación es definitiva en el iPhone: las fotos no pasan por « Eliminados recientemente ». Por defecto, PhotoCull guarda durante 30 días una copia de cada elemento eliminado en tu ordenador, en una carpeta « PhotoCull Trash » dentro de Imágenes, de modo que un error se puede deshacer importando de nuevo el archivo.",
-    strip_p_before="En un iPhone, ",
-    strip_p_link="la app TripSweep (gratuita)",
-    strip_p_after=" sigue siendo una opción: elimina a través de « Eliminados recientemente » del iPhone (30 días), hace casi instantáneo el análisis de estancias y es el camino cuando Fotos en iCloud está activado o tu Mac tiene macOS 26 o anterior. <strong>Android:</strong> la app TripSweep es imprescindible: aplica la eliminación en el teléfono a través de su papelera (30 días). Las eliminaciones que pasan por TripSweep tienen un límite diario: 6 fotos al día gratis, 15 con Pro. Las carpetas del Mac o del PC se ordenan sin ella.",
-    footer_copy="© 2026 PhotoCull. Desarrollado por Jeffrey Brignoli.",
-    footer_ios="App móvil", footer_privacy="Privacidad", footer_kofi="Ko-fi", footer_github="GitHub",
 ),
 }
 
@@ -742,7 +552,6 @@ PRIVACY = {
 }
 
 print("privacy dict loaded ok", len(PRIVACY))
-print("desktop dict loaded ok", len(DESKTOP))
 print("dict loaded ok", len(INDEX))
 
 # ---------------------------------------------------------------------------
@@ -942,194 +751,6 @@ def render_index(lang):
 </html>
 '''
 
-# Real screenshots of the PhotoCull window (dark theme, sample photos), one set per language:
-# assets/screenshots/photocull-{grid,review,compare,trips}-{lang}.jpg
-SHOTS = {
-"en": dict(
-    h2="A look at the app",
-    grid_alt="PhotoCull showing a folder of photos, with badges on the similar ones",
-    items=[
-        ("review", "Review a group of similar photos side by side: keep the best, mark the rest."),
-        ("compare", "Compare up to 6 photos at once in full screen."),
-        ("trips", "Your library grouped by trip, with the space each one takes."),
-        ("android", "Connect an Android phone over Wi-Fi: allow the computer once, from the phone."),
-    ],
-),
-"fr": dict(
-    h2="Un aperçu de l'app",
-    grid_alt="PhotoCull affichant un dossier de photos, avec des pastilles sur les photos similaires",
-    items=[
-        ("review", "Passez en revue un groupe de photos similaires côte à côte : gardez la meilleure, marquez les autres."),
-        ("compare", "Comparez jusqu'à 6 photos à la fois en plein écran."),
-        ("trips", "Votre photothèque regroupée par séjour, avec la place que chacun occupe."),
-        ("android", "Connectez un téléphone Android en Wi-Fi : autorisez l'ordinateur une fois, depuis le téléphone."),
-    ],
-),
-"it": dict(
-    h2="Uno sguardo all'app",
-    grid_alt="PhotoCull con una cartella di foto e i badge sulle foto simili",
-    items=[
-        ("review", "Rivedi un gruppo di foto simili affiancate: tieni la migliore, segna le altre."),
-        ("compare", "Confronta fino a 6 foto alla volta a schermo intero."),
-        ("trips", "La tua libreria raggruppata per soggiorno, con lo spazio occupato da ciascuno."),
-        ("android", "Collega un telefono Android via Wi-Fi: autorizza il computer una volta, dal telefono."),
-    ],
-),
-"de": dict(
-    h2="Ein Blick in die App",
-    grid_alt="PhotoCull zeigt einen Fotoordner mit Markierungen an ähnlichen Fotos",
-    items=[
-        ("review", "Eine Gruppe ähnlicher Fotos nebeneinander prüfen: das beste behalten, den Rest markieren."),
-        ("compare", "Bis zu 6 Fotos gleichzeitig im Vollbild vergleichen."),
-        ("trips", "Deine Mediathek nach Aufenthalten gruppiert, mit dem Platz, den jeder belegt."),
-        ("android", "Ein Android-Telefon per WLAN verbinden: den Computer einmal am Telefon erlauben."),
-    ],
-),
-"es": dict(
-    h2="Un vistazo a la app",
-    grid_alt="PhotoCull mostrando una carpeta de fotos, con insignias en las fotos similares",
-    items=[
-        ("review", "Revisa un grupo de fotos similares una al lado de otra: conserva la mejor, marca el resto."),
-        ("compare", "Compara hasta 6 fotos a la vez a pantalla completa."),
-        ("trips", "Tu fototeca agrupada por estancia, con el espacio que ocupa cada una."),
-        ("android", "Conecta un teléfono Android por wifi: autoriza el ordenador una vez, desde el teléfono."),
-    ],
-),
-}
-
-def render_desktop_shots(lang):
-    d = SHOTS[lang]
-    a = lambda rel: asset_path(lang, rel)
-    figures = "\n".join(
-        f'''        <figure>
-          <a class="window-frame" href="{a(f'assets/screenshots/photocull-{key}-{lang}.jpg')}" target="_blank" rel="noopener"><img src="{a(f'assets/screenshots/photocull-{key}-{lang}.webp')}" width="1800" height="1165" alt="{caption}" loading="lazy" /></a>
-          <figcaption>{caption}</figcaption>
-        </figure>''' for key, caption in d["items"]
-    )
-    return f'''    <section id="apercu">
-      <h2>{d['h2']}</h2>
-      <div class="screens-grid">
-{figures}
-      </div>
-    </section>
-
-'''
-
-
-def render_photocull_home(lang):
-    d = DESKTOP[lang]
-    a = lambda rel: asset_path(lang, rel)
-    features_html = "\n".join(
-        f'''        <div class="feature-card">
-          <span class="icon">{icon}</span>
-          <h3>{title}</h3>
-          <p>{text}</p>
-        </div>''' for icon, title, text in d["features"]
-    )
-    connect_html = "\n".join(
-        f'''        <div class="feature-card">
-          <span class="icon">{icon}</span>
-          <h3>{title}</h3>
-          <p>{text}</p>
-        </div>''' for icon, title, text in d["connect"]
-    )
-    return f'''<!DOCTYPE html>
-<html lang="{lang}">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{d['title']}</title>
-  <meta name="description" content="{d['desc']}" />
-  <link rel="icon" type="image/png" href="{a('assets/img/favicon-photocull.png')}" />
-{hreflang_links('index.html')}
-{seo_meta(lang, 'index.html', d['title'], d['desc'], 'assets/img/photocull-icon.png')}
-  <script src="{a('assets/lightbox.js')}" defer></script>
-{software_app_ld_json("PhotoCull", d['desc'], page_url(lang, 'index.html'), SITE_ORIGIN + '/assets/img/photocull-icon.png', "macOS, Windows", download_url=PHOTOCULL_DOWNLOAD_URL)}
-  <link rel="stylesheet" href="{a('assets/style.css')}" />
-</head>
-<body>
-  <div class="wrap">
-    <header class="nav">
-      <a class="brand" href="{path_for(lang, 'index.html', lang)}">
-        <img class="logo-img" src="{a('assets/img/photocull-icon-96.png')}" alt="" />
-        PhotoCull
-      </a>
-      <nav class="links">
-        <a href="{cross_url(lang)}">{d['nav_ios']}</a>
-        <a href="#fonctionnalites">{d['nav_features']}</a>
-        <a href="{path_for(lang, 'privacy.html', lang)}">{d['nav_privacy']}</a>
-        <a href="{path_for(lang, 'faq.html', lang)}">FAQ</a>
-        <a href="{path_for(lang, 'blog.html', lang)}">{BLOG_UI[lang]['nav']}</a>
-        {lang_switcher(lang, 'index.html')}
-      </nav>
-    </header>
-
-    <section class="hero">
-      <span class="badge">{d['badge']}</span>
-      <h1>{d['h1']}</h1>
-      <p class="subtitle">
-        {d['subtitle']}
-      </p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="{PHOTOCULL_DOWNLOAD_URL}" rel="noopener">{d['cta_download']}</a>
-        <a class="btn btn-primary" href="{PHOTOCULL_WINDOWS_DOWNLOAD_URL}" rel="noopener">{d['cta_download_windows']}</a>
-        <a class="btn btn-primary" href="{MS_STORE_URL}" target="_blank" rel="noopener">{d['cta_ms_store']}</a>
-      </div>
-
-      <a class="window-frame" href="{a(f'assets/screenshots/photocull-grid-{lang}.jpg')}" target="_blank" rel="noopener">
-        <img src="{a(f'assets/screenshots/photocull-grid-{lang}.webp')}" width="1800" height="1165" alt="{SHOTS[lang]['grid_alt']}" />
-      </a>
-    </section>
-
-{render_desktop_shots(lang)}    <section id="connexion">
-      <h2>{d['connect_h2']}</h2>
-      <p style="text-align:center;">{d['connect_intro']}</p>
-      <div class="features" style="grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));">
-{connect_html}
-      </div>
-    </section>
-
-    <section id="fonctionnalites">
-      <h2>{d['features_h2']}</h2>
-      <div class="features">
-{features_html}
-      </div>
-    </section>
-
-{render_pricing(lang)}    <section>
-      <div class="privacy-strip">
-        <h2>{d['strip_h2']}</h2>
-        <p>{d['strip_p1']}</p>
-        <p>
-          {d['strip_p_before']}
-          <a href="{cross_url(lang)}">{d['strip_p_link']}</a>{d['strip_p_after']}
-        </p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="{store_link(f'site-{lang}-photocull-home')}" target="_blank" rel="noopener">{BLOG_UI[lang]['cta_store']}</a>
-          <a class="btn btn-primary" href="{play_link(f'site-{lang}-photocull-home')}" target="_blank" rel="noopener">{BLOG_UI[lang]['cta_play']}</a>
-        </div>
-      </div>
-    </section>
-
-{guides_section(lang)}
-
-    <footer>
-      <div>{d['footer_copy']}</div>
-      <div class="footer-links">
-        <a href="{cross_url(lang)}">{d['footer_ios']}</a>
-        <a href="{path_for(lang, 'privacy.html', lang)}">{d['footer_privacy']}</a>
-        <a href="{path_for(lang, 'faq.html', lang)}">FAQ</a>
-        <a href="{path_for(lang, 'blog.html', lang)}">{BLOG_UI[lang]['nav']}</a>
-        <a href="https://ko-fi.com/jeffreybrignoli" target="_blank" rel="noopener">{d['footer_kofi']}</a>
-        <a href="https://github.com/brignolij/TripSweepSite" target="_blank" rel="noopener">{d['footer_github']}</a>
-        {passmerge_link(lang)}
-      </div>
-    </footer>
-  </div>
-</body>
-</html>
-'''
-
 def render_privacy(lang):
     d = PRIVACY[lang]
     a = lambda rel: asset_path(lang, rel)
@@ -1191,7 +812,7 @@ def render_privacy(lang):
 
       <h2>{d['s4_h']}</h2>
       <p>
-        {d['s4_p1']}<a href="{desktop_url(lang)}">{d['s4_p_link']}</a>{d['s4_p2']}
+        {d['s4_p1']}<a href="{cross_url(lang)}">{d['s4_p_link']}</a>{d['s4_p2']}
       </p>
 
       <h2>{d['s5_h']}</h2>
@@ -1387,33 +1008,22 @@ CONTENT = {l: importlib.import_module(f"content.{l}") for l in LANGS}
 BLOG_UI = {l: CONTENT[l].BLOG_UI for l in LANGS}
 FAQS = {
     "tripsweep": {l: dict(FAQ_TRIPSWEEP[l], qa=FAQ_TRIPSWEEP[l]["qa"] + CONTENT[l].FAQ_TRIPSWEEP_EXTRA) for l in LANGS},
-    "photocull": {l: CONTENT[l].FAQ_PHOTOCULL for l in LANGS},
 }
-HERO_IMAGE = {"tripsweep": "assets/screenshots/tripsweep-cleanup-{lang}.jpg", "photocull": "assets/screenshots/photocull-grid-{lang}.jpg"}
-APPLE_META = {"tripsweep": f'  <meta name="apple-itunes-app" content="app-id={APP_STORE_ID}" />', "photocull": ""}
-
-def home_url(site, lang):
-    f = mapped("index.html", site)
-    return ORIGIN + ("/" if lang == "en" else f"/{lang}/") + ("" if f == "index.html" else f)
+HERO_IMAGE = {"tripsweep": "assets/screenshots/tripsweep-cleanup-{lang}.jpg"}
+APPLE_META = {"tripsweep": f'  <meta name="apple-itunes-app" content="app-id={APP_STORE_ID}" />'}
 
 def link_tokens(text, lang, campaign):
-    """Answers and articles write {ts} / {pc} / {store} / {play} / {mac} / {win} for links; resolved per language."""
-    tokens = {"{ts}": home_url("tripsweep", lang), "{pc}": home_url("photocull", lang), "{store}": store_link(campaign), "{play}": play_link(campaign),
-              "{mac}": PHOTOCULL_DOWNLOAD_URL, "{win}": PHOTOCULL_WINDOWS_DOWNLOAD_URL}
+    """Answers and articles write {ts} / {pc} / {store} / {play} for links; resolved per language."""
+    tokens = {"{ts}": page_url(lang, "index.html"), "{pc}": cross_url(lang), "{store}": store_link(campaign), "{play}": play_link(campaign)}
     for k, v in tokens.items():
         text = text.replace(k, v)
     # {post:<slug>} links to one of the current product's articles.
     return re.sub(r"\{post:([a-z0-9-]+)\}", lambda m: page_url(lang, f"blog-{m.group(1)}.html"), text)
 
 def cta_row(lang, campaign):
-    if SITE == "tripsweep":
-        return f'''<div class="cta-row">
+    return f'''<div class="cta-row">
         <a class="btn btn-primary" href="{store_link(f'site-{lang}-{campaign}')}" target="_blank" rel="noopener">{BLOG_UI[lang]['cta_store']}</a>
         <a class="btn btn-primary" href="{play_link(f'site-{lang}-{campaign}')}" target="_blank" rel="noopener">{BLOG_UI[lang]['cta_play']}</a>
-      </div>'''
-    return f'''<div class="cta-row">
-        <a class="btn btn-primary" href="{PHOTOCULL_DOWNLOAD_URL}" rel="noopener">{BLOG_UI[lang]['cta_mac']}</a>
-        <a class="btn btn-primary" href="{PHOTOCULL_WINDOWS_DOWNLOAD_URL}" rel="noopener">{BLOG_UI[lang]['cta_win']}</a>
       </div>'''
 
 def faq_ld_json(qa):
@@ -1602,9 +1212,6 @@ def render_blog_index(lang):
 TWINS = {
     "free-up-iphone-storage": "free-up-android-storage",
     "delete-duplicate-photos-iphone": "delete-duplicate-photos-android",
-    "sort-iphone-photos-on-mac": "sort-android-photos-on-mac",
-    "sort-iphone-photos-on-pc": "sort-android-photos-on-pc",
-    "free-up-iphone-from-mac-or-pc": "free-up-android-from-mac-or-pc",
 }
 
 def twin_note(lang, slug):
@@ -1648,17 +1255,6 @@ POST_DATES = {
     "free-up-iphone-storage": ("2026-11-03", "2026-11-03"),
     "delete-duplicate-photos-iphone": ("2026-11-03", "2026-11-03"),
     "clean-up-vacation-photos": ("2026-11-03", "2026-11-03"),
-    "sort-photos-on-computer": ("2026-11-03", "2026-11-12"),
-    "free-up-iphone-from-mac-or-pc": ("2026-11-03", "2026-11-12"),
-    "compare-similar-photos-keep-the-best": ("2026-11-03", "2026-11-12"),
-    "sort-iphone-photos-on-mac": ("2026-11-05", "2026-11-12"),
-    "sort-iphone-photos-on-pc": ("2026-11-05", "2026-11-12"),
-    "find-duplicate-photos-on-mac": ("2026-11-10", "2026-11-10"),
-    "find-duplicate-photos-on-windows": ("2026-11-10", "2026-11-10"),
-    "sort-photo-folder-external-drive": ("2026-11-10", "2026-11-10"),
-    "sort-android-photos-on-mac": ("2026-11-10", "2026-11-12"),
-    "sort-android-photos-on-pc": ("2026-11-10", "2026-11-12"),
-    "free-up-android-from-mac-or-pc": ("2026-11-10", "2026-11-12"),
     "free-up-android-storage": ("2026-11-10", "2026-11-10"),
     "delete-duplicate-photos-android": ("2026-11-10", "2026-11-10"),
 }
@@ -1677,8 +1273,7 @@ def write(path, content):
     print("wrote", path)
 
 def site_pages():
-    pages = ["index.html", "faq.html", "blog.html"] + [f"blog-{p['slug']}.html" for p in blog_posts("en")]
-    return pages + (["privacy.html"] if SITE == "tripsweep" else [])
+    return ["index.html", "faq.html", "blog.html"] + [f"blog-{p['slug']}.html" for p in blog_posts("en")] + ["privacy.html"]
 
 def sitemap_entry(page):
     lastmod = POST_DATES[page[5:-5]][1] if page.startswith("blog-") else LASTMOD
@@ -1704,20 +1299,16 @@ LLMS_SUMMARY = '''> TripSweep is an iOS and Android app that groups your photos 
 > videos by trip, or by event and month when they have no GPS location, shows what's
 > taking up space, and sorts out what you don't need by type — identical copies, similar
 > and blurry photos, screenshots, large videos — so you keep the best shot and delete
-> the rest in a few taps. PhotoCull is its desktop companion (macOS and Windows) for bulk
-> photo review and cleanup of an iPhone or Android phone on a big screen. Both run 100% on-device: no photo, video, or
-> location data is ever collected, sent, or shared.'''
+> the rest in a few taps. It runs 100% on-device: no photo, video, or location data is ever
+> collected, sent, or shared. PhotoCull, its desktop companion (macOS and Windows) for sorting an
+> iPhone or Android phone on a big screen, has its own site: ''' + PHOTOCULL_ORIGIN + '''/'''
 
 def llms_pages():
     own = [
         f"- [TripSweep on the App Store]({APP_STORE_URL}): download the iOS app.",
         f"- [TripSweep on Google Play]({PLAY_STORE_URL}): download the Android app (Android 11+).",
         f"- [TripSweep home]({page_url('en', 'index.html')}): grouping by trip, event or month, a Cleanup tab, review, backup, sharing and deletion on iPhone and Android.",
-    ] if SITE == "tripsweep" else [
-        f"- [PhotoCull home]({page_url('en', 'index.html')}): sort and bulk-delete iPhone and Android photos from a Mac or Windows PC (iPhone by USB, deleted directly over USB; Android over Wi-Fi, or USB on Windows, deleted through the TripSweep app).",
-        f"- [Download PhotoCull for Mac]({PHOTOCULL_DOWNLOAD_URL}): free, signed and notarized by Apple, macOS 11+ on Apple Silicon.",
-        f"- [PhotoCull on the Microsoft Store]({MS_STORE_URL}): the Windows app, installed from the Store.",
-        f"- [Download PhotoCull for Windows]({PHOTOCULL_WINDOWS_DOWNLOAD_URL}): free, Windows 10/11 (64-bit); reading an iPhone needs the free Apple Devices app. Not code-signed yet, so SmartScreen may warn on first launch.",
+        f"- [PhotoCull]({PHOTOCULL_ORIGIN}/): the desktop app (Mac and Windows) that sorts an iPhone or Android phone on a big screen; its own site, with its FAQ, guides and llms.txt.",
     ]
     posts = [f"- [{p['h1']}]({page_url('en', 'blog-' + p['slug'] + '.html')}): {p['desc']}" for p in blog_posts("en")]
     return own + [f"- [{SITES[SITE]['brand']} FAQ]({page_url('en', 'faq.html')}): questions and answers.",
@@ -1731,7 +1322,7 @@ def llms_txt(pages):
                 "only when iCloud Photos is off. The deletion is permanent on the iPhone (not sent to Recently Deleted); by default PhotoCull keeps a copy of each deleted item on the computer for 30 days "
                 "in a PhotoCull Trash folder in Pictures. TripSweep remains an option on an iPhone (it deletes through Recently Deleted, 30 days, and is the way when iCloud Photos is on or on macOS 26 or earlier) "
                 "and is required for an Android phone.\n")
-    return f'''# TripSweep & PhotoCull
+    return f'''# TripSweep
 
 {LLMS_SUMMARY}
 
@@ -1751,20 +1342,53 @@ English (default, at the root), French, Italian, German and Spanish, each under 
 {pricing}{deletion}- Do not describe either app as collecting or transmitting user data — that is factually the opposite of how they work.
 '''
 
-def build(site):
-    """Writes one product's pages into OUT; returns its sitemap entries and llms.txt lines."""
-    global SITE, SITE_ORIGIN
-    SITE, SITE_ORIGIN = site, ORIGIN
+def build():
+    """Writes every page into OUT; returns the sitemap entries and llms.txt lines."""
     for lang in LANGS:
         prefix = "" if lang == "en" else f"{lang}/"
-        write(f"{prefix}{mapped('index.html')}", render_index(lang) if site == "tripsweep" else render_photocull_home(lang))
-        if site == "tripsweep":
-            write(f"{prefix}privacy.html", render_privacy(lang))
-        write(f"{prefix}{mapped('faq.html')}", render_faq(lang))
-        write(f"{prefix}{mapped('blog.html')}", render_blog_index(lang))
+        write(f"{prefix}index.html", render_index(lang))
+        write(f"{prefix}privacy.html", render_privacy(lang))
+        write(f"{prefix}faq.html", render_faq(lang))
+        write(f"{prefix}blog.html", render_blog_index(lang))
         for p in blog_posts(lang):
-            write(f"{prefix}{mapped('blog-' + p['slug'] + '.html')}", render_blog_post(lang, p))
+            write(f"{prefix}blog-{p['slug']}.html", render_blog_post(lang, p))
     return [sitemap_entry(pg) for pg in site_pages()], llms_pages()
+
+# PhotoCull's pages used to live here as desktop*.html; they moved to PhotoCull's own site without the prefix.
+# GitHub Pages cannot redirect on the server, so each old address keeps a tiny page that sends visitors (and search
+# engines, through the canonical) to the new one. Frozen list: never add to it.
+PHOTOCULL_MOVED_SLUGS = [
+    "sort-iphone-photos-on-mac", "sort-iphone-photos-on-pc", "sort-photos-on-computer", "free-up-iphone-from-mac-or-pc",
+    "compare-similar-photos-keep-the-best", "find-duplicate-photos-on-mac", "find-duplicate-photos-on-windows",
+    "sort-photo-folder-external-drive", "sort-android-photos-on-mac", "sort-android-photos-on-pc", "free-up-android-from-mac-or-pc",
+]
+PHOTOCULL_MOVED = {"desktop.html": "", "desktop-faq.html": "faq.html", "desktop-blog.html": "blog.html",
+                   **{f"desktop-blog-{s}.html": f"blog-{s}.html" for s in PHOTOCULL_MOVED_SLUGS}}
+MOVED_TEXT = {"en": "PhotoCull has moved to", "fr": "PhotoCull a déménagé sur", "it": "PhotoCull si è trasferito su",
+              "de": "PhotoCull ist umgezogen nach", "es": "PhotoCull se ha mudado a"}
+
+def render_moved(lang, new):
+    url = cross_url(lang) + new
+    return f'''<!DOCTYPE html>
+<html lang="{lang}">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="noindex" />
+  <meta http-equiv="refresh" content="0; url={url}" />
+  <link rel="canonical" href="{url}" />
+  <title>PhotoCull</title>
+</head>
+<body>
+  <p>{MOVED_TEXT[lang]} <a href="{url}">{url}</a></p>
+</body>
+</html>
+'''
+
+def write_moved():
+    for lang in LANGS:
+        prefix = "" if lang == "en" else f"{lang}/"
+        for old, new in PHOTOCULL_MOVED.items():
+            write(prefix + old, render_moved(lang, new))
 
 OUT = os.path.join(ROOT, "sites", "web")
 shutil.rmtree(os.path.join(ROOT, "sites"), ignore_errors=True)
@@ -1775,11 +1399,8 @@ import concurrent.futures, glob, subprocess
 with concurrent.futures.ThreadPoolExecutor() as pool:
     list(pool.map(lambda jpg: subprocess.run(["cwebp", "-quiet", "-q", "80", jpg, "-o", jpg[:-4] + ".webp"], check=True),
                   glob.glob(os.path.join(OUT, "assets", "screenshots", "*.jpg"))))
-entries, pages = [], []
-for _site in SITES:
-    e, p = build(_site)
-    entries += e
-    pages += p
+entries, pages = build()
+write_moved()
 write("sitemap.xml", '''<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
@@ -1806,13 +1427,15 @@ write("404.html", f'''<!DOCTYPE html>
       <h1>Page not found</h1>
       <p>This page does not exist or has moved.</p>
       <p><a href="/">TripSweep</a> · <a href="/fr/">Français</a> · <a href="/it/">Italiano</a> · <a href="/de/">Deutsch</a> · <a href="/es/">Español</a></p>
-      <p><a href="/desktop.html">PhotoCull for Mac and Windows</a></p>
+      <p><a href="{PHOTOCULL_ORIGIN}/">PhotoCull for Mac and Windows</a></p>
     </section>
   </main>
 </body>
 </html>
 ''')
 write("CNAME", ORIGIN.split("//")[1] + "\n")
+# Read at this URL by the installed TripSweep apps (iOS, Android) AND by installed PhotoCull versions: never move it.
+# photocull.idealy.ch/versions.json is a copy (brignolij/PhotoCullSite): keep both in sync.
 shutil.copy(os.path.join(ROOT, "versions.json"), os.path.join(OUT, "versions.json"))
 shutil.copy(os.path.join(ROOT, "BingSiteAuth.xml"), OUT)  # Bing Webmaster Tools ownership proof
 
