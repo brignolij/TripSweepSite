@@ -348,7 +348,7 @@ PRIVACY = {
     desc="TripSweep's privacy policy: no photo, video, or location data is ever collected, sent, or shared. Everything happens locally on your iPhone.",
     nav_home="Home",
     h1="Privacy Policy",
-    updated="Last updated: November 3, 2026",
+    updated="Last updated: November 16, 2026",
     intro='TripSweep ("the app") is developed by Jeffrey Brignoli. This page explains what data the app uses, where it goes, and why. The project\'s guiding principle is simple: <strong>your photos, videos and location never leave your iPhone or Android phone</strong>.',
     s1_h="What the app does not do",
     s1_items=[
@@ -366,10 +366,6 @@ PRIVACY = {
     s2_p2="No photo, thumbnail, or metadata extracted from your photo library is ever transmitted off your device. The results of the analysis (your trips, and a compact numerical fingerprint of each analyzed photo used to compare them) are kept in a local database on your iPhone, excluded from backups, and removed when you delete the app.",
     s3_h="Access to your location",
     s3_p="The app requests access to your location only when you choose to manually add a “place” (for example “Home” or “Work”) in the places management feature. This location is stored locally on your device and never transmitted elsewhere. It is used only to compare distance with detected trips, so you can exclude them from the list if you wish.",
-    s4_h="Syncing with the Mac app",
-    s4_p1="If you also use ",
-    s4_p_link="PhotoCull",
-    s4_p2=" on your Mac, the companion app can exchange information with it via a direct local USB/Wi-Fi connection between your two Apple devices (a standard protocol used for iOS device syncing) — never over the Internet or via a third-party server.",
     s5_h="In-app purchases",
     s5_p="The app offers an optional paid feature (“Pro”, one-time purchase) handled exclusively by Apple via StoreKit. No payment information is collected, stored, or visible to the developer: Apple handles the entire transaction in accordance with its own privacy policy.",
     s6_h="Analytics and diagnostics",
@@ -389,7 +385,7 @@ PRIVACY = {
     desc="Politique de confidentialité de TripSweep : aucune photo, vidéo ou position n'est jamais collectée, envoyée ou partagée. Tout reste sur votre iPhone.",
     nav_home="Accueil",
     h1="Politique de confidentialité",
-    updated="Dernière mise à jour : 3 novembre 2026",
+    updated="Dernière mise à jour : 16 novembre 2026",
     intro='TripSweep (« l\'application ») est développée par Jeffrey Brignoli. Cette page explique quelles données l\'application utilise, où elles vont, et pourquoi. Le principe directeur du projet est simple : <strong>vos photos, vidéos et positions ne quittent jamais votre iPhone ou votre téléphone Android</strong>.',
     s1_h="Ce que l'application ne fait pas",
     s1_items=[
@@ -407,10 +403,6 @@ PRIVACY = {
     s2_p2="Aucune photo, vignette ou métadonnée extraite de votre photothèque n'est jamais transmise hors de votre appareil. Les résultats de l'analyse (vos séjours, et une empreinte numérique compacte de chaque photo analysée servant à les comparer) sont conservés dans une base de données locale sur votre iPhone, exclue des sauvegardes, et supprimés avec l'application.",
     s3_h="Accès à votre position",
     s3_p="L'application demande l'accès à votre position uniquement lorsque vous choisissez d'ajouter manuellement un « lieu » (par exemple « Domicile » ou « Travail ») dans la fonctionnalité de gestion des lieux. Cette position est enregistrée localement sur votre appareil et n'est jamais transmise ailleurs. Elle sert uniquement à comparer la distance avec les séjours détectés, pour vous permettre de les exclure de la liste si vous le souhaitez.",
-    s4_h="Synchronisation avec l'application Mac",
-    s4_p1="Si vous utilisez également ",
-    s4_p_link="PhotoCull",
-    s4_p2=" sur Mac, l'application compagnon peut échanger des informations avec lui via une connexion USB/Wi-Fi locale directe entre vos deux appareils Apple (protocole standard utilisé pour la synchronisation d'appareils iOS) — jamais via Internet ni un serveur tiers.",
     s5_h="Achats intégrés",
     s5_p="L'application propose une option payante facultative (« Pro », achat unique) gérée exclusivement par Apple via StoreKit. Aucune information de paiement n'est collectée, stockée ou visible par le développeur : Apple gère l'intégralité de la transaction conformément à sa propre politique de confidentialité.",
     s6_h="Statistiques et diagnostics",
@@ -430,7 +422,7 @@ PRIVACY = {
     desc="L'informativa sulla privacy di TripSweep: nessuna foto, video o posizione viene mai raccolta, inviata o condivisa. Tutto avviene localmente sul tuo iPhone.",
     nav_home="Home",
     h1="Informativa sulla privacy",
-    updated="Ultimo aggiornamento: 3 novembre 2026",
+    updated="Ultimo aggiornamento: 16 novembre 2026",
     intro='TripSweep («l\'applicazione») è sviluppata da Jeffrey Brignoli. Questa pagina spiega quali dati utilizza l\'applicazione, dove vanno e perché. Il principio guida del progetto è semplice: <strong>le tue foto, i tuoi video e la tua posizione non lasciano mai il tuo iPhone o il tuo telefono Android</strong>.',
     s1_h="Cosa non fa l'applicazione",
     s1_items=[
@@ -448,10 +440,6 @@ PRIVACY = {
     s2_p2="Nessuna foto, miniatura o metadato estratto dalla tua libreria foto viene mai trasmesso al di fuori del tuo dispositivo. I risultati dell'analisi (i tuoi soggiorni e un'impronta numerica compatta di ogni foto analizzata, usata per confrontarle) sono conservati in un database locale sul tuo iPhone, escluso dai backup, e vengono rimossi quando elimini l'app.",
     s3_h="Accesso alla tua posizione",
     s3_p="L'applicazione richiede l'accesso alla tua posizione solo quando scegli di aggiungere manualmente un «luogo» (ad esempio «Casa» o «Lavoro») nella funzione di gestione dei luoghi. Questa posizione viene salvata localmente sul tuo dispositivo e non viene mai trasmessa altrove. Serve unicamente a confrontare la distanza con i soggiorni rilevati, per permetterti di escluderli dall'elenco se lo desideri.",
-    s4_h="Sincronizzazione con l'app Mac",
-    s4_p1="Se utilizzi anche ",
-    s4_p_link="PhotoCull",
-    s4_p2=" su Mac, l'app compagna può scambiare informazioni con esso tramite una connessione USB/Wi-Fi locale diretta tra i tuoi due dispositivi Apple (protocollo standard utilizzato per la sincronizzazione dei dispositivi iOS) — mai tramite Internet né un server di terze parti.",
     s5_h="Acquisti in-app",
     s5_p="L'applicazione offre un'opzione a pagamento facoltativa («Pro», acquisto singolo) gestita esclusivamente da Apple tramite StoreKit. Nessuna informazione di pagamento viene raccolta, memorizzata o resa visibile allo sviluppatore: Apple gestisce l'intera transazione in conformità alla propria informativa sulla privacy.",
     s6_h="Statistiche e diagnostica",
@@ -471,7 +459,7 @@ PRIVACY = {
     desc="Die Datenschutzerklärung von TripSweep: Es werden nie Fotos, Videos oder Standortdaten gesammelt, gesendet oder geteilt. Alles läuft lokal auf deinem iPhone.",
     nav_home="Startseite",
     h1="Datenschutzerklärung",
-    updated="Zuletzt aktualisiert: 3. November 2026",
+    updated="Zuletzt aktualisiert: 16. November 2026",
     intro='TripSweep ("die App") wird von Jeffrey Brignoli entwickelt. Diese Seite erklärt, welche Daten die App verwendet, wohin sie gehen und warum. Das Leitprinzip des Projekts ist einfach: <strong>deine Fotos, Videos und Standorte verlassen niemals dein iPhone oder dein Android-Telefon</strong>.',
     s1_h="Was die App nicht tut",
     s1_items=[
@@ -489,10 +477,6 @@ PRIVACY = {
     s2_p2="Kein Foto, keine Miniaturansicht und keine Metadaten aus deiner Fotobibliothek werden jemals von deinem Gerät übertragen. Die Analyseergebnisse (deine Aufenthalte und ein kompakter numerischer Fingerabdruck jedes analysierten Fotos zum Vergleichen) werden in einer lokalen Datenbank auf deinem iPhone gespeichert, von Backups ausgeschlossen und beim Löschen der App entfernt.",
     s3_h="Zugriff auf deinen Standort",
     s3_p="Die App fordert Zugriff auf deinen Standort nur an, wenn du dich entscheidest, manuell einen „Ort“ (zum Beispiel „Zuhause“ oder „Arbeit“) in der Funktion zur Ortsverwaltung hinzuzufügen. Dieser Standort wird lokal auf deinem Gerät gespeichert und niemals anderswohin übertragen. Er dient nur dazu, die Entfernung zu erkannten Aufenthalten zu vergleichen, damit du sie bei Bedarf aus der Liste ausschließen kannst.",
-    s4_h="Synchronisierung mit der Mac-App",
-    s4_p1="Wenn du zusätzlich ",
-    s4_p_link="PhotoCull",
-    s4_p2=" auf deinem Mac verwendest, kann die Begleit-App über eine direkte lokale USB-/WLAN-Verbindung zwischen deinen beiden Apple-Geräten Informationen mit ihr austauschen (ein Standardprotokoll, das für die Synchronisierung von iOS-Geräten verwendet wird) — niemals über das Internet oder einen Server eines Drittanbieters.",
     s5_h="In-App-Käufe",
     s5_p="Die App bietet eine optionale kostenpflichtige Funktion („Pro“, einmaliger Kauf), die ausschließlich von Apple über StoreKit abgewickelt wird. Es werden keine Zahlungsinformationen vom Entwickler erfasst, gespeichert oder eingesehen: Apple wickelt die gesamte Transaktion gemäß seiner eigenen Datenschutzerklärung ab.",
     s6_h="Statistiken und Diagnose",
@@ -512,7 +496,7 @@ PRIVACY = {
     desc="La política de privacidad de TripSweep: ninguna foto, vídeo o ubicación se recopila, envía o comparte jamás. Todo ocurre localmente en tu iPhone.",
     nav_home="Inicio",
     h1="Política de privacidad",
-    updated="Última actualización: 3 de noviembre de 2026",
+    updated="Última actualización: 16 de noviembre de 2026",
     intro='TripSweep («la aplicación») está desarrollada por Jeffrey Brignoli. Esta página explica qué datos utiliza la aplicación, adónde van y por qué. El principio rector del proyecto es simple: <strong>tus fotos, vídeos y ubicaciones nunca salen de tu iPhone ni de tu teléfono Android</strong>.',
     s1_h="Lo que la aplicación no hace",
     s1_items=[
@@ -530,10 +514,6 @@ PRIVACY = {
     s2_p2="Ninguna foto, miniatura o metadato extraído de tu biblioteca de fotos se transmite nunca fuera de tu dispositivo. Los resultados del análisis (tus estancias y una huella numérica compacta de cada foto analizada, usada para compararlas) se guardan en una base de datos local en tu iPhone, excluida de las copias de seguridad, y se eliminan al borrar la app.",
     s3_h="Acceso a tu ubicación",
     s3_p="La aplicación solicita acceso a tu ubicación únicamente cuando eliges añadir manualmente un «lugar» (por ejemplo «Casa» o «Trabajo») en la función de gestión de lugares. Esta ubicación se guarda localmente en tu dispositivo y nunca se transmite a otro sitio. Se utiliza solo para comparar la distancia con las estancias detectadas, para que puedas excluirlas de la lista si lo deseas.",
-    s4_h="Sincronización con la app de Mac",
-    s4_p1="Si también utilizas ",
-    s4_p_link="PhotoCull",
-    s4_p2=" en tu Mac, la app complementaria puede intercambiar información con ella mediante una conexión USB/Wi-Fi local directa entre tus dos dispositivos Apple (protocolo estándar utilizado para la sincronización de dispositivos iOS) — nunca a través de Internet ni de un servidor de terceros.",
     s5_h="Compras dentro de la app",
     s5_p="La aplicación ofrece una función de pago opcional («Pro», compra única) gestionada exclusivamente por Apple mediante StoreKit. El desarrollador no recopila, almacena ni puede ver ninguna información de pago: Apple gestiona toda la transacción conforme a su propia política de privacidad.",
     s6_h="Estadísticas y diagnósticos",
@@ -807,11 +787,6 @@ def render_privacy(lang):
       <h2>{d['s3_h']}</h2>
       <p>
         {d['s3_p']}
-      </p>
-
-      <h2>{d['s4_h']}</h2>
-      <p>
-        {d['s4_p1']}<a href="{cross_url(lang)}">{d['s4_p_link']}</a>{d['s4_p2']}
       </p>
 
       <h2>{d['s5_h']}</h2>
