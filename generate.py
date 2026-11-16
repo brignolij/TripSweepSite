@@ -46,8 +46,7 @@ def store_link(campaign):
     """App Store link tagged with a campaign token, so App Analytics shows which page brought the install."""
     pt = f"pt={APP_STORE_PT}&" if APP_STORE_PT else ""
     return f"{APP_STORE_URL}?{pt}ct={campaign}&mt=8"
-# Pricing section (Free / Pro) on the home page and in llms.txt. "Pro + Desktop" is no longer sold (owners keep it): it only
-# appears as a one-sentence note. Set to False to hide the section.
+# Pricing section (TripSweep's Free / Pro, on the phone) on the home page and in llms.txt. Set to False to hide the section.
 SHOW_PRICING = True
 
 # Cross-link to the owner's other site (PassMerge) in every footer, in the visitor's language. Mirrored by a
@@ -563,46 +562,46 @@ PRICING = {
     h2="Free, with one one-time upgrade",
     intro="No subscription, ever. Browsing, comparing and sorting are always free. The plans only set how many photos you can delete per day in TripSweep.",
     plans=[
-        ("Free", "$0", "Browse, compare and sort everything. Delete 3 times a day on the phone, and up to 6 photos a day from the computer when the deletion goes through TripSweep."),
-        ("Pro", "$4.99 · one time", "Unlimited deletion on the phone, unlimited custom places and bulk actions across trips. Up to 15 photos a day from the computer through TripSweep."),
+        ("Free", "$0", "Browse, compare and sort everything. Delete 3 times a day on the phone."),
+        ("Pro", "$4.99 · one time", "Unlimited deletion on the phone, unlimited custom places and bulk actions across trips."),
     ],
-    note="Prices in USD; the App Store and Google Play show them in your currency. You buy in the TripSweep app on your phone. From the computer, PhotoCull deletes an iPhone's photos directly over USB with no daily limit and nothing to buy: it needs iCloud Photos off and, on a Mac, macOS 27 or later, and it is permanent on the iPhone (a copy stays on the computer for 30 days by default). Pro + Desktop is no longer sold; people who already bought it keep unlimited deletion from the computer through TripSweep. Sorting a folder on your computer is never limited.",
+    note="Prices in USD; the App Store and Google Play show them in your currency. You buy in the TripSweep app on your phone.",
 ),
 "fr": dict(
     h2="Gratuit, avec une option en achat unique",
     intro="Jamais d'abonnement. Parcourir, comparer et trier est toujours gratuit. Les formules ne fixent que le nombre de photos supprimables par jour dans TripSweep.",
     plans=[
-        ("Gratuit", "0 $", "Parcourez, comparez et triez tout. 3 suppressions par jour sur le téléphone, et jusqu'à 6 photos par jour depuis l'ordinateur quand la suppression passe par TripSweep."),
-        ("Pro", "4,99 $ · achat unique", "Suppression illimitée sur le téléphone, lieux personnalisés illimités et actions groupées sur plusieurs séjours. Jusqu'à 15 photos par jour depuis l'ordinateur via TripSweep."),
+        ("Gratuit", "0 $", "Parcourez, comparez et triez tout. 3 suppressions par jour sur le téléphone."),
+        ("Pro", "4,99 $ · achat unique", "Suppression illimitée sur le téléphone, lieux personnalisés illimités et actions groupées sur plusieurs séjours."),
     ],
-    note="Prix en dollars US ; l'App Store et Google Play les affichent dans votre devise. L'achat se fait dans l'app TripSweep du téléphone. Depuis l'ordinateur, PhotoCull supprime directement les photos d'un iPhone par USB, sans limite quotidienne et sans rien à acheter : cela demande Photos iCloud désactivé et, sur un Mac, macOS 27 ou ultérieur, et c'est définitif sur l'iPhone (une copie reste par défaut 30 jours sur l'ordinateur). Pro + Desktop n'est plus proposé ; les personnes qui l'ont déjà acheté gardent la suppression illimitée depuis l'ordinateur via TripSweep. Trier un dossier de l'ordinateur n'est jamais limité.",
+    note="Prix en dollars US ; l'App Store et Google Play les affichent dans votre devise. L'achat se fait dans l'app TripSweep du téléphone.",
 ),
 "it": dict(
     h2="Gratis, con un upgrade a pagamento unico",
     intro="Mai un abbonamento. Sfogliare, confrontare e ordinare è sempre gratis. I piani stabiliscono solo quante foto puoi eliminare al giorno in TripSweep.",
     plans=[
-        ("Gratis", "0 $", "Sfoglia, confronta e ordina tutto. 3 eliminazioni al giorno sul telefono e fino a 6 foto al giorno dal computer quando l'eliminazione passa da TripSweep."),
-        ("Pro", "4,99 $ · acquisto unico", "Eliminazione illimitata sul telefono, luoghi personalizzati illimitati e azioni di gruppo su più soggiorni. Fino a 15 foto al giorno dal computer tramite TripSweep."),
+        ("Gratis", "0 $", "Sfoglia, confronta e ordina tutto. 3 eliminazioni al giorno sul telefono."),
+        ("Pro", "4,99 $ · acquisto unico", "Eliminazione illimitata sul telefono, luoghi personalizzati illimitati e azioni di gruppo su più soggiorni."),
     ],
-    note="Prezzi in dollari USA; l'App Store e Google Play li mostrano nella tua valuta. L'acquisto si fa nell'app TripSweep sul telefono. Dal computer, PhotoCull elimina direttamente le foto di un iPhone via USB, senza limite giornaliero e senza nulla da acquistare: servono Foto di iCloud disattivato e, su un Mac, macOS 27 o successivo, ed è definitivo sull'iPhone (una copia resta per impostazione predefinita 30 giorni sul computer). Pro + Desktop non è più in vendita; chi l'ha già acquistato mantiene l'eliminazione illimitata dal computer tramite TripSweep. Ordinare una cartella del computer non è mai limitato.",
+    note="Prezzi in dollari USA; l'App Store e Google Play li mostrano nella tua valuta. L'acquisto si fa nell'app TripSweep sul telefono.",
 ),
 "de": dict(
     h2="Kostenlos, mit einem Einmal-Upgrade",
     intro="Nie ein Abo. Durchsuchen, Vergleichen und Sortieren ist immer kostenlos. Die Pläne legen nur fest, wie viele Fotos du pro Tag in TripSweep löschen kannst.",
     plans=[
-        ("Kostenlos", "0 $", "Alles durchsuchen, vergleichen und sortieren. 3 Löschvorgänge pro Tag auf dem Telefon und bis zu 6 Fotos pro Tag vom Computer aus, wenn das Löschen über TripSweep läuft."),
-        ("Pro", "4,99 $ · einmalig", "Unbegrenztes Löschen auf dem Telefon, unbegrenzt eigene Orte und Sammelaktionen für mehrere Aufenthalte. Bis zu 15 Fotos pro Tag vom Computer aus über TripSweep."),
+        ("Kostenlos", "0 $", "Alles durchsuchen, vergleichen und sortieren. 3 Löschvorgänge pro Tag auf dem Telefon."),
+        ("Pro", "4,99 $ · einmalig", "Unbegrenztes Löschen auf dem Telefon, unbegrenzt eigene Orte und Sammelaktionen für mehrere Aufenthalte."),
     ],
-    note="Preise in US-Dollar; App Store und Google Play zeigen sie in deiner Währung an. Du kaufst in der TripSweep-App auf dem Telefon. Vom Computer aus löscht PhotoCull die Fotos eines iPhones direkt über USB, ohne Tageslimit und ohne etwas zu kaufen: Voraussetzung sind ausgeschaltetes iCloud-Fotos und auf einem Mac macOS 27 oder neuer, und es ist auf dem iPhone endgültig (eine Kopie bleibt standardmäßig 30 Tage auf dem Computer). Pro + Desktop wird nicht mehr verkauft; wer es schon gekauft hat, behält das unbegrenzte Löschen vom Computer aus über TripSweep. Einen Ordner auf dem Computer zu sortieren ist nie begrenzt.",
+    note="Preise in US-Dollar; App Store und Google Play zeigen sie in deiner Währung an. Du kaufst in der TripSweep-App auf dem Telefon.",
 ),
 "es": dict(
     h2="Gratis, con una mejora de pago único",
     intro="Nunca una suscripción. Explorar, comparar y ordenar es siempre gratis. Los planes solo fijan cuántas fotos puedes eliminar al día en TripSweep.",
     plans=[
-        ("Gratis", "0 $", "Explora, compara y ordena todo. 3 eliminaciones al día en el teléfono y hasta 6 fotos al día desde el ordenador cuando la eliminación pasa por TripSweep."),
-        ("Pro", "4,99 $ · pago único", "Eliminación ilimitada en el teléfono, lugares personalizados ilimitados y acciones masivas en varias estancias. Hasta 15 fotos al día desde el ordenador a través de TripSweep."),
+        ("Gratis", "0 $", "Explora, compara y ordena todo. 3 eliminaciones al día en el teléfono."),
+        ("Pro", "4,99 $ · pago único", "Eliminación ilimitada en el teléfono, lugares personalizados ilimitados y acciones masivas en varias estancias."),
     ],
-    note="Precios en dólares estadounidenses; la App Store y Google Play los muestran en tu moneda. Compras en la app TripSweep del teléfono. Desde el ordenador, PhotoCull elimina directamente las fotos de un iPhone por USB, sin límite diario y sin nada que comprar: requiere Fotos en iCloud desactivado y, en un Mac, macOS 27 o posterior, y es definitivo en el iPhone (queda una copia 30 días por defecto en el ordenador). Pro + Desktop ya no se vende; quienes ya lo compraron conservan la eliminación ilimitada desde el ordenador a través de TripSweep. Ordenar una carpeta del ordenador nunca está limitado.",
+    note="Precios en dólares estadounidenses; la App Store y Google Play los muestran en tu moneda. Compras en la app TripSweep del teléfono.",
 ),
 }
 
@@ -876,11 +875,11 @@ FAQ_TRIPSWEEP = {
         ("Does TripSweep send my photos to a server?",
          "No. TripSweep works 100% on-device: place recognition and similar-photo detection run on your iPhone, with no account. No photo, video or location ever leaves the device; only optional, anonymous usage statistics can be sent."),
         ("Is TripSweep free? Is there a subscription?",
-         "There is no subscription. Browsing, comparing and sorting are free, with 3 deletions a day from the viewer. Pro ($4.99, one time) removes the limit on the iPhone. When PhotoCull asks TripSweep to delete photos from the computer, the daily limit is 6 photos for free and 15 with Pro; PhotoCull's direct deletion over USB on an iPhone has no limit. People who already bought Pro + Desktop (no longer sold) keep unlimited deletion from the computer. TripSweep needs iOS 18 or later."),
+         "There is no subscription. Browsing, comparing and sorting are free, with 3 deletions a day from the viewer. Pro ($4.99, one time) removes the limit on the iPhone. TripSweep needs iOS 18 or later."),
         ("Can I get back a photo I deleted by mistake?",
          "Yes. TripSweep always deletes through the Photos app's “Recently Deleted” album, never permanently. Photos stay there for 30 days and you can restore them at any time."),
         ("Can I sort my iPhone photos from my Mac or a Windows PC?",
-         "Yes, with <a href=\"{pc}\">PhotoCull</a>, the free desktop companion for Mac and Windows. It compares photos on a big screen and sorts a folder on your computer with no limit. It can also delete photos on your iPhone directly over the USB cable, with no daily limit, when iCloud Photos is off and, on a Mac, macOS 27 or later (Windows works too). That deletion is permanent on the iPhone, with a copy kept on your computer for 30 days by default. TripSweep stays an option on an iPhone: it deletes through “Recently Deleted” (30 days) and is the way to go when iCloud Photos is on, within a daily limit (6 photos a day for free, 15 with Pro). An Android phone always needs TripSweep."),
+         "Yes, with <a href=\"{pc}\">PhotoCull</a>, the free desktop app for Mac and Windows. It compares photos on a big screen and sorts a folder on your computer with no limit. It can also delete photos on your iPhone directly over the USB cable, with no daily limit, when iCloud Photos is off and, on a Mac, macOS 27 or later (Windows works too). That deletion is permanent on the iPhone, with a copy kept on your computer for 30 days by default."),
     ],
     footer_copy="© 2026 TripSweep. Developed by Jeffrey Brignoli.",
     footer_privacy="Privacy", footer_kofi="Ko-fi",
@@ -904,11 +903,11 @@ FAQ_TRIPSWEEP = {
         ("TripSweep envoie-t-il mes photos sur un serveur ?",
          "Non. TripSweep fonctionne 100 % sur l'appareil : la reconnaissance des lieux et la détection des photos similaires tournent sur votre iPhone, sans compte. Aucune photo, vidéo ou position ne quitte l'appareil ; seules des statistiques d'usage anonymes, désactivables, peuvent être envoyées."),
         ("TripSweep est-il gratuit ? Y a-t-il un abonnement ?",
-         "Il n'y a pas d'abonnement. Parcourir, comparer et trier est gratuit, avec 3 suppressions par jour depuis la visionneuse. Pro (4,99 $, achat unique) lève la limite sur l'iPhone. Quand PhotoCull demande à TripSweep de supprimer des photos depuis l'ordinateur, la limite quotidienne est de 6 photos en gratuit et 15 avec Pro ; la suppression directe de PhotoCull par USB sur un iPhone n'a pas de limite. Les personnes qui ont déjà acheté Pro + Desktop (qui n'est plus proposé) gardent la suppression illimitée depuis l'ordinateur. TripSweep demande iOS 18 ou plus récent."),
+         "Il n'y a pas d'abonnement. Parcourir, comparer et trier est gratuit, avec 3 suppressions par jour depuis la visionneuse. Pro (4,99 $, achat unique) lève la limite sur l'iPhone. TripSweep demande iOS 18 ou plus récent."),
         ("Puis-je récupérer une photo supprimée par erreur ?",
          "Oui. TripSweep supprime toujours via l'album « Récemment supprimés » de l'app Photos, jamais définitivement. Les photos y restent 30 jours et vous pouvez les restaurer à tout moment."),
         ("Puis-je trier les photos de mon iPhone depuis mon Mac ou un PC Windows ?",
-         "Oui, avec <a href=\"{pc}\">PhotoCull</a>, l'application de bureau gratuite pour Mac et Windows. Elle compare les photos sur grand écran et trie un dossier de votre ordinateur sans limite. Elle peut aussi supprimer des photos de votre iPhone directement par le câble USB, sans limite quotidienne, quand Photos iCloud est désactivé et, sur un Mac, macOS 27 ou ultérieur (Windows fonctionne aussi). Cette suppression est définitive sur l'iPhone, avec une copie gardée par défaut 30 jours sur votre ordinateur. TripSweep reste une option sur un iPhone : il supprime via « Supprimés récemment » (30 jours) et c'est la voie à suivre quand Photos iCloud est activé, avec une limite quotidienne (6 photos par jour en gratuit, 15 avec Pro). Un téléphone Android a toujours besoin de TripSweep."),
+         "Oui, avec <a href=\"{pc}\">PhotoCull</a>, l'application de bureau gratuite pour Mac et Windows. Elle compare les photos sur grand écran et trie un dossier de votre ordinateur sans limite. Elle peut aussi supprimer des photos de votre iPhone directement par le câble USB, sans limite quotidienne, quand Photos iCloud est désactivé et, sur un Mac, macOS 27 ou ultérieur (Windows fonctionne aussi). Cette suppression est définitive sur l'iPhone, avec une copie gardée par défaut 30 jours sur votre ordinateur."),
     ],
     footer_copy="© 2026 TripSweep. Développé par Jeffrey Brignoli.",
     footer_privacy="Confidentialité", footer_kofi="Ko-fi",
@@ -932,11 +931,11 @@ FAQ_TRIPSWEEP = {
         ("TripSweep invia le mie foto a un server?",
          "No. TripSweep funziona al 100% sul dispositivo: il riconoscimento dei luoghi e il rilevamento delle foto simili avvengono sul tuo iPhone, senza account. Nessuna foto, video o posizione lascia il dispositivo; possono essere inviate solo statistiche d'uso anonime, disattivabili."),
         ("TripSweep è gratis? C'è un abbonamento?",
-         "Non c'è nessun abbonamento. Sfogliare, confrontare e ordinare è gratis, con 3 eliminazioni al giorno dal visualizzatore. Pro (4,99 $, acquisto unico) toglie il limite su iPhone. Quando PhotoCull chiede a TripSweep di eliminare foto dal computer, il limite giornaliero è di 6 foto gratis e 15 con Pro; l'eliminazione diretta di PhotoCull via USB su un iPhone non ha limiti. Chi ha già acquistato Pro + Desktop (non più in vendita) mantiene l'eliminazione illimitata dal computer. TripSweep richiede iOS 18 o successivo."),
+         "Non c'è nessun abbonamento. Sfogliare, confrontare e ordinare è gratis, con 3 eliminazioni al giorno dal visualizzatore. Pro (4,99 $, acquisto unico) toglie il limite su iPhone. TripSweep richiede iOS 18 o successivo."),
         ("Posso recuperare una foto eliminata per sbaglio?",
          "Sì. TripSweep elimina sempre tramite l'album «Eliminati di recente» dell'app Foto, mai in modo definitivo. Le foto restano lì 30 giorni e puoi ripristinarle in qualsiasi momento."),
         ("Posso ordinare le foto dell'iPhone dal Mac o da un PC Windows?",
-         "Sì, con <a href=\"{pc}\">PhotoCull</a>, l'app desktop gratuita per Mac e Windows. Confronta le foto su grande schermo e ordina una cartella del computer senza limiti. Può anche eliminare le foto dell'iPhone direttamente tramite il cavo USB, senza limite giornaliero, quando Foto di iCloud è disattivato e, su un Mac, macOS 27 o successivo (funziona anche su Windows). Questa eliminazione è definitiva sull'iPhone, con una copia conservata per impostazione predefinita 30 giorni sul computer. TripSweep resta un'opzione su un iPhone: elimina tramite «Eliminati di recente» (30 giorni) ed è la strada da seguire quando Foto di iCloud è attivo, con un limite giornaliero (6 foto al giorno gratis, 15 con Pro). Un telefono Android ha sempre bisogno di TripSweep."),
+         "Sì, con <a href=\"{pc}\">PhotoCull</a>, l'app desktop gratuita per Mac e Windows. Confronta le foto su grande schermo e ordina una cartella del computer senza limiti. Può anche eliminare le foto dell'iPhone direttamente tramite il cavo USB, senza limite giornaliero, quando Foto di iCloud è disattivato e, su un Mac, macOS 27 o successivo (funziona anche su Windows). Questa eliminazione è definitiva sull'iPhone, con una copia conservata per impostazione predefinita 30 giorni sul computer."),
     ],
     footer_copy="© 2026 TripSweep. Sviluppato da Jeffrey Brignoli.",
     footer_privacy="Privacy", footer_kofi="Ko-fi",
@@ -960,11 +959,11 @@ FAQ_TRIPSWEEP = {
         ("Schickt TripSweep meine Fotos an einen Server?",
          "Nein. TripSweep arbeitet zu 100 % auf dem Gerät: Ortserkennung und die Suche nach ähnlichen Fotos laufen auf deinem iPhone, ohne Konto. Kein Foto, Video oder Standort verlässt das Gerät; es können nur anonyme, abschaltbare Nutzungsstatistiken gesendet werden."),
         ("Ist TripSweep kostenlos? Gibt es ein Abo?",
-         "Es gibt kein Abo. Durchsuchen, Vergleichen und Sortieren ist kostenlos, mit 3 Löschvorgängen pro Tag aus der Ansicht. Pro (4,99 $, einmalig) hebt die Grenze auf dem iPhone auf. Wenn PhotoCull TripSweep bittet, Fotos vom Computer aus zu löschen, gilt ein Tageslimit von 6 Fotos kostenlos und 15 mit Pro; das direkte Löschen von PhotoCull über USB auf einem iPhone hat keine Grenze. Wer Pro + Desktop (nicht mehr erhältlich) schon gekauft hat, behält das unbegrenzte Löschen vom Computer aus. TripSweep braucht iOS 18 oder neuer."),
+         "Es gibt kein Abo. Durchsuchen, Vergleichen und Sortieren ist kostenlos, mit 3 Löschvorgängen pro Tag aus der Ansicht. Pro (4,99 $, einmalig) hebt die Grenze auf dem iPhone auf. TripSweep braucht iOS 18 oder neuer."),
         ("Kann ich ein versehentlich gelöschtes Foto zurückholen?",
          "Ja. TripSweep löscht immer über das Album „Kürzlich gelöscht“ der Fotos-App, nie endgültig. Die Fotos bleiben dort 30 Tage, und du kannst sie jederzeit wiederherstellen."),
         ("Kann ich meine iPhone-Fotos vom Mac oder einem Windows-PC aus sortieren?",
-         "Ja, mit <a href=\"{pc}\">PhotoCull</a>, der kostenlosen Desktop-App für Mac und Windows. Sie vergleicht Fotos auf dem großen Bildschirm und sortiert einen Ordner auf deinem Computer ohne Grenze. Sie kann auch Fotos auf deinem iPhone direkt über das USB-Kabel löschen, ohne Tageslimit, wenn iCloud-Fotos ausgeschaltet ist und auf einem Mac macOS 27 oder neuer läuft (Windows funktioniert auch). Dieses Löschen ist auf dem iPhone endgültig, standardmäßig bleibt 30 Tage lang eine Kopie auf deinem Computer. TripSweep bleibt auf einem iPhone eine Option: Es löscht über „Zuletzt gelöscht“ (30 Tage) und ist der Weg, wenn iCloud-Fotos eingeschaltet ist, mit einem Tageslimit (6 Fotos pro Tag kostenlos, 15 mit Pro). Ein Android-Telefon braucht immer TripSweep."),
+         "Ja, mit <a href=\"{pc}\">PhotoCull</a>, der kostenlosen Desktop-App für Mac und Windows. Sie vergleicht Fotos auf dem großen Bildschirm und sortiert einen Ordner auf deinem Computer ohne Grenze. Sie kann auch Fotos auf deinem iPhone direkt über das USB-Kabel löschen, ohne Tageslimit, wenn iCloud-Fotos ausgeschaltet ist und auf einem Mac macOS 27 oder neuer läuft (Windows funktioniert auch). Dieses Löschen ist auf dem iPhone endgültig, standardmäßig bleibt 30 Tage lang eine Kopie auf deinem Computer."),
     ],
     footer_copy="© 2026 TripSweep. Entwickelt von Jeffrey Brignoli.",
     footer_privacy="Datenschutz", footer_kofi="Ko-fi",
@@ -988,11 +987,11 @@ FAQ_TRIPSWEEP = {
         ("¿TripSweep envía mis fotos a un servidor?",
          "No. TripSweep funciona 100 % en el dispositivo: el reconocimiento de lugares y la detección de fotos similares se hacen en tu iPhone, sin cuenta. Ninguna foto, vídeo o ubicación sale del dispositivo; solo se pueden enviar estadísticas de uso anónimas y desactivables."),
         ("¿TripSweep es gratis? ¿Hay suscripción?",
-         "No hay suscripción. Explorar, comparar y ordenar es gratis, con 3 eliminaciones al día desde el visor. Pro (4,99 $, pago único) quita el límite en el iPhone. Cuando PhotoCull le pide a TripSweep que elimine fotos desde el ordenador, el límite diario es de 6 fotos gratis y 15 con Pro; la eliminación directa de PhotoCull por USB en un iPhone no tiene límite. Quienes ya compraron Pro + Desktop (que ya no se vende) conservan la eliminación ilimitada desde el ordenador. TripSweep necesita iOS 18 o posterior."),
+         "No hay suscripción. Explorar, comparar y ordenar es gratis, con 3 eliminaciones al día desde el visor. Pro (4,99 $, pago único) quita el límite en el iPhone. TripSweep necesita iOS 18 o posterior."),
         ("¿Puedo recuperar una foto eliminada por error?",
          "Sí. TripSweep siempre elimina a través del álbum «Eliminados recientemente» de la app Fotos, nunca de forma definitiva. Las fotos se quedan allí 30 días y puedes restaurarlas en cualquier momento."),
         ("¿Puedo ordenar las fotos del iPhone desde mi Mac o un PC con Windows?",
-         "Sí, con <a href=\"{pc}\">PhotoCull</a>, la aplicación de escritorio gratuita para Mac y Windows. Compara fotos en pantalla grande y ordena una carpeta de tu ordenador sin límite. También puede eliminar fotos de tu iPhone directamente por el cable USB, sin límite diario, cuando Fotos en iCloud está desactivado y, en un Mac, macOS 27 o posterior (también funciona en Windows). Esa eliminación es definitiva en el iPhone, con una copia que se guarda por defecto 30 días en tu ordenador. TripSweep sigue siendo una opción en un iPhone: elimina a través de « Eliminados recientemente » (30 días) y es el camino cuando Fotos en iCloud está activado, con un límite diario (6 fotos al día gratis, 15 con Pro). Un teléfono Android siempre necesita TripSweep."),
+         "Sí, con <a href=\"{pc}\">PhotoCull</a>, la aplicación de escritorio gratuita para Mac y Windows. Compara fotos en pantalla grande y ordena una carpeta de tu ordenador sin límite. También puede eliminar fotos de tu iPhone directamente por el cable USB, sin límite diario, cuando Fotos en iCloud está desactivado y, en un Mac, macOS 27 o posterior (también funciona en Windows). Esa eliminación es definitiva en el iPhone, con una copia que se guarda por defecto 30 días en tu ordenador."),
     ],
     footer_copy="© 2026 TripSweep. Desarrollado por Jeffrey Brignoli.",
     footer_privacy="Privacidad", footer_kofi="Ko-fi",
@@ -1255,7 +1254,7 @@ POST_DATES = {
     "free-up-iphone-storage": ("2026-11-03", "2026-11-03"),
     "delete-duplicate-photos-iphone": ("2026-11-03", "2026-11-03"),
     "clean-up-vacation-photos": ("2026-11-03", "2026-11-03"),
-    "free-up-android-storage": ("2026-11-10", "2026-11-10"),
+    "free-up-android-storage": ("2026-11-10", "2026-11-16"),
     "delete-duplicate-photos-android": ("2026-11-10", "2026-11-10"),
 }
 
@@ -1300,7 +1299,7 @@ LLMS_SUMMARY = '''> TripSweep is an iOS and Android app that groups your photos 
 > taking up space, and sorts out what you don't need by type — identical copies, similar
 > and blurry photos, screenshots, large videos — so you keep the best shot and delete
 > the rest in a few taps. It runs 100% on-device: no photo, video, or location data is ever
-> collected, sent, or shared. PhotoCull, its desktop companion (macOS and Windows) for sorting an
+> collected, sent, or shared. PhotoCull, a desktop app (macOS and Windows) from the same developer for sorting an
 > iPhone or Android phone on a big screen, has its own site: ''' + PHOTOCULL_ORIGIN + '''/'''
 
 def llms_pages():
@@ -1315,13 +1314,12 @@ def llms_pages():
                   f"- [{SITES[SITE]['brand']} blog]({page_url('en', 'blog.html')}): guides."] + posts
 
 def llms_txt(pages):
-    pricing = ("- TripSweep plans (one-time purchases, no subscription, on iPhone and Android): Free and Pro ($4.99). "
-               "Deletions requested from a computer through TripSweep (an Android phone, or an iPhone by choice) are limited to 6 photos a day for free and 15 with Pro. "
-               "Pro + Desktop is no longer sold; people who already bought it keep unlimited deletion from the computer.\n") if SHOW_PRICING else ""
-    deletion = ("- PhotoCull 1.4 deletes an iPhone's photos directly over the USB cable (no TripSweep needed, no daily limit, nothing to buy) on Windows and on a Mac with macOS 27 or later, "
-                "only when iCloud Photos is off. The deletion is permanent on the iPhone (not sent to Recently Deleted); by default PhotoCull keeps a copy of each deleted item on the computer for 30 days "
-                "in a PhotoCull Trash folder in Pictures. TripSweep remains an option on an iPhone (it deletes through Recently Deleted, 30 days, and is the way when iCloud Photos is on or on macOS 26 or earlier) "
-                "and is required for an Android phone.\n")
+    pricing = ("- TripSweep plans (one-time purchases, no subscription, on iPhone and Android): Free (3 deletions a day in the viewer) "
+               "and Pro ($4.99, unlimited deletion on the phone).\n") if SHOW_PRICING else ""
+    deletion = ("- PhotoCull 1.5 does not use TripSweep. It deletes an iPhone's photos directly over the USB cable (no daily limit, nothing to buy) "
+                "on Windows 10/11 and on a Mac with macOS 27 or later, and refuses when iCloud Photos is on. The deletion is permanent on the iPhone "
+                "(not sent to Recently Deleted); by default PhotoCull keeps a copy of each deleted item on the computer for 30 days in a PhotoCull Trash folder in Pictures. "
+                "An Android phone connects to PhotoCull by USB only, in File transfer mode, with nothing to install on the phone (Windows 10/11, or a Mac with macOS 27 or later).\n")
     return f'''# TripSweep
 
 {LLMS_SUMMARY}

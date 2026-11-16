@@ -39,7 +39,7 @@ FAQ_TRIPSWEEP_EXTRA = [
     ("Posso controllare le foto del mio iPhone su un grande schermo invece che sul telefono?",
      "Sì. <a href=\"{pc}\">PhotoCull</a> è l'app desktop gratuita per Mac e Windows: mostra il rullino del tuo iPhone raggruppato per viaggio, confronta le foto simili fianco a fianco e ti permette di selezionare centinaia di foto con pochi clic. <a href=\"{pc}\">Scopri di più su PhotoCull</a>."),
     ("Posso eliminare le foto in blocco dal computer invece di toccare il telefono?",
-     "Sì, con <a href=\"{pc}\">PhotoCull</a> su un Mac o un PC Windows. Selezioni le foto sul grande schermo e, con un iPhone, PhotoCull le elimina direttamente tramite il cavo USB: senza limite giornaliero, senza nulla da acquistare e senza TripSweep. Serve che Foto di iCloud sia disattivato sull'iPhone e, su un Mac, macOS 27 o successivo (funziona anche su Windows). L'eliminazione è definitiva sull'iPhone, le foto non passano da «Eliminati di recente», ma PhotoCull conserva per impostazione predefinita una copia sul computer per 30 giorni. TripSweep resta un'opzione: elimina tramite «Eliminati di recente» (30 giorni) ed è la strada da seguire quando Foto di iCloud è attivo o con macOS 26 o precedente. Le eliminazioni richieste dal computer tramite TripSweep, che è anche il funzionamento di un telefono Android, sono limitate a 6 foto al giorno gratis e 15 con Pro."),
+     "Sì, con <a href=\"{pc}\">PhotoCull</a> su un Mac o un PC Windows. Selezioni le foto sul grande schermo e PhotoCull le elimina direttamente tramite il cavo USB, senza limite giornaliero e senza nulla da acquistare. Con un iPhone serve che Foto di iCloud sia disattivato sull'iPhone e, su un Mac, macOS 27 o successivo (va bene qualsiasi Windows 10 o 11). L'eliminazione è definitiva sull'iPhone, le foto non passano da «Eliminati di recente», ma PhotoCull conserva per impostazione predefinita una copia sul computer per 30 giorni. Anche un telefono Android si collega tramite cavo USB, in modalità «Trasferimento file», senza nulla da installare sul telefono (Windows 10 o 11, o un Mac con macOS 27 o successivo)."),
     ("Quali iPhone e versioni di iOS supporta TripSweep?",
      "TripSweep richiede iOS 18 o successivo. L'analisi delle foto simili usa il framework Vision di Apple ed è più veloce sugli iPhone recenti, ma funziona su tutti i modelli supportati. Su Android richiede Android 11 o successivo ed è disponibile su <a href=\"{play}\">Google Play</a>."),
 ]
@@ -148,7 +148,7 @@ dict(slug="free-up-android-storage",
 
       <h2>Come TripSweep rende tutto più veloce</h2>
       <p><a href="{ts}">TripSweep</a> esegue questi passaggi per te sul telefono. La sua scheda Pulizia elenca copie identiche, foto simili, foto sfocate, screenshot e video pesanti, ciascuno con lo spazio che occupa, e i tuoi viaggi sono raggruppati automaticamente. È gratuita su <a href="{play}">Google Play</a> (Android 11 o successivo) e funziona 100% sul telefono.</p>
-      <p>Se preferisci un grande schermo, <a href="{pc}">PhotoCull</a> fa lo stesso lavoro di selezione su un Mac o PC Windows, collegato via Wi-Fi.</p>
+      <p>Se preferisci un grande schermo, <a href="{pc}">PhotoCull</a> fa lo stesso lavoro di selezione su un Mac o PC Windows, con il telefono collegato tramite cavo USB.</p>
 
       <h2>Mi serve Google One?</h2>
       <p>Lo spazio nel cloud è un buon backup, ma non è uno strumento di pulizia: conserva tutto, compresi i duplicati. Fare ordine prima significa aver bisogno di meno spazio, ovunque si trovi.</p>"""),
