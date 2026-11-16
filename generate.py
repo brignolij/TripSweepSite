@@ -1373,7 +1373,7 @@ def render_moved(lang, new):
 <html lang="{lang}">
 <head>
   <meta charset="UTF-8" />
-  <meta name="robots" content="noindex" />
+  <!-- Pas de noindex : avec la redirection immédiate et la canonique, les moteurs reportent le classement sur la nouvelle adresse. -->
   <meta http-equiv="refresh" content="0; url={url}" />
   <link rel="canonical" href="{url}" />
   <title>PhotoCull</title>
