@@ -12,17 +12,17 @@ TripSweep groups your photos and videos by trip (or by event and month when they
 - [Get TripSweep on Google Play](https://play.google.com/store/apps/details?id=com.tripsweep.app) (Android 11+)
 - [TripSweep website](https://tripsweep.idealy.ch/) · [FAQ](https://tripsweep.idealy.ch/faq.html)
 
-## PhotoCull for Mac and Windows
+## PixCuller for Mac and Windows
 
-PhotoCull, the desktop app that sorts your iPhone or Android photos on a computer, has its own website and repository:
-**[photocull.idealy.ch](https://photocull.idealy.ch/)** ([brignolij/PhotoCullSite](https://github.com/brignolij/PhotoCullSite)).
+PixCuller, the desktop app that sorts your iPhone or Android photos on a computer, has its own website and repository:
+**[pixculler.idealy.ch](https://pixculler.idealy.ch/)** ([brignolij/PixCullerSite](https://github.com/brignolij/PixCullerSite)).
 
 ## Guides
 
 - [How to free up iPhone storage without paying for iCloud](https://tripsweep.idealy.ch/blog-free-up-iphone-storage.html)
 - [How to delete duplicate and similar photos on your iPhone](https://tripsweep.idealy.ch/blog-delete-duplicate-photos-iphone.html)
 - [How to free up Android storage without paying for Google One](https://tripsweep.idealy.ch/blog-free-up-android-storage.html)
-- All guides: [TripSweep blog](https://tripsweep.idealy.ch/blog.html), in five languages. Guides to sort photos on a Mac or PC: [PhotoCull blog](https://photocull.idealy.ch/blog.html).
+- All guides: [TripSweep blog](https://tripsweep.idealy.ch/blog.html), in five languages. Guides to sort photos on a Mac or PC: [PixCuller blog](https://pixculler.idealy.ch/blog.html).
 
 ## Privacy
 
@@ -30,14 +30,14 @@ Your photos, videos and locations never leave your devices. The app only sends o
 
 ## About this repository
 
-This repository holds the TripSweep website (published by GitHub Pages) and the older [PhotoCull releases](https://github.com/brignolij/TripSweepSite/releases) (new ones are on [PhotoCullSite](https://github.com/brignolij/PhotoCullSite/releases)). The apps' source code is not here.
+This repository holds the TripSweep website (published by GitHub Pages) and the older [PixCuller releases](https://github.com/brignolij/TripSweepSite/releases) (new ones are on [PixCullerSite](https://github.com/brignolij/PixCullerSite/releases)). The apps' source code is not here.
 
 ---
 
 ## Maintenance du site
 
-Site statique de TripSweep seul. PhotoCull a son propre site depuis novembre 2026 (dépôt `brignolij/PhotoCullSite`,
-`photocull.idealy.ch`, dossier local `../photocull-website/`) ; les liens vers PhotoCull sont absolus.
+Site statique de TripSweep seul. PixCuller a son propre site depuis novembre 2026 (dépôt `brignolij/PixCullerSite`,
+`pixculler.idealy.ch`, dossier local `../pixculler-website/`) ; les liens vers PixCuller sont absolus.
 Domaine géré chez Infomaniak, voir `DEPLOY.md`.
 
 Tout est généré par `generate.py` dans `sites/web/`, que le workflow `.github/workflows/pages.yml` publie à
@@ -61,7 +61,7 @@ dates dans `POST_DATES` ; titres ≤ 60 caractères, descriptions ≤ 160.
 
 ```bash
 python3 generate.py
-python3 check_links.py https://photocull.idealy.ch=../photocull-website/sites/web   # vérifie aussi les liens vers PhotoCull
+python3 check_links.py https://pixculler.idealy.ch=../pixculler-website/sites/web   # vérifie aussi les liens vers PixCuller
 ```
 
 ```bash
@@ -89,20 +89,20 @@ python3 -m http.server 8000 -d sites/web
 ### versions.json : ne jamais le déplacer
 
 `https://tripsweep.idealy.ch/versions.json` est lu par les apps TripSweep installées (iOS `UpdateChecker.swift`,
-Android `UpdateChecker.kt`) **et** par les PhotoCull installés (`src/PhotoCull.Core/Updates/UpdateCheck.cs`) : il
-reste ici, avec son schéma et son entrée `desktop`. Le site PhotoCull en publie une copie
-(`https://photocull.idealy.ch/versions.json`, dépôt PhotoCullSite) pour les futures versions de PhotoCull. **Tant que
-des versions anciennes de PhotoCull tournent, les deux copies doivent rester identiques** : toute modification se fait
-dans les deux dépôts. Les releases PhotoCull de ce dépôt restent en place (`desktop.downloads` y renvoie).
+Android `UpdateChecker.kt`) **et** par les PixCuller installés (`src/PixCuller.Core/Updates/UpdateCheck.cs`) : il
+reste ici, avec son schéma et son entrée `desktop`. Le site PixCuller en publie une copie
+(`https://pixculler.idealy.ch/versions.json`, dépôt PixCullerSite) pour les futures versions de PixCuller. **Tant que
+des versions anciennes de PixCuller tournent, les deux copies doivent rester identiques** : toute modification se fait
+dans les deux dépôts. Les releases PixCuller de ce dépôt restent en place (`desktop.downloads` y renvoie).
 
-### Anciennes adresses PhotoCull
+### Anciennes adresses PixCuller
 
-Les pages PhotoCull (`desktop.html`, `desktop-faq.html`, `desktop-blog*.html`, dans les 5 langues) sont remplacées
+Les pages PixCuller (`desktop.html`, `desktop-faq.html`, `desktop-blog*.html`, dans les 5 langues) sont remplacées
 par de petites pages de redirection (`meta refresh` + `canonical` + `noindex` + lien visible) générées par
-`write_moved()` depuis la liste figée `PHOTOCULL_MOVED`. Elles ne sont ni dans `sitemap.xml` ni dans `llms.txt`.
-Table complète ancienne → nouvelle adresse : `README.md` du dépôt PhotoCullSite. En bref : `/desktop.html` →
-`https://photocull.idealy.ch/`, `/desktop-faq.html` → `/faq.html`, `/desktop-blog.html` → `/blog.html`,
+`write_moved()` depuis la liste figée `PIXCULLER_MOVED`. Elles ne sont ni dans `sitemap.xml` ni dans `llms.txt`.
+Table complète ancienne → nouvelle adresse : `README.md` du dépôt PixCullerSite. En bref : `/desktop.html` →
+`https://pixculler.idealy.ch/`, `/desktop-faq.html` → `/faq.html`, `/desktop-blog.html` → `/blog.html`,
 `/desktop-blog-<slug>.html` → `/blog-<slug>.html` (et pareil sous `/fr/ /it/ /de/ /es/`).
 
-`privacy.html` n'est pas redirigée : c'est la politique de TripSweep, qui décrit encore PhotoCull (les PhotoCull
-installés et la fiche Microsoft Store y renvoient). PhotoCull a la sienne sur `https://photocull.idealy.ch/privacy.html`.
+`privacy.html` n'est pas redirigée : c'est la politique de TripSweep, qui décrit encore PixCuller (les PixCuller
+installés et la fiche Microsoft Store y renvoient). PixCuller a la sienne sur `https://pixculler.idealy.ch/privacy.html`.

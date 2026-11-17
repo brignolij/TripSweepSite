@@ -1,7 +1,7 @@
 # Mettre le site en ligne sur tripsweep.idealy.ch
 
-Site de TripSweep. Hébergé par GitHub Pages, domaine géré chez Infomaniak. PhotoCull a son propre site
-(`photocull.idealy.ch`, dépôt PhotoCullSite, voir son `DEPLOY.md`) ; ici ne restent que des redirections à ses
+Site de TripSweep. Hébergé par GitHub Pages, domaine géré chez Infomaniak. PixCuller a son propre site
+(`pixculler.idealy.ch`, dépôt PixCullerSite, voir son `DEPLOY.md`) ; ici ne restent que des redirections à ses
 anciennes adresses `desktop*.html`.
 
 Ordre à respecter : **DNS → GitHub → attendre le HTTPS → Search Console → mettre à jour les apps**.
@@ -39,7 +39,7 @@ Les noms exacts des menus Infomaniak peuvent varier légèrement ; l'important e
    - **Custom domain** : `tripsweep.idealy.ch` → Save (GitHub vérifie le DNS)
 3. Attendre que la coche verte apparaisse (jusqu'à ~1 h : GitHub crée le certificat), puis cocher
    **Enforce HTTPS**.
-4. Tester : https://tripsweep.idealy.ch/ et https://tripsweep.idealy.ch/desktop.html (redirige vers photocull.idealy.ch)
+4. Tester : https://tripsweep.idealy.ch/ et https://tripsweep.idealy.ch/desktop.html (redirige vers pixculler.idealy.ch)
 
 L'ancienne adresse `brignolij.github.io/TripSweepSite/` devrait ensuite rediriger (301) vers le nouveau domaine,
 `versions.json` compris. À contrôler après la mise en ligne, car les apps déjà installées lisent ce fichier.
@@ -59,13 +59,13 @@ Les anciennes URLs sont encore dans : `AppLinks.swift`, `UpdateChecker.swift` (i
 `UpdateChecker.kt` (Android), `UpdateCheck.cs` (desktop), et dans les fiches App Store Connect, Play Console et
 Microsoft Store (URL marketing et politique de confidentialité : `https://tripsweep.idealy.ch/privacy.html`).
 
-## 5. photocull.idealy.ch
+## 5. pixculler.idealy.ch
 
-Ancienne configuration : redirection web permanente (301) Infomaniak `photocull.idealy.ch` →
-`https://tripsweep.idealy.ch/desktop.html`. Elle est remplacée par le site PhotoCull sur GitHub Pages : supprimer
-cette redirection puis créer le CNAME `photocull` → `brignolij.github.io.`, étapes détaillées dans le `DEPLOY.md` du
-dépôt PhotoCullSite. Pousser ce dépôt-ci (pages de redirection) **après** la mise en ligne de photocull.idealy.ch,
-sinon les anciennes adresses PhotoCull renvoient un moment vers un site vide.
+Ancienne configuration : redirection web permanente (301) Infomaniak `pixculler.idealy.ch` →
+`https://tripsweep.idealy.ch/desktop.html`. Elle est remplacée par le site PixCuller sur GitHub Pages : supprimer
+cette redirection puis créer le CNAME `pixculler` → `brignolij.github.io.`, étapes détaillées dans le `DEPLOY.md` du
+dépôt PixCullerSite. Pousser ce dépôt-ci (pages de redirection) **après** la mise en ligne de pixculler.idealy.ch,
+sinon les anciennes adresses PixCuller renvoient un moment vers un site vide.
 
 ## Régénérer le site
 

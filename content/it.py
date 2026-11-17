@@ -5,7 +5,7 @@ BLOG_UI = dict(
     nav="Blog", privacy="Privacy", more="Continua a leggere",
     cta_store="📱 Scarica TripSweep su App Store",
     cta_play="🤖 Scarica TripSweep su Google Play",
-    cross_label={"tripsweep": "App desktop", "photocull": "App mobile"},
+    cross_label={"tripsweep": "App desktop", "pixculler": "App mobile"},
     twin_android="Usi un telefono Android? Leggi la guida per Android:",
     twin_iphone="Usi un iPhone? Leggi la guida per iPhone:",
     index={
@@ -37,9 +37,9 @@ FAQ_TRIPSWEEP_EXTRA = [
     ("Eliminare con TripSweep elimina le foto anche da iCloud?",
      "Se Foto di iCloud è attivo, eliminare una foto sul tuo iPhone la rimuove da tutti i tuoi dispositivi, perché è così che funziona Foto di iCloud. TripSweep elimina passando da «Eliminati di recente», quindi hai 30 giorni per cambiare idea, e lo spazio su iCloud si libera quando svuoti quell'album."),
     ("Posso controllare le foto del mio iPhone su un grande schermo invece che sul telefono?",
-     "Sì. <a href=\"{pc}\">PhotoCull</a> è l'app desktop gratuita per Mac e Windows: mostra il rullino del tuo iPhone raggruppato per viaggio, confronta le foto simili fianco a fianco e ti permette di selezionare centinaia di foto con pochi clic. <a href=\"{pc}\">Scopri di più su PhotoCull</a>."),
+     "Sì. <a href=\"{pc}\">PixCuller</a> è l'app desktop gratuita per Mac e Windows: mostra il rullino del tuo iPhone raggruppato per viaggio, confronta le foto simili fianco a fianco e ti permette di selezionare centinaia di foto con pochi clic. <a href=\"{pc}\">Scopri di più su PixCuller</a>."),
     ("Posso eliminare le foto in blocco dal computer invece di toccare il telefono?",
-     "Sì, con <a href=\"{pc}\">PhotoCull</a> su un Mac o un PC Windows. Selezioni le foto sul grande schermo e PhotoCull le elimina direttamente tramite il cavo USB, senza limite giornaliero e senza nulla da acquistare. Con un iPhone serve che Foto di iCloud sia disattivato sull'iPhone e, su un Mac, macOS 27 o successivo (va bene qualsiasi Windows 10 o 11). L'eliminazione è definitiva sull'iPhone, le foto non passano da «Eliminati di recente», ma PhotoCull conserva per impostazione predefinita una copia sul computer per 30 giorni. Anche un telefono Android si collega tramite cavo USB, in modalità «Trasferimento file», senza nulla da installare sul telefono (Windows 10 o 11, o un Mac con macOS 27 o successivo)."),
+     "Sì, con <a href=\"{pc}\">PixCuller</a> su un Mac o un PC Windows. Selezioni le foto sul grande schermo e PixCuller le elimina direttamente tramite il cavo USB, senza limite giornaliero e senza nulla da acquistare. Con un iPhone serve che Foto di iCloud sia disattivato sull'iPhone e, su un Mac, macOS 27 o successivo (va bene qualsiasi Windows 10 o 11). L'eliminazione è definitiva sull'iPhone, le foto non passano da «Eliminati di recente», ma PixCuller conserva per impostazione predefinita una copia sul computer per 30 giorni. Anche un telefono Android si collega tramite cavo USB, in modalità «Trasferimento file», senza nulla da installare sul telefono (Windows 10 o 11, o un Mac con macOS 27 o successivo)."),
     ("Quali iPhone e versioni di iOS supporta TripSweep?",
      "TripSweep richiede iOS 18 o successivo. L'analisi delle foto simili usa il framework Vision di Apple ed è più veloce sugli iPhone recenti, ma funziona su tutti i modelli supportati. Su Android richiede Android 11 o successivo ed è disponibile su <a href=\"{play}\">Google Play</a>."),
 ]
@@ -69,7 +69,7 @@ dict(slug="free-up-iphone-storage",
 
       <h2>Come TripSweep rende tutto più veloce</h2>
       <p><a href="{ts}">TripSweep</a> esegue questi passaggi per te sull'iPhone. La sua scheda Pulizia elenca copie identiche, foto simili, foto sfocate, screenshot e video pesanti, ciascuno con lo spazio che occupa. I tuoi viaggi sono raggruppati per luogo e data e ordinati per dimensione, e un pulsante «Tieni 1 per gruppo» gestisce un'intera categoria con un solo tocco. I preferiti non vengono mai proposti per l'eliminazione, le eliminazioni passano da «Eliminati di recente» e nulla lascia mai il tuo telefono: nessun account, nessun cloud. Possono essere inviate solo statistiche d'uso anonime, disattivabili.</p>
-      <p>Se preferisci un grande schermo, <a href="{pc}">PhotoCull</a> fa lo stesso lavoro di selezione su un Mac o PC Windows.</p>
+      <p>Se preferisci un grande schermo, <a href="{pc}">PixCuller</a> fa lo stesso lavoro di selezione su un Mac o PC Windows.</p>
 
       <h2>Mi serve iCloud?</h2>
       <p>iCloud è un buon backup, ma non è uno strumento di pulizia: conserva tutto, compresi i duplicati. Fare ordine prima significa aver bisogno di meno spazio, ovunque si trovi.</p>"""),
@@ -100,7 +100,7 @@ dict(slug="delete-duplicate-photos-iphone",
       </ul>
 
       <h2>Preferisci un grande schermo?</h2>
-      <p>Con <a href="{pc}">PhotoCull</a> su un Mac o PC Windows puoi confrontare fino a sei foto simili fianco a fianco e selezionarne centinaia con pochi clic.</p>"""),
+      <p>Con <a href="{pc}">PixCuller</a> su un Mac o PC Windows puoi confrontare fino a sei foto simili fianco a fianco e selezionarne centinaia con pochi clic.</p>"""),
 dict(slug="clean-up-vacation-photos",
      title="Come riordinare le foto delle vacanze e tenere le migliori",
      desc="Trasforma mille foto di vacanza in un album da conservare: raggruppa per viaggio, elimina gli scatti quasi identici, tieni i momenti migliori.",
@@ -124,7 +124,7 @@ dict(slug="clean-up-vacation-photos",
 
       <h2>Come ti aiuta TripSweep</h2>
       <p><a href="{ts}">TripSweep</a> raggruppa le tue foto e i tuoi video per viaggio (o per evento e mese quando manca il GPS), mostra quanti gigabyte di foto simili contiene ogni viaggio, suggerisce lo scatto migliore di ogni gruppo ed esporta o condivide un intero viaggio. Puoi escludere casa e lavoro così la vita quotidiana non sembra un viaggio. Tutto avviene sul tuo iPhone, offline.</p>
-      <p>Per fare lo stesso su un grande schermo, <a href="{pc}">PhotoCull</a> mostra i viaggi del tuo iPhone su un Mac o PC Windows.</p>"""),
+      <p>Per fare lo stesso su un grande schermo, <a href="{pc}">PixCuller</a> mostra i viaggi del tuo iPhone su un Mac o PC Windows.</p>"""),
 dict(slug="free-up-android-storage",
      title="Come liberare spazio su Android senza Google One",
      desc="Dove va davvero lo spazio del tuo Android e i modi più rapidi per liberare gigabyte di foto e video senza pagare altro spazio nel cloud.",
@@ -148,7 +148,7 @@ dict(slug="free-up-android-storage",
 
       <h2>Come TripSweep rende tutto più veloce</h2>
       <p><a href="{ts}">TripSweep</a> esegue questi passaggi per te sul telefono. La sua scheda Pulizia elenca copie identiche, foto simili, foto sfocate, screenshot e video pesanti, ciascuno con lo spazio che occupa, e i tuoi viaggi sono raggruppati automaticamente. È gratuita su <a href="{play}">Google Play</a> (Android 11 o successivo) e funziona 100% sul telefono.</p>
-      <p>Se preferisci un grande schermo, <a href="{pc}">PhotoCull</a> fa lo stesso lavoro di selezione su un Mac o PC Windows, con il telefono collegato tramite cavo USB.</p>
+      <p>Se preferisci un grande schermo, <a href="{pc}">PixCuller</a> fa lo stesso lavoro di selezione su un Mac o PC Windows, con il telefono collegato tramite cavo USB.</p>
 
       <h2>Mi serve Google One?</h2>
       <p>Lo spazio nel cloud è un buon backup, ma non è uno strumento di pulizia: conserva tutto, compresi i duplicati. Fare ordine prima significa aver bisogno di meno spazio, ovunque si trovi.</p>"""),
@@ -172,7 +172,7 @@ dict(slug="delete-duplicate-photos-android",
       <h2>Da sapere</h2>
       <ul>
         <li>Tutto avviene sul telefono: nessun account, nessun invio. TripSweep è gratuita su <a href="{play}">Google Play</a> (Android 11 o successivo).</li>
-        <li>Per un intero rullino, confrontare su un grande schermo con <a href="{pc}">PhotoCull</a> su un Mac o PC è ancora più veloce.</li>
+        <li>Per un intero rullino, confrontare su un grande schermo con <a href="{pc}">PixCuller</a> su un Mac o PC è ancora più veloce.</li>
       </ul>"""),
 ],
 }

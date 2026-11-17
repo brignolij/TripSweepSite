@@ -369,7 +369,7 @@ footer .footer-links {
   padding: 48px 0 64px;
 }
 
-/* Desktop screenshots (PhotoCull): a real app window instead of a phone frame. */
+/* Desktop screenshots (PixCuller): a real app window instead of a phone frame. */
 .window-frame {
   display: block;
   margin: 48px auto 0;

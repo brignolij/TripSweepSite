@@ -5,7 +5,7 @@ BLOG_UI = dict(
     nav="Blog", privacy="Privacy", more="Keep reading",
     cta_store="📱 Download TripSweep on the App Store",
     cta_play="🤖 Get TripSweep on Google Play",
-    cross_label={"tripsweep": "Desktop app", "photocull": "Mobile app"},
+    cross_label={"tripsweep": "Desktop app", "pixculler": "Mobile app"},
     twin_android="Using an Android phone? Read the Android guide:",
     twin_iphone="Using an iPhone? Read the iPhone guide:",
     index={
@@ -37,9 +37,9 @@ FAQ_TRIPSWEEP_EXTRA = [
     ("Does deleting in TripSweep also delete my photos from iCloud?",
      "If iCloud Photos is on, deleting a photo on your iPhone removes it from all your devices, because that is how iCloud Photos works. TripSweep deletes through “Recently Deleted”, so you have 30 days to change your mind, and iCloud space is freed once that album is emptied."),
     ("Can I review my iPhone photos on a big screen instead of the phone?",
-     "Yes. <a href=\"{pc}\">PhotoCull</a> is the free desktop app for Mac and Windows: it shows your iPhone's camera roll grouped by trip, compares similar photos side by side and lets you mark hundreds of photos in a few clicks. <a href=\"{pc}\">Learn more about PhotoCull</a>."),
+     "Yes. <a href=\"{pc}\">PixCuller</a> is the free desktop app for Mac and Windows: it shows your iPhone's camera roll grouped by trip, compares similar photos side by side and lets you mark hundreds of photos in a few clicks. <a href=\"{pc}\">Learn more about PixCuller</a>."),
     ("Can I delete photos in bulk from my computer instead of tapping on the phone?",
-     "Yes, with <a href=\"{pc}\">PhotoCull</a> on a Mac or Windows PC. You mark the photos on the big screen and PhotoCull deletes them directly over the USB cable, with no daily limit and nothing to buy. With an iPhone, this requires iCloud Photos turned off on the iPhone, and macOS 27 or later on a Mac (any Windows 10 or 11 works). The deletion is permanent on the iPhone, the photos do not go to “Recently Deleted”, but PhotoCull keeps a copy on your computer for 30 days by default. An Android phone connects by USB cable too, in “File transfer” mode, with nothing to install on the phone (Windows 10 or 11, or a Mac with macOS 27 or later)."),
+     "Yes, with <a href=\"{pc}\">PixCuller</a> on a Mac or Windows PC. You mark the photos on the big screen and PixCuller deletes them directly over the USB cable, with no daily limit and nothing to buy. With an iPhone, this requires iCloud Photos turned off on the iPhone, and macOS 27 or later on a Mac (any Windows 10 or 11 works). The deletion is permanent on the iPhone, the photos do not go to “Recently Deleted”, but PixCuller keeps a copy on your computer for 30 days by default. An Android phone connects by USB cable too, in “File transfer” mode, with nothing to install on the phone (Windows 10 or 11, or a Mac with macOS 27 or later)."),
     ("Which iPhones and iOS versions does TripSweep support?",
      "TripSweep needs iOS 18 or later. Similar-photo analysis uses Apple's Vision framework and is faster on recent iPhones, but works on every supported model. On Android, it needs Android 11 or later and is available on <a href=\"{play}\">Google Play</a>."),
 ]
@@ -69,7 +69,7 @@ dict(slug="free-up-iphone-storage",
 
       <h2>How TripSweep makes this faster</h2>
       <p><a href="{ts}">TripSweep</a> does these steps for you on the iPhone. Its Cleanup tab lists identical copies, similar photos, blurry photos, screenshots and large videos, each with the space it takes. Your trips are grouped by place and date and sorted by size, and a “Keep 1 per group” button handles a whole category in one tap. Favorites are never suggested for deletion, deletions go through “Recently Deleted”, and nothing ever leaves your phone: no account, no cloud. Only optional, anonymous usage statistics can be sent.</p>
-      <p>If you prefer a big screen, <a href="{pc}">PhotoCull</a> does the same sorting on a Mac or Windows PC.</p>
+      <p>If you prefer a big screen, <a href="{pc}">PixCuller</a> does the same sorting on a Mac or Windows PC.</p>
 
       <h2>Do I need iCloud?</h2>
       <p>iCloud is a fine backup, but it is not a cleaning tool: it stores everything, including the duplicates. Cleaning first means you need less storage, wherever it is.</p>"""),
@@ -100,7 +100,7 @@ dict(slug="delete-duplicate-photos-iphone",
       </ul>
 
       <h2>Prefer a big screen?</h2>
-      <p>With <a href="{pc}">PhotoCull</a> on a Mac or Windows PC you can compare up to six similar photos side by side and mark hundreds in a few clicks.</p>"""),
+      <p>With <a href="{pc}">PixCuller</a> on a Mac or Windows PC you can compare up to six similar photos side by side and mark hundreds in a few clicks.</p>"""),
 dict(slug="clean-up-vacation-photos",
      title="How to clean up old vacation photos and keep the best ones",
      desc="Turn a thousand holiday photos into a keeper album: group by trip, remove the near-identical shots, keep the highlights.",
@@ -124,7 +124,7 @@ dict(slug="clean-up-vacation-photos",
 
       <h2>How TripSweep helps</h2>
       <p><a href="{ts}">TripSweep</a> groups your photos and videos by trip (or by event and month when there is no GPS), shows how many gigabytes of similar photos each trip contains, suggests the best shot of each group and exports or shares a whole trip. You can exclude home and work so daily life doesn't look like a trip. Everything runs on your iPhone, offline.</p>
-      <p>To do the same on a big screen, <a href="{pc}">PhotoCull</a> shows your iPhone's trips on a Mac or Windows PC.</p>"""),
+      <p>To do the same on a big screen, <a href="{pc}">PixCuller</a> shows your iPhone's trips on a Mac or Windows PC.</p>"""),
 dict(slug="free-up-android-storage",
      title="How to free up Android storage without Google One",
      desc="Where your Android storage really goes and the fastest ways to free gigabytes of photos and videos without paying for more cloud storage.",
@@ -148,7 +148,7 @@ dict(slug="free-up-android-storage",
 
       <h2>How TripSweep makes this faster</h2>
       <p><a href="{ts}">TripSweep</a> does these steps for you on the phone. Its Cleanup tab lists identical copies, similar photos, blurry photos, screenshots and large videos, each with the space it takes, and your trips are grouped automatically. It is free on <a href="{play}">Google Play</a> (Android 11 or later) and works 100% on the phone.</p>
-      <p>If you prefer a big screen, <a href="{pc}">PhotoCull</a> does the same sorting on a Mac or Windows PC, with the phone connected by USB cable.</p>
+      <p>If you prefer a big screen, <a href="{pc}">PixCuller</a> does the same sorting on a Mac or Windows PC, with the phone connected by USB cable.</p>
 
       <h2>Do I need Google One?</h2>
       <p>Cloud storage is a fine backup, but it is not a cleaning tool: it stores everything, duplicates included. Cleaning first means you need less storage, wherever it is.</p>"""),
@@ -172,7 +172,7 @@ dict(slug="delete-duplicate-photos-android",
       <h2>Good to know</h2>
       <ul>
         <li>Everything runs on the phone: no account, no upload. TripSweep is free on <a href="{play}">Google Play</a> (Android 11 or later).</li>
-        <li>For a whole camera roll, comparing on a big screen with <a href="{pc}">PhotoCull</a> on a Mac or PC is faster still.</li>
+        <li>For a whole camera roll, comparing on a big screen with <a href="{pc}">PixCuller</a> on a Mac or PC is faster still.</li>
       </ul>"""),
 ],
 }

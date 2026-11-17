@@ -5,7 +5,7 @@ BLOG_UI = dict(
     nav="Blog", privacy="Privacidad", more="Sigue leyendo",
     cta_store="📱 Descarga TripSweep en la App Store",
     cta_play="🤖 Descarga TripSweep en Google Play",
-    cross_label={"tripsweep": "App de escritorio", "photocull": "App móvil"},
+    cross_label={"tripsweep": "App de escritorio", "pixculler": "App móvil"},
     twin_android="¿Usas un móvil Android? Lee la guía para Android:",
     twin_iphone="¿Usas un iPhone? Lee la guía para iPhone:",
     index={
@@ -37,9 +37,9 @@ FAQ_TRIPSWEEP_EXTRA = [
     ("¿Borrar en TripSweep también borra mis fotos de iCloud?",
      "Si Fotos de iCloud está activado, borrar una foto en el iPhone la elimina de todos tus dispositivos, porque así funciona Fotos de iCloud. TripSweep borra a través de « Eliminados recientemente », así que tienes 30 días para arrepentirte, y el espacio de iCloud se libera cuando vacías ese álbum."),
     ("¿Puedo revisar las fotos de mi iPhone en una pantalla grande en lugar del móvil?",
-     "Sí. <a href=\"{pc}\">PhotoCull</a> es la app de escritorio gratuita que acompaña a TripSweep, para Mac y Windows: muestra el carrete de tu iPhone agrupado por viaje, compara fotos parecidas lado a lado y te permite marcar cientos de fotos con unos pocos clics. <a href=\"{pc}\">Más información sobre PhotoCull</a>."),
+     "Sí. <a href=\"{pc}\">PixCuller</a> es la app de escritorio gratuita que acompaña a TripSweep, para Mac y Windows: muestra el carrete de tu iPhone agrupado por viaje, compara fotos parecidas lado a lado y te permite marcar cientos de fotos con unos pocos clics. <a href=\"{pc}\">Más información sobre PixCuller</a>."),
     ("¿Puedo borrar fotos en bloque desde el ordenador en vez de tocar la pantalla del móvil?",
-     "Sí, con <a href=\"{pc}\">PhotoCull</a> en un Mac o un PC con Windows. Marcas las fotos en la pantalla grande y PhotoCull las borra directamente por el cable USB, sin límite diario y sin nada que comprar. Con un iPhone hace falta que Fotos en iCloud esté desactivado en el iPhone y, en un Mac, macOS 27 o posterior (sirve cualquier Windows 10 u 11). El borrado es definitivo en el iPhone, las fotos no pasan por « Eliminados recientemente », pero PhotoCull guarda por defecto una copia en tu ordenador durante 30 días. Un teléfono Android también se conecta por cable USB, en modo « Transferencia de archivos », sin nada que instalar en el teléfono (Windows 10 u 11, o un Mac con macOS 27 o posterior)."),
+     "Sí, con <a href=\"{pc}\">PixCuller</a> en un Mac o un PC con Windows. Marcas las fotos en la pantalla grande y PixCuller las borra directamente por el cable USB, sin límite diario y sin nada que comprar. Con un iPhone hace falta que Fotos en iCloud esté desactivado en el iPhone y, en un Mac, macOS 27 o posterior (sirve cualquier Windows 10 u 11). El borrado es definitivo en el iPhone, las fotos no pasan por « Eliminados recientemente », pero PixCuller guarda por defecto una copia en tu ordenador durante 30 días. Un teléfono Android también se conecta por cable USB, en modo « Transferencia de archivos », sin nada que instalar en el teléfono (Windows 10 u 11, o un Mac con macOS 27 o posterior)."),
     ("¿Qué iPhone y qué versiones de iOS admite TripSweep?",
      "TripSweep requiere iOS 18 o posterior. El análisis de fotos parecidas usa el framework Vision de Apple y es más rápido en los iPhone recientes, pero funciona en todos los modelos compatibles. En Android requiere Android 11 o posterior y está disponible en <a href=\"{play}\">Google Play</a>."),
 ]
@@ -69,7 +69,7 @@ dict(slug="free-up-iphone-storage",
 
       <h2>Cómo te lo hace más rápido TripSweep</h2>
       <p><a href="{ts}">TripSweep</a> hace estos pasos por ti en el iPhone. Su pestaña Limpieza enumera las copias idénticas, las fotos parecidas, las fotos borrosas, las capturas de pantalla y los vídeos grandes, cada uno con el espacio que ocupa. Tus viajes se agrupan por lugar y fecha y se ordenan por tamaño, y un botón « Conservar 1 por grupo » resuelve una categoría entera con un solo toque. Los favoritos nunca se sugieren para borrar, los borrados pasan por « Eliminados recientemente » y nada sale jamás de tu móvil: sin cuenta, sin nube. Solo se pueden enviar estadísticas de uso anónimas y desactivables.</p>
-      <p>Si prefieres una pantalla grande, <a href="{pc}">PhotoCull</a> hace el mismo trabajo de ordenación en un Mac o un PC con Windows.</p>
+      <p>Si prefieres una pantalla grande, <a href="{pc}">PixCuller</a> hace el mismo trabajo de ordenación en un Mac o un PC con Windows.</p>
 
       <h2>¿Necesito iCloud?</h2>
       <p>iCloud es una buena copia de seguridad, pero no es una herramienta de limpieza: guarda todo, duplicados incluidos. Limpiar primero significa que necesitas menos almacenamiento, esté donde esté.</p>"""),
@@ -100,7 +100,7 @@ dict(slug="delete-duplicate-photos-iphone",
       </ul>
 
       <h2>¿Prefieres una pantalla grande?</h2>
-      <p>Con <a href="{pc}">PhotoCull</a> en un Mac o un PC con Windows puedes comparar hasta seis fotos parecidas lado a lado y marcar cientos con unos pocos clics.</p>"""),
+      <p>Con <a href="{pc}">PixCuller</a> en un Mac o un PC con Windows puedes comparar hasta seis fotos parecidas lado a lado y marcar cientos con unos pocos clics.</p>"""),
 dict(slug="clean-up-vacation-photos",
      title="Cómo limpiar fotos de vacaciones y quedarte con las mejores",
      desc="Convierte mil fotos de vacaciones en un álbum para guardar: agrupa por viaje, elimina las tomas casi idénticas y conserva lo mejor.",
@@ -124,7 +124,7 @@ dict(slug="clean-up-vacation-photos",
 
       <h2>Cómo ayuda TripSweep</h2>
       <p><a href="{ts}">TripSweep</a> agrupa tus fotos y vídeos por viaje (o por evento y mes cuando no hay GPS), muestra cuántos gigas de fotos parecidas contiene cada viaje, sugiere la mejor toma de cada grupo y exporta o comparte un viaje completo. Puedes excluir tu casa y tu trabajo para que el día a día no parezca un viaje. Todo se ejecuta en tu iPhone, sin conexión.</p>
-      <p>Para hacer lo mismo en una pantalla grande, <a href="{pc}">PhotoCull</a> muestra los viajes de tu iPhone en un Mac o un PC con Windows.</p>"""),
+      <p>Para hacer lo mismo en una pantalla grande, <a href="{pc}">PixCuller</a> muestra los viajes de tu iPhone en un Mac o un PC con Windows.</p>"""),
 dict(slug="free-up-android-storage",
      title="Cómo liberar espacio en Android sin Google One",
      desc="Dónde se va realmente el almacenamiento de tu Android y las formas más rápidas de liberar gigas de fotos y vídeos sin pagar más por la nube.",
@@ -148,7 +148,7 @@ dict(slug="free-up-android-storage",
 
       <h2>Cómo te lo facilita TripSweep</h2>
       <p><a href="{ts}">TripSweep</a> hace estos pasos por ti en el móvil. Su pestaña Limpieza lista las copias idénticas, las fotos parecidas, las fotos borrosas, las capturas de pantalla y los vídeos grandes, cada uno con el espacio que ocupa, y tus viajes se agrupan automáticamente. Es gratuita en <a href="{play}">Google Play</a> (Android 11 o posterior) y funciona 100 % en el móvil.</p>
-      <p>Si prefieres una pantalla grande, <a href="{pc}">PhotoCull</a> hace la misma clasificación en un Mac o un PC con Windows, con el teléfono conectado por cable USB.</p>
+      <p>Si prefieres una pantalla grande, <a href="{pc}">PixCuller</a> hace la misma clasificación en un Mac o un PC con Windows, con el teléfono conectado por cable USB.</p>
 
       <h2>¿Necesito Google One?</h2>
       <p>El almacenamiento en la nube es una buena copia de seguridad, pero no es una herramienta de limpieza: guarda todo, duplicados incluidos. Limpiar primero significa que necesitas menos espacio, estés donde estés.</p>"""),
@@ -172,7 +172,7 @@ dict(slug="delete-duplicate-photos-android",
       <h2>Conviene saber</h2>
       <ul>
         <li>Todo se ejecuta en el móvil: sin cuenta, sin envíos. TripSweep es gratuita en <a href="{play}">Google Play</a> (Android 11 o posterior).</li>
-        <li>Para un carrete entero, comparar en una pantalla grande con <a href="{pc}">PhotoCull</a> en un Mac o un PC es todavía más rápido.</li>
+        <li>Para un carrete entero, comparar en una pantalla grande con <a href="{pc}">PixCuller</a> en un Mac o un PC es todavía más rápido.</li>
       </ul>"""),
 ],
 }
