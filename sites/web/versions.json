@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-11-23",
+  "updated": "2026-11-24",
   "apps": {
     "ios": {
       "version": "1.5.5",
@@ -11,7 +11,7 @@
       "url": "https://play.google.com/store/apps/details?id=com.tripsweep.app"
     },
     "desktop": {
-      "version": "1.9.0",
+      "version": "1.10.0",
       "url": "https://pixculler.idealy.ch/",
       "downloads": {
         "mac": "https://github.com/brignolij/PixCullerSite/releases/latest/download/PixCuller-Desktop.zip",
