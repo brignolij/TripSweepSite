@@ -18,7 +18,7 @@
         "windows": "https://github.com/brignolij/PixCullerSite/releases/latest/download/PixCuller-Windows-x64.zip"
       },
       "windowsStore": {
-        "version": "1.10.1.0",
+        "version": "1.11.0.0",
         "url": "https://apps.microsoft.com/detail/9N6WV393B3PL"
       }
     }
